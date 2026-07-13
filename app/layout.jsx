@@ -1,7 +1,7 @@
 import './globals.css';
 import { Archivo, Lora, Source_Sans_3, Space_Mono } from 'next/font/google';
+import Link from 'next/link';
 import Header from './components/Header';
-import Sidebar from './components/Sidebar';
 
 // Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
 const display = Archivo({
@@ -20,7 +20,7 @@ const serif = Lora({
   display: 'swap',
 });
 
-// Monospace for the numeric / label layer — the "mathematical" signal.
+// Monospace for the numeric / label layer.
 const mono = Space_Mono({
   subsets: ['latin'],
   weight: ['400', '700'],
@@ -38,11 +38,10 @@ const body = Source_Sans_3({
 export const metadata = {
   title: 'Medwick Construction: Digital Growth Plan',
   description:
-    'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and remodeling across Medina County, Ohio.',
+    'How Medwick Construction gets found on Google and takes the Medina County market: roofing, water, and remodeling.',
   openGraph: {
     title: 'Medwick Construction: Digital Growth Plan',
-    description:
-      'The full SEO strategy, site structure, content calendar, roadmap, and competitor analysis for the new Medwick website.',
+    description: 'The plan to get Medwick found on Google and own the Medina County market.',
     type: 'website',
   },
   icons: { icon: '/medwick-logo.webp' },
@@ -53,19 +52,18 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${display.variable} ${serif.variable} ${mono.variable} ${body.variable}`}>
       <body>
         <Header />
-        <div className="shell">
-          <Sidebar />
-          <main className="main">{children}</main>
-        </div>
+        <main className="page">{children}</main>
         <footer className="site-footer">
-          <p>
-            <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
-            (330) 635-3744
-          </p>
-          <p className="footer-note">
-            Confidential planning document prepared for Medwick Construction · July 13, 2026.
-            Strategy only. Figures are directional pending live rank-tracking.
-          </p>
+          <div className="wrap">
+            <Link href="/strategy" className="footer-link">
+              Full technical plan (for your web team) →
+            </Link>
+            <p>
+              <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
+              (330) 635-3744
+            </p>
+            <p className="footer-note">Prepared July 13, 2026 · Confidential.</p>
+          </div>
         </footer>
       </body>
     </html>

@@ -29,6 +29,7 @@ export default async function DocPage({ params }) {
 
   return (
     <article className="doc">
+      <Link href="/" className="doc-back">← Overview</Link>
       <div className="doc-kicker">
         <span className="doc-kicker-num">{doc.num}</span>
         <span className="doc-kicker-label">Medwick Digital Growth Plan</span>
