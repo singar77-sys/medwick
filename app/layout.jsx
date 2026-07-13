@@ -1,5 +1,5 @@
 import './globals.css';
-import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
+import { Archivo, Lora, Source_Sans_3, Space_Mono } from 'next/font/google';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
@@ -17,6 +17,14 @@ const serif = Lora({
   weight: ['500', '600'],
   style: ['italic'],
   variable: '--font-serif',
+  display: 'swap',
+});
+
+// Monospace for the numeric / label layer — the "mathematical" signal.
+const mono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -42,7 +50,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
+    <html lang="en" className={`${display.variable} ${serif.variable} ${mono.variable} ${body.variable}`}>
       <body>
         <Header />
         <div className="shell">
