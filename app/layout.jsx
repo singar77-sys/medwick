@@ -1,6 +1,5 @@
 import './globals.css';
 import { Archivo, Lora, Source_Sans_3, Space_Mono } from 'next/font/google';
-import Link from 'next/link';
 import Header from './components/Header';
 
 // Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
@@ -55,9 +54,6 @@ export default function RootLayout({ children }) {
         <main className="page">{children}</main>
         <footer className="site-footer">
           <div className="wrap">
-            <Link href="/strategy" className="footer-link">
-              Full technical plan (for your web team) →
-            </Link>
             <p>
               <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
               (330) 635-3744

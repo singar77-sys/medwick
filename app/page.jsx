@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function Home() {
   return (
     <div className="home">
@@ -12,18 +10,17 @@ export default function Home() {
               Medwick Construction / Digital Growth Plan
             </p>
             <h1>
-              Right now you&rsquo;re <span className="hl">invisible</span> on Google. Here&rsquo;s how we fix that.
+              Right now you&rsquo;re <span className="hl">invisible</span> on Google. Let&rsquo;s fix that.
             </h1>
             <p className="hero-lede">
-              You have the license, the 5-star rating, and the real projects. Almost none of it
-              shows up online yet. This is the plan to change that, and to own the one thing no
-              contractor in Medina does.
+              You have the license, the 5-star rating, and the real projects. Online, almost none of
+              it shows. Here&rsquo;s the plan, and the one lane no Medina contractor owns.
             </p>
             <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
             <div className="hero-cta">
-              <Link href="#plan" className="btn btn-gold">
+              <a href="#plan" className="btn btn-gold">
                 See the plan
-              </Link>
+              </a>
             </div>
           </div>
           <div className="hero-geo" aria-hidden="true">
@@ -50,19 +47,19 @@ export default function Home() {
               <span className="bn-mark bn-square" aria-hidden="true" />
               <span className="bn-figure">1</span>
               <span className="bn-label">page on your site</span>
-              <span className="bn-ctx">Google has almost nothing of yours to show.</span>
+              <span className="bn-ctx">Google has nothing to rank.</span>
             </div>
             <div className="bignum">
               <span className="bn-mark bn-circle" aria-hidden="true" />
               <span className="bn-figure">12</span>
               <span className="bn-label">5-star reviews, hidden</span>
-              <span className="bn-ctx">You&rsquo;ve earned them. Your website shows none.</span>
+              <span className="bn-ctx">Earned, but none show on your site.</span>
             </div>
             <div className="bignum">
               <span className="bn-mark bn-triangle" aria-hidden="true" />
               <span className="bn-figure gold">0 / 6</span>
               <span className="bn-label">rivals showing Google stars</span>
-              <span className="bn-ctx">Be the first and you stand out instantly.</span>
+              <span className="bn-ctx">Be first and you stand out instantly.</span>
             </div>
           </div>
         </div>
@@ -76,26 +73,17 @@ export default function Home() {
             <div className="opening">
               <span className="bn-mark bn-square opening-mark" aria-hidden="true" />
               <h3>Own storm &amp; water</h3>
-              <p>
-                When a storm hits, homeowners need the roof, the water cleanup, and the rebuild. You
-                do all three. No competitor in Medina leads with it, and insurance pays for it.
-              </p>
+              <p>Roof, water cleanup, and rebuild in one call. Nobody else in Medina offers all three, and insurance pays for it.</p>
             </div>
             <div className="opening">
               <span className="bn-mark bn-circle opening-mark" aria-hidden="true" />
               <h3>You&rsquo;re the real local</h3>
-              <p>
-                The biggest names in Medina search run it from Solon, North Canton, even Maryland.
-                You&rsquo;re actually here. That&rsquo;s an edge they can&rsquo;t buy.
-              </p>
+              <p>The biggest names run Medina from out of town. You&rsquo;re actually here, and that&rsquo;s an edge they can&rsquo;t buy.</p>
             </div>
             <div className="opening">
               <span className="bn-mark bn-triangle opening-mark" aria-hidden="true" />
               <h3>Be the one with stars</h3>
-              <p>
-                Not one of your six competitors shows their star rating in Google. Set it up right
-                and you&rsquo;re the listing that catches the eye.
-              </p>
+              <p>Not one of your six competitors shows a Google star rating. Be the first and you catch every eye.</p>
             </div>
           </div>
         </div>
@@ -110,29 +98,19 @@ export default function Home() {
               <span className="phase-num">01</span>
               <span className="phase-when">Now</span>
               <span className="phase-sub">This week</span>
-              <p>
-                Fix and show what you already have. Your website&rsquo;s call button dials the wrong
-                number, fix that today. Claim your Google listing. Put your 12 reviews and real
-                project photos where people can see them.
-              </p>
+              <p>Fix the call button that dials the wrong number, claim your Google listing, and show your 12 reviews and real photos.</p>
             </div>
             <div className="phase">
               <span className="phase-num">02</span>
               <span className="phase-when">Next</span>
               <span className="phase-sub">1-3 months</span>
-              <p>
-                Build a real website. A page for each service and each town you cover, led by storm
-                and water. Real photos, real local detail, built to show up on Google.
-              </p>
+              <p>Build a real website: a page for every service and town, led by storm and water.</p>
             </div>
             <div className="phase">
               <span className="phase-num">03</span>
               <span className="phase-when">Then</span>
               <span className="phase-sub">3-12 months</span>
-              <p>
-                Pull ahead. A steady stream of new reviews, local storm and cost guides, and the
-                trust badges that put you next to, then past, the big out-of-town names.
-              </p>
+              <p>Stack up reviews and local guides until you pass the out-of-town names.</p>
             </div>
           </div>
         </div>
@@ -142,13 +120,12 @@ export default function Home() {
       <section className="bottomline">
         <div className="wrap">
           <p className="bottomline-lead">
-            <strong>Honest expectations.</strong> A real website, a claimed Google profile, and a
-            steady flow of reviews. Give it 6 to 12 months to fully take hold. Reviews are the
-            single biggest lever, and they start the day we ask.
+            <strong>Give it 6 to 12 months.</strong> A real site, a claimed Google profile, and a
+            steady stream of reviews do the work. Reviews are the biggest lever by far.
           </p>
           <p className="bottomline-cta">
-            The fastest win is free and takes an afternoon: fix the phone number and claim your
-            Google listing.
+            The first win is free and takes an afternoon: fix the phone number and claim your Google
+            listing.
           </p>
         </div>
       </section>
