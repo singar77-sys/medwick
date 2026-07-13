@@ -1,11 +1,12 @@
 :root {
-  /* Brand — pulled from the Medwick logo */
-  --navy: #2a3a4e;
-  --navy-deep: #1e2b3a;
-  --navy-ink: #16212e;
-  --gold: #c8a24c;
-  --gold-deep: #a9863a;
-  --gold-soft: #f4ecd9;
+  /* Brand — sampled directly from the Medwick logo pixels */
+  --navy: #2c3242;       /* logo background (measured) */
+  --navy-deep: #232935;  /* darkened for gradient depth */
+  --navy-ink: #1a1f29;   /* deepest, for contrast fills */
+  --gold: #c0a674;       /* metallic antique gold (measured highlight) */
+  --gold-deep: #a98f5f;  /* mid gold, for large accents */
+  --gold-ink: #7d6634;   /* darkened gold — AA contrast for small text on white */
+  --gold-soft: #f2ebdb;  /* gold tint for callouts */
 
   /* Reading surface */
   --bg: #f7f6f2;
@@ -42,7 +43,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a { color: var(--gold-deep); text-decoration: none; }
+a { color: var(--gold-ink); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 img { max-width: 100%; display: block; }
@@ -145,7 +146,12 @@ img { max-width: 100%; display: block; }
   margin: 0 0 20px; letter-spacing: 0.01em; max-width: 20ch;
 }
 .hero h1 .hl { color: var(--gold); }
-.hero-lede { font-size: 18px; color: #c3cdd7; max-width: 62ch; margin: 0 0 28px; }
+.hero-lede { font-size: 18px; color: #c3cdd7; max-width: 62ch; margin: 0 0 22px; }
+.hero-tagline {
+  font-family: var(--font-serif), Georgia, 'Times New Roman', serif;
+  font-style: italic; font-size: 18px; color: var(--gold);
+  margin: 0 0 28px; letter-spacing: 0.01em;
+}
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
   display: inline-block; padding: 13px 22px; border-radius: 9px;
@@ -193,14 +199,14 @@ img { max-width: 100%; display: block; }
 .card { transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease; }
 .card-num {
   font-family: var(--font-display), sans-serif; font-weight: 700; font-size: 14px;
-  color: var(--gold-deep); letter-spacing: 0.08em;
+  color: var(--gold-ink); letter-spacing: 0.08em;
 }
 .card-title {
   font-family: var(--font-display), sans-serif; font-weight: 600; font-size: 20px;
   color: var(--navy); margin: 6px 0 8px;
 }
 .card-blurb { font-size: 15px; color: var(--ink-soft); flex: 1; }
-.card-go { margin-top: 14px; font-weight: 700; color: var(--gold-deep); font-size: 15px; }
+.card-go { margin-top: 14px; font-weight: 700; color: var(--gold-ink); font-size: 15px; }
 
 .howto { padding: 30px 52px 46px; }
 .howto p { max-width: 74ch; color: var(--ink-soft); }
@@ -277,7 +283,7 @@ img { max-width: 100%; display: block; }
 .prose tbody tr:hover { background: var(--gold-soft); }
 
 .doc-ref { color: var(--ink-soft); font-style: italic; }
-.xlink { color: var(--gold-deep); font-weight: 600; }
+.xlink { color: var(--gold-ink); font-weight: 600; }
 
 /* Pager */
 .doc-pager {
@@ -291,7 +297,7 @@ img { max-width: 100%; display: block; }
 }
 .pager:hover { text-decoration: none; border-color: var(--gold); box-shadow: var(--shadow-sm); }
 .pager.next { text-align: right; }
-.pager-dir { font-size: 12.5px; color: var(--gold-deep); font-weight: 700; letter-spacing: 0.04em; }
+.pager-dir { font-size: 12.5px; color: var(--gold-ink); font-weight: 700; letter-spacing: 0.04em; }
 .pager-title { font-family: var(--font-display), sans-serif; font-weight: 600; font-size: 16px; color: var(--navy); }
 
 /* ---------- Footer ---------- */

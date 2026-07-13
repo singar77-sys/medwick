@@ -14,6 +14,7 @@ export default function Home() {
           registration, a 5.0-star Google rating — all currently invisible online. This is the
           plan to fix that and get ahead of the field, built on a 25-agent competitive audit.
         </p>
+        <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         <div className="hero-cta">
           <Link href="/strategy" className="btn btn-gold">
             Start with the strategy →

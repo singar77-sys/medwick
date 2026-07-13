@@ -1,12 +1,22 @@
 import './globals.css';
-import { Oswald, Source_Sans_3 } from 'next/font/google';
+import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
-const display = Oswald({
+// Wide, heavy grotesque — echoes the MEDWICK wordmark (not condensed).
+const display = Archivo({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ['600', '700', '800'],
   variable: '--font-display',
+  display: 'swap',
+});
+
+// Serif italic — echoes the logo tagline "Building Excellence, One Project at a Time."
+const serif = Lora({
+  subsets: ['latin'],
+  weight: ['500', '600'],
+  style: ['italic'],
+  variable: '--font-serif',
   display: 'swap',
 });
 
@@ -32,7 +42,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
       <body>
         <Header />
         <div className="shell">
