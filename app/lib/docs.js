@@ -1,4 +1,4 @@
-// Pure data — safe to import from both client and server components.
+// Pure data, safe to import from both client and server components.
 // (No node built-ins here; see getDoc.js for the server-only file read.)
 
 export const DOCS = [
@@ -21,7 +21,7 @@ export const DOCS = [
     title: 'Content Calendar',
     num: '03',
     file: 'CONTENT-CALENDAR.md',
-    blurb: 'What to publish and when — the cornerstone pipeline, storm-response playbook, and seasonal timing.',
+    blurb: 'What to publish and when: the cornerstone pipeline, the storm-response playbook, and seasonal timing.',
   },
   {
     slug: 'roadmap',

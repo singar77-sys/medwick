@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const doc = DOCS.find((d) => d.slug === slug);
   return {
     title: doc
-      ? `${doc.title} — Medwick Digital Growth Plan`
+      ? `${doc.title} · Medwick Digital Growth Plan`
       : 'Medwick Digital Growth Plan',
   };
 }

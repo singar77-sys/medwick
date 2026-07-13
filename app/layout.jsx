@@ -3,7 +3,7 @@ import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
-// Wide, heavy grotesque — echoes the MEDWICK wordmark (not condensed).
+// Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
 const display = Archivo({
   subsets: ['latin'],
   weight: ['600', '700', '800'],
@@ -11,7 +11,7 @@ const display = Archivo({
   display: 'swap',
 });
 
-// Serif italic — echoes the logo tagline "Building Excellence, One Project at a Time."
+// Serif italic that echoes the logo tagline "Building Excellence, One Project at a Time."
 const serif = Lora({
   subsets: ['latin'],
   weight: ['500', '600'],
@@ -28,11 +28,11 @@ const body = Source_Sans_3({
 });
 
 export const metadata = {
-  title: 'Medwick Construction — Digital Growth Plan',
+  title: 'Medwick Construction: Digital Growth Plan',
   description:
     'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and remodeling across Medina County, Ohio.',
   openGraph: {
-    title: 'Medwick Construction — Digital Growth Plan',
+    title: 'Medwick Construction: Digital Growth Plan',
     description:
       'The full SEO strategy, site structure, content calendar, roadmap, and competitor analysis for the new Medwick website.',
     type: 'website',
@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
           </p>
           <p className="footer-note">
             Confidential planning document prepared for Medwick Construction · July 13, 2026.
-            Strategy only — figures are directional pending live rank-tracking.
+            Strategy only. Figures are directional pending live rank-tracking.
           </p>
         </footer>
       </body>

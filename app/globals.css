@@ -1,11 +1,11 @@
 :root {
-  /* Brand — sampled directly from the Medwick logo pixels */
+  /* Brand colors, sampled directly from the Medwick logo pixels */
   --navy: #2c3242;       /* logo background (measured) */
   --navy-deep: #232935;  /* darkened for gradient depth */
   --navy-ink: #1a1f29;   /* deepest, for contrast fills */
   --gold: #c0a674;       /* metallic antique gold (measured highlight) */
   --gold-deep: #a98f5f;  /* mid gold, for large accents */
-  --gold-ink: #7d6634;   /* darkened gold — AA contrast for small text on white */
+  --gold-ink: #7d6634;   /* darkened gold for AA contrast on small text on white */
   --gold-soft: #f2ebdb;  /* gold tint for callouts */
 
   /* Reading surface */

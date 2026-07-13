@@ -7,12 +7,12 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
-          The plan to make Medwick <span className="hl">findable</span> — and win the storm-to-restoration lane.
+          The plan to make Medwick <span className="hl">findable</span>, then win the storm-to-restoration lane.
         </h1>
         <p className="hero-lede">
           Medwick is in better shape than its website shows: an active license, a City of Medina
-          registration, a 5.0-star Google rating — all currently invisible online. This is the
-          plan to fix that and get ahead of the field, built on a 25-agent competitive audit.
+          registration, a 5.0-star Google rating, all currently invisible online. This is the plan
+          to fix that and get ahead of the field, built on a 25-agent competitive audit.
         </p>
         <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         <div className="hero-cta">
@@ -34,7 +34,7 @@ export default function Home() {
         <div className="bignum">
           <span className="bn-figure">3</span>
           <span className="bn-label">services, one contractor</span>
-          <span className="bn-ctx">Roof + water + rebuild — a lane no local competitor owns.</span>
+          <span className="bn-ctx">Roof + water + rebuild: a lane no local competitor owns.</span>
         </div>
         <div className="bignum">
           <span className="bn-figure gold">0 / 6</span>
@@ -47,7 +47,7 @@ export default function Home() {
         <p>
           <strong>The bet is to flank, not fight head-on.</strong> A brand-new domain with 9
           reviews won&rsquo;t beat 2,500-review regional roofers on the big keywords this year. So
-          the plan front-loads the searches nobody has claimed — storm damage, insurance-claim help,
+          the plan front-loads the searches nobody has claimed: storm damage, insurance-claim help,
           emergency water, and the small towns every competitor skips.
         </p>
       </section>
@@ -69,7 +69,7 @@ export default function Home() {
       <section className="howto">
         <h2 className="section-h">How to read this</h2>
         <p>
-          Each section stands on its own — start with <Link href="/strategy">the strategy</Link> for
+          Each section stands on its own. Start with <Link href="/strategy">the strategy</Link> for
           the big picture, or hand a specific section to whoever owns that work. The{' '}
           <Link href="/roadmap">roadmap</Link> is the do-this-in-order version, and its first phase
           (fixing the phone number and claiming the Google profile) can start this week, before the
