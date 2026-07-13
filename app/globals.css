@@ -173,7 +173,7 @@ img { max-width: 100%; display: block; }
   font-size: 46px; line-height: 1; color: var(--navy);
 }
 .bn-figure.gold { color: var(--gold-deep); }
-.bn-label { margin-top: 10px; font-weight: 700; font-size: 15px; color: var(--ink); }
+.bn-label { margin-top: 10px; font-weight: 700; font-size: 15px; color: var(--ink); text-transform: capitalize; }
 .bn-ctx { margin-top: 5px; font-size: 14px; color: var(--ink-soft); }
 
 .callout {
@@ -187,6 +187,7 @@ img { max-width: 100%; display: block; }
 .section-h {
   font-family: var(--font-display), sans-serif; font-weight: 600;
   font-size: 24px; color: var(--navy); margin: 0 0 22px; letter-spacing: 0.01em;
+  text-transform: capitalize;
 }
 .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .card {
