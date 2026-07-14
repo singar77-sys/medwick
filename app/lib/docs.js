@@ -47,6 +47,13 @@ export const DOCS = [
     file: 'COMPETITOR-ANALYSIS.md',
     blurb: 'The three market scans distilled: the top threats in roofing, water, and remodeling, each rival’s exploitable gap, and how Medwick wins each one.',
   },
+  {
+    slug: 'authority-program',
+    title: 'Authority Program',
+    num: '06',
+    file: 'AUTHORITY-PROGRAM.md',
+    blurb: 'The 80%: the off-site authority the website only displays. Reviews, storm publishing, documentation, GBP, insurance relationships, sponsorships, and awards.',
+  },
 ];
 
 // Competitive Authority Reports — self-contained HTML dashboards served from /public/reports.

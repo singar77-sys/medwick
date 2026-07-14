@@ -1,6 +1,8 @@
 # Medwick Construction: Competitor Analysis
 
-The strategic digest of three Competitive Authority Reports (roofing, water mitigation, remodeling), each scoring the field on one 21-dimension, 100-point scale, issued July 14, 2026. The full interactive reports live under **Market Intelligence**; this page is the through-line.
+Medwick is Medina County's Insurance Restoration Advocate. That is the brand. Roofing, water mitigation, and reconstruction are the services it produces; owning the homeowner's decision after property damage is the position. This page reads the competitive field through that lens. Medwick does not win by out-roofing the roofers or out-scaling the national franchises. It wins by owning the decision moment and the insurance journey, which is what generates the roofing, water, and reconstruction jobs in the first place.
+
+The analysis rests on three Competitive Authority Reports (roofing, water mitigation, remodeling), each scoring the field on one 21-dimension, 100-point scale, issued July 14, 2026. The full interactive reports live under **Market Intelligence**; this page is the through-line.
 
 > **This resolves the earlier source conflict.** The original audit surfaced two non-overlapping competitor lists (a non-geolocated organic scan versus a broader search layer) and flagged that a proper geolocated scan was needed. That scan is now done, three times over. Where the old audit and these scored reports disagree, the reports win. Notably, two names from the old "regional giants" list (The Third Estimate, Home Genius Exteriors) did not survive as scored Medina-market operators; they were search-layer renters, not real local competitors.
 
@@ -42,7 +44,7 @@ The inverse of water: here the top is real and defended.
 | 2 | **Hansen Restoration & Remodeling** (2001) | 67.6 | Breadth: whole-home + exterior, ~141 reviews at 4.6, strong local SEO | No design-build credential depth or awards at Cabinet-S-Top's level; not a premium brand |
 | 3 | **Hurst Design Build Remodel** (Cleveland) | 67.4 | Premium design-build: NARI Master Certified, award-winning | Cleveland-based, reaching into Medina via a single /medina page; not locally rooted |
 
-**The verdict:** unlike water, this top tier holds real NARI/NKBA credentials, Houzz awards, and showrooms. Marketing alone will not topple it. But beneath the top five sits an undifferentiated middle, and the one **cross-category "Medina remodeler" seat is unowned**, along with local basement-finishing authority and an underplayed Houzz channel.
+**The verdict:** unlike water, this top tier holds real NARI/NKBA credentials, Houzz awards, and showrooms. Marketing alone will not topple it. But beneath the top five sits an undifferentiated middle, and the one **cross-category "Medina remodeler" seat is unowned**, along with local basement-finishing authority and an underplayed Houzz channel. For Medwick this market matters less as a battleground than as a destination. The relevant play here is reconstruction, the insurance-paid rebuild that follows a storm or water claim, not discretionary remodeling (see How Medwick wins each market).
 
 ---
 
@@ -58,10 +60,12 @@ Read together, the three scans say one thing: **no competitor in any market is l
 
 ## How Medwick wins each market
 
-- **Roofing: flank the split.** Match the certification tier (GAF or OC), then out-local Exteriors Plus and out-digital Fixler: contest Reader's Choice, build review velocity, and run the content and AI plays no incumbent is running. Copy 4K's proven cost-guide and 48-hour storm-response playbook.
-- **Water: plant the flag first.** No champion exists, so the honest play is speed: local identity, aggressive reviews, insurance-claim advocacy, and a provable in-county response time the North Royalton / Akron / Cleveland regionals physically cannot match. The softest, fastest win.
-- **Remodeling: earn in, then take the seat.** This is an owner decision, because the top tier is credentialed and defended. If yes: earn NARI/NKBA + Best of Houzz first (the price of entry), then claim the unowned cross-category and basement-finishing positions. If no: keep remodeling as a supporting service to the roofing and water lanes. (See the Implementation Roadmap for the decision point and timing.)
-- **Across all three: the trifecta is the moat.** One genuinely local company handling roof, water, and rebuild is a position no single-market rival can defend. That is the connective tissue of the entire strategy.
+Medwick does not enter these as three trades competing on their own terms. It enters as the Insurance Restoration Advocate, the company that owns the homeowner's decision after damage and carries them through the claim. The roofing, water, and reconstruction work follows from that. Here is how the advocacy position converts in each market.
+
+- **Roofing: flank the split.** Match the certification tier (GAF or OC) so Medwick is credible on the roof itself, then win where the incumbents are weak: out-local Exteriors Plus, out-digital Fixler, contest Reader's Choice, build review velocity, and run the content and AI plays no incumbent is running. The wedge is advocacy, not roofing craft: everyone bills insurance, nobody owns "we fight for you." Copy 4K's proven cost-guide and 48-hour storm-response playbook.
+- **Water: plant the flag first.** No champion exists, so the honest play is speed and ownership of the decision: local identity, aggressive reviews, insurance-claim advocacy, and a provable in-county response time the North Royalton / Akron / Cleveland regionals physically cannot match. This is where the advocate position is most open, and the softest, fastest win.
+- **Reconstruction, not remodeling: take the warm handoff.** Medwick does not fight the remodeling market. It does not chase NARI, NKBA, or Best of Houzz for discretionary kitchen-and-bath work, and it does not try to unseat Cabinet-S-Top or Hansen on their own turf. Its play here is reconstruction: the insurance-paid rebuild that follows its own water and storm jobs, handled by the same crew as a warm handoff from a claim Medwick is already managing. The scored remodeling field is the competitive backdrop, not the target. Pursuing discretionary remodeling as its own line is a separate owner decision whose price of entry is the credentials, NARI/NKBA and Best of Houzz (see the Implementation Roadmap for the decision point and timing). The default is reconstruction as the natural tail of the storm-recovery journey.
+- **Across all three: the advocacy position is the moat.** One genuinely local company that owns the homeowner's decision after damage and carries it from the first insurance call through roof, water, and rebuild is a position no single-trade rival can copy. A roofer cannot become the water and rebuild advocate without becoming a different company, and a national franchise cannot become local. Insurance Restoration Advocate is the connective tissue that ties all three markets together, and it is uncopyable by anyone who only works one of them.
 
 ## Hard guardrails
 
