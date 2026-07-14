@@ -1,7 +1,6 @@
 import './globals.css';
 import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import TopNav from './components/TopNav';
 
 // Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
 const display = Archivo({
@@ -45,11 +44,8 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
       <body>
         <a href="#main" className="skip-link">Skip to content</a>
-        <Header />
-        <div className="shell">
-          <Sidebar />
-          <main id="main" className="main">{children}</main>
-        </div>
+        <TopNav />
+        <main id="main" className="main">{children}</main>
         <footer className="site-footer">
           <p>
             <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
