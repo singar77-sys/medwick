@@ -1,6 +1,16 @@
 // Pure data, safe to import from both client and server components.
 // (No node built-ins here; see getDoc.js for the server-only file read.)
 
+// The north-star positioning document. Leads the whole deliverable.
+export const POSITION = {
+  slug: 'positioning',
+  title: 'The Position',
+  num: '★',
+  file: 'POSITIONING.md',
+  blurb:
+    'The north star: Medina County’s Insurance Restoration Advocate. One brand, from the first insurance call to the final repair. Everything else supports this.',
+};
+
 export const DOCS = [
   {
     slug: 'strategy',
@@ -68,6 +78,9 @@ export const REPORTS = [
   },
 ];
 
+// Everything renderable via the /[slug] route: the position plus the five docs.
+export const ALL_DOCS = [POSITION, ...DOCS];
+
 // Cross-document links inside the markdown reference the source filenames.
 // Map them to their on-site routes so the links resolve.
-export const FILE_TO_SLUG = Object.fromEntries(DOCS.map((d) => [d.file, d.slug]));
+export const FILE_TO_SLUG = Object.fromEntries(ALL_DOCS.map((d) => [d.file, d.slug]));

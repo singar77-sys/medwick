@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { DOCS, REPORTS } from '../lib/docs';
+import { DOCS, REPORTS, POSITION } from '../lib/docs';
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -15,6 +15,15 @@ export default function Sidebar() {
         >
           <span className="nav-num">◆</span>
           <span className="nav-label">Overview</span>
+        </Link>
+
+        <p className="nav-group">The Position</p>
+        <Link
+          href={`/${POSITION.slug}`}
+          className={`nav-item${pathname === `/${POSITION.slug}` ? ' active' : ''}`}
+        >
+          <span className="nav-num">{POSITION.num}</span>
+          <span className="nav-label">{POSITION.title}</span>
         </Link>
 
         <p className="nav-group">Market Intelligence</p>

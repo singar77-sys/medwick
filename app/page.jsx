@@ -73,9 +73,12 @@ export default function Home() {
 
       <section className="callout">
         <p>
-          <strong>The opportunity is to become Medina&rsquo;s trusted contractor for all three.</strong>{' '}
-          A local company with the right credentials that offers roofing, water mitigation, and
-          remodeling can take a position that specialized competitors cannot easily match.
+          <strong>The answer is to own the whole problem, not a trade.</strong>{' '}
+          People don&rsquo;t wake up wanting a roofer; they wake up with a leaking ceiling, a flooded
+          basement, or a denied claim. Medwick can become Medina County&rsquo;s{' '}
+          <strong>Insurance Restoration Advocate</strong>: the trusted guide from the first insurance
+          call to the final repair, with roofing, water mitigation, and reconstruction as the natural
+          outcomes. <Link href="/positioning">Read the positioning →</Link>
         </p>
       </section>
 

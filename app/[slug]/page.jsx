@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { DOCS } from '../lib/docs';
+import { DOCS, ALL_DOCS } from '../lib/docs';
 import { getDoc } from '../lib/getDoc';
 import Markdown from '../components/Markdown';
 
 export function generateStaticParams() {
-  return DOCS.map((d) => ({ slug: d.slug }));
+  return ALL_DOCS.map((d) => ({ slug: d.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const doc = DOCS.find((d) => d.slug === slug);
+  const doc = ALL_DOCS.find((d) => d.slug === slug);
   return {
     title: doc
       ? `${doc.title} · Medwick Digital Growth Plan`
