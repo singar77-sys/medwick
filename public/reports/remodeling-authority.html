@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medwick | Competitive Authority Report — Medina County, OH Remodeling Market</title>
+<style>
+  :root {
+    --bg: #10141b;
+    --surface: #171e28;
+    --surface2: #161822;
+    --border: #28323f;
+    --border2: #2a2d42;
+    --gold: #d4a017;
+    --gold-light: #f0c040;
+    --text: #e8eaf0;
+    --text-dim: #8b90a8;
+    --text-muted: #555875;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --accent: #c0a674;
+    --score-10: #15803d;
+    --score-9: #16a34a;
+    --score-8: #22c55e;
+    --score-7: #4ade80;
+    --score-6: #86efac;
+    --score-5: #fbbf24;
+    --score-4: #f59e0b;
+    --score-3: #f97316;
+    --score-2: #ef4444;
+    --score-1: #dc2626;
+    --score-0: #991b1b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ──────────────────────────────────────────── */
+  .report-header {
+    background: linear-gradient(135deg, #0a0b12 0%, #0f1020 50%, #080910 100%);
+    border-bottom: 1px solid var(--gold);
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 40%;
+    background: radial-gradient(ellipse at 80% 50%, rgba(212,160,23,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .agency-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    border: 1px solid rgba(212,160,23,0.4);
+    padding: 4px 12px;
+    border-radius: 3px;
+  }
+  .report-date {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+  }
+  .report-date span { color: var(--gold-light); font-weight: 600; }
+  .report-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .report-title em {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+  .report-subtitle {
+    font-size: 16px;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+  .header-stats {
+    display: flex;
+    gap: 32px;
+  }
+  .hstat {
+    text-align: center;
+  }
+  .hstat-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .hstat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* ─── LAYOUT ──────────────────────────────────────────── */
+  .container { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .section-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+
+  /* ─── THREAT CARDS ────────────────────────────────────── */
+  .threat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .threat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .threat-card.rank-1 { border-color: rgba(239,68,68,0.5); }
+  .threat-card.rank-2 { border-color: rgba(245,158,11,0.5); }
+  .threat-card.rank-3 { border-color: rgba(212,160,23,0.4); }
+  .threat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .threat-card.rank-1::before { background: #ef4444; }
+  .threat-card.rank-2::before { background: #f59e0b; }
+  .threat-card.rank-3::before { background: var(--gold); }
+  .threat-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .rank-1 .threat-rank { color: #ef4444; }
+  .rank-2 .threat-rank { color: #f59e0b; }
+  .rank-3 .threat-rank { color: var(--gold); }
+  .threat-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .threat-score-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .threat-score {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+  }
+  .threat-score-label { font-size: 12px; color: var(--text-dim); }
+  .threat-why {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .threat-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .chip {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .chip-red { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+  .chip-amber { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+  .chip-gold { background: rgba(212,160,23,0.15); color: var(--gold-light); border: 1px solid rgba(212,160,23,0.3); }
+  .chip-blue { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+  .chip-green { background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+  .chip-purple { background: rgba(192,166,116,0.15); color: #c4b5fd; border: 1px solid rgba(192,166,116,0.3); }
+
+  /* ─── WEIGHT TABLE ────────────────────────────────────── */
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  .wcat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .wcat-num {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .wcat-abbrev {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .wcat-weight {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--gold);
+  }
+  .wcat-name {
+    font-size: 9px;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin-top: 3px;
+  }
+
+  /* ─── MAIN SCORING TABLE ──────────────────────────────── */
+  .table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  table.score-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1400px;
+  }
+  .score-table th {
+    background: var(--surface2);
+    color: var(--text-dim);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border2);
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .score-table th.col-name {
+    text-align: left;
+    padding-left: 16px;
+    min-width: 200px;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface2);
+    border-right: 2px solid var(--border2);
+  }
+  .score-table th.col-total {
+    color: var(--gold);
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .score-table th .weight-badge {
+    display: block;
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.8;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .score-table td {
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .score-table tr:last-child td { border-bottom: none; }
+  .score-table td.col-name {
+    text-align: left;
+    padding-left: 16px;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    border-right: 2px solid var(--border2);
+    white-space: nowrap;
+  }
+  .score-table tbody tr { transition: background 0.1s; }
+  .score-table tbody tr:hover td { background: rgba(255,255,255,0.03); }
+  .score-table tbody tr:hover td.col-name,
+  .score-table tbody tr:hover td.col-total { filter: brightness(1.1); }
+  .competitor-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 13px;
+  }
+  .competitor-location {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 1px;
+  }
+  td.col-total {
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .total-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .total-score {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .score-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--border2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--gold);
+  }
+  /* Score cell colors */
+  .s10 { background: rgba(21,128,61,0.35); color: #86efac; }
+  .s9  { background: rgba(22,163,74,0.30); color: #4ade80; }
+  .s8  { background: rgba(34,197,94,0.22); color: #4ade80; }
+  .s7  { background: rgba(74,222,128,0.15); color: #6ee7b7; }
+  .s6  { background: rgba(134,239,172,0.10); color: #d1fae5; }
+  .s5  { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .s4  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .s3  { background: rgba(249,115,22,0.20); color: #fb923c; }
+  .s2  { background: rgba(239,68,68,0.20); color: #f87171; }
+  .s1  { background: rgba(220,38,38,0.25); color: #fca5a5; }
+  .s0  { background: rgba(153,27,27,0.30); color: #fca5a5; }
+
+  /* Total score colors */
+  .total-80plus { color: #22c55e; }
+  .total-70s { color: #86efac; }
+  .total-60s { color: #fbbf24; }
+  .total-50s { color: #f59e0b; }
+  .total-40s { color: #f97316; }
+  .total-below40 { color: #ef4444; }
+
+  /* ─── COMPETITOR PROFILES ─────────────────────────────── */
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+  }
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .profile-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .profile-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .profile-loc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .profile-score-badge {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    min-width: 60px;
+  }
+  .profile-score-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .profile-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  /* ─── GAP ANALYSIS ────────────────────────────────────── */
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .gap-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .gap-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .gap-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .gap-icon.blue { background: rgba(59,130,246,0.15); }
+  .gap-icon.green { background: rgba(34,197,94,0.15); }
+  .gap-icon.amber { background: rgba(245,158,11,0.15); }
+  .gap-icon.purple { background: rgba(192,166,116,0.15); }
+  .gap-icon.red { background: rgba(239,68,68,0.15); }
+  .gap-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .gap-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .gap-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .gap-body strong { color: var(--text); }
+
+  /* ─── FOOTER ──────────────────────────────────────────── */
+  .report-footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+  }
+  .footer-brand {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .footer-brand strong { color: var(--gold); }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 600px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  /* ─── UTILITIES ───────────────────────────────────────── */
+  .divider { height: 1px; background: var(--border); margin: 24px 0; }
+  .alert-box {
+    background: rgba(212,160,23,0.07);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+  }
+  .alert-box strong { color: var(--gold-light); }
+
+  @media (max-width: 1100px) {
+    .threat-grid { grid-template-columns: 1fr; }
+    .profiles-grid { grid-template-columns: 1fr; }
+    .gap-grid { grid-template-columns: 1fr; }
+    .weight-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+<a href="/" style="position:fixed;top:14px;left:14px;z-index:99999;font:700 11px/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12161d;background:#c0a674;padding:9px 13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.5)">&#8592; Medwick Plan</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<div class="report-header">
+  <div class="header-meta">
+    <div class="agency-badge">Hunter Systems — Intelligence Division</div>
+    <div class="report-date">
+      Client: <span>Medwick</span><br>
+      Market: <span>Medina County, OH</span><br>
+      Issued: <span>July 14, 2026</span>
+    </div>
+  </div>
+  <div class="report-title">Medina County Remodeling Market<br><em>Competitive Authority Report</em></div>
+  <div class="report-subtitle">County-wide competitor scan · Weighted Authority Scoring · Strategic gap analysis</div>
+  <div class="header-stats">
+    <div class="hstat">
+      <span class="hstat-val">16</span>
+      <div class="hstat-label">Competitors Scored</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">21</span>
+      <div class="hstat-label">Scoring Categories</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">74.4</span>
+      <div class="hstat-label">Highest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">48.1</span>
+      <div class="hstat-label">Lowest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">58.8</span>
+      <div class="hstat-label">Market Average</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 1 — TOP 3 THREATS
+════════════════════════════════════════════════════════════ -->
+<div class="container">
+<section>
+  <div class="section-label">Threat Assessment</div>
+  <div class="section-title">Top 3 Hardest to Beat</div>
+  <div class="section-desc">Unlike the water-mitigation market, the top of the remodeling market is <em>genuinely defended</em> — these firms hold real NARI/NKBA credentials, Best-of-Houzz awards, and showrooms. This is the one Medina market where the leaders earned their position and will not be dislodged by digital tactics alone.</div>
+
+  <div class="threat-grid">
+
+    <!-- THREAT 1 -->
+    <div class="threat-card rank-1">
+      <div class="threat-rank">⚠ Threat Level: Critical</div>
+      <div class="threat-name">Cabinet-S-Top</div>
+      <div class="threat-score-line">
+        <div class="threat-score">74.4</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The credential and reputation leader of the Medina remodeling market, and effectively untouchable in kitchen &amp; bath. On Medina Rd since 1991 (35+ years), a 2,400 sqft showroom, and the <em>only</em> firm in the entire county scan holding true remodeling credentials — NARI Certified Remodeler, NKBA member (the owner is a past Ohio State Chapter President), and Certified Kitchen Designer — stacked on a Houzz 4.9 rating with Best of Houzz Design &amp; Service in both 2025 and 2026. BBB accredited since 1992. Their only structural limit is scope: they are a kitchen-and-bath / cabinetry specialist, not a whole-home or exterior remodeler. You do not beat Cabinet-S-Top in K&amp;B; you compete <em>around</em> them in the categories they don't serve — additions, basements, whole-home, exterior-integrated remodels.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">NARI Certified Remodeler</span>
+        <span class="chip chip-red">NKBA + CKD</span>
+        <span class="chip chip-gold">Best of Houzz 2025 + 2026</span>
+        <span class="chip chip-amber">Houzz 4.9</span>
+        <span class="chip chip-blue">Est. 1991 · Showroom</span>
+      </div>
+    </div>
+
+    <!-- THREAT 2 -->
+    <div class="threat-card rank-2">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">Hansen Restoration &amp; Remodeling</div>
+      <div class="threat-score-line">
+        <div class="threat-score">67.6</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The breadth-and-volume leader — the closest thing the county has to a full-service "one company for the whole house." Family-owned (the Hansen brothers) on Stone Rd in Medina since 2001, BBB A+, with the widest service menu in the scan: kitchen, bath, basement, additions, whole-home, new construction <em>and</em> a roofing/siding/outdoor-living division with a lifetime roof warranty. They also carry the largest verified review base of any in-county remodeler (~141 Birdeye at 4.6, plus Angi 4.8 and Houzz 4.4) and the broadest per-town service-area SEO footprint in the county. Their gap is credentials and awards — no NARI/NKBA, no Best-of-Houzz — so they win on reach and reviews, not on prestige. A credentialed, award-seeking whole-home competitor can outflank them on authority signals while matching their breadth.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">Broadest Scope</span>
+        <span class="chip chip-amber">~141 Reviews / 4.6★</span>
+        <span class="chip chip-gold">Est. 2001 · BBB A+</span>
+        <span class="chip chip-blue">Whole-Home + Exterior</span>
+        <span class="chip chip-purple">Strong Local SEO</span>
+      </div>
+    </div>
+
+    <!-- THREAT 3 -->
+    <div class="threat-card rank-3">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">Hurst Design Build Remodel</div>
+      <div class="threat-score-line">
+        <div class="threat-score">67.4</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The premium design-build threat reaching into the county from Greater Cleveland. Established 1997, with NARI Certified <em>and</em> NARI Master Certified Remodelers on staff — the deepest formal credential bench in the competitive set — an award-winning design team, and a full design-build model (kitchens, baths, basements, additions, whole-home) that homeowners perceive as the "serious" tier above a general contractor. They run a dedicated /medina landing page, so they are actively targeting the county, not passively covering it. Their weakness is that they are not <em>from</em> Medina: no in-county showroom or address, Cleveland-clustered reviews and identity, and thinner local brand recognition. A Medina-based design-build brand with equivalent polish takes the "local premium remodeler" position Hurst can only reach for from outside.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">NARI Master Certified</span>
+        <span class="chip chip-amber">Full Design-Build</span>
+        <span class="chip chip-gold">Est. 1997 · Award-Winning</span>
+        <span class="chip chip-blue">Targets Medina (/medina)</span>
+        <span class="chip chip-purple">Cleveland-Based</span>
+      </div>
+    </div>
+
+  </div><!-- /threat-grid -->
+
+  <div class="alert-box">
+    <strong>Key Insight for Medwick:</strong> This market behaves like the <em>opposite</em> of water mitigation. Water mitigation had no credentials, no awards, and no local identity — wide open. Remodeling is the reverse: a credentialed, awarded, showroom-backed top tier (Cabinet-S-Top in K&amp;B, Hurst/Franklin in premium design-build) that will <em>not</em> fall to marketing alone — but beneath them, a sprawling, undifferentiated middle of 30+ in-county firms with no reviews, no Houzz presence, and no positioning. The opening is not "unseat the leaders." It is: <strong>no one owns the cross-category "Medina County whole-home remodeler" identity.</strong> Cabinet-S-Top owns K&amp;B; Hansen owns breadth-and-reviews; the premium design-build lane is held by out-of-county firms. That specific position — the credentialed, local, full-scope remodeler — is unclaimed.
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 2 — SCORING METHODOLOGY
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Methodology</div>
+  <div class="section-title">Scoring Model — 21 Categories, 100-Point Weighted Scale</div>
+  <div class="section-desc">Identical model to the Medwick roofing and water-mitigation reports, so all three markets read on the same scale. Each competitor is scored 0–10 per category. Raw score = Σ(category score × weight). Final authority score = raw score ÷ 10. In this market, "GBP Quality" and "Social Proof" also fold in <strong>Houzz</strong> — the primary research platform for remodeling buyers.</div>
+
+  <div class="alert-box">
+    <strong>Data transparency note:</strong> Remodeling public data is uneven — a handful of firms publish rich data (Cabinet-S-Top, Hansen, Home Sweet Home, JP Grabenstetter), while the large in-county middle is BBB-listing-only with no website, reviews, or Houzz profile. Houzz category pages also bot-blocked during the scan, so some Houzz ratings are partial. <strong>Fleet Size, Employee Count, and some review/Houzz scores are proxy-estimated</strong> (showroom size, project-count claims, franchise scale, BBB accreditation) and scored conservatively. Absent public presence is scored as <em>low visibility</em> — a real competitive weakness in a category where 80%+ of projects begin with online research. Scores measure <em>visible market authority</em>, not private capability.
+  </div>
+
+  <div class="weight-grid">
+    <div class="wcat"><div class="wcat-num">C1</div><div class="wcat-abbrev">Mat</div><div class="wcat-weight">4%</div><div class="wcat-name">Business Maturity</div></div>
+    <div class="wcat"><div class="wcat-num">C2</div><div class="wcat-abbrev">Trust</div><div class="wcat-weight">5%</div><div class="wcat-name">Trust Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C3</div><div class="wcat-abbrev">Rep</div><div class="wcat-weight">6%</div><div class="wcat-name">Local Reputation</div></div>
+    <div class="wcat"><div class="wcat-num">C4</div><div class="wcat-abbrev">RevVel</div><div class="wcat-weight">5%</div><div class="wcat-name">Review Velocity</div></div>
+    <div class="wcat"><div class="wcat-num">C5</div><div class="wcat-abbrev">RevQual</div><div class="wcat-weight">6%</div><div class="wcat-name">Review Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C6</div><div class="wcat-abbrev">SvcBrd</div><div class="wcat-weight">4%</div><div class="wcat-name">Service Breadth</div></div>
+    <div class="wcat"><div class="wcat-num">C7</div><div class="wcat-abbrev">Price</div><div class="wcat-weight">3%</div><div class="wcat-name">Pricing Position</div></div>
+    <div class="wcat"><div class="wcat-num">C8</div><div class="wcat-abbrev">Fleet</div><div class="wcat-weight">3%</div><div class="wcat-name">Fleet Size</div></div>
+    <div class="wcat"><div class="wcat-num">C9</div><div class="wcat-abbrev">Staff</div><div class="wcat-weight">3%</div><div class="wcat-name">Employee Count</div></div>
+    <div class="wcat"><div class="wcat-num">C10</div><div class="wcat-abbrev">Certs</div><div class="wcat-weight">7%</div><div class="wcat-name">Certifications</div></div>
+    <div class="wcat"><div class="wcat-num">C11</div><div class="wcat-abbrev">Awards</div><div class="wcat-weight">5%</div><div class="wcat-name">Awards</div></div>
+    <div class="wcat"><div class="wcat-num">C12</div><div class="wcat-abbrev">Refs</div><div class="wcat-weight">3%</div><div class="wcat-name">Referral Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C13</div><div class="wcat-abbrev">Spon</div><div class="wcat-weight">3%</div><div class="wcat-name">Sponsorships</div></div>
+    <div class="wcat"><div class="wcat-num">C14</div><div class="wcat-abbrev">Web</div><div class="wcat-weight">6%</div><div class="wcat-name">Website Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C15</div><div class="wcat-abbrev">SEO</div><div class="wcat-weight">5%</div><div class="wcat-name">Technical SEO</div></div>
+    <div class="wcat"><div class="wcat-num">C16</div><div class="wcat-abbrev">AI</div><div class="wcat-weight">5%</div><div class="wcat-name">AI Readiness</div></div>
+    <div class="wcat"><div class="wcat-num">C17</div><div class="wcat-abbrev">Cont</div><div class="wcat-weight">5%</div><div class="wcat-name">Content Depth</div></div>
+    <div class="wcat"><div class="wcat-num">C18</div><div class="wcat-abbrev">GBP</div><div class="wcat-weight">6%</div><div class="wcat-name">GBP / Houzz Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C19</div><div class="wcat-abbrev">Soc</div><div class="wcat-weight">4%</div><div class="wcat-name">Social Proof</div></div>
+    <div class="wcat"><div class="wcat-num">C20</div><div class="wcat-abbrev">Brand</div><div class="wcat-weight">6%</div><div class="wcat-name">Brand Recognition</div></div>
+    <div class="wcat"><div class="wcat-num">C21</div><div class="wcat-abbrev">Sent</div><div class="wcat-weight">6%</div><div class="wcat-name">Customer Sentiment</div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 3 — COMPARISON TABLE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Core Deliverable</div>
+  <div class="section-title">Competitive Authority Scoring Matrix</div>
+  <div class="section-desc">The 16 strongest / most-relevant competitors of 61 found, scored across 21 categories. Sorted by total authority score. Scroll horizontally for all columns. Color: <span style="color:var(--green)">■ 8–10 Strong</span> · <span style="color:#fbbf24">■ 5–7 Average</span> · <span style="color:#f87171">■ 0–4 Weak</span></div>
+
+  <div class="table-wrapper">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th class="col-name">Competitor</th>
+          <th>C1<br><span class="weight-badge">Mat / 4%</span></th>
+          <th>C2<br><span class="weight-badge">Trust / 5%</span></th>
+          <th>C3<br><span class="weight-badge">Rep / 6%</span></th>
+          <th>C4<br><span class="weight-badge">RevVel / 5%</span></th>
+          <th>C5<br><span class="weight-badge">RevQual / 6%</span></th>
+          <th>C6<br><span class="weight-badge">SvcBrd / 4%</span></th>
+          <th>C7<br><span class="weight-badge">Price / 3%</span></th>
+          <th>C8<br><span class="weight-badge">Fleet / 3%</span></th>
+          <th>C9<br><span class="weight-badge">Staff / 3%</span></th>
+          <th>C10<br><span class="weight-badge">Certs / 7%</span></th>
+          <th>C11<br><span class="weight-badge">Awards / 5%</span></th>
+          <th>C12<br><span class="weight-badge">Refs / 3%</span></th>
+          <th>C13<br><span class="weight-badge">Spon / 3%</span></th>
+          <th>C14<br><span class="weight-badge">Web / 6%</span></th>
+          <th>C15<br><span class="weight-badge">SEO / 5%</span></th>
+          <th>C16<br><span class="weight-badge">AI / 5%</span></th>
+          <th>C17<br><span class="weight-badge">Cont / 5%</span></th>
+          <th>C18<br><span class="weight-badge">GBP/Houzz / 6%</span></th>
+          <th>C19<br><span class="weight-badge">Soc / 4%</span></th>
+          <th>C20<br><span class="weight-badge">Brand / 6%</span></th>
+          <th>C21<br><span class="weight-badge">Sent / 6%</span></th>
+          <th class="col-total">AUTHORITY<br><span class="weight-badge">Score / 100</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- CABINET-S-TOP -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Cabinet-S-Top</div>
+            <div class="competitor-location">Medina, OH · Kitchen &amp; Bath · Est. 1991</div>
+          </td>
+          <td class="s9">9</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s10">10</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-70s">74.4</span><div class="score-bar"><div class="score-bar-fill" style="width:74.4%"></div></div></div></td>
+        </tr>
+
+        <!-- HANSEN -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Hansen Restoration &amp; Remodeling</div>
+            <div class="competitor-location">Medina, OH · Full-Service GC · Est. 2001</div>
+          </td>
+          <td class="s8">8</td><td class="s8">8</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s10">10</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">67.6</span><div class="score-bar"><div class="score-bar-fill" style="width:67.6%"></div></div></div></td>
+        </tr>
+
+        <!-- HURST -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Hurst Design Build Remodel</div>
+            <div class="competitor-location">Greater Cleveland (targets Medina) · Design-Build · Est. 1997</div>
+          </td>
+          <td class="s9">9</td><td class="s9">9</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s9">9</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">67.4</span><div class="score-bar"><div class="score-bar-fill" style="width:67.4%"></div></div></div></td>
+        </tr>
+
+        <!-- FRANKLIN -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Franklin &amp; Associates</div>
+            <div class="competitor-location">NE Ohio (serves Medina) · Design-Build + Architecture</div>
+          </td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s9">9</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s8">8</td><td class="s9">9</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">65.1</span><div class="score-bar"><div class="score-bar-fill" style="width:65.1%"></div></div></div></td>
+        </tr>
+
+        <!-- HOME SWEET HOME -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Home Sweet Home Remodeling</div>
+            <div class="competitor-location">Summit County (serves Medina/Brunswick) · Whole-Home</div>
+          </td>
+          <td class="s6">6</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s5">5</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">64.9</span><div class="score-bar"><div class="score-bar-fill" style="width:64.9%"></div></div></div></td>
+        </tr>
+
+        <!-- ADVANCE -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Advance Remodel</div>
+            <div class="competitor-location">Cleveland (serves Medina) · Kitchens/Baths/Additions</div>
+          </td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s8">8</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">60.1</span><div class="score-bar"><div class="score-bar-fill" style="width:60.1%"></div></div></div></td>
+        </tr>
+
+        <!-- ARCHITECTURAL JUSTICE -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Architectural Justice</div>
+            <div class="competitor-location">Medina, OH · Design-Build + Cabinetry Fabrication</div>
+          </td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">59.9</span><div class="score-bar"><div class="score-bar-fill" style="width:59.9%"></div></div></div></td>
+        </tr>
+
+        <!-- RE-BATH -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Re-Bath (Cleveland)</div>
+            <div class="competitor-location">Cleveland metro (serves Medina/Brunswick) · Franchise · Bath</div>
+          </td>
+          <td class="s9">9</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s4">4</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">57.0</span><div class="score-bar"><div class="score-bar-fill" style="width:57%"></div></div></div></td>
+        </tr>
+
+        <!-- CLEMENT -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Clement Construction</div>
+            <div class="competitor-location">Brunswick, OH (in-county) · Basements/Whole-Home · Est. 1989</div>
+          </td>
+          <td class="s9">9</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s7">7</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">56.8</span><div class="score-bar"><div class="score-bar-fill" style="width:56.8%"></div></div></div></td>
+        </tr>
+
+        <!-- JP GRABENSTETTER -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">JP Grabenstetter Construction</div>
+            <div class="competitor-location">NE Ohio (serves Wadsworth/Medina) · Basements · Est. 2005</div>
+          </td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">56.5</span><div class="score-bar"><div class="score-bar-fill" style="width:56.5%"></div></div></div></td>
+        </tr>
+
+        <!-- ANTHONY SLABAUGH -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Anthony Slabaugh Remodeling &amp; Design</div>
+            <div class="competitor-location">Bath/Akron (serves Sharon Center) · Kitchen/Bath/Whole-Home</div>
+          </td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s4">4</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">55.6</span><div class="score-bar"><div class="score-bar-fill" style="width:55.6%"></div></div></div></td>
+        </tr>
+
+        <!-- NATIONAL DESIGN MART -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">National Design Mart</div>
+            <div class="competitor-location">Medina, OH · Cabinets/Countertops + K&amp;B · Showroom</div>
+          </td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">53.4</span><div class="score-bar"><div class="score-bar-fill" style="width:53.4%"></div></div></div></td>
+        </tr>
+
+        <!-- KIBA OF MEDINA -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Kiba Studios of Medina</div>
+            <div class="competitor-location">Medina, OH · Franchise (KIBA) · Kitchen &amp; Bath · Showroom</div>
+          </td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">52.8</span><div class="score-bar"><div class="score-bar-fill" style="width:52.8%"></div></div></div></td>
+        </tr>
+
+        <!-- KENSINGTON -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Kensington Custom Builders</div>
+            <div class="competitor-location">Medina, OH · Custom Homes + Additions · 40+ Yrs</div>
+          </td>
+          <td class="s10">10</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">50.3</span><div class="score-bar"><div class="score-bar-fill" style="width:50.3%"></div></div></div></td>
+        </tr>
+
+        <!-- PIONEER BASEMENT -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Pioneer Basement Solutions</div>
+            <div class="competitor-location">NE Ohio (serves Wadsworth/Medina) · Basement Finishing · 40+ Yrs</div>
+          </td>
+          <td class="s9">9</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">50.2</span><div class="score-bar"><div class="score-bar-fill" style="width:50.2%"></div></div></div></td>
+        </tr>
+
+        <!-- MEDINA EXTERIORS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Medina Exteriors &amp; Remodeling</div>
+            <div class="competitor-location">Medina, OH · Exterior-Led + Interior K&amp;B/Basement · 30+ Yrs</div>
+          </td>
+          <td class="s10">10</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s2">2</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">48.1</span><div class="score-bar"><div class="score-bar-fill" style="width:48.1%"></div></div></div></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div><!-- /table-wrapper -->
+
+  <div class="alert-box" style="margin-top:24px;">
+    <strong>Below the scored tier — the fragmented middle:</strong> The scan found <strong>61 companies total (33 with in-county addresses)</strong>. The 45+ not scored above are overwhelmingly BBB-listing-only firms with no website, reviews, or Houzz presence — e.g. Dreamland Renovations, Clazak, Impact Home Remodeling, DM Customs, URG Construction, Sturgess Construction, plus a long tail of A+ accredited independents across Medina/Wadsworth/Brunswick/Seville/Valley City (Kio, Bella's, Hartman, Tim Englert, Grindle, Chapman, Tucker, Ohio Cabinets, PM Home Remodeling, and more). Bath-conversion franchises (West Shore Home, Bath R Us, Five Star, Premier, Soma, LuxRise) saturate the region but none is Medina-County-based. Franchise brands <em>absent</em> from the county — Bath Fitter, Renovation Sells, Mr. Handyman — are a saturation signal. This middle is the real opportunity: a crowded field of undifferentiated, digitally-invisible operators with no authority to defend.
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 4 — AUTHORITY SUMMARIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Competitor Intelligence</div>
+  <div class="section-title">Authority Summaries</div>
+  <div class="section-desc">One-paragraph intelligence brief per scored competitor. Data verified via company websites, BBB, Google/Houzz/Angi, and NARI/NKBA directories. Blank fields reflect genuinely unpublished data, flagged as such.</div>
+
+  <div class="profiles-grid">
+
+    <!-- #1 Cabinet-S-Top -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#1 — Authority Score</div>
+          <div class="profile-name">Cabinet-S-Top</div>
+          <div class="profile-loc">1977 Medina Rd (Rte 18), Medina, OH · cabinet-s-top.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-70s">74.4</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">NARI Certified Remodeler</span>
+        <span class="chip chip-red">NKBA + CKD</span>
+        <span class="chip chip-gold">Best of Houzz '25 + '26</span>
+        <span class="chip chip-amber">Houzz 4.9</span>
+        <span class="chip chip-blue">Est. 1991 · Showroom</span>
+      </div>
+      <div class="profile-body">
+        The authority leader of the market and the benchmark every kitchen &amp; bath competitor is measured against. Founded 1991, BBB accredited since 1992, operating a 2,400 sqft showroom on Route 18. Uniquely in the entire county scan, Cabinet-S-Top holds genuine, verifiable remodeling credentials — NARI Certified Remodeler, NKBA membership (owner is a past Ohio State Chapter President, 2004–06), and Certified Kitchen Designer — reinforced by a Houzz 4.9 rating and Best of Houzz Design &amp; Service awards in both 2025 and 2026. Their specialization in kitchens, baths, custom cabinetry and aging-in-place is also their only real limit: they don't do whole-home, additions, basements or exterior work, so their scope score is mid-pack. For Medwick, the lesson is decisive — do not attack Cabinet-S-Top head-on in K&amp;B; they have spent 35 years and a credential stack building a moat there. Compete in the categories they've deliberately left to others.
+      </div>
+    </div>
+
+    <!-- #2 Hansen -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#2 — Authority Score</div>
+          <div class="profile-name">Hansen Restoration &amp; Remodeling</div>
+          <div class="profile-loc">6050 Stone Rd, Medina, OH 44256 · (330) 952-1520 · hansenrestoration.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">67.6</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">Broadest Scope</span>
+        <span class="chip chip-amber">~141 Reviews / 4.6★</span>
+        <span class="chip chip-gold">BBB A+ · Est. 2001</span>
+        <span class="chip chip-blue">Whole-Home + Exterior</span>
+      </div>
+      <div class="profile-body">
+        The full-service breadth leader — the county's nearest thing to a single company for the entire house. Family-owned by the Hansen brothers since 2001, BBB A+, with the widest service menu in the scan: kitchen, bath, basement, additions, whole-home, new construction, plus a roofing/siding/outdoor-living division carrying a lifetime roof warranty. They also own the largest verified remodeling review base in the county (~141 Birdeye at 4.6, Angi 4.8, Houzz 4.4) and the broadest per-town service-area SEO footprint. Where they trail Cabinet-S-Top is prestige: no NARI/NKBA credential, no Best-of-Houzz award, so their authority rests on reach and reviews rather than certification. Hansen is the direct competitor for any Medwick whole-home/full-service positioning — and the clearest target, because a credentialed, award-seeking rival can match their breadth while beating them on the authority signals they've left on the table.
+      </div>
+    </div>
+
+    <!-- #3 Hurst -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#3 — Authority Score</div>
+          <div class="profile-name">Hurst Design Build Remodel</div>
+          <div class="profile-loc">Greater Cleveland, OH (targets Medina) · hurstremodel.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">67.4</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">NARI Master Certified</span>
+        <span class="chip chip-amber">Full Design-Build</span>
+        <span class="chip chip-gold">Est. 1997 · Award-Winning</span>
+        <span class="chip chip-blue">/medina Landing Page</span>
+      </div>
+      <div class="profile-body">
+        The premium design-build threat reaching into the county from Cleveland. Established 1997, with both NARI Certified and NARI <em>Master</em> Certified Remodelers on staff — the deepest formal credential bench in the field — an award-winning design team, and a complete design-build offering (kitchens, baths, basements, additions, whole-home) that reads to homeowners as the tier above a general contractor. A dedicated /medina landing page confirms they are actively pursuing county business. Their vulnerability is that they are not local: no Medina showroom or address, Cleveland-clustered reviews and identity, and modest in-county brand recognition. Hurst is the model for what a Medina-based premium design-build brand could be — and the argument for building one, since the "local premium remodeler" seat is exactly what Hurst cannot occupy from Cleveland.
+      </div>
+    </div>
+
+    <!-- #4 Franklin -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#4 — Authority Score</div>
+          <div class="profile-name">Franklin &amp; Associates</div>
+          <div class="profile-loc">NE Ohio (serves Akron/Medina/Hudson) · franklinandassociates.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">65.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">NARI + Chrysalis Awards</span>
+        <span class="chip chip-amber">Architecture + Build + Interiors</span>
+        <span class="chip chip-gold">Nationally Recognized</span>
+      </div>
+      <div class="profile-body">
+        The high-end, design-forward competitor — an integrated architecture, construction and interior-design house with NARI membership and a trophy case that includes Chrysalis and Houzz awards plus national recognition. Their all-under-one-roof model (design the space, build it, furnish it) is the most complete premium offering in the set, and their award pedigree is second only to Cabinet-S-Top's credential stack. The trade-offs: they compete at the top of the price band (less accessible to the median remodel budget), and like Hurst they serve Medina from outside the county with no local storefront or dense in-county review base. They are the firm to watch for large, architect-driven whole-home projects — a lane most Medina homeowners never reach, but a lucrative one when they do.
+      </div>
+    </div>
+
+    <!-- #5 Home Sweet Home -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#5 — Authority Score</div>
+          <div class="profile-name">Home Sweet Home Remodeling</div>
+          <div class="profile-loc">Summit County (serves Medina/Brunswick) · homesweethome.co</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">64.9</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">Houzz 5.0 / 30</span>
+        <span class="chip chip-red">Best of Houzz Service ×4</span>
+        <span class="chip chip-amber">EnVision Awards</span>
+        <span class="chip chip-blue">Fixed-Price Quotes</span>
+      </div>
+      <div class="profile-body">
+        A quietly formidable regional whole-home remodeler with the best <em>sentiment</em> profile in the field: a perfect Houzz 5.0 across 30 reviews, Best of Houzz Service in 2020, 2021, 2022 and 2026, and multiple EnVision Awards. Two differentiators stand out — <strong>fixed-price quotes</strong> (directly addressing homeowners' #1 remodeling fear, cost overruns) and locally-made cabinets. Kitchen-led but spanning bath, whole-home, additions and interior/exterior. Their ceiling is set by geography and scale: Summit County-based, serving Medina/Brunswick from outside, with a small (though flawless) review count and limited in-county brand recognition. A strong operator that proves the fixed-price and Houzz-awards playbook works — and that a Medina-based firm executing the same playbook locally would outrank them on home-turf searches.
+      </div>
+    </div>
+
+    <!-- #6 Advance -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#6 — Authority Score</div>
+          <div class="profile-name">Advance Remodel</div>
+          <div class="profile-loc">Cleveland, OH (serves Medina) · advanceremodel.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">60.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">NARI Cleveland CotY</span>
+        <span class="chip chip-amber">Kitchens · Baths · Additions</span>
+      </div>
+      <div class="profile-body">
+        A credentialed Cleveland remodeler carrying a NARI Greater Cleveland "Contractor of the Year" award and NARI membership — real authority signals in a market where they are scarce. Focused on kitchens, bathrooms and home additions, with a solid reputation and award pedigree. As with the other Cleveland design houses, their Medina position is a service-area extension rather than a local presence: no in-county address, Cleveland-weighted reviews, and thin county brand recognition. Advance is a credible mid-to-upper-tier competitor for kitchen/bath/addition work who reaches Medina but doesn't own any of it — beatable on locality, not on credentials.
+      </div>
+    </div>
+
+    <!-- #7 Architectural Justice -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#7 — Authority Score</div>
+          <div class="profile-name">Architectural Justice</div>
+          <div class="profile-loc">Medina, OH · architecturaljustice.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">59.9</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">20,000 sqft Showroom</span>
+        <span class="chip chip-blue">In-House Fabrication</span>
+        <span class="chip chip-green">Design-Build</span>
+      </div>
+      <div class="profile-body">
+        The most physically impressive local operation — a Medina design-build firm running a 20,000 sqft showroom and an in-house cabinetry fabrication facility, spanning kitchen, bath and whole-home remodeling. That vertical integration (design, fabricate, install under one roof) is a genuine differentiator and gives them strong trust and brand-presence signals locally. What holds them back from the top tier is proof and credentials: no surfaced NARI/NKBA certification, no awards, and no dense public review base to match their showroom scale. Architectural Justice has the <em>infrastructure</em> of a market leader without yet the <em>authority signals</em> — a firm that would jump significantly if it earned certifications and built a review/Houzz presence to match its physical footprint.
+      </div>
+    </div>
+
+    <!-- #8 Re-Bath -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#8 — Authority Score</div>
+          <div class="profile-name">Re-Bath (Cleveland)</div>
+          <div class="profile-loc">Cleveland metro (serves Medina/Brunswick) · rebath.com · Franchise</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">57.0</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">National Brand Recall</span>
+        <span class="chip chip-blue">Since 1993</span>
+        <span class="chip chip-purple">Bath-Only</span>
+      </div>
+      <div class="profile-body">
+        The strongest of the bath-remodel franchises covering the county — Re-Bath has served Cleveland since 1993 and carries genuine national brand recall, a polished national website and strong search-domain authority, plus franchise-scale fleet and staffing. For a homeowner who wants a fast, packaged, single-purpose bathroom remodel, Re-Bath is a known, low-risk name. Its limits are structural: bath-only scope (no kitchens, basements, additions or whole-home), no in-county studio (served from Cleveland), and no local identity or credentials. It scores well on brand/maturity/digital and poorly on breadth/local — a specialist that competes for one room, not the house. Representative of a well-saturated regional bath-franchise segment (West Shore Home, Bath R Us, Five Star, Premier) that collectively pressures the bathroom category but cedes everything else.
+      </div>
+    </div>
+
+    <!-- #9 Clement -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#9 — Authority Score</div>
+          <div class="profile-name">Clement Construction</div>
+          <div class="profile-loc">Brunswick, OH (in-county) · clementconstruction.com · Est. 1989</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">56.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">Est. 1989</span>
+        <span class="chip chip-amber">8,000+ Projects</span>
+        <span class="chip chip-green">Basements + Whole-Home</span>
+      </div>
+      <div class="profile-body">
+        A long-established in-county player based in Brunswick, operating since 1989 with a claimed 8,000+ completed NE Ohio projects — a maturity and volume story few can match. Focused on basement finishing and home remodeling. That track record gives them strong trust, referral and experience signals in the northern half of the county. What caps their authority is the now-familiar pattern: no surfaced certifications or awards, and a thin digital/review footprint relative to their tenure and project volume. Clement is a substantial, credible operator whose visible authority significantly understates their real market position — exactly the kind of quiet incumbent that a digitally aggressive competitor can out-rank despite the experience gap.
+      </div>
+    </div>
+
+    <!-- #10 JP Grabenstetter -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#10 — Authority Score</div>
+          <div class="profile-name">JP Grabenstetter Construction</div>
+          <div class="profile-loc">NE Ohio (serves Wadsworth/Medina) · Est. 2005</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">56.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">Angi 4.9 / 180</span>
+        <span class="chip chip-red">Basement Specialist</span>
+        <span class="chip chip-blue">20+ Years</span>
+      </div>
+      <div class="profile-body">
+        The review-volume standout among specialists — a basement-finishing and remodeling firm (est. 2005) with 4.9★ across ~180 Angi reviews, the second-largest verified review base in the entire scan after Hansen. That rating-plus-volume combination gives them excellent reputation and sentiment scores and makes them a genuine force for basement projects in the Wadsworth/Medina corridor. Their glaring weakness is digital foundation: <strong>no company website was found</strong> — their presence lives almost entirely inside Angi. That means no owned SEO, no content, no AI discoverability, and no brand asset they control. A basement competitor with equal service quality plus an actual website and Google presence would out-rank them everywhere outside the Angi walled garden, despite their strong review base.
+      </div>
+    </div>
+
+    <!-- #11 Anthony Slabaugh -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#11 — Authority Score</div>
+          <div class="profile-name">Anthony Slabaugh Remodeling &amp; Design</div>
+          <div class="profile-loc">Bath/Akron (serves Sharon Center) · anthonyslabaughremodeling.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">55.6</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">Kitchen/Bath/Whole-Home</span>
+        <span class="chip chip-blue">Sharon Center Page</span>
+      </div>
+      <div class="profile-body">
+        A Summit County kitchen/bath/whole-home remodeler reaching into the southeastern edge of the county via a dedicated Sharon Center service page. Solid design-and-remodel reputation and a clean offering, positioned as a quality mid-to-upper-tier firm. Like the other Akron/Summit players, their Medina footprint is a service-area extension with no in-county presence, no surfaced certifications or awards, and limited county brand recognition. A competent competitor at the county's southeastern boundary rather than a countywide threat — relevant mainly for Sharon Center / Hinckley-adjacent projects.
+      </div>
+    </div>
+
+    <!-- #12 National Design Mart -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#12 — Authority Score</div>
+          <div class="profile-name">National Design Mart</div>
+          <div class="profile-loc">2255 Medina Rd, Medina, OH · nationaldesignmart.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">53.4</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">Design Showroom</span>
+        <span class="chip chip-blue">In-House Designers</span>
+      </div>
+      <div class="profile-body">
+        A Medina-based cabinets-and-countertops retailer with in-house designers and a design showroom that also delivers kitchen &amp; bath remodeling. Their showroom and design-consultation model gives them decent local trust and brand presence, and a physical Medina Rd address puts them in the local consideration set. But they read more as a product-and-design showroom than a full remodeling contractor, with no surfaced certifications, awards or meaningful review base. A credible K&amp;B option for homeowners who start from product selection, but not an authority-tier competitor — and squarely outgunned by Cabinet-S-Top in the same lane and geography.
+      </div>
+    </div>
+
+    <!-- #13 Kiba -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#13 — Authority Score</div>
+          <div class="profile-name">Kiba Studios of Medina</div>
+          <div class="profile-loc">Medina, OH (inside MDG Flooring America) · medina.kibastudios.com · Franchise</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">52.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">KIBA Franchise</span>
+        <span class="chip chip-blue">5,000 sqft Showroom</span>
+      </div>
+      <div class="profile-body">
+        The one confirmed remodeling franchise with an actual in-county storefront — a KIBA kitchen &amp; bath studio operating inside the MDG Flooring America showroom in Medina (5,000 sqft, carrying Cambria/Fieldstone/Kemper/Wolf/Moen lines), also serving Brunswick. The franchise systems, showroom and co-located flooring traffic give it a reasonable footing. But as a newer franchise location its review base, brand recognition and content are still thin, with no awards or surfaced certifications. A legitimate K&amp;B option riding franchise infrastructure and showroom foot traffic, but without the earned local authority of Cabinet-S-Top or the breadth of the full-service GCs.
+      </div>
+    </div>
+
+    <!-- #14 Kensington -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#14 — Authority Score</div>
+          <div class="profile-name">Kensington Custom Builders</div>
+          <div class="profile-loc">Medina, OH · kensingtoncustombuilders.com · 40+ Yrs</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">50.3</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">40+ Years</span>
+        <span class="chip chip-amber">Custom Homes + Additions</span>
+      </div>
+      <div class="profile-body">
+        The maturity anchor of the local field — a Medina custom home builder with 40+ years in business, serving Medina, Wayne, Portage, Cuyahoga and Summit counties with custom homes, additions and work on existing construction. That longevity gives them the highest business-maturity score in the set and real word-of-mouth equity. But they are build-led rather than remodel-led (narrower remodeling scope), and their digital and review presence is minimal — low content, thin reviews, weak search and social. A respected old-guard builder whose authority rests almost entirely on tenure and reputation, with essentially no modern-marketing signal — durable with referral customers, invisible to new-to-market searchers.
+      </div>
+    </div>
+
+    <!-- #15 Pioneer Basement -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#15 — Authority Score</div>
+          <div class="profile-name">Pioneer Basement Solutions</div>
+          <div class="profile-loc">NE Ohio (serves Wadsworth/Medina/Akron) · Basement Finishing · 40+ Yrs</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">50.2</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">40+ Years</span>
+        <span class="chip chip-red">Basement Specialist</span>
+      </div>
+      <div class="profile-body">
+        A veteran basement-finishing specialist with 40+ years of experience, covering Wadsworth, Medina, Akron, Canton and Hudson and positioning itself as a leading Ohio basement contractor. Deep experience and a clear niche give it credibility for basement projects. But it is a single-category specialist serving Medina from outside the county, with a thin digital and review footprint, no surfaced certifications or awards, and modest brand recognition. Pioneer competes directly with JP Grabenstetter and Clement for basement work; against Grabenstetter's 180-review base it is out-signaled online despite comparable tenure — another experienced operator underperforming its potential on visibility.
+      </div>
+    </div>
+
+    <!-- #16 Medina Exteriors -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#16 — Authority Score</div>
+          <div class="profile-name">Medina Exteriors &amp; Remodeling</div>
+          <div class="profile-loc">Medina, OH · medinaexteriors.com · 30+ Yrs</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">48.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">30+ Years · BBB A+</span>
+        <span class="chip chip-amber">Interior + Exterior</span>
+        <span class="chip chip-red">Thin/Mixed Reviews</span>
+      </div>
+      <div class="profile-body">
+        A 30+ year Medina institution (also scored in the roofing report at 46.1) that spans exterior work — windows, doors, siding, roofing — and interior kitchen, bath and basement remodeling, handling projects start to finish. BBB A+ and a CertainTeed designation give it baseline trust, and its dual interior/exterior scope is genuinely useful for full-home refreshes. But its digital presence is weak and its review profile is thin and mixed (only ~11 Yelp reviews of uneven sentiment for a 30-year firm is a red flag), with no awards, minimal content, and low search/social visibility. It represents the "legacy operator coasting on tenure" profile — real local history, almost no modern authority signal — and anchors the bottom of the scored tier as a result.
+      </div>
+    </div>
+
+  </div><!-- /profiles-grid -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 5 — GAP ANALYSIS / MEDWICK OPPORTUNITIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Strategic Intelligence</div>
+  <div class="section-title">Market Gaps &amp; Medwick Opportunities</div>
+  <div class="section-desc">Where the openings actually are. This market is more defended at the top than water mitigation — so the honest opportunities are about <em>positioning into unowned lanes</em> and out-executing a fragmented middle, not about walking into an empty category.</div>
+
+  <div class="gap-grid">
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">🏠</div>
+        <div>
+          <div class="gap-title">Gap #1 — The Cross-Category "Medina Remodeler" Is Unowned</div>
+          <div class="gap-subtitle">Leaders own slices; nobody owns the whole identity</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Cabinet-S-Top owns kitchen &amp; bath. Hansen owns breadth-and-reviews. Hurst and Franklin own premium design-build — from outside the county. Bath franchises own the single-room bathroom job. <strong>No single firm owns the identity of "the credentialed, local, full-scope Medina County remodeler."</strong> That is the seat to claim: a Medina-based brand that is both broad (kitchen, bath, basement, additions, whole-home) <em>and</em> credentialed/awarded — combining Hansen's scope with Cabinet-S-Top's authority signals. No competitor currently occupies that exact intersection.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon red">🎖️</div>
+        <div>
+          <div class="gap-title">Gap #2 — Credentials &amp; Awards Are the Price of the Top Tier</div>
+          <div class="gap-subtitle">This is an entry cost, not an open gap — stated honestly</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Unlike water mitigation (where <em>no one</em> had awards), remodeling's top tier is <em>defined</em> by NARI/NKBA credentials and Best-of-Houzz/EnVision/Chrysalis awards — Cabinet-S-Top, Hurst, Franklin, Advance and Home Sweet Home all hold them. <strong>To be taken seriously at the top, Medwick must earn them too:</strong> NARI membership + Certified Remodeler, NKBA for K&amp;B, EPA Lead-Safe, and an active Houzz-awards push. This is the one market where the honest answer is "you have to buy the ticket" — but it's also a filter: the entire fragmented middle (30+ firms) has none of these, so earning them vaults Medwick past everyone except the four or five genuine leaders.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">🖼️</div>
+        <div>
+          <div class="gap-title">Gap #3 — Houzz Is Underplayed by Local Firms</div>
+          <div class="gap-subtitle">The buyer's #1 research platform, ceded to a few</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Houzz is to remodeling what Google Business Profile is to emergency services — the platform where homeowners research, save inspiration, and vet contractors. Yet only Cabinet-S-Top (4.9, Best of Houzz) and a couple of regionals (Home Sweet Home 5.0, Franklin) seriously invest in it; most in-county firms have thin or no Houzz profiles. <strong>A disciplined Houzz strategy — a rich project portfolio, ideabook contributions, review generation, and a Best-of-Houzz push — is a fast lane to visible authority</strong> that the crowded local middle is almost entirely ignoring, and it compounds directly into the credential/award gap above.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon purple">⭐</div>
+        <div>
+          <div class="gap-title">Gap #4 — Review Volume Is Thin Beyond Two Firms</div>
+          <div class="gap-subtitle">Only Hansen (~141) and Grabenstetter (~180) have real volume</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Across 61 companies, only two have a substantial verified review base — Hansen (~141) and JP Grabenstetter (~180, and that's trapped inside Angi with no website). Cabinet-S-Top and Home Sweet Home have excellent <em>ratings</em> but modest counts. The entire fragmented middle shows essentially no reviews. <strong>A structured multi-platform review program (Google + Houzz + Angi) could put Medwick into the county's top 3 by review volume within a year</strong> — and because remodeling is a high-consideration, high-dollar purchase, review depth converts even harder here than in emergency services.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">💵</div>
+        <div>
+          <div class="gap-title">Gap #5 — Price Transparency &amp; Process Certainty</div>
+          <div class="gap-subtitle">Only Home Sweet Home leads with fixed-price. Homeowners crave it.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        The #1 fear in remodeling is the runaway budget and the project that drags on for months. Only Home Sweet Home leads with <strong>fixed-price quotes</strong>; Clazak advertises a defined 6–10 week timeline; virtually everyone else is vague on both. A Medwick that productizes certainty — fixed-price packages, a published project timeline, a clear design-to-completion process, milestone guarantees — directly answers the homeowner's deepest anxiety and differentiates on <em>trust</em> in a category where trust is the whole sale. This lane is nearly empty among in-county firms.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">📝</div>
+        <div>
+          <div class="gap-title">Gap #6 — Content &amp; AI Discoverability Are Wide Open</div>
+          <div class="gap-subtitle">Same content-dark, AI-invisible pattern as the other markets</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        As in roofing and water mitigation, the remodeling field is content-dark: no competitor runs a substantive educational program answering the questions Medina homeowners actually ask — "kitchen remodel cost in Medina County," "do I need a permit for a basement finish in Medina," "how long does a bathroom remodel take," "addition vs. move." And no one is optimized for AI search ("best kitchen remodeler in Medina Ohio"). <strong>Medina-specific, project-planning content plus structured data and a tuned GBP/Houzz presence make Medwick the cited answer</strong> in both organic and AI search — a compounding advantage the crowded middle isn't even attempting.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">🧱</div>
+        <div>
+          <div class="gap-title">Gap #7 — No Local Basement-Finishing Authority</div>
+          <div class="gap-subtitle">A high-demand niche served mostly from outside the county</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Basement finishing is a high-demand, high-margin remodel category in Medina County, but it's served largely by out-of-county specialists — JP Grabenstetter and Pioneer (both NE Ohio, reaching in) — plus Clement in Brunswick. <strong>No Medina-city firm owns "basement finishing" as a category authority.</strong> Grabenstetter's biggest weakness (no website, Angi-only) leaves the door open: a Medina-based basement specialist with a real site, portfolio, reviews and financing options could claim the county's basement search share, then cross-sell into full-home remodeling from that beachhead.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">🏢</div>
+        <div>
+          <div class="gap-title">Gap #8 — A Local Premium Design-Build Seat</div>
+          <div class="gap-subtitle">The prestige lane is held entirely by out-of-county firms</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        The premium, design-build, "we handle everything from drawings to décor" positioning is held by Hurst and Franklin — both reaching into Medina from Cleveland/Akron with no local roots. Architectural Justice has the showroom and fabrication muscle to own this locally but lacks the credentials and review base to claim it. <strong>There is no credentialed, Medina-based premium design-build brand.</strong> For homeowners doing a major whole-home or high-end project who want a serious local partner — not a Cleveland firm driving in — that seat is open. It pairs naturally with Gaps #1 and #2: local + credentialed + full-scope is the whole thesis.
+      </div>
+    </div>
+
+  </div><!-- /gap-grid -->
+
+  <div class="alert-box" style="margin-top:24px;">
+    <strong>Bottom line for Medwick:</strong> Remodeling is the <em>inverse</em> of the water-mitigation market. There, the field was empty and the play was to plant a flag first. Here, the top tier is real, credentialed and defended — so the honest strategy is different: (1) <strong>earn the entry credentials</strong> (NARI/NKBA + Houzz awards) that separate the top five from the invisible 55, then (2) <strong>claim the one unowned seat</strong> — the credentialed, local, full-scope "Medina County remodeler" — that neither the K&amp;B specialist, the breadth leader, nor the out-of-county design-build houses occupy, while (3) <strong>out-executing the fragmented middle</strong> on Houzz, reviews, price-certainty and content. Don't fight Cabinet-S-Top for kitchens. Become the local brand that owns the whole house.
+  </div>
+
+</section>
+</div><!-- /container -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<div class="report-footer">
+  <div class="footer-brand">
+    <strong>Hunter Systems</strong> — Intelligence Division<br>
+    Prepared for Medwick · Medina County, OH · Remodeling Market
+  </div>
+  <div class="footer-disclaimer">
+    Scores based on publicly available data as of July 2026 via company websites, BBB records, Google Business Profiles, Houzz, Angi/HomeAdvisor, and NARI/NKBA directories. Remodeling public data is uneven and Houzz pages partially bot-blocked during the scan; Fleet Size, Employee Count and some review/Houzz scores are proxy-estimated and flagged. 16 of 61 identified firms scored — the remainder are BBB-listing-only with insufficient public data to score. Scores represent relative <em>visible</em> market authority, not absolute quality or private capability. Analytical estimation for strategic planning only.
+  </div>
+</div>
+
+</body>
+</html>

@@ -346,9 +346,10 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Scoreboard (two markets) ---------- */
 .scoreboard {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
   padding: 40px 52px; background: var(--surface); border-bottom: 1px solid var(--line);
 }
+@media (max-width: 1024px) { .scoreboard { grid-template-columns: 1fr; } }
 .market {
   border: 1px solid var(--line); border-radius: 12px; padding: 22px;
   box-shadow: var(--shadow-sm); background: var(--surface);

@@ -56,7 +56,15 @@ export const REPORTS = [
     file: 'water-authority.html',
     tag: '15 rivals scored',
     blurb:
-      'The county water-damage field. SERVPRO and Roto-Rooter win on brand recall; no local champion exists. The softer of the two markets.',
+      'The county water-damage field. SERVPRO and Roto-Rooter win on brand recall; no local champion exists. The most wide-open market.',
+  },
+  {
+    key: 'remodeling',
+    title: 'Remodeling Market',
+    file: 'remodeling-authority.html',
+    tag: '16 rivals scored',
+    blurb:
+      'The inverse of water: a real, credentialed top tier (Cabinet-S-Top, Hurst) that marketing alone won’t topple, over an undifferentiated middle with one unowned seat.',
   },
 ];
 

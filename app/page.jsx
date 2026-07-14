@@ -7,13 +7,12 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
-          Two market scans. The same <span className="hl">open door</span>, and Medwick fits it.
+          Three market scans. One position <span className="hl">nobody holds</span>, and Medwick fits it.
         </h1>
         <p className="hero-lede">
-          We scored every roofer and every water-damage firm in the Medina market across 21
-          authority dimensions. In both, the same gap: nobody owns local identity, digital
-          authority, reviews, and AI search at once. Medwick is the one company that can, across
-          roof, water, and rebuild.
+          We scored every roofer, water-damage firm, and remodeler in the Medina market across 21
+          authority dimensions. No competitor combines genuine local identity, cross-category range,
+          and digital authority. Medwick can, across roof, water, and rebuild.
         </p>
         <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         <div className="hero-cta">
@@ -28,11 +27,12 @@ export default function Home() {
 
       <section className="callout">
         <p>
-          <strong>Two markets, one opening.</strong> In roofing, authority is split three ways:
-          Gridiron wins on volume, Exteriors Plus on certifications, Fixler on local identity, but
-          no one holds all three. In water mitigation it is even softer: national franchises own
-          brand recall and no local champion exists at all. The seat marked &ldquo;the trusted
-          Medina name&rdquo; is empty in both.
+          <strong>Three markets, three shapes, one wedge.</strong> In roofing, authority splits
+          three ways and nobody holds all of it. In water mitigation it is wide open, with no local
+          champion at all. Remodeling is the inverse: a credentialed top tier that marketing alone
+          won&rsquo;t topple, over an undifferentiated middle with the cross-category &ldquo;Medina
+          remodeler&rdquo; seat unclaimed. The one company that is local, credentialed, and spans
+          all three takes ground no single-market rival can defend.
         </p>
       </section>
 
@@ -62,13 +62,27 @@ export default function Home() {
             <div className="mrow"><b>53.2</b> market average</div>
           </div>
           <p className="market-take">
-            No local champion, no award holder, a review desert. The wider-open of the two.
+            No local champion, no award holder, a review desert. The most wide-open of the three.
+          </p>
+        </div>
+        <div className="market">
+          <div className="market-head">
+            <span className="market-tag">Remodeling</span>
+            <span className="market-n">16 rivals scored</span>
+          </div>
+          <div className="market-rows">
+            <div className="mrow"><b>74.4</b> Cabinet-S-Top — kitchen &amp; bath leader</div>
+            <div className="mrow"><b>67.6</b> Hansen — broadest scope, whole-home</div>
+            <div className="mrow"><b>58.8</b> market average</div>
+          </div>
+          <p className="market-take">
+            A defended top tier. Earn the credentials, then take the unowned cross-category seat.
           </p>
         </div>
       </section>
 
       <section className="gaps-sec">
-        <h2 className="section-h">The opening, in both markets</h2>
+        <h2 className="section-h">Where Medwick wins</h2>
         <div className="gaps">
           <div className="gap">
             <h4>AI &amp; generative search</h4>
@@ -92,7 +106,7 @@ export default function Home() {
           </div>
           <div className="gap">
             <h4>The trifecta</h4>
-            <p>Roof + water + rebuild under one local roof. No competitor offers it. Medwick&rsquo;s structural edge.</p>
+            <p>Roof + water + rebuild under one local roof. Three scans, zero competitors who span all three. Medwick&rsquo;s structural edge.</p>
           </div>
         </div>
       </section>
