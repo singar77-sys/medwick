@@ -4,7 +4,7 @@
 **Prepared:** July 13, 2026
 **Basis:** Builds directly on `medwick-digital-audit-2026-07-13.md` (the authoritative research). This document is the forward-looking SEO plan for the **rebuild**. It specifies the search layer the audit prescribed but did not fully engineer. It does not repeat the audit; read the audit first.
 
-> **Source-conflict note.** The two inputs to this plan name different competitor sets (see `COMPETITOR-ANALYSIS.md`). This strategy is built on the source-verified markdown audit and treats the artifact's regional giants as a second competitive layer. Resolve which SERP each reflects (organic API vs. localized/map-aware Google) before committing ad spend against either.
+> **Competitive basis.** This strategy now rests on three dated Competitive Authority Reports (roofing, water, remodeling) that score every real competitor in each market on one 21-dimension scale. They supersede and resolve the original audit's two-competitor-set conflict. See `COMPETITOR-ANALYSIS.md` for the digest and Market Intelligence for the full scored reports.
 
 ---
 
@@ -19,14 +19,14 @@ Three defensible pillars, all verified as *unoccupied* in this market:
 
 ## 2. The strategic bet
 
-Medwick cannot out-muscle 2,500-review regional roofers or 201-review 4K on head terms in year one (Jan-2026 domain, 9 reviews). The bet is **flanking, not frontal**:
+Medwick cannot out-muscle the market leaders on their own turf in year one (a new domain, 9 reviews) against Gridiron's 928-review volume or Fixler's grip on local identity. It does not have to. Across all three scored markets authority is split or undefended, so the bet is **flanking, not frontal**:
 
 | Win here first (thin/empty SERPs) | Not here yet (contested) |
 |---|---|
 | Storm-damage + insurance-claim content | "roofers medina ohio" head term |
 | Emergency water / flooded-basement (map pack) | "roof replacement cost medina" (4K owns it) |
-| Zero-competition townships (Valley City, Granger, Litchfield, Montville, Hinckley) | Regional-giant financing/scale plays |
-| Google review **stars** in SERPs (0 of competitors show them) | National paid-ad saturation (Home Genius) |
+| Zero-competition townships (Valley City, Granger, Litchfield, Montville, Hinckley) | Gridiron's volume and scale plays |
+| Google review **stars** via schema (few local rivals surface them) | Certification-and-scale head-to-head with Exteriors Plus |
 
 Two proven accelerators from the audit's competitive timeline: **review velocity** and **storm-reactive publishing within 48h**. Both are baked into the roadmap.
 
@@ -55,7 +55,7 @@ Replace the GoDaddy one-pager. Requirements for the new stack:
 - **Crawlability:** clean URL hierarchy (§ `SITE-STRUCTURE.md`), per-section XML sitemaps, one canonical per page, no duplicate/self-canonical doorway pairs (AAPEX's cautionary failure).
 - **One phone number everywhere.** Resolve defect C1 first. Canonical (330) 635-3744 on site, GBP, and all citations. A call-tracking number is ads-only, added later, never on GBP/citations.
 - **Instrumentation day one:** GA4 + Search Console + call tracking. Nothing is optimizable until this exists (defect C4).
-- **Schema:** per §4.5 of the audit: `RoofingContractor`/`GeneralContractor` org identity with complete NAP + geo + `sameAs`; per-service `Service` with city-level `areaServed` (all served communities, not "Ohio"); FAQ schema on insurance/cost pages. **No `aggregateRating` markup until real reviews render on-page** (the AAPEX violation to avoid). Once reviews render, adding review markup captures the artifact's #1 opening: **be the only result in the SERP showing stars.**
+- **Schema:** per §4.5 of the audit: `RoofingContractor`/`GeneralContractor` org identity with complete NAP + geo + `sameAs`; per-service `Service` with city-level `areaServed` (all served communities, not "Ohio"); FAQ schema on insurance/cost pages. **No `aggregateRating` markup until real reviews render on-page** (the empty-reviews-markup violation to avoid). Once reviews render, review markup makes Medwick **one of the few local results showing review stars in search.**
 - **Accessibility:** WCAG 2.2-oriented (overlaps with technical SEO and CWV).
 
 ## 5. GEO / AI-search readiness

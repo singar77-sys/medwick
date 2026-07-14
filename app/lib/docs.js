@@ -35,7 +35,7 @@ export const DOCS = [
     title: 'Competitor Analysis',
     num: '05',
     file: 'COMPETITOR-ANALYSIS.md',
-    blurb: 'The two competitive layers reconciled, each rival’s exploitable gap, and how Medwick lawfully wins.',
+    blurb: 'The three market scans distilled: the top threats in roofing, water, and remodeling, each rival’s exploitable gap, and how Medwick wins each one.',
   },
 ];
 

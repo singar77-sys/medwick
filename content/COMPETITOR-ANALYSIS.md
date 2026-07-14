@@ -1,60 +1,68 @@
-# Medwick Construction: Competitor Analysis & Source Reconciliation
+# Medwick Construction: Competitor Analysis
 
-## ⚠️ Read this first: the two inputs disagree on who the competitors are
+The strategic digest of three Competitive Authority Reports (roofing, water mitigation, remodeling), each scoring the field on one 21-dimension, 100-point scale, issued July 14, 2026. The full interactive reports live under **Market Intelligence**; this page is the through-line.
 
-The two source documents name **completely non-overlapping** competitor sets:
-
-| Markdown audit (source-verified) | Artifact (client-facing) |
-|---|---|
-| 4K Roofing & Restoration | Royalty Roofing |
-| AAPEX Restoration | The Third Estimate |
-| Fixler Roofing | Brightside Restoration |
-| Hansen Restoration | Hinckley Roofing |
-| SERVPRO of Medina County | Gridiron Guys |
-| BTN Restoration | Home Genius Exteriors |
-
-This is not an error to average away. It almost certainly reflects **two different SERPs**:
-- The **markdown audit** used a non-geolocated organic web API and focused on *Medina-County-based* firms plus the client-named competitor (AAPEX). It explicitly flags that it could **not** observe the Google local 3-pack or ads layer.
-- The **artifact** appears to capture whatever renders in a broader/localized roofing SERP, dominated by *large regional players renting the market* (Solon, North Canton, Maryland) with 1,476-2,500+ reviews and 82-326 pages.
-
-**Both are real and both matter.** They are two competitive layers, not a contradiction. **Action item for a human:** run a Medina-IP local-pack + grid scan (the audit's flagged next-phase gap) to confirm which firms actually occupy the map pack and paid layer before committing ad budget. Until then, treat the giants as the organic *ceiling* and the locals as the beatable *near-field*.
+> **This resolves the earlier source conflict.** The original audit surfaced two non-overlapping competitor lists (a non-geolocated organic scan versus a broader search layer) and flagged that a proper geolocated scan was needed. That scan is now done, three times over. Where the old audit and these scored reports disagree, the reports win. Notably, two names from the old "regional giants" list (The Third Estimate, Home Genius Exteriors) did not survive as scored Medina-market operators; they were search-layer renters, not real local competitors.
 
 ---
 
-## Layer 1: Regional giants (the organic ceiling, from the artifact)
+## Roofing market: 13 scored, average 57.8
 
-You will not out-scale these in year one. Learn from them; flank them.
+Authority is genuinely split, and that split is the opening.
 
-- **Royalty Roofing** (North Canton): 326 pages, 2,500+ reviews @ 4.9, GAF Master Elite. *Gap:* skips the small towns around Medina; thin templated local pages.
-- **The Third Estimate** (Solon): 82 town pages, 1,476 reviews. *Gap:* runs Medina remotely; generic Medina page.
-- **Brightside Restoration**: 102 pages, active blog, financing, offers water restoration but **buries it**. *Gap:* very thin local pages, no address shown.
-- **Home Genius Exteriors** (Maryland): national, 10,000+ reviews, aggressive financing. *Gap:* **no Medina presence**, paid ads only.
-- **Hinckley Roofing** (since 1958): deep local trust, "Best of Medina" awards. *Gap:* coasting, with no blog, no certs, county-level pages only.
-- **Gridiron Guys**: strong trust badges, warranties, 60-sec quote tool. *Gap:* old domain has an **expired security certificate** (scary browser warning).
+| Rank | Competitor | Score | Owns | Exploitable gap |
+|---|---|---|---|---|
+| 1 | **Gridiron Guys** (Medina, 2003) | 79.0 | Volume: 20 trucks, 21K+ jobs, 928 reviews, HubSpot content engine | No Reader's Choice, weak community presence, spread across every trade, so it reads as a generalist, not a roofing specialist |
+| 2 | **Exteriors Plus** (Akron) | 78.8 | Certifications: GAF Master Elite President's Club + OC Platinum + CertainTeed, 850+ reviews at 4.9 | Akron-centric; reviews and identity cluster in Summit County, weak on Medina-specific local identity |
+| 3 | **Fixler Roofing** (Medina, ~2009) | 75.1 | Local identity: 3x Medina Gazette Reader's Choice, Home & Garden Show sponsor, GAF President's Club | Only 34 Birdeye reviews in 15+ years, aging Joomla site, thin content, low review velocity |
 
-**The four openings true across ALL of them (the artifact's core finding):**
-1. **Nobody shows Google review stars**, 0 of 6. First mover with valid review markup owns visual standout in the SERP.
-2. **Nobody leads with water & storm restoration**: urgent, insurance-paid, near-zero competition.
-3. **The biggest names serve Medina from out of town.** Medwick is physically here; a strong GBP is an edge they can't copy.
-4. **Their local pages are generic templates**: real Medina photos + genuine local detail out-rank them page-for-page.
+Also in the field: **4K Roofing** (65.0), the digitally-native upstart to copy, with 201 reviews, an SEO/AEO-tuned site, and insurance-claim positioning; **Hinckley** (66.6), 68 years of trust and a 5.0 over 193 reviews, but digitally invisible.
 
-## Layer 2: Medina-County locals (the beatable near-field, from the verified audit)
+**The split:** Gridiron owns volume, Exteriors Plus owns certifications, Fixler owns local identity. **No single competitor holds all three, and none of them out-digitals the others.** That three-way gap is where Medwick enters.
 
-- **4K Roofing & Restoration** is the real organic leader in the audit's roofing sample: 201 reviews @ 4.9, storm-reactive content, price transparency. **The playbook to copy** (city pages + cost guides + 48h storm posts). *Crack:* open BBB advertising review (since Jun 26, 2026) over unsubstantiated "Owens Corning Preferred" / "0% interest" claims; only 3 of 16 city pages in Medina County; no water, no remodel.
-- **AAPEX Restoration** (the client-named competitor): strong on paper (insurance-advocacy positioning, 4.7/35, 7-yr site) but **organically invisible** (1 of 17 sampled SERPs). *Weaknesses:* duplicate AI doorway pages (spam risk), schema `aggregateRating` violation, three phone numbers, two trade names, thin pages, staleness, Creston (Wayne County) base, not on the Medina contractor list. **Never reference their customer dispute publicly**; counter with policy pages.
-- **Fixler Roofing**: GAF Master Elite, local awards. *Gap:* only 49 reviews, no city pages, site static since ~2023, roofing-only.
-- **Hansen Restoration**: deepest city coverage (11 communities), 142 reviews. *Gap:* **no water mitigation despite the name**; remodeling-only city pages; dated architecture.
-- **SERVPRO of Medina County**: 189 reviews, IICRC firm, 7 community pages. *Gap:* corporate template, no roofing/remodel depth, split franchise attention.
-- **BTN Restoration**: proof a local independent can crack water SERPs (IICRC, 24/7, modern site). *Gap:* thin proof; no rebuild/roofing/remodel.
+## Water mitigation market: 15 scored, average 53.2
 
-## How Medwick lawfully outperforms both layers
+The softest of the three, and the fastest to win.
 
-1. **Own the full storm-to-restoration cycle**: roof + water + rebuild under one roof, verifiably unoccupied by any local.
-2. **Be genuinely FROM Medina County**: against 4K's out-county pages, the giants' remote HQs, and SERVPRO's franchise template.
-3. **Match the certification stack with documented claims**: GAF/OC tier + IICRC WRT/ASD, pointedly unlike the two competitors (4K, AAPEX) currently carrying unsubstantiated-claim problems.
-4. **Be the only SERP result showing review stars** (Layer 1 opening #1) once real reviews render.
-5. **Attack the zero-competition townships**: Valley City, Granger, Litchfield, Montville, Hinckley Twp have **no** city page from any tracked competitor.
-6. **Out-communicate everyone** with owner-led responsiveness and the one-asset-three-channels content engine.
+| Rank | Competitor | Score | Owns | Exploitable gap |
+|---|---|---|---|---|
+| 1 | **SERVPRO of Medina County** (1977) | 75.4 | National brand recall, IICRC Certified Firm, 189 reviews, broadest scope | National-template site, no local identity, no awards, a modest review count for a 40-year franchise |
+| 2 | **Roto-Rooter** (national) | 66.3 | The plumbing-to-water cross-sell, dominant SEO domain, 24/7 scale | Zero local identity or community presence, mixed national sentiment, transactional feel |
+| 3 | **BTN Restoration** (Medina) | 57.7 | The best genuine local: founder-led, 5.0 Google, IICRC, 24/7, broad scope | Review count is unverified, thin content and SEO, low brand recognition. The model local operator, but the seat is not locked |
+
+**The verdict:** no local identity champion, no award holder anywhere in the field, a review desert, and a content-dark, AI-invisible market held at the top by national franchises with no local roots. The "trusted Medina water-damage company" seat is vacant and undefended. (The old audit's AAPEX also appears here at 44.1, a low-authority in-county restoration-plus-construction firm, not a roofing threat.)
+
+## Remodeling market: 16 scored, average 58.8
+
+The inverse of water: here the top is real and defended.
+
+| Rank | Competitor | Score | Owns | Exploitable gap |
+|---|---|---|---|---|
+| 1 | **Cabinet-S-Top** (Medina, 1991) | 74.4 | Kitchen & bath authority: NARI + NKBA/CKD, Best of Houzz 2025 and 2026, showroom | Narrow to K&B; does not own whole-home or the cross-category "Medina remodeler" position |
+| 2 | **Hansen Restoration & Remodeling** (2001) | 67.6 | Breadth: whole-home + exterior, ~141 reviews at 4.6, strong local SEO | No design-build credential depth or awards at Cabinet-S-Top's level; not a premium brand |
+| 3 | **Hurst Design Build Remodel** (Cleveland) | 67.4 | Premium design-build: NARI Master Certified, award-winning | Cleveland-based, reaching into Medina via a single /medina page; not locally rooted |
+
+**The verdict:** unlike water, this top tier holds real NARI/NKBA credentials, Houzz awards, and showrooms. Marketing alone will not topple it. But beneath the top five sits an undifferentiated middle, and the one **cross-category "Medina remodeler" seat is unowned**, along with local basement-finishing authority and an underplayed Houzz channel.
+
+---
+
+## The pattern across all three markets
+
+Read together, the three scans say one thing: **no competitor in any market is local, credentialed, cross-category, and digitally strong at once.** Three separate scans, and not one firm spans roof + water + rebuild. The same levers sit open across the board:
+
+- **AI and generative search**: nobody is the cited answer when a homeowner asks an AI who to call.
+- **Review volume and velocity**: the roofing identity leader shows 34 reviews; the water field is a desert; remodeling is thin beyond two firms.
+- **Educational content**: the highest content score in any market is a 6; most competitors publish nothing.
+- **Local identity and awards**: Reader's Choice (roofing) is challengeable, and water has zero award holders; Best of Houzz (remodeling) is the parallel prize.
+- **Insurance-claim advocacy**: everyone bills insurance; nobody owns "we fight for you" (roofing and water).
+
+## How Medwick wins each market
+
+- **Roofing: flank the split.** Match the certification tier (GAF or OC), then out-local Exteriors Plus and out-digital Fixler: contest Reader's Choice, build review velocity, and run the content and AI plays no incumbent is running. Copy 4K's proven cost-guide and 48-hour storm-response playbook.
+- **Water: plant the flag first.** No champion exists, so the honest play is speed: local identity, aggressive reviews, insurance-claim advocacy, and a provable in-county response time the North Royalton / Akron / Cleveland regionals physically cannot match. The softest, fastest win.
+- **Remodeling: earn in, then take the seat.** This is an owner decision, because the top tier is credentialed and defended. If yes: earn NARI/NKBA + Best of Houzz first (the price of entry), then claim the unowned cross-category and basement-finishing positions. If no: keep remodeling as a supporting service to the roofing and water lanes. (See the Implementation Roadmap for the decision point and timing.)
+- **Across all three: the trifecta is the moat.** One genuinely local company handling roof, water, and rebuild is a position no single-market rival can defend. That is the connective tissue of the entire strategy.
 
 ## Hard guardrails
-No fake reviews. No comparison/smear pages. Never repeat unverified accusations about any competitor. Counter reputational risk with published policy (cancellation terms, "no games with your insurer" process), never public commentary.
+
+No fake reviews. No comparison or smear pages. Never repeat an unverified accusation about any competitor, and never reference a competitor's customer dispute publicly. Counter reputational risk with published policy (clear cancellation terms, a "no games with your insurer" process), not commentary. Document every certification and claim before stating it: two roofing competitors already carry open BBB problems over unsubstantiated claims, and that is the mistake to avoid, not imitate.
