@@ -254,6 +254,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono, ui-monospace), 'SF Mono', Menlo, Consolas, monospace;
   font-size: 0.86em; background: #eef1f4; color: var(--navy-deep);
   padding: 2px 6px; border-radius: 5px; border: 1px solid #e0e5ea;
+  overflow-wrap: anywhere;
 }
 .prose pre {
   background: var(--navy-deep); color: #e7edf3;
@@ -330,6 +331,8 @@ img { max-width: 100%; display: block; }
   .doc { padding: 24px 18px 44px; }
   .prose h2 { font-size: 22px; }
   .brand-sub { display: none; }
+  .doc-pager { flex-direction: column; }
+  .pager { min-width: 0; }
 }
 
 /* ---------- Scoreboard (two markets) ---------- */
