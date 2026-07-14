@@ -1,6 +1,7 @@
 import './globals.css';
-import { Archivo, Lora, Source_Sans_3, Space_Mono } from 'next/font/google';
+import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
 import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 // Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
 const display = Archivo({
@@ -19,14 +20,6 @@ const serif = Lora({
   display: 'swap',
 });
 
-// Monospace for the numeric / label layer.
-const mono = Space_Mono({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-mono',
-  display: 'swap',
-});
-
 const body = Source_Sans_3({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
@@ -37,10 +30,11 @@ const body = Source_Sans_3({
 export const metadata = {
   title: 'Medwick Construction: Digital Growth Plan',
   description:
-    'How Medwick Construction gets found on Google and takes the Medina County market: roofing, water, and remodeling.',
+    'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and remodeling across Medina County, Ohio.',
   openGraph: {
     title: 'Medwick Construction: Digital Growth Plan',
-    description: 'The plan to get Medwick found on Google and own the Medina County market.',
+    description:
+      'The full SEO strategy, site structure, content calendar, roadmap, and competitor analysis for the new Medwick website.',
     type: 'website',
   },
   icons: { icon: '/medwick-logo.webp' },
@@ -48,18 +42,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${mono.variable} ${body.variable}`}>
+    <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
       <body>
         <Header />
-        <main className="page">{children}</main>
+        <div className="shell">
+          <Sidebar />
+          <main className="main">{children}</main>
+        </div>
         <footer className="site-footer">
-          <div className="wrap">
-            <p>
-              <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
-              (330) 635-3744
-            </p>
-            <p className="footer-note">Prepared July 13, 2026 · Confidential.</p>
-          </div>
+          <p>
+            <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
+            (330) 635-3744
+          </p>
+          <p className="footer-note">
+            Confidential planning document prepared for Medwick Construction · July 13, 2026.
+            Strategy only. Figures are directional pending live rank-tracking.
+          </p>
         </footer>
       </body>
     </html>
