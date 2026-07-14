@@ -6,10 +6,10 @@
 <title>Medwick | Competitive Authority Report — Medina County, OH Water Mitigation Market</title>
 <style>
   :root {
-    --bg: #10141b;
-    --surface: #171e28;
+    --bg: #07080d;
+    --surface: #0f1117;
     --surface2: #161822;
-    --border: #28323f;
+    --border: #1e2030;
     --border2: #2a2d42;
     --gold: #d4a017;
     --gold-light: #f0c040;
@@ -545,9 +545,25 @@
     .weight-grid { grid-template-columns: repeat(4, 1fr); }
   }
 </style>
+
+<style id="light-theme-match">
+/* Light theme to match the strategy pages: navy masthead banner + light paper body */
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --surface2:#faf9f5;
+  --border:#e5e2d9; --border2:#e5e2d9;
+  --text:#1c2530; --text-dim:#55606c; --text-muted:#8a8578;
+  --accent:#8a6d3b;
+}
+body{ background:var(--bg); color:var(--text); }
+.report-header{ background:linear-gradient(135deg,#2c3242 0%,#1f2530 100%) !important; border-bottom:4px solid #c0a674 !important; }
+.report-header::before{ display:none !important; }
+.report-subtitle,.report-date,.hstat-label{ color:#aeb9c6 !important; }
+.section-title,.threat-name,.competitor-name,.profile-name,.gap-title{ color:#161f29 !important; }
+.score-table tbody tr:hover td{ background:rgba(18,22,29,0.05) !important; }
+</style>
 </head>
 <body>
-<a href="/" style="position:fixed;top:14px;left:14px;z-index:99999;font:700 11px/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12161d;background:#c0a674;padding:9px 13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.5)">&#8592; Medwick Plan</a>
+<a href="/" style="position:fixed;top:14px;left:14px;z-index:99999;font:700 11px/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12161d;background:#c0a674;padding:9px 13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.28)">&#8592; Medwick Plan</a>
 
 <!-- ═══════════════════════════════════════════════════════════
      HEADER

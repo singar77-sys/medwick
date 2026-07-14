@@ -115,17 +115,11 @@ export default function Home() {
         <h2 className="section-h">Market intelligence</h2>
         <div className="cards">
           {REPORTS.map((r) => (
-            <a
-              key={r.key}
-              href={`/reports/${r.file}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card card-report"
-            >
+            <a key={r.key} href={`/reports/${r.file}`} className="card card-report">
               <span className="card-num">{r.tag}</span>
               <span className="card-title">{r.title}</span>
               <span className="card-blurb">{r.blurb}</span>
-              <span className="card-go">Open report ↗</span>
+              <span className="card-go">Open report →</span>
             </a>
           ))}
         </div>
