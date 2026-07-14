@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medwick | Competitive Authority Report — Medina County, OH Water Mitigation Market</title>
+<style>
+  :root {
+    --bg: #10141b;
+    --surface: #171e28;
+    --surface2: #161822;
+    --border: #28323f;
+    --border2: #2a2d42;
+    --gold: #d4a017;
+    --gold-light: #f0c040;
+    --text: #e8eaf0;
+    --text-dim: #8b90a8;
+    --text-muted: #555875;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --accent: #c0a674;
+    --score-10: #15803d;
+    --score-9: #16a34a;
+    --score-8: #22c55e;
+    --score-7: #4ade80;
+    --score-6: #86efac;
+    --score-5: #fbbf24;
+    --score-4: #f59e0b;
+    --score-3: #f97316;
+    --score-2: #ef4444;
+    --score-1: #dc2626;
+    --score-0: #991b1b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ──────────────────────────────────────────── */
+  .report-header {
+    background: linear-gradient(135deg, #0a0b12 0%, #0f1020 50%, #080910 100%);
+    border-bottom: 1px solid var(--gold);
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 40%;
+    background: radial-gradient(ellipse at 80% 50%, rgba(212,160,23,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .agency-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    border: 1px solid rgba(212,160,23,0.4);
+    padding: 4px 12px;
+    border-radius: 3px;
+  }
+  .report-date {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+  }
+  .report-date span { color: var(--gold-light); font-weight: 600; }
+  .report-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .report-title em {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+  .report-subtitle {
+    font-size: 16px;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+  .header-stats {
+    display: flex;
+    gap: 32px;
+  }
+  .hstat {
+    text-align: center;
+  }
+  .hstat-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .hstat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* ─── LAYOUT ──────────────────────────────────────────── */
+  .container { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .section-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+
+  /* ─── THREAT CARDS ────────────────────────────────────── */
+  .threat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .threat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .threat-card.rank-1 { border-color: rgba(239,68,68,0.5); }
+  .threat-card.rank-2 { border-color: rgba(245,158,11,0.5); }
+  .threat-card.rank-3 { border-color: rgba(212,160,23,0.4); }
+  .threat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .threat-card.rank-1::before { background: #ef4444; }
+  .threat-card.rank-2::before { background: #f59e0b; }
+  .threat-card.rank-3::before { background: var(--gold); }
+  .threat-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .rank-1 .threat-rank { color: #ef4444; }
+  .rank-2 .threat-rank { color: #f59e0b; }
+  .rank-3 .threat-rank { color: var(--gold); }
+  .threat-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .threat-score-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .threat-score {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+  }
+  .threat-score-label { font-size: 12px; color: var(--text-dim); }
+  .threat-why {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .threat-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .chip {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .chip-red { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+  .chip-amber { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+  .chip-gold { background: rgba(212,160,23,0.15); color: var(--gold-light); border: 1px solid rgba(212,160,23,0.3); }
+  .chip-blue { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+  .chip-green { background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+  .chip-purple { background: rgba(192,166,116,0.15); color: #c4b5fd; border: 1px solid rgba(192,166,116,0.3); }
+
+  /* ─── WEIGHT TABLE ────────────────────────────────────── */
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  .wcat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .wcat-num {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .wcat-abbrev {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .wcat-weight {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--gold);
+  }
+  .wcat-name {
+    font-size: 9px;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin-top: 3px;
+  }
+
+  /* ─── MAIN SCORING TABLE ──────────────────────────────── */
+  .table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  table.score-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1400px;
+  }
+  .score-table th {
+    background: var(--surface2);
+    color: var(--text-dim);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border2);
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .score-table th.col-name {
+    text-align: left;
+    padding-left: 16px;
+    min-width: 200px;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface2);
+    border-right: 2px solid var(--border2);
+  }
+  .score-table th.col-total {
+    color: var(--gold);
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .score-table th .weight-badge {
+    display: block;
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.8;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .score-table td {
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .score-table tr:last-child td { border-bottom: none; }
+  .score-table td.col-name {
+    text-align: left;
+    padding-left: 16px;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    border-right: 2px solid var(--border2);
+    white-space: nowrap;
+  }
+  .score-table tbody tr { transition: background 0.1s; }
+  .score-table tbody tr:hover td { background: rgba(255,255,255,0.03); }
+  .score-table tbody tr:hover td.col-name,
+  .score-table tbody tr:hover td.col-total { filter: brightness(1.1); }
+  .competitor-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 13px;
+  }
+  .competitor-location {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 1px;
+  }
+  td.col-total {
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .total-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .total-score {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .score-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--border2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--gold);
+  }
+  /* Score cell colors */
+  .s10 { background: rgba(21,128,61,0.35); color: #86efac; }
+  .s9  { background: rgba(22,163,74,0.30); color: #4ade80; }
+  .s8  { background: rgba(34,197,94,0.22); color: #4ade80; }
+  .s7  { background: rgba(74,222,128,0.15); color: #6ee7b7; }
+  .s6  { background: rgba(134,239,172,0.10); color: #d1fae5; }
+  .s5  { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .s4  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .s3  { background: rgba(249,115,22,0.20); color: #fb923c; }
+  .s2  { background: rgba(239,68,68,0.20); color: #f87171; }
+  .s1  { background: rgba(220,38,38,0.25); color: #fca5a5; }
+  .s0  { background: rgba(153,27,27,0.30); color: #fca5a5; }
+
+  /* Total score colors */
+  .total-80plus { color: #22c55e; }
+  .total-70s { color: #86efac; }
+  .total-60s { color: #fbbf24; }
+  .total-50s { color: #f59e0b; }
+  .total-40s { color: #f97316; }
+  .total-below40 { color: #ef4444; }
+
+  /* ─── COMPETITOR PROFILES ─────────────────────────────── */
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+  }
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .profile-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .profile-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .profile-loc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .profile-score-badge {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    min-width: 60px;
+  }
+  .profile-score-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .profile-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  /* ─── GAP ANALYSIS ────────────────────────────────────── */
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .gap-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .gap-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .gap-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .gap-icon.blue { background: rgba(59,130,246,0.15); }
+  .gap-icon.green { background: rgba(34,197,94,0.15); }
+  .gap-icon.amber { background: rgba(245,158,11,0.15); }
+  .gap-icon.purple { background: rgba(192,166,116,0.15); }
+  .gap-icon.red { background: rgba(239,68,68,0.15); }
+  .gap-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .gap-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .gap-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .gap-body strong { color: var(--text); }
+
+  /* ─── FOOTER ──────────────────────────────────────────── */
+  .report-footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+  }
+  .footer-brand {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .footer-brand strong { color: var(--gold); }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 600px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  /* ─── UTILITIES ───────────────────────────────────────── */
+  .divider { height: 1px; background: var(--border); margin: 24px 0; }
+  .alert-box {
+    background: rgba(212,160,23,0.07);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+  }
+  .alert-box strong { color: var(--gold-light); }
+
+  @media (max-width: 1100px) {
+    .threat-grid { grid-template-columns: 1fr; }
+    .profiles-grid { grid-template-columns: 1fr; }
+    .gap-grid { grid-template-columns: 1fr; }
+    .weight-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+<a href="/" style="position:fixed;top:14px;left:14px;z-index:99999;font:700 11px/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12161d;background:#c0a674;padding:9px 13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.5)">&#8592; Medwick Plan</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<div class="report-header">
+  <div class="header-meta">
+    <div class="agency-badge">Hunter Systems — Intelligence Division</div>
+    <div class="report-date">
+      Client: <span>Medwick</span><br>
+      Market: <span>Medina County, OH</span><br>
+      Issued: <span>July 14, 2026</span>
+    </div>
+  </div>
+  <div class="report-title">Medina County Water Mitigation Market<br><em>Competitive Authority Report</em></div>
+  <div class="report-subtitle">County-wide competitor scan · Weighted Authority Scoring · Strategic gap analysis</div>
+  <div class="header-stats">
+    <div class="hstat">
+      <span class="hstat-val">15</span>
+      <div class="hstat-label">Competitors Scored</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">21</span>
+      <div class="hstat-label">Scoring Categories</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">75.4</span>
+      <div class="hstat-label">Highest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">44.0</span>
+      <div class="hstat-label">Lowest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">53.2</span>
+      <div class="hstat-label">Market Average</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 1 — TOP 3 THREATS
+════════════════════════════════════════════════════════════ -->
+<div class="container">
+<section>
+  <div class="section-label">Threat Assessment</div>
+  <div class="section-title">Top 3 Hardest to Beat</div>
+  <div class="section-desc">Competitors with the highest aggregate authority across all 21 dimensions. In water mitigation, unlike roofing, the top of the market is held by <em>national franchise brand power</em> — not a local identity champion. That distinction defines the entire strategy below.</div>
+
+  <div class="threat-grid">
+
+    <!-- THREAT 1 -->
+    <div class="threat-card rank-1">
+      <div class="threat-rank">⚠ Threat Level: Critical</div>
+      <div class="threat-name">SERVPRO of Medina County</div>
+      <div class="threat-score-line">
+        <div class="threat-score">75.4</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The category default. When a Medina County homeowner's basement floods at 2am, "SERVPRO" is the name they already know — #1 brand recall in restoration, nationally advertised, "Like it never even happened." Locally: an in-county office (400 N State Rd, Medina 44256), operating since 1977, IICRC Certified Firm, Greater Medina Chamber member, 24/7, and the single broadest service scope in the market — water, fire, mold, storm, sewage, biohazard, commercial, contents and document restoration. 4.7★ across 189 Google reviews. Their weakness is that everything about them is <em>national-template</em>: generic website, no local identity, no awards, thin content, and — for a 40+ year franchise — a surprisingly modest review count. They win the brand-recall search; they do not win the "trusted local restorer" story.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">#1 Brand Recall</span>
+        <span class="chip chip-red">Est. 1977</span>
+        <span class="chip chip-amber">IICRC Certified Firm</span>
+        <span class="chip chip-blue">4.7★ / 189 Reviews</span>
+        <span class="chip chip-green">Broadest Service Scope</span>
+        <span class="chip chip-purple">Chamber Member</span>
+      </div>
+    </div>
+
+    <!-- THREAT 2 -->
+    <div class="threat-card rank-2">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">Roto-Rooter</div>
+      <div class="threat-score-line">
+        <div class="threat-score">66.3</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The other national name a panicking homeowner already knows — and uniquely dangerous because they arrive for the <em>plumbing</em> emergency and stay for the <em>water damage</em>. Roto-Rooter is already in the basement fixing the burst pipe, then cross-sells the extraction, drying and mold remediation. IICRC certified, 24/7/365, enormous fleet and scale, dominant search-domain authority (rotorooter.com outranks every independent). Serves Medina, Wayne, Holmes and Ashland counties. Their weakness is the mirror of their strength: zero local identity, no community presence in Medina County, mixed national sentiment, and a water-first scope that is thinner on fire and contents. They own the reflex call; they are beatable on trust, sentiment and "local."
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">Plumbing Cross-Sell</span>
+        <span class="chip chip-red">National Scale</span>
+        <span class="chip chip-amber">Dominant SEO Domain</span>
+        <span class="chip chip-blue">IICRC Certified</span>
+        <span class="chip chip-purple">24/7/365</span>
+      </div>
+    </div>
+
+    <!-- THREAT 3 -->
+    <div class="threat-card rank-3">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">BTN Restoration Group</div>
+      <div class="threat-score-line">
+        <div class="threat-score">57.7</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The most important competitor for Medwick to study — not because they are the biggest, but because they are the <em>closest thing to what Medwick would be</em>: a genuine Medina-based independent (811 Remsen Rd, Medina 44256), founder-led (Lance Gavrilovic), a perfect 5.0★ Google rating, IICRC-certified, 24/7, with broad scope — water, flooded basement, fire/smoke, mold, storm, ice-dam removal, commercial and structural drying. This is the local operator doing it right. Their vulnerability is thinness of proof: the 5.0★ rating has no publicly surfaced review count (so the <em>volume</em> can't be verified), no awards, limited content and SEO investment, and low brand recognition against the franchises. Whoever matches BTN's local credibility and then out-executes them on review volume, content and search will take the "best local restorer" position BTN is currently drifting toward but has not locked.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">Medina-Based Local</span>
+        <span class="chip chip-gold">5.0★ Google</span>
+        <span class="chip chip-amber">IICRC Certified</span>
+        <span class="chip chip-blue">Founder-Led</span>
+        <span class="chip chip-purple">Broad Scope + 24/7</span>
+      </div>
+    </div>
+
+  </div><!-- /threat-grid -->
+
+  <div class="alert-box">
+    <strong>Key Insight for Medwick:</strong> The Medina County water-mitigation market has <em>no local identity champion and no award holder anywhere in the field.</em> Compare this to the roofing market, where Fixler owns "Medina roofing" through Reader's Choice wins and Home &amp; Garden Show sponsorship. Here, the top of the market is held entirely by national franchise brand recall (SERVPRO, Roto-Rooter), while every genuine local independent has a thin, unproven digital footprint. No single company is simultaneously the local brand, the digital authority, and the most-reviewed. That vacuum is <em>wider</em> than the one in roofing — the opening for a well-executed local specialist is larger, not smaller.
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 2 — SCORING METHODOLOGY
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Methodology</div>
+  <div class="section-title">Scoring Model — 21 Categories, 100-Point Weighted Scale</div>
+  <div class="section-desc">Identical model to the Medwick roofing report, so the two markets read on the same scale. Each competitor is scored 0–10 per category. Category weights reflect strategic impact on market authority. Raw score = Σ(category score × weight). Final authority score = raw score ÷ 10.</div>
+
+  <div class="alert-box">
+    <strong>Data transparency note:</strong> Water-mitigation firms publish far less public data than roofers — most independents have no visible review counts, zero awards, and BBB-only profiles with no website. Where hard data was unavailable, <strong>Fleet Size, Employee Count, and some review/GBP scores are estimated from proxies</strong> (franchise scale, BBB accreditation, address footprint, service-area pages) and scored conservatively. Absent public presence is scored as <em>low visibility</em> — which in a search-driven emergency category is itself a real competitive weakness, not a neutral unknown. Scores measure <em>visible market authority</em>, not private operational capability.
+  </div>
+
+  <div class="weight-grid">
+    <div class="wcat"><div class="wcat-num">C1</div><div class="wcat-abbrev">Mat</div><div class="wcat-weight">4%</div><div class="wcat-name">Business Maturity</div></div>
+    <div class="wcat"><div class="wcat-num">C2</div><div class="wcat-abbrev">Trust</div><div class="wcat-weight">5%</div><div class="wcat-name">Trust Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C3</div><div class="wcat-abbrev">Rep</div><div class="wcat-weight">6%</div><div class="wcat-name">Local Reputation</div></div>
+    <div class="wcat"><div class="wcat-num">C4</div><div class="wcat-abbrev">RevVel</div><div class="wcat-weight">5%</div><div class="wcat-name">Review Velocity</div></div>
+    <div class="wcat"><div class="wcat-num">C5</div><div class="wcat-abbrev">RevQual</div><div class="wcat-weight">6%</div><div class="wcat-name">Review Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C6</div><div class="wcat-abbrev">SvcBrd</div><div class="wcat-weight">4%</div><div class="wcat-name">Service Breadth</div></div>
+    <div class="wcat"><div class="wcat-num">C7</div><div class="wcat-abbrev">Price</div><div class="wcat-weight">3%</div><div class="wcat-name">Pricing Position</div></div>
+    <div class="wcat"><div class="wcat-num">C8</div><div class="wcat-abbrev">Fleet</div><div class="wcat-weight">3%</div><div class="wcat-name">Fleet Size</div></div>
+    <div class="wcat"><div class="wcat-num">C9</div><div class="wcat-abbrev">Staff</div><div class="wcat-weight">3%</div><div class="wcat-name">Employee Count</div></div>
+    <div class="wcat"><div class="wcat-num">C10</div><div class="wcat-abbrev">Certs</div><div class="wcat-weight">7%</div><div class="wcat-name">Certifications</div></div>
+    <div class="wcat"><div class="wcat-num">C11</div><div class="wcat-abbrev">Awards</div><div class="wcat-weight">5%</div><div class="wcat-name">Awards</div></div>
+    <div class="wcat"><div class="wcat-num">C12</div><div class="wcat-abbrev">Refs</div><div class="wcat-weight">3%</div><div class="wcat-name">Referral Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C13</div><div class="wcat-abbrev">Spon</div><div class="wcat-weight">3%</div><div class="wcat-name">Sponsorships</div></div>
+    <div class="wcat"><div class="wcat-num">C14</div><div class="wcat-abbrev">Web</div><div class="wcat-weight">6%</div><div class="wcat-name">Website Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C15</div><div class="wcat-abbrev">SEO</div><div class="wcat-weight">5%</div><div class="wcat-name">Technical SEO</div></div>
+    <div class="wcat"><div class="wcat-num">C16</div><div class="wcat-abbrev">AI</div><div class="wcat-weight">5%</div><div class="wcat-name">AI Readiness</div></div>
+    <div class="wcat"><div class="wcat-num">C17</div><div class="wcat-abbrev">Cont</div><div class="wcat-weight">5%</div><div class="wcat-name">Content Depth</div></div>
+    <div class="wcat"><div class="wcat-num">C18</div><div class="wcat-abbrev">GBP</div><div class="wcat-weight">6%</div><div class="wcat-name">GBP Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C19</div><div class="wcat-abbrev">Soc</div><div class="wcat-weight">4%</div><div class="wcat-name">Social Proof</div></div>
+    <div class="wcat"><div class="wcat-num">C20</div><div class="wcat-abbrev">Brand</div><div class="wcat-weight">6%</div><div class="wcat-name">Brand Recognition</div></div>
+    <div class="wcat"><div class="wcat-num">C21</div><div class="wcat-abbrev">Sent</div><div class="wcat-weight">6%</div><div class="wcat-name">Customer Sentiment</div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 3 — COMPARISON TABLE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Core Deliverable</div>
+  <div class="section-title">Competitive Authority Scoring Matrix</div>
+  <div class="section-desc">All 15 scored competitors across 21 categories. Sorted by total authority score. Scroll horizontally for all columns. Color: <span style="color:var(--green)">■ 8–10 Strong</span> · <span style="color:#fbbf24">■ 5–7 Average</span> · <span style="color:#f87171">■ 0–4 Weak</span></div>
+
+  <div class="table-wrapper">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th class="col-name">Competitor</th>
+          <th>C1<br><span class="weight-badge">Mat / 4%</span></th>
+          <th>C2<br><span class="weight-badge">Trust / 5%</span></th>
+          <th>C3<br><span class="weight-badge">Rep / 6%</span></th>
+          <th>C4<br><span class="weight-badge">RevVel / 5%</span></th>
+          <th>C5<br><span class="weight-badge">RevQual / 6%</span></th>
+          <th>C6<br><span class="weight-badge">SvcBrd / 4%</span></th>
+          <th>C7<br><span class="weight-badge">Price / 3%</span></th>
+          <th>C8<br><span class="weight-badge">Fleet / 3%</span></th>
+          <th>C9<br><span class="weight-badge">Staff / 3%</span></th>
+          <th>C10<br><span class="weight-badge">Certs / 7%</span></th>
+          <th>C11<br><span class="weight-badge">Awards / 5%</span></th>
+          <th>C12<br><span class="weight-badge">Refs / 3%</span></th>
+          <th>C13<br><span class="weight-badge">Spon / 3%</span></th>
+          <th>C14<br><span class="weight-badge">Web / 6%</span></th>
+          <th>C15<br><span class="weight-badge">SEO / 5%</span></th>
+          <th>C16<br><span class="weight-badge">AI / 5%</span></th>
+          <th>C17<br><span class="weight-badge">Cont / 5%</span></th>
+          <th>C18<br><span class="weight-badge">GBP / 6%</span></th>
+          <th>C19<br><span class="weight-badge">Soc / 4%</span></th>
+          <th>C20<br><span class="weight-badge">Brand / 6%</span></th>
+          <th>C21<br><span class="weight-badge">Sent / 6%</span></th>
+          <th class="col-total">AUTHORITY<br><span class="weight-badge">Score / 100</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- SERVPRO -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">SERVPRO of Medina County</div>
+            <div class="competitor-location">Medina, OH · Franchise · Est. 1977</div>
+          </td>
+          <td class="s10">10</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s10">10</td>
+          <td class="s6">6</td><td class="s8">8</td><td class="s8">8</td>
+          <td class="s8">8</td><td class="s4">4</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s10">10</td><td class="s7">7</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-70s">75.4</span><div class="score-bar"><div class="score-bar-fill" style="width:75.4%"></div></div></div></td>
+        </tr>
+
+        <!-- ROTO-ROOTER -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Roto-Rooter</div>
+            <div class="competitor-location">Serves Medina County · Franchise · National</div>
+          </td>
+          <td class="s9">9</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s9">9</td><td class="s9">9</td>
+          <td class="s7">7</td><td class="s3">3</td><td class="s7">7</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s9">9</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">66.3</span><div class="score-bar"><div class="score-bar-fill" style="width:66.3%"></div></div></div></td>
+        </tr>
+
+        <!-- BTN RESTORATION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">BTN Restoration Group</div>
+            <div class="competitor-location">Medina, OH · Independent · Local</div>
+          </td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s7">7</td><td class="s3">3</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">57.7</span><div class="score-bar"><div class="score-bar-fill" style="width:57.7%"></div></div></div></td>
+        </tr>
+
+        <!-- RAINBOW RESTORATION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Rainbow Restoration of Medina</div>
+            <div class="competitor-location">Medina, OH · Franchise (Neighborly)</div>
+          </td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s9">9</td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s7">7</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">57.5</span><div class="score-bar"><div class="score-bar-fill" style="width:57.5%"></div></div></div></td>
+        </tr>
+
+        <!-- SERVICEMASTER CDR -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">ServiceMaster CDR (Akron)</div>
+            <div class="competitor-location">Akron, OH (serves Medina) · Franchise</div>
+          </td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">56.7</span><div class="score-bar"><div class="score-bar-fill" style="width:56.7%"></div></div></div></td>
+        </tr>
+
+        <!-- PUROCLEAN -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">PuroClean Emergency Restoration</div>
+            <div class="competitor-location">Elyria/NE Ohio (serves Medina) · Franchise</div>
+          </td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">56.1</span><div class="score-bar"><div class="score-bar-fill" style="width:56.1%"></div></div></div></td>
+        </tr>
+
+        <!-- 1-800 WATER DAMAGE -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">1-800 Water Damage of Cleveland West</div>
+            <div class="competitor-location">North Royalton, OH (serves Medina) · Franchise (BELFOR)</div>
+          </td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">54.5</span><div class="score-bar"><div class="score-bar-fill" style="width:54.5%"></div></div></div></td>
+        </tr>
+
+        <!-- DRS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Disaster Recovery Services (DRS)</div>
+            <div class="competitor-location">NE Ohio (serves Medina) · Independent</div>
+          </td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s4">4</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">52.0</span><div class="score-bar"><div class="score-bar-fill" style="width:52%"></div></div></div></td>
+        </tr>
+
+        <!-- XPERT RESTORATION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Xpert Restoration Inc.</div>
+            <div class="competitor-location">Brunswick, OH (in-county) · Independent</div>
+          </td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">48.8</span><div class="score-bar"><div class="score-bar-fill" style="width:48.8%"></div></div></div></td>
+        </tr>
+
+        <!-- RESTOPROS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">RestoPros of West Cleveland</div>
+            <div class="competitor-location">Valley City, OH (in-county) · Franchise</div>
+          </td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s6">6</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">46.9</span><div class="score-bar"><div class="score-bar-fill" style="width:46.9%"></div></div></div></td>
+        </tr>
+
+        <!-- AMP RESTORATION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">AMP Restoration LLC</div>
+            <div class="competitor-location">Louisville, OH (via Medina lead-gen) · Independent</div>
+          </td>
+          <td class="s6">6</td><td class="s6">6</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s8">8</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s3">3</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">46.8</span><div class="score-bar"><div class="score-bar-fill" style="width:46.8%"></div></div></div></td>
+        </tr>
+
+        <!-- 911 WATER DAMAGE EXPERTS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">911 Water Damage Experts of Ohio</div>
+            <div class="competitor-location">North Royalton, OH (serves Medina) · Independent</div>
+          </td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s6">6</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s6">6</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">46.5</span><div class="score-bar"><div class="score-bar-fill" style="width:46.5%"></div></div></div></td>
+        </tr>
+
+        <!-- AMERICON -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Americon Restoration</div>
+            <div class="competitor-location">Cleveland, OH (serves county towns) · Independent</div>
+          </td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s3">3</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">44.6</span><div class="score-bar"><div class="score-bar-fill" style="width:44.6%"></div></div></div></td>
+        </tr>
+
+        <!-- AAPEX -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Aapex Restoration &amp; Remodeling</div>
+            <div class="competitor-location">Creston, OH (in-county) · Independent</div>
+          </td>
+          <td class="s8">8</td><td class="s6">6</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s3">3</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">44.1</span><div class="score-bar"><div class="score-bar-fill" style="width:44.1%"></div></div></div></td>
+        </tr>
+
+        <!-- PROFESSIONAL RESTORATION SERVICE -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Professional Restoration Service Inc.</div>
+            <div class="competitor-location">Medina, OH · Independent · Est. 1996</div>
+          </td>
+          <td class="s9">9</td><td class="s8">8</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s5">5</td><td class="s2">2</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s3">3</td><td class="s3">3</td>
+          <td class="s2">2</td><td class="s2">2</td><td class="s3">3</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">44.0</span><div class="score-bar"><div class="score-bar-fill" style="width:44%"></div></div></div></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div><!-- /table-wrapper -->
+
+  <div class="alert-box" style="margin-top:24px;">
+    <strong>Peripheral &amp; excluded from scoring:</strong> Shambaugh Cleaning &amp; Restoration (Mansfield-area, service-area page only), ESS and Mid-Ohio Mold (older mold-led sites with Medina pages, current activity unconfirmed), Pappas Construction and Aki Restoration (construction/roofing-led firms that also do water/fire work), and BBH Remediation (single flooded-basement landing page). Additionally, a cluster of national pay-per-lead <em>doorway sites</em> auto-generate "Medina 44256" pages (naplesdamagerestoration, azwaterdamagepros, ohiowaterdamagerestorationdirectory, prowaterrestore, abwaterdamage, and similar) — these are <strong>not real operators</strong> but they clutter the SERP and siphon clicks. Notably, franchise brands 911 Restoration, Rytech, and AdvantaClean have <em>no</em> Medina County location — a saturation signal confirming the operating franchise field is SERVPRO, PuroClean, Rainbow, ServiceMaster, Roto-Rooter, 1-800 Water Damage, and RestoPros.
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 4 — AUTHORITY SUMMARIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Competitor Intelligence</div>
+  <div class="section-title">Authority Summaries</div>
+  <div class="section-desc">One-paragraph intelligence brief per competitor. Data points verified via company websites, BBB records, Google Business Profiles, HomeAdvisor/Angi, and franchise locators. Blank fields reflect genuinely unpublished data, flagged as such.</div>
+
+  <div class="profiles-grid">
+
+    <!-- #1 SERVPRO -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#1 — Authority Score</div>
+          <div class="profile-name">SERVPRO of Medina County</div>
+          <div class="profile-loc">400 N State Rd, Medina, OH 44256 · (330) 722-4343 · servpro.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-70s">75.4</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">#1 Brand Recall</span>
+        <span class="chip chip-amber">IICRC Certified Firm</span>
+        <span class="chip chip-gold">Est. 1977</span>
+        <span class="chip chip-blue">4.7★ / 189 Reviews</span>
+        <span class="chip chip-green">Broadest Scope</span>
+      </div>
+      <div class="profile-body">
+        The clear market leader and the name every Medina County homeowner already knows. Operating since 1977, franchise-owned (Janis Valega), IICRC Certified Firm, Greater Medina Chamber member, 24/7. Their service scope is the widest in the market by a distance — water, fire, mold, storm, sewage, biohazard, commercial, contents and document restoration, odor control and board-up. 4.7★ across 189 Google reviews is the largest verified review base in the local field. National advertising gives them brand-recall dominance no independent can match short-term. Their vulnerabilities are entirely in the local/digital layer: a generic national-template website, no Medina-specific content, no local awards, and — telling for a 40+ year franchise — a review count (189) that a focused local competitor could match within 12–18 months. SERVPRO owns the reflex; it does not own "the trusted local expert." A Medina-identity brand with an aggressive review and content engine erodes their organic and map visibility while leaving their brand recall intact.
+      </div>
+    </div>
+
+    <!-- #2 Roto-Rooter -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#2 — Authority Score</div>
+          <div class="profile-name">Roto-Rooter</div>
+          <div class="profile-loc">Serves Medina/Wayne/Holmes/Ashland · (330) 725-9586 · rotorooter.com/medinaoh</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">66.3</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">Plumbing Cross-Sell</span>
+        <span class="chip chip-red">National Scale</span>
+        <span class="chip chip-amber">Dominant SEO</span>
+        <span class="chip chip-blue">IICRC Certified</span>
+        <span class="chip chip-purple">24/7/365</span>
+      </div>
+      <div class="profile-body">
+        The second national name a panicking homeowner already knows — and structurally dangerous because they own the <em>upstream</em> emergency. The pipe bursts, the homeowner calls Roto-Rooter for the plumbing, and Roto-Rooter's water-restoration division then captures the extraction, structural drying, mold and deodorization work on the same visit. IICRC certified and insured, 24/7/365, with fleet and scale no local can rival and a search-domain authority (rotorooter.com) that outranks every independent for "water damage Medina OH." Their weaknesses are the flip side: no local identity or community presence in Medina County, mixed national customer sentiment, thinner fire/contents scope, and a transactional brand feel. They win the reflex call; they are beatable on trust, sentiment, and local credibility — especially with homeowners who want a specialist, not a national dispatch.
+      </div>
+    </div>
+
+    <!-- #3 BTN Restoration -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#3 — Authority Score</div>
+          <div class="profile-name">BTN Restoration Group</div>
+          <div class="profile-loc">811 Remsen Rd, Medina, OH 44256 · (330) 618-5321 · btnrestoration.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">57.7</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">Medina-Based Local</span>
+        <span class="chip chip-gold">5.0★ Google</span>
+        <span class="chip chip-amber">IICRC Certified</span>
+        <span class="chip chip-blue">Founder-Led</span>
+        <span class="chip chip-purple">24/7</span>
+      </div>
+      <div class="profile-body">
+        "Back to Normal" — the strongest genuine local independent and the single most instructive competitor for Medwick, because BTN <em>is</em> the model of a well-run Medina restoration brand. Real Medina 44256 address, founder-led (Lance Gavrilovic), a perfect 5.0★ Google rating, IICRC-certified, 24/7, and broad scope: water, flooded basement, fire/smoke, mold, storm, ice-dam removal, commercial and structural drying. This is what "local, done right" looks like today. Their ceiling is set by unproven depth: the 5.0★ has no publicly surfaced review <em>count</em>, so the volume — and therefore the durability of that rating under scrutiny — can't be verified; there are no awards, limited content and technical-SEO investment, and low brand recognition against the franchises. BTN is drifting toward the open "best local restorer" position but has not locked it. Medwick's most direct competitive question is: can we match BTN's credibility and then decisively out-execute on review volume, content, and search before they professionalize their marketing?
+      </div>
+    </div>
+
+    <!-- #4 Rainbow Restoration -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#4 — Authority Score</div>
+          <div class="profile-name">Rainbow Restoration of Medina</div>
+          <div class="profile-loc">Medina, OH · (216) 249-6229 · rainbowrestores.com/medina</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">57.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">Neighborly Network</span>
+        <span class="chip chip-blue">IICRC · RIA · IFA</span>
+        <span class="chip chip-green">Very Broad Scope</span>
+        <span class="chip chip-purple">Locally Owned</span>
+      </div>
+      <div class="profile-body">
+        A locally owned franchise backed by the Neighborly network, Rainbow carries one of the broadest service menus in the market — water, fire/smoke, mold, contents, board-up/tarp, reconstruction, carpet/upholstery, air-duct, biohazard and odor — plus a strong credential stack (IICRC member, RIA, IFA) and 24/7 availability. The Neighborly backing gives them national systems and referral flow that pure independents lack. What holds them at mid-table is visibility: no publicly surfaced review count or GBP volume, no local awards, no community presence, and a national-template digital footprint with thin Medina-specific content. They are a credible, well-equipped operator that most Medina homeowners simply haven't heard of — a strong service business with a weak local marketing signal.
+      </div>
+    </div>
+
+    <!-- #5 ServiceMaster CDR -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#5 — Authority Score</div>
+          <div class="profile-name">ServiceMaster CDR (Akron)</div>
+          <div class="profile-loc">Akron, OH (serves Medina/Wadsworth/Brunswick) · servicemasterrestore.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">56.7</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">ServiceMaster Restore</span>
+        <span class="chip chip-blue">IICRC Certified</span>
+        <span class="chip chip-purple">~1-Hr Response</span>
+      </div>
+      <div class="profile-body">
+        A ServiceMaster Restore franchise running Medina-area crews out of Akron, advertising ~1-hour response to Medina, Wadsworth and Brunswick. Solid national brand recognition (ServiceMaster is a top-tier restoration name), IICRC certification, real fleet and staffing depth, and core water/fire/mold/storm scope. Their limitation is that they are an Akron operation reaching into Medina County rather than a Medina brand — no in-county GBP, Akron-clustered reviews, and no Medina community footprint. They compete on brand and response time in the paid/organic layer, but a homeowner searching for a <em>local</em> restorer sees an out-of-town franchise. Credible and capable; not locally anchored.
+      </div>
+    </div>
+
+    <!-- #6 PuroClean -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#6 — Authority Score</div>
+          <div class="profile-name">PuroClean Emergency Restoration</div>
+          <div class="profile-loc">Elyria + NE Ohio offices (serve Medina) · puroclean.com/offices/oh/medina</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">56.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">"Paramedics of Prop. Damage"</span>
+        <span class="chip chip-blue">~60-Min Response</span>
+        <span class="chip chip-green">Full Restoration Scope</span>
+      </div>
+      <div class="profile-body">
+        A well-known national franchise brand covering Medina through several NE Ohio offices (nearest in Elyria; Akron, Macedonia, Chagrin Valley and Chardon also serve the county). Full scope — water, fire, mold, biohazard, reconstruction and commercial — 24/7 with ~60-minute response targets and insurance-direct billing. The brand ("the paramedics of property damage") carries respectable recall. The problem for Medina specifically is that there is <em>no Medina PuroClean office</em>: coverage is a service-area page, not a local presence, so there's no Medina GBP, no local reviews, and no community identity. Strong franchise machine, absent local roots — precisely the gap a Medina-based specialist exploits.
+      </div>
+    </div>
+
+    <!-- #7 1-800 Water Damage -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#7 — Authority Score</div>
+          <div class="profile-name">1-800 Water Damage of Cleveland West</div>
+          <div class="profile-loc">9841 York Alpha Dr, North Royalton, OH · (440) 545-7786 · 1800waterdamage.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">54.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">BELFOR-Backed</span>
+        <span class="chip chip-blue">BBB A+</span>
+        <span class="chip chip-purple">Multi-County Coverage</span>
+      </div>
+      <div class="profile-body">
+        A franchise of the 1-800 Water Damage network (owned by BELFOR, the largest disaster-restoration company in the world), based in North Royalton and covering Lorain, Cuyahoga and Medina counties. BBB A+, with water, mold, sewage, fire/smoke and carpet cleaning scope, and BELFOR's operational muscle and insurance relationships behind it. As with the other regionals, their Medina position is a coverage claim, not a local presence — no Medina GBP, no local reviews, no community identity. Their descriptive brand name ("1-800 Water Damage") is a genuine asset in a panic search, but the North Royalton base and thin local signal cap their authority in-county.
+      </div>
+    </div>
+
+    <!-- #8 DRS -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#8 — Authority Score</div>
+          <div class="profile-name">Disaster Recovery Services (DRS)</div>
+          <div class="profile-loc">Serves Medina / NE Ohio · gotamesscalldrs.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">52.0</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">HomeAdvisor 4.9 / 54</span>
+        <span class="chip chip-blue">Thermal Imaging</span>
+        <span class="chip chip-purple">24-Hr Live Answer</span>
+      </div>
+      <div class="profile-body">
+        An independent with the best <em>verified</em> third-party rating in the non-franchise field — 4.9★ across 54 HomeAdvisor reviews — and a memorable brand hook ("Got a mess? Call DRS"). Broad scope: flood, smoke, mold inspection/testing, structural demo, odor and debris removal, plus roof repair, with thermal-imaging moisture detection and a 24-hour live-answer line. Their sentiment and review-quality scores are among the strongest in the market. What holds DRS back is everything around that rating: no certifications surfaced (thermal imaging is a tool, not a credential), no awards, thin content and technical SEO, no Google Business Profile volume to match the HomeAdvisor base, and low brand recognition. A strong service reputation trapped inside a weak marketing footprint — the recurring pattern of this market.
+      </div>
+    </div>
+
+    <!-- #9 Xpert -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#9 — Authority Score</div>
+          <div class="profile-name">Xpert Restoration Inc.</div>
+          <div class="profile-loc">1126 Industrial Pkwy N, Brunswick, OH 44212 · (440) 260-0241 · xpertrestoration.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">48.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-blue">BBB A+</span>
+        <span class="chip chip-green">In-County (Brunswick)</span>
+        <span class="chip chip-amber">Dedicated Medina Page</span>
+      </div>
+      <div class="profile-body">
+        A genuine in-county independent based in Brunswick, BBB A+, with a real website and a dedicated "water damage restoration Medina OH" page — a sign they take local search seriously. Core scope is water removal, flooding repair and home restoration. Xpert has two things the distant regionals lack: a Medina County physical address and local search intent. What they don't have is proof at scale — no surfaced review count or GBP volume, no visible certifications beyond BBB, no awards, and limited content depth. They are a legitimate local competitor in the northern (Brunswick) half of the county whose authority is capped by thin public validation rather than by capability.
+      </div>
+    </div>
+
+    <!-- #10 RestoPros -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#10 — Authority Score</div>
+          <div class="profile-name">RestoPros of West Cleveland</div>
+          <div class="profile-loc">Valley City, OH 44280 · (440) 583-6333 · Franchise (RestoPros)</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">46.9</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-blue">BBB A Accredited</span>
+        <span class="chip chip-green">In-County (Valley City)</span>
+        <span class="chip chip-amber">Water + Mold Focus</span>
+      </div>
+      <div class="profile-body">
+        A RestoPros franchise physically located in Valley City — inside Medina County — giving it a real in-county footprint, BBB A accreditation, and a national franchise system behind a narrower water-and-mold focus. As a newer franchise location its brand and review base are still thin, with no surfaced GBP volume, no awards and limited content. RestoPros is a rising in-county player worth watching, but at this stage competes on franchise credibility rather than established local authority. Their Valley City base positions them for the western/southern county, adjacent to where several of the larger players are weakest.
+      </div>
+    </div>
+
+    <!-- #11 AMP -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#11 — Authority Score</div>
+          <div class="profile-name">AMP Restoration LLC</div>
+          <div class="profile-loc">Louisville, OH (Stark Co.) · (330) 983-3400 · Independent</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">46.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">Master Water Restorer</span>
+        <span class="chip chip-red">AMRT Certified</span>
+        <span class="chip chip-amber">Commercial Drying Spec.</span>
+      </div>
+      <div class="profile-body">
+        The most <em>individually credentialed</em> independent in the scan — owner Andrew Printz holds Master Water Restorer, Applied Microbial Remediation Technician (AMRT) and Commercial Drying Specialist designations, with 21+ years of experience and positive HomeAdvisor reviews. On pure technical credentials, AMP outranks most franchises. The catch is geography and visibility: AMP is based in Louisville (Stark County, ~50 miles out) and only appears in Medina via Angi/HomeAdvisor lead-gen, with no local presence, no Medina GBP, no website depth surfaced, and minimal brand recognition in the county. A high-skill operator competing at the edge of the market through lead aggregators rather than local authority — a useful illustration that certifications alone don't create market position without local visibility.
+      </div>
+    </div>
+
+    <!-- #12 911 Water Damage Experts -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#12 — Authority Score</div>
+          <div class="profile-name">911 Water Damage Experts of Ohio</div>
+          <div class="profile-loc">12800 York Rd, North Royalton, OH · (440) 845-3473 · 911wdeohio.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">46.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-blue">BBB A+</span>
+        <span class="chip chip-amber">Descriptive Brand Name</span>
+        <span class="chip chip-purple">Water · Sewage · Mold · Fire</span>
+      </div>
+      <div class="profile-body">
+        A North Royalton independent (distinct from the national "911 Restoration" franchise, which has no Medina location) covering Medina with water, sewage, mold and fire services, BBB A+, listed in the Medina BBB restoration category. The "911 Water Damage Experts" name is a real asset in an emergency search — descriptive and urgent. But the operation is Cuyahoga-based reaching into Medina, with no in-county presence, no surfaced review volume, no certifications beyond BBB, no awards and thin content. A serviceable regional competitor whose in-county authority is minimal.
+      </div>
+    </div>
+
+    <!-- #13 Americon -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#13 — Authority Score</div>
+          <div class="profile-name">Americon Restoration</div>
+          <div class="profile-loc">Cleveland, OH (serves Medina/Brunswick/Wadsworth/Seville/Lodi) · (330) 238-3927</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">44.6</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">"Since 1913" (claim)</span>
+        <span class="chip chip-amber">County-Town Coverage</span>
+        <span class="chip chip-red">Site Returned 429</span>
+      </div>
+      <div class="profile-body">
+        A Cleveland-based independent that markets aggressively across Medina County towns — Medina, Brunswick, Wadsworth, Seville, Lodi — with water, fire, smoke and storm services and a striking "since 1913" heritage claim (unverified; flagged). If that longevity is genuine it is the deepest maturity story in the field, but the claim couldn't be corroborated and their site returned an HTTP 429 (rate-limited) on fetch, itself a minor technical-health signal. No surfaced review volume, no certifications, no awards, no in-county presence. Americon competes on service-area SEO reach and a heritage narrative rather than verifiable local authority — broad coverage, thin proof.
+      </div>
+    </div>
+
+    <!-- #14 Aapex -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#14 — Authority Score</div>
+          <div class="profile-name">Aapex Restoration &amp; Remodeling</div>
+          <div class="profile-loc">Creston, OH (in-county) · aapex-restoration.com · Independent</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">44.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">20+ Years</span>
+        <span class="chip chip-green">In-County (Creston)</span>
+        <span class="chip chip-amber">Restoration + Construction</span>
+      </div>
+      <div class="profile-body">
+        An in-county independent based in Creston with 20+ years of operation, combining water extraction, structural drying and water-damage repair with roofing, remodeling and general contracting. The dual restoration-plus-construction model is a genuine differentiator for full mitigation-to-rebuild jobs — the homeowner doesn't have to hand off to a separate contractor. But their visibility is minimal: no surfaced review volume, no certifications, no awards, thin website and SEO, and low brand recognition. A capable, long-tenured small operator in the southern county whose authority is suppressed almost entirely by weak digital presence — the exact profile Medwick can leapfrog with focused marketing.
+      </div>
+    </div>
+
+    <!-- #15 Professional Restoration Service -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#15 — Authority Score</div>
+          <div class="profile-name">Professional Restoration Service Inc.</div>
+          <div class="profile-loc">1170 Industrial Pkwy, Medina, OH 44256 · (330) 825-1803 · Independent</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">44.0</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">Est. 1996 · ~50 Staff</span>
+        <span class="chip chip-blue">BBB A+ Since 1998</span>
+        <span class="chip chip-red">No Website / Digital-Dark</span>
+      </div>
+      <div class="profile-body">
+        The market's clearest example of the scoring model's core lesson: a substantial, capable operation with almost no visible market authority. Founded 1996, Medina-based, BBB A+ accredited since 1998, roughly 50 employees, with full fire/water/mold/asbestos-removal and reconstruction scope across residential, commercial and industrial work — real scale and maturity. Yet they have no functioning consumer website (only a BBB profile), no Google review presence, no content, no SEO, and effectively zero AI/search discoverability. In a category where 80% of jobs begin with an online search, a firm this established being digitally invisible is a strategic liability that pulls their authority score down to the bottom of the field despite genuine operational strength. If they ever built a modern web presence to match their capability, their score would jump sharply — which is precisely why they are a latent, not active, threat.
+      </div>
+    </div>
+
+  </div><!-- /profiles-grid -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 5 — GAP ANALYSIS / MEDWICK OPPORTUNITIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Strategic Intelligence</div>
+  <div class="section-title">Market Gaps &amp; Medwick Opportunities</div>
+  <div class="section-desc">Structural vulnerabilities in the competitive set that Medwick can exploit. This market is <em>weaker and more fragmented</em> than the roofing market — the gaps are wider and there is no incumbent local champion defending them.</div>
+
+  <div class="gap-grid">
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">🏅</div>
+        <div>
+          <div class="gap-title">Gap #1 — No Local Identity Champion Exists</div>
+          <div class="gap-subtitle">The single biggest opening in this market</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        In roofing, Fixler owns "Medina" through Reader's Choice wins and Home &amp; Garden Show sponsorship. In water mitigation, <strong>no company owns local identity at all.</strong> The top of the market is national brand recall (SERVPRO, Roto-Rooter); the locals (BTN, Xpert, Aapex, Professional Restoration) are digitally quiet. There is no "the Medina County water-damage company." That position is <em>vacant and undefended</em>. A Medwick brand built explicitly around Medina County identity — county imagery, local reviews, community involvement, "your neighbors, not a national dispatch" — can claim it before anyone realizes it was available.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">🏆</div>
+        <div>
+          <div class="gap-title">Gap #2 — Zero Awards Anywhere in the Field</div>
+          <div class="gap-subtitle">No Reader's Choice, no "Best of Medina" — uncontested</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Not one competitor in the scan holds a local award for water mitigation. The Medina Gazette Reader's Choice and "Best of Medina" categories for restoration/water damage are effectively <strong>unclaimed.</strong> Awards are a community-vote game that rewards the most engaged customer base, not the best technician. A Medwick that builds a review-and-engagement machine and runs an organized Reader's Choice push could win a "Best of" designation with little organized resistance — an authority signal that would immediately separate it from a field where <em>everyone</em> scores 2–4 on this dimension.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">🔍</div>
+        <div>
+          <div class="gap-title">Gap #3 — AI &amp; Generative Search Is Wide Open</div>
+          <div class="gap-subtitle">Nobody is optimized for "who do I call for water damage in Medina?"</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        When a homeowner asks ChatGPT, Claude, Perplexity or Google AI Overviews "who should I call for a flooded basement in Medina Ohio," <strong>no competitor has structured their presence to be the cited answer.</strong> The franchises rely on national brand pages; the independents have thin or no content. Whoever builds authoritative, structured, Medina-specific FAQ content (burst pipes, sump-pump failure, sewage backup, insurance claims, mold-from-water), consistent NAP, schema markup and a well-tuned GBP becomes the AI-cited default. First mover in Medina County's AI-search landscape earns a defensible, compounding advantage in the fastest-growing discovery channel for emergency services.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon purple">⭐</div>
+        <div>
+          <div class="gap-title">Gap #4 — The Review-Data Desert</div>
+          <div class="gap-subtitle">The category leader has 189 reviews. Most rivals show none.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Review volume in this market is startlingly thin. SERVPRO's 189 is the largest verified base; BTN shows a 5.0★ with <em>no surfaced count</em>; DRS has 54 (on HomeAdvisor, not Google); most independents show no public review volume at all. <strong>A disciplined review-generation program — every completed job, every platform — could put Medwick into the top 3 by Google review count within 9–12 months</strong> and challenge SERVPRO's 189 within two years. Because review velocity and volume are primary local-ranking and map-pack signals, this is the fastest lever to move in the entire model, and the field is barely competing on it.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">📝</div>
+        <div>
+          <div class="gap-title">Gap #5 — The Market Is Content-Dark</div>
+          <div class="gap-subtitle">Not one competitor runs a real educational content program</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Across all 15 scored competitors, editorial content ranges from thin to nonexistent — the highest content score in the field is a 6. No one is answering the questions a stressed Medina homeowner actually types at 2am: "how fast does water damage cause mold," "will insurance cover a burst pipe in Ohio," "sump pump failed basement flooded what do I do," "sewage backup cleanup cost Medina." <strong>Even 12–20 well-executed, Medina-specific articles would build topical authority no competitor could quickly match</strong> — and would feed directly into the AI-search and organic-ranking gaps above. Content is the connective tissue between every other opportunity in this list.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon red">🛡️</div>
+        <div>
+          <div class="gap-title">Gap #6 — Insurance-Claim Advocacy Positioning</div>
+          <div class="gap-subtitle">Everyone bills insurance; nobody owns "we fight for you"</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Water damage is overwhelmingly an insurance event, and the franchises all "work with insurance" — transactionally. <strong>No competitor has claimed the homeowner-advocacy angle:</strong> "we document the loss, handle the adjuster, maximize your claim, and you pay your deductible — not a dollar more." For a homeowner who is frightened, underwater and distrustful of both the water and the insurer, that positioning is powerful and emotionally resonant. It is a messaging lane sitting completely empty in Medina County, and it pairs naturally with the local-identity and content plays.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">⏱️</div>
+        <div>
+          <div class="gap-title">Gap #7 — Prove the Response Time</div>
+          <div class="gap-subtitle">Everyone claims 24/7. Nobody proves speed with data.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        In an emergency category, response time <em>is</em> the product — water spreads and damage compounds by the hour. Every competitor claims "24/7" and a couple claim "~60-minute response," but <strong>none proves it</strong> with published average arrival times, live dispatch tracking, timestamped before/after documentation, or a response guarantee. A Medwick that measures and publicly proves a genuine response-time advantage — "on-site in Medina County in under 60 minutes, guaranteed, or [X]" — converts a category cliché into a hard differentiator, and being in-county is a structural advantage over the North Royalton / Akron / Cleveland regionals who physically cannot match it.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">📜</div>
+        <div>
+          <div class="gap-title">Gap #8 — Certifications Held but Hidden</div>
+          <div class="gap-subtitle">IICRC is common; making the customer see it is not</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Several competitors hold real credentials — SERVPRO (IICRC Certified Firm), BTN and the franchises (IICRC), AMP (Master Water Restorer, AMRT) — but they <strong>bury them.</strong> The average homeowner has no idea what IICRC is or why it matters, and no one is teaching them. A Medwick that earns the IICRC WRT/ASD/AMRT stack <em>and</em> then translates it into plain-language trust ("certified to national standards to dry your home correctly and prevent hidden mold — most cut corners here") turns a table-stakes credential into a visible competitive weapon. Owning the <em>explanation</em> of certification, not just the certificate, is the move — because in this market, nobody else is even trying.
+      </div>
+    </div>
+
+  </div><!-- /gap-grid -->
+
+  <div class="alert-box" style="margin-top:24px;">
+    <strong>Bottom line for Medwick:</strong> The Medina County water-mitigation market is <em>softer than the roofing market it mirrors.</em> No local identity champion, no award holder, a review-data desert, and a content-dark, AI-invisible field — with the top two positions held by national franchises that have brand recall but no local roots. The winning play is not to out-scale SERVPRO or out-brand Roto-Rooter; it is to become <strong>the definitive local Medina County water-damage authority</strong> — local identity + aggressive reviews + educational content + AI/SEO + insurance advocacy + provable response time — capturing the ground that no competitor is currently defending.
+  </div>
+
+</section>
+</div><!-- /container -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<div class="report-footer">
+  <div class="footer-brand">
+    <strong>Hunter Systems</strong> — Intelligence Division<br>
+    Prepared for Medwick · Medina County, OH · Water Mitigation Market
+  </div>
+  <div class="footer-disclaimer">
+    Scores based on publicly available data as of July 2026 via company websites, BBB records, Google Business Profiles, HomeAdvisor/Angi, and franchise locators. Water-mitigation firms publish materially less public data than roofers; Fleet Size, Employee Count and some review/GBP scores are proxy-estimated and flagged. Scores represent relative <em>visible</em> market authority, not absolute quality ratings or private operational capability. Analytical estimation for strategic planning only.
+  </div>
+</div>
+
+</body>
+</html>

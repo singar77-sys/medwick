@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medwick | Competitive Authority Report — Medina, OH Roofing Market</title>
+<style>
+  :root {
+    --bg: #10141b;
+    --surface: #171e28;
+    --surface2: #161822;
+    --border: #28323f;
+    --border2: #2a2d42;
+    --gold: #d4a017;
+    --gold-light: #f0c040;
+    --text: #e8eaf0;
+    --text-dim: #8b90a8;
+    --text-muted: #555875;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --green: #22c55e;
+    --blue: #3b82f6;
+    --accent: #c0a674;
+    --score-10: #15803d;
+    --score-9: #16a34a;
+    --score-8: #22c55e;
+    --score-7: #4ade80;
+    --score-6: #86efac;
+    --score-5: #fbbf24;
+    --score-4: #f59e0b;
+    --score-3: #f97316;
+    --score-2: #ef4444;
+    --score-1: #dc2626;
+    --score-0: #991b1b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─── HEADER ──────────────────────────────────────────── */
+  .report-header {
+    background: linear-gradient(135deg, #0a0b12 0%, #0f1020 50%, #080910 100%);
+    border-bottom: 1px solid var(--gold);
+    padding: 48px 40px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .report-header::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 40%;
+    background: radial-gradient(ellipse at 80% 50%, rgba(212,160,23,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+  .agency-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    border: 1px solid rgba(212,160,23,0.4);
+    padding: 4px 12px;
+    border-radius: 3px;
+  }
+  .report-date {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: right;
+  }
+  .report-date span { color: var(--gold-light); font-weight: 600; }
+  .report-title {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .report-title em {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+  .report-subtitle {
+    font-size: 16px;
+    color: var(--text-dim);
+    font-weight: 400;
+    margin-bottom: 28px;
+  }
+  .header-stats {
+    display: flex;
+    gap: 32px;
+  }
+  .hstat {
+    text-align: center;
+  }
+  .hstat-val {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+    display: block;
+    line-height: 1;
+  }
+  .hstat-label {
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+  }
+
+  /* ─── LAYOUT ──────────────────────────────────────────── */
+  .container { max-width: 1600px; margin: 0 auto; padding: 0 32px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .section-desc {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+
+  /* ─── THREAT CARDS ────────────────────────────────────── */
+  .threat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  .threat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .threat-card.rank-1 { border-color: rgba(239,68,68,0.5); }
+  .threat-card.rank-2 { border-color: rgba(245,158,11,0.5); }
+  .threat-card.rank-3 { border-color: rgba(212,160,23,0.4); }
+  .threat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+  .threat-card.rank-1::before { background: #ef4444; }
+  .threat-card.rank-2::before { background: #f59e0b; }
+  .threat-card.rank-3::before { background: var(--gold); }
+  .threat-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .rank-1 .threat-rank { color: #ef4444; }
+  .rank-2 .threat-rank { color: #f59e0b; }
+  .rank-3 .threat-rank { color: var(--gold); }
+  .threat-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  .threat-score-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .threat-score {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--gold-light);
+  }
+  .threat-score-label { font-size: 12px; color: var(--text-dim); }
+  .threat-why {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+  .threat-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .chip {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .chip-red { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+  .chip-amber { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+  .chip-gold { background: rgba(212,160,23,0.15); color: var(--gold-light); border: 1px solid rgba(212,160,23,0.3); }
+  .chip-blue { background: rgba(59,130,246,0.15); color: #93c5fd; border: 1px solid rgba(59,130,246,0.3); }
+  .chip-green { background: rgba(34,197,94,0.15); color: #86efac; border: 1px solid rgba(34,197,94,0.3); }
+  .chip-purple { background: rgba(192,166,116,0.15); color: #c4b5fd; border: 1px solid rgba(192,166,116,0.3); }
+
+  /* ─── WEIGHT TABLE ────────────────────────────────────── */
+  .weight-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+  .wcat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .wcat-num {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+  .wcat-abbrev {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .wcat-weight {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--gold);
+  }
+  .wcat-name {
+    font-size: 9px;
+    color: var(--text-muted);
+    line-height: 1.3;
+    margin-top: 3px;
+  }
+
+  /* ─── MAIN SCORING TABLE ──────────────────────────────── */
+  .table-wrapper {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+  }
+  table.score-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1400px;
+  }
+  .score-table th {
+    background: var(--surface2);
+    color: var(--text-dim);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--border2);
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .score-table th.col-name {
+    text-align: left;
+    padding-left: 16px;
+    min-width: 200px;
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--surface2);
+    border-right: 2px solid var(--border2);
+  }
+  .score-table th.col-total {
+    color: var(--gold);
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .score-table th .weight-badge {
+    display: block;
+    font-size: 9px;
+    color: var(--gold);
+    opacity: 0.8;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+  .score-table td {
+    border-bottom: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    text-align: center;
+    padding: 10px 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .score-table tr:last-child td { border-bottom: none; }
+  .score-table td.col-name {
+    text-align: left;
+    padding-left: 16px;
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    border-right: 2px solid var(--border2);
+    white-space: nowrap;
+  }
+  .score-table tbody tr { transition: background 0.1s; }
+  .score-table tbody tr:hover td { background: rgba(255,255,255,0.03); }
+  .score-table tbody tr:hover td.col-name,
+  .score-table tbody tr:hover td.col-total { filter: brightness(1.1); }
+  .competitor-name {
+    font-weight: 700;
+    color: #fff;
+    font-size: 13px;
+  }
+  .competitor-location {
+    font-size: 10px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-top: 1px;
+  }
+  td.col-total {
+    border-left: 2px solid var(--border2);
+    min-width: 90px;
+  }
+  .total-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .total-score {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  .score-bar {
+    width: 60px;
+    height: 4px;
+    background: var(--border2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: var(--gold);
+  }
+  /* Score cell colors */
+  .s10 { background: rgba(21,128,61,0.35); color: #86efac; }
+  .s9  { background: rgba(22,163,74,0.30); color: #4ade80; }
+  .s8  { background: rgba(34,197,94,0.22); color: #4ade80; }
+  .s7  { background: rgba(74,222,128,0.15); color: #6ee7b7; }
+  .s6  { background: rgba(134,239,172,0.10); color: #d1fae5; }
+  .s5  { background: rgba(251,191,36,0.15); color: #fbbf24; }
+  .s4  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .s3  { background: rgba(249,115,22,0.20); color: #fb923c; }
+  .s2  { background: rgba(239,68,68,0.20); color: #f87171; }
+  .s1  { background: rgba(220,38,38,0.25); color: #fca5a5; }
+  .s0  { background: rgba(153,27,27,0.30); color: #fca5a5; }
+
+  /* Total score colors */
+  .total-80plus { color: #22c55e; }
+  .total-70s { color: #86efac; }
+  .total-60s { color: #fbbf24; }
+  .total-50s { color: #f59e0b; }
+  .total-40s { color: #f97316; }
+  .total-below40 { color: #ef4444; }
+
+  /* ─── COMPETITOR PROFILES ─────────────────────────────── */
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .profile-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+  }
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .profile-rank {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .profile-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .profile-loc {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .profile-score-badge {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+    text-align: center;
+    min-width: 60px;
+  }
+  .profile-score-sub {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+  }
+  .profile-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  /* ─── GAP ANALYSIS ────────────────────────────────────── */
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .gap-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .gap-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .gap-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .gap-icon.blue { background: rgba(59,130,246,0.15); }
+  .gap-icon.green { background: rgba(34,197,94,0.15); }
+  .gap-icon.amber { background: rgba(245,158,11,0.15); }
+  .gap-icon.purple { background: rgba(192,166,116,0.15); }
+  .gap-icon.red { background: rgba(239,68,68,0.15); }
+  .gap-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .gap-subtitle {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+  .gap-body {
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.6;
+  }
+  .gap-body strong { color: var(--text); }
+
+  /* ─── FOOTER ──────────────────────────────────────────── */
+  .report-footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--surface);
+  }
+  .footer-brand {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .footer-brand strong { color: var(--gold); }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    max-width: 600px;
+    text-align: right;
+    line-height: 1.4;
+  }
+
+  /* ─── UTILITIES ───────────────────────────────────────── */
+  .divider { height: 1px; background: var(--border); margin: 24px 0; }
+  .alert-box {
+    background: rgba(212,160,23,0.07);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 6px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 24px;
+  }
+  .alert-box strong { color: var(--gold-light); }
+
+  @media (max-width: 1100px) {
+    .threat-grid { grid-template-columns: 1fr; }
+    .profiles-grid { grid-template-columns: 1fr; }
+    .gap-grid { grid-template-columns: 1fr; }
+    .weight-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+<a href="/" style="position:fixed;top:14px;left:14px;z-index:99999;font:700 11px/1 'Segoe UI',system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#12161d;background:#c0a674;padding:9px 13px;text-decoration:none;box-shadow:0 3px 12px rgba(0,0,0,.5)">&#8592; Medwick Plan</a>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<div class="report-header">
+  <div class="header-meta">
+    <div class="agency-badge">Hunter Systems — Intelligence Division</div>
+    <div class="report-date">
+      Client: <span>Medwick Roofing</span><br>
+      Market: <span>Medina, OH</span><br>
+      Issued: <span>July 14, 2026</span>
+    </div>
+  </div>
+  <div class="report-title">Medina Roofing Market<br><em>Competitive Authority Report</em></div>
+  <div class="report-subtitle">Full competitor scan · Weighted Authority Scoring · Strategic gap analysis</div>
+  <div class="header-stats">
+    <div class="hstat">
+      <span class="hstat-val">13</span>
+      <div class="hstat-label">Competitors Scored</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">21</span>
+      <div class="hstat-label">Scoring Categories</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">79.0</span>
+      <div class="hstat-label">Highest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">36.5</span>
+      <div class="hstat-label">Lowest Score</div>
+    </div>
+    <div class="hstat">
+      <span class="hstat-val">57.8</span>
+      <div class="hstat-label">Market Average</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 1 — TOP 3 THREATS
+════════════════════════════════════════════════════════════ -->
+<div class="container">
+<section>
+  <div class="section-label">Threat Assessment</div>
+  <div class="section-title">Top 3 Hardest to Beat</div>
+  <div class="section-desc">Competitors with the highest aggregate authority across all 21 dimensions — these require deliberate flanking strategy, not head-on challenge.</div>
+
+  <div class="threat-grid">
+
+    <!-- THREAT 1 -->
+    <div class="threat-card rank-1">
+      <div class="threat-rank">⚠ Threat Level: Critical</div>
+      <div class="threat-name">Gridiron Guys Construction</div>
+      <div class="threat-score-line">
+        <div class="threat-score">79.0</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The operational heavyweight of the Medina market. 20 active trucks, 21,000+ completed projects, 23 years of brand equity, and Angi Super Service recognition every year from 2015–2021. Their HubSpot-powered website and "Roof to Remodel" content engine signal serious digital investment. They compete across every exterior service category — roof, siding, windows, doors, gutters, flooring, kitchen and bath remodeling — making them nearly impossible to out-breadth. Their weakness: they are a regional brand, not a Medina-first brand. No Reader's Choice wins. Community sponsorship presence is weak relative to their scale. Fixler owns "Medina roofing" in local identity; Gridiron owns "volume."
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">20-Truck Fleet</span>
+        <span class="chip chip-red">21K+ Customers</span>
+        <span class="chip chip-amber">Angi SS ×7</span>
+        <span class="chip chip-amber">GAF Master Elite</span>
+        <span class="chip chip-blue">928 Reviews</span>
+        <span class="chip chip-blue">HubSpot CMS</span>
+      </div>
+    </div>
+
+    <!-- THREAT 2 -->
+    <div class="threat-card rank-2">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">Exteriors Plus</div>
+      <div class="threat-score-line">
+        <div class="threat-score">78.8</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The certification king. They hold the full tri-fecta — GAF Master Elite (President's Club), Owens Corning Platinum Preferred (top tier), and CertainTeed, plus Duro-Last for commercial flat roofing. No other competitor in this market stacks that. 850+ reviews at 4.9★ and "Akron's Best 2025" keep their trust signals maxed. They are Akron-based, which creates a legitimate local disadvantage in Medina — their reviews skew Akron and Summit County. Their AI/local-search visibility for "Medina roofing" is lower than their overall footprint suggests. If Medwick can anchor on local identity before Exteriors Plus doubles down on Medina-specific SEO, there's a window.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">GAF ME + President's Club</span>
+        <span class="chip chip-red">OC Platinum Preferred</span>
+        <span class="chip chip-amber">850+ Reviews 4.9★</span>
+        <span class="chip chip-gold">Akron's Best 2025</span>
+        <span class="chip chip-blue">CertainTeed + Duro-Last</span>
+      </div>
+    </div>
+
+    <!-- THREAT 3 -->
+    <div class="threat-card rank-3">
+      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-name">Fixler Roofing LLC</div>
+      <div class="threat-score-line">
+        <div class="threat-score">75.1</div>
+        <div class="threat-score-label">/100 Authority Score</div>
+      </div>
+      <div class="threat-why">
+        The most dangerous competitor for Medwick specifically — not because of scale, but because of identity. Fixler <em>is</em> Medina roofing in the eyes of the local community. Three-time Medina Gazette Reader's Choice winner (2021, 2022, 2026 "Best of the Best"), GAF Master Elite President's Club, multi-manufacturer certified, drone inspections, Equipter tearoff system, and they sponsor the Medina County Home &amp; Garden Show. Ohio License #CE24667. That's institutional-grade local presence. Their Achilles heel: only 34 Birdeye reviews (far too few for their tenure), a Joomla CMS that is aging out, and limited digital content. A competitor who matches their local credibility and out-digitals them will steal their top Google positions.
+      </div>
+      <div class="threat-chips">
+        <span class="chip chip-red">2026 Best of the Best</span>
+        <span class="chip chip-red">GAF President's Club</span>
+        <span class="chip chip-gold">Reader's Choice ×3</span>
+        <span class="chip chip-amber">Drone Inspections</span>
+        <span class="chip chip-purple">Equipter System</span>
+        <span class="chip chip-blue">H&G Show Sponsor</span>
+      </div>
+    </div>
+
+  </div><!-- /threat-grid -->
+
+  <div class="alert-box">
+    <strong>Key Insight for Medwick:</strong> None of the top three threats dominate all dimensions simultaneously. Gridiron wins on volume; Exteriors Plus wins on certifications; Fixler wins on local identity. The market has no single competitor who is both the <em>local identity brand</em> AND the <em>digital authority</em> AND the <em>most certified</em>. That three-way split is Medwick's opening.
+  </div>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 2 — SCORING METHODOLOGY
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Methodology</div>
+  <div class="section-title">Scoring Model — 21 Categories, 100-Point Weighted Scale</div>
+  <div class="section-desc">Each competitor is scored 0–10 per category. Category weights reflect strategic impact on market authority in the residential/commercial roofing segment. Raw score = Σ(category score × weight). Final authority score = raw score ÷ 10.</div>
+
+  <div class="weight-grid">
+    <div class="wcat"><div class="wcat-num">C1</div><div class="wcat-abbrev">Mat</div><div class="wcat-weight">4%</div><div class="wcat-name">Business Maturity</div></div>
+    <div class="wcat"><div class="wcat-num">C2</div><div class="wcat-abbrev">Trust</div><div class="wcat-weight">5%</div><div class="wcat-name">Trust Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C3</div><div class="wcat-abbrev">Rep</div><div class="wcat-weight">6%</div><div class="wcat-name">Local Reputation</div></div>
+    <div class="wcat"><div class="wcat-num">C4</div><div class="wcat-abbrev">RevVel</div><div class="wcat-weight">5%</div><div class="wcat-name">Review Velocity</div></div>
+    <div class="wcat"><div class="wcat-num">C5</div><div class="wcat-abbrev">RevQual</div><div class="wcat-weight">6%</div><div class="wcat-name">Review Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C6</div><div class="wcat-abbrev">SvcBrd</div><div class="wcat-weight">4%</div><div class="wcat-name">Service Breadth</div></div>
+    <div class="wcat"><div class="wcat-num">C7</div><div class="wcat-abbrev">Price</div><div class="wcat-weight">3%</div><div class="wcat-name">Pricing Position</div></div>
+    <div class="wcat"><div class="wcat-num">C8</div><div class="wcat-abbrev">Fleet</div><div class="wcat-weight">3%</div><div class="wcat-name">Fleet Size</div></div>
+    <div class="wcat"><div class="wcat-num">C9</div><div class="wcat-abbrev">Staff</div><div class="wcat-weight">3%</div><div class="wcat-name">Employee Count</div></div>
+    <div class="wcat"><div class="wcat-num">C10</div><div class="wcat-abbrev">Certs</div><div class="wcat-weight">7%</div><div class="wcat-name">Certifications</div></div>
+    <div class="wcat"><div class="wcat-num">C11</div><div class="wcat-abbrev">Awards</div><div class="wcat-weight">5%</div><div class="wcat-name">Awards</div></div>
+    <div class="wcat"><div class="wcat-num">C12</div><div class="wcat-abbrev">Refs</div><div class="wcat-weight">3%</div><div class="wcat-name">Referral Signals</div></div>
+    <div class="wcat"><div class="wcat-num">C13</div><div class="wcat-abbrev">Spon</div><div class="wcat-weight">3%</div><div class="wcat-name">Sponsorships</div></div>
+    <div class="wcat"><div class="wcat-num">C14</div><div class="wcat-abbrev">Web</div><div class="wcat-weight">6%</div><div class="wcat-name">Website Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C15</div><div class="wcat-abbrev">SEO</div><div class="wcat-weight">5%</div><div class="wcat-name">Technical SEO</div></div>
+    <div class="wcat"><div class="wcat-num">C16</div><div class="wcat-abbrev">AI</div><div class="wcat-weight">5%</div><div class="wcat-name">AI Readiness</div></div>
+    <div class="wcat"><div class="wcat-num">C17</div><div class="wcat-abbrev">Cont</div><div class="wcat-weight">5%</div><div class="wcat-name">Content Depth</div></div>
+    <div class="wcat"><div class="wcat-num">C18</div><div class="wcat-abbrev">GBP</div><div class="wcat-weight">6%</div><div class="wcat-name">GBP Quality</div></div>
+    <div class="wcat"><div class="wcat-num">C19</div><div class="wcat-abbrev">Soc</div><div class="wcat-weight">4%</div><div class="wcat-name">Social Proof</div></div>
+    <div class="wcat"><div class="wcat-num">C20</div><div class="wcat-abbrev">Brand</div><div class="wcat-weight">6%</div><div class="wcat-name">Brand Recognition</div></div>
+    <div class="wcat"><div class="wcat-num">C21</div><div class="wcat-abbrev">Sent</div><div class="wcat-weight">6%</div><div class="wcat-name">Customer Sentiment</div></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 3 — COMPARISON TABLE
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Core Deliverable</div>
+  <div class="section-title">Competitive Authority Scoring Matrix</div>
+  <div class="section-desc">All 13 competitors scored across 21 categories. Sorted by total authority score. Scroll horizontally for all columns. Color: <span style="color:var(--green)">■ 8–10 Strong</span> · <span style="color:#fbbf24">■ 5–7 Average</span> · <span style="color:#f87171">■ 0–4 Weak</span></div>
+
+  <div class="table-wrapper">
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th class="col-name">Competitor</th>
+          <th>C1<br><span class="weight-badge">Mat / 4%</span></th>
+          <th>C2<br><span class="weight-badge">Trust / 5%</span></th>
+          <th>C3<br><span class="weight-badge">Rep / 6%</span></th>
+          <th>C4<br><span class="weight-badge">RevVel / 5%</span></th>
+          <th>C5<br><span class="weight-badge">RevQual / 6%</span></th>
+          <th>C6<br><span class="weight-badge">SvcBrd / 4%</span></th>
+          <th>C7<br><span class="weight-badge">Price / 3%</span></th>
+          <th>C8<br><span class="weight-badge">Fleet / 3%</span></th>
+          <th>C9<br><span class="weight-badge">Staff / 3%</span></th>
+          <th>C10<br><span class="weight-badge">Certs / 7%</span></th>
+          <th>C11<br><span class="weight-badge">Awards / 5%</span></th>
+          <th>C12<br><span class="weight-badge">Refs / 3%</span></th>
+          <th>C13<br><span class="weight-badge">Spon / 3%</span></th>
+          <th>C14<br><span class="weight-badge">Web / 6%</span></th>
+          <th>C15<br><span class="weight-badge">SEO / 5%</span></th>
+          <th>C16<br><span class="weight-badge">AI / 5%</span></th>
+          <th>C17<br><span class="weight-badge">Cont / 5%</span></th>
+          <th>C18<br><span class="weight-badge">GBP / 6%</span></th>
+          <th>C19<br><span class="weight-badge">Soc / 4%</span></th>
+          <th>C20<br><span class="weight-badge">Brand / 6%</span></th>
+          <th>C21<br><span class="weight-badge">Sent / 6%</span></th>
+          <th class="col-total">AUTHORITY<br><span class="weight-badge">Score / 100</span></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- GRIDIRON GUYS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Gridiron Guys Construction</div>
+            <div class="competitor-location">Medina, OH · Est. 2003</div>
+          </td>
+          <td class="s9">9</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="s9">9</td><td class="s8">8</td><td class="s10">10</td>
+          <td class="s6">6</td><td class="s10">10</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-70s">79.0</span><div class="score-bar"><div class="score-bar-fill" style="width:79%"></div></div></div></td>
+        </tr>
+
+        <!-- EXTERIORS PLUS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Exteriors Plus</div>
+            <div class="competitor-location">Akron, OH (serves Medina) · Est. 2013</div>
+          </td>
+          <td class="s7">7</td><td class="s10">10</td><td class="s6">6</td>
+          <td class="s9">9</td><td class="s9">9</td><td class="s9">9</td>
+          <td class="s7">7</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s10">10</td><td class="s8">8</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s9">9</td>
+          <td class="s8">8</td><td class="s7">7</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-70s">78.8</span><div class="score-bar"><div class="score-bar-fill" style="width:78.8%"></div></div></div></td>
+        </tr>
+
+        <!-- FIXLER ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Fixler Roofing LLC</div>
+            <div class="competitor-location">Medina, OH · Est. ~2009</div>
+          </td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s10">10</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s9">9</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s10">10</td><td class="s10">10</td><td class="s7">7</td>
+          <td class="s8">8</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="s8">8</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-70s">75.1</span><div class="score-bar"><div class="score-bar-fill" style="width:75.1%"></div></div></div></td>
+        </tr>
+
+        <!-- ROYALTY ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Royalty Roofing LLC</div>
+            <div class="competitor-location">North Canton, OH (serves Medina) · Est. 2012</div>
+          </td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s8">8</td><td class="s8">8</td>
+          <td class="s8">8</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s10">10</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="s4">4</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">67.6</span><div class="score-bar"><div class="score-bar-fill" style="width:67.6%"></div></div></div></td>
+        </tr>
+
+        <!-- HINCKLEY ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Hinckley Roofing</div>
+            <div class="competitor-location">Medina, OH · Est. 1958 (68 yrs)</div>
+          </td>
+          <td class="s10">10</td><td class="s9">9</td><td class="s9">9</td>
+          <td class="s7">7</td><td class="s10">10</td><td class="s5">5</td>
+          <td class="s7">7</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s7">7</td>
+          <td class="s6">6</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s4">4</td><td class="s8">8</td>
+          <td class="s4">4</td><td class="s9">9</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">66.6</span><div class="score-bar"><div class="score-bar-fill" style="width:66.6%"></div></div></div></td>
+        </tr>
+
+        <!-- 4K ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">4K Roofing &amp; Restoration</div>
+            <div class="competitor-location">Medina, OH · Est. 2020</div>
+          </td>
+          <td class="s4">4</td><td class="s7">7</td><td class="s6">6</td>
+          <td class="s8">8</td><td class="s9">9</td><td class="s8">8</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s6">6</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s7">7</td><td class="s8">8</td>
+          <td class="s7">7</td><td class="s5">5</td><td class="s9">9</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-60s">65.0</span><div class="score-bar"><div class="score-bar-fill" style="width:65%"></div></div></div></td>
+        </tr>
+
+        <!-- FIRESTONE RESTORATIONS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Firestone Restorations</div>
+            <div class="competitor-location">Fairlawn/Akron, OH (serves Medina)</div>
+          </td>
+          <td class="s5">5</td><td class="s9">9</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s10">10</td><td class="s6">6</td>
+          <td class="s6">6</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s9">9</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">59.8</span><div class="score-bar"><div class="score-bar-fill" style="width:59.8%"></div></div></div></td>
+        </tr>
+
+        <!-- BRIGHTSIDE RESTORATION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Brightside Restoration</div>
+            <div class="competitor-location">Medina, OH · Est. ~2016</div>
+          </td>
+          <td class="s5">5</td><td class="s7">7</td><td class="s7">7</td>
+          <td class="s7">7</td><td class="s9">9</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s3">3</td><td class="s5">5</td>
+          <td class="s3">3</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s4">4</td><td class="s7">7</td>
+          <td class="s5">5</td><td class="s6">6</td><td class="s8">8</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-50s">56.1</span><div class="score-bar"><div class="score-bar-fill" style="width:56.1%"></div></div></div></td>
+        </tr>
+
+        <!-- MEDINA EXTERIORS -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Medina Exteriors &amp; Remodeling</div>
+            <div class="competitor-location">Medina, OH · Est. ~1995 (30+ yrs)</div>
+          </td>
+          <td class="s10">10</td><td class="s6">6</td><td class="s6">6</td>
+          <td class="s2">2</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s2">2</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s7">7</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">46.1</span><div class="score-bar"><div class="score-bar-fill" style="width:46.1%"></div></div></div></td>
+        </tr>
+
+        <!-- EAGLE EYE ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Eagle Eye Roofing</div>
+            <div class="competitor-location">Hartville, OH (serves Medina) · Est. ~2000</div>
+          </td>
+          <td class="s8">8</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s3">3</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-40s">41.5</span><div class="score-bar"><div class="score-bar-fill" style="width:41.5%"></div></div></div></td>
+        </tr>
+
+        <!-- FIRST RATE ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">First Rate Roofing &amp; Exteriors</div>
+            <div class="competitor-location">Medina, OH · Est. unknown</div>
+          </td>
+          <td class="s5">5</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s6">6</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s3">3</td>
+          <td class="s4">4</td><td class="s2">2</td><td class="s3">3</td>
+          <td class="s2">2</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-below40">39.8</span><div class="score-bar"><div class="score-bar-fill" style="width:39.8%"></div></div></div></td>
+        </tr>
+
+        <!-- LEGACY ROOFING -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Legacy Roofing Services</div>
+            <div class="competitor-location">Medina County · Est. ~2019</div>
+          </td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s4">4</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s5">5</td><td class="s3">3</td><td class="s3">3</td>
+          <td class="s3">3</td><td class="s2">2</td><td class="s3">3</td>
+          <td class="s2">2</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s3">3</td><td class="s5">5</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-below40">37.9</span><div class="score-bar"><div class="score-bar-fill" style="width:37.9%"></div></div></div></td>
+        </tr>
+
+        <!-- FINISH LINE CONSTRUCTION -->
+        <tr>
+          <td class="col-name">
+            <div class="competitor-name">Finish Line Construction</div>
+            <div class="competitor-location">Spencer, OH (serves Medina) · Est. 1998</div>
+          </td>
+          <td class="s9">9</td><td class="s5">5</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s3">3</td><td class="s5">5</td>
+          <td class="s5">5</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="s3">3</td><td class="s2">2</td><td class="s3">3</td>
+          <td class="s2">2</td><td class="s4">4</td><td class="s3">3</td>
+          <td class="s2">2</td><td class="s3">3</td><td class="s3">3</td>
+          <td class="s3">3</td><td class="s4">4</td><td class="s4">4</td>
+          <td class="col-total"><div class="total-cell"><span class="total-score total-below40">36.5</span><div class="score-bar"><div class="score-bar-fill" style="width:36.5%"></div></div></div></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div><!-- /table-wrapper -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 4 — AUTHORITY SUMMARIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Competitor Intelligence</div>
+  <div class="section-title">Authority Summaries</div>
+  <div class="section-desc">One-paragraph intelligence brief per competitor. Key data points verified via direct website research, BBB, Birdeye, Angi, Google, and PR records.</div>
+
+  <div class="profiles-grid">
+
+    <!-- #1 Gridiron Guys -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#1 — Authority Score</div>
+          <div class="profile-name">Gridiron Guys Construction</div>
+          <div class="profile-loc">3950 Pearl Rd, Medina, OH · (330) 356-5353 · thegridironguys.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-70s">79.0</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">GAF Master Elite</span>
+        <span class="chip chip-amber">20 Active Trucks</span>
+        <span class="chip chip-gold">Est. 2003</span>
+        <span class="chip chip-blue">Angi SS ×7 Years</span>
+        <span class="chip chip-green">928 Reviews</span>
+      </div>
+      <div class="profile-body">
+        Founded in 2003 as a family-owned business, Gridiron Guys is the operational giant of the Medina market. Their numbers are staggering: 20 active trucks, 21,000+ satisfied customers, 10,000+ residential installs, and 1,029+ commercial installs. Seven consecutive Angie's List Super Service Awards (2015–2021) validate their consistency at scale. GAF Master Elite certified. Their service scope is the broadest in the market — residential and commercial roofing, siding, gutters, windows, doors, flooring, kitchen remodels, and bathroom remodels — making them the only true "full exterior and interior" player. HubSpot CMS powers a clean, modern website with a dedicated blog ("Roof to Remodel"), e-estimate flow, and multi-channel social presence (Facebook, Instagram, YouTube). Their core vulnerability: despite 23 years of operation, they have no Medina Gazette Reader's Choice wins, minimal community sponsorship presence, and their massive scope means they don't feel like a roofing specialist. They are spread thin across many trades. A tightly positioned Medina roofing specialist with strong local identity can steal the "roofing expert" positioning from under them.
+      </div>
+    </div>
+
+    <!-- #2 Exteriors Plus -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#2 — Authority Score</div>
+          <div class="profile-name">Exteriors Plus</div>
+          <div class="profile-loc">Akron, OH · exteriorsplus.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-70s">78.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">GAF ME + President's Club</span>
+        <span class="chip chip-red">OC Platinum Preferred</span>
+        <span class="chip chip-amber">850+ Reviews 4.9★</span>
+        <span class="chip chip-gold">Akron's Best 2025</span>
+        <span class="chip chip-blue">CertainTeed + Duro-Last</span>
+      </div>
+      <div class="profile-body">
+        Exteriors Plus is the certification king of the regional market — the only competitor holding GAF Master Elite with President's Club distinction, Owens Corning Platinum Preferred (the top tier, above "Preferred"), CertainTeed certification, and Duro-Last for commercial flat roofing simultaneously. 850+ reviews averaging 4.9★ and an "Akron's Best 2025" award underscore a mature, well-reviewed operation. Founded 2013, BBB A+ accredited. Their digital and trust footprint is the strongest in the competitive set. However, they are Akron-centric — their community identity, their local press coverage, their event sponsorships, and their review base all cluster in Akron and Summit County. When a Medina homeowner searches "roofing Medina Ohio," Exteriors Plus competes on paid and organic reach but doesn't own the local identity. A Medina-based competitor who builds comparable certifications AND local community ties can undercut their perceived relevance in the Medina market specifically.
+      </div>
+    </div>
+
+    <!-- #3 Fixler Roofing -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#3 — Authority Score</div>
+          <div class="profile-name">Fixler Roofing LLC</div>
+          <div class="profile-loc">3644 Abbeyville Rd, Medina, OH · (330) 247-2211 · fixlerroofing.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-70s">75.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">2026 Best of the Best</span>
+        <span class="chip chip-red">GAF President's Club</span>
+        <span class="chip chip-gold">Reader's Choice ×3</span>
+        <span class="chip chip-amber">Drone Inspections</span>
+        <span class="chip chip-purple">Equipter System</span>
+        <span class="chip chip-blue">H&amp;G Show Sponsor</span>
+      </div>
+      <div class="profile-body">
+        Fixler Roofing is the local identity champion — and the most strategically critical competitor for Medwick to monitor. Owner David Averette grew up in the roofing business, holds Ohio License #CE24667, and has built a multi-layered certification stack: GAF Master Elite with President's Club (top ~2% of North American roofers), CertainTeed, Owens Corning, Firestone materials, BBB Accredited since 2014, and Houzz endorsement. They operate drone inspections and use an Equipter roofing robot for tearoff and cleanup — genuine operational differentiators. Most importantly, they won the Medina Gazette "Best of the Best" in 2021, 2022, and 2026, and sponsor the Medina County Home &amp; Garden Show, embedding them into the community's annual calendar. That is brand equity no website can replicate quickly. Their critical weakness: only 34 Birdeye reviews for 15+ years of operation — a glaring digital underperformance. Their Joomla CMS website is aging. Their content strategy is thin. And their social presence, while multi-platform, is not aggressive. A competitor who matches their local credibility, stacks their own certification portfolio, and then out-executes digitally and on review volume will crack their position.
+      </div>
+    </div>
+
+    <!-- #4 Royalty Roofing -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#4 — Authority Score</div>
+          <div class="profile-name">Royalty Roofing LLC</div>
+          <div class="profile-loc">North Canton, OH · royaltyroofingllc.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">67.6</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">GAF ME + President's Club</span>
+        <span class="chip chip-red">GAF Golden Pledge Warranty</span>
+        <span class="chip chip-amber">CertainTeed 5-Star</span>
+        <span class="chip chip-blue">GAF Solar Installer</span>
+        <span class="chip chip-purple">Velux Certified</span>
+      </div>
+      <div class="profile-body">
+        Founded 2012, Royalty Roofing holds what may be the most impressive certification stack in the broader competitive set: GAF Master Elite with President's Club, GAF Golden Pledge warranty eligibility (only available through the top 2% of GAF installers), CertainTeed 5-Star Contractor, GAF Solar Installer certification, and Velux skylight certification. That combination of solar roofing and skylight expertise is unique in this market. However, they are North Canton-based and their Medina footprint is secondary. Angi rating of 4.8/5 is strong but their review volume is limited. They do not hold obvious Medina community presence or local press coverage. Positioned as a premium specialty contractor, they compete for the homeowner who is actively researching certifications — not the homeowner who searches by location.
+      </div>
+    </div>
+
+    <!-- #5 Hinckley Roofing -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#5 — Authority Score</div>
+          <div class="profile-name">Hinckley Roofing</div>
+          <div class="profile-loc">3587 Ridge Rd, Medina, OH · hinckleyroofing.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">66.6</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">Est. 1958 — 68 Years</span>
+        <span class="chip chip-amber">BBB A+ Since 1999</span>
+        <span class="chip chip-gold">193 Reviews 5.0★</span>
+      </div>
+      <div class="profile-body">
+        Established in 1958, Hinckley Roofing is the oldest active roofing contractor in the Medina market by a wide margin — 68 years of operation, BBB A+ accredited since 1999, and 193 Birdeye reviews averaging 5.0★. That 5.0★ average over nearly 200 reviews is remarkably consistent for any trade contractor and speaks to deeply embedded customer trust. They have generational name recognition — grandparents who had Hinckley do their roof in the 1970s are recommending them to their grandchildren today. Their Achilles heels are completely concentrated in the digital era: their website appears dated, their technical SEO and content strategy are minimal, their social presence is thin, and their AI search visibility is essentially non-existent. They represent the "old money" of the local roofing market — unimpeachable in word-of-mouth but nearly invisible in modern search. A digital-first competitor will not take their existing customers, but will capture all the new-to-Medina homeowners and younger buyers who start their search online.
+      </div>
+    </div>
+
+    <!-- #6 4K Roofing -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#6 — Authority Score</div>
+          <div class="profile-name">4K Roofing &amp; Restoration</div>
+          <div class="profile-loc">758 Medina Rd, Medina, OH · (216) 469-0863 · 4kroofing.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-60s">65.0</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-green">OC Preferred</span>
+        <span class="chip chip-amber">4.9★ Google</span>
+        <span class="chip chip-blue">201 Reviews</span>
+        <span class="chip chip-purple">Insurance Specialists</span>
+        <span class="chip chip-blue">SEO/AEO Optimized</span>
+      </div>
+      <div class="profile-body">
+        Founded 2020 by Michael Kvak, 4K Roofing is the fastest-growing digitally-native player in the Medina market. Despite only 6 years in operation, they've accumulated 201 Birdeye reviews at 4.9★, built a clean Wix site optimized for both SEO and AEO (AI engine optimization, explicitly noted in their footer credit to Purposeful IT), and positioned hard on insurance claim advocacy — a highly effective residential marketing angle post-storm. Owens Corning Preferred Contractor, BBB A+, licensed and insured. Their "5,000+ roofs completed" and "25+ years in NEO" claims leverage Michael's pre-company experience, which the market may or may not scrutinize. Their certification stack is thin compared to the top three. No awards, minimal community sponsorship. But their SEO/AEO investment and 4.9★ review velocity make them the most dangerous upstart in the market — especially as AI search becomes the primary discovery channel for home services.
+      </div>
+    </div>
+
+    <!-- #7 Firestone Restorations -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#7 — Authority Score</div>
+          <div class="profile-name">Firestone Restorations</div>
+          <div class="profile-loc">Fairlawn/Akron, OH (serves Medina)</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">59.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-red">GAF + CertainTeed Dual Cert</span>
+        <span class="chip chip-gold">5.0★ Google (51 reviews)</span>
+        <span class="chip chip-blue">BBB 5-Star</span>
+      </div>
+      <div class="profile-body">
+        Firestone Restorations holds a dual GAF Master Elite and CertainTeed certification — rare in this market — and maintains a perfect 5.0★ Google rating across 51+ reviews. A 2026 PRWeb press release self-proclaimed them "Medina County's #1 Roofer," though this is a paid distribution claim without verified third-party award backing. Based in the Akron/Fairlawn area, their Medina presence is secondary. Their digital footprint is moderate: a 5-star BBB rating, functional website, and strong review quality, but limited review volume, thin content strategy, and minimal community visibility in Medina proper. They are credible for homeowners who find them via search, but lack the local identity to dominate the Medina market.
+      </div>
+    </div>
+
+    <!-- #8 Brightside Restoration -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#8 — Authority Score</div>
+          <div class="profile-name">Brightside Restoration</div>
+          <div class="profile-loc">7645 Neff Rd, Medina, OH · Est. ~2016</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-50s">56.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">BBB A+ (2016)</span>
+        <span class="chip chip-gold">4.9★ / 209 Reviews</span>
+        <span class="chip chip-blue">129 Google Reviews</span>
+        <span class="chip chip-purple">Storm/Insurance Focus</span>
+      </div>
+      <div class="profile-body">
+        Brightside is a Medina-based restoration contractor with a genuine local address and solid review base — 209 Birdeye reviews at 4.9★, 129 Google reviews, BBB A+ since 2016. Their niche is storm damage and insurance restoration, which aligns well with Medina County's weather patterns and hail activity. However, their service breadth is narrow (primarily roofing restoration, limited exterior scope), certifications are minimal beyond BBB, no visible manufacturer partnerships or awards, and their online content strategy is thin. They compete in the insurance claim lane alongside 4K Roofing. Because Brightside doesn't have the digital investment or certification muscle of the top-tier competitors, they risk being squeezed out as 4K Roofing grows and as larger operators invest more in the insurance restoration market.
+      </div>
+    </div>
+
+    <!-- #9 Medina Exteriors -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#9 — Authority Score</div>
+          <div class="profile-name">Medina Exteriors &amp; Remodeling</div>
+          <div class="profile-loc">4029 N Jefferson St, Medina, OH · Est. ~1995</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">46.1</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">Est. 30+ Years</span>
+        <span class="chip chip-amber">CertainTeed SSM</span>
+        <span class="chip chip-red">11 Yelp Reviews (Mixed)</span>
+      </div>
+      <div class="profile-body">
+        Medina Exteriors &amp; Remodeling is a 30+ year Medina institution with a CertainTeed Select Shingle Master designation. They have generational name recognition in the area, but their digital presence is essentially nonexistent by modern standards. Only 11 Yelp reviews with mixed sentiment is a significant red flag — this level of online exposure for a 30-year company indicates either a very small operation, customer service inconsistency, or both. No visible social media presence, no content marketing, no major awards, and no manufacturer partnership depth. They represent a "legacy operator coasting on historical reputation" profile — dangerous for them in the medium term as digital-first buyers become the norm.
+      </div>
+    </div>
+
+    <!-- #10 Eagle Eye -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#10 — Authority Score</div>
+          <div class="profile-name">Eagle Eye Roofing</div>
+          <div class="profile-loc">Hartville, OH (serves Medina) · Est. ~2000</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-40s">41.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">26+ Years</span>
+        <span class="chip chip-amber">Family-Owned</span>
+      </div>
+      <div class="profile-body">
+        Eagle Eye Roofing is a 26-year family-owned operation based in Hartville, Ohio, serving the broader Northeast Ohio region including Medina. Limited digital footprint data available — no visible major certifications, no significant review counts discovered on primary platforms, and a basic website (eagleeyeroofing.us). They compete primarily on word-of-mouth in markets outside their home base. In the Medina market specifically, they are a tertiary competitor with minimal market presence and no local brand anchors. Not a primary threat to Medwick, but representative of the "long-tenured quiet operators" who persist in markets through relationships alone.
+      </div>
+    </div>
+
+    <!-- #11 First Rate -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#11 — Authority Score</div>
+          <div class="profile-name">First Rate Roofing &amp; Exteriors of Medina</div>
+          <div class="profile-loc">Medina, OH · medinaroofandexteriors.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-below40">39.8</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">Medina-Based</span>
+        <span class="chip chip-blue">Roof + Siding + Doors + Gutters</span>
+      </div>
+      <div class="profile-body">
+        First Rate Roofing &amp; Exteriors is a Medina-local operation with a clear service breadth (roofing, siding, doors, gutters) but very limited publicly available data across review platforms, BBB, certifications, and digital presence. Their local address is an asset. Their online authority score is suppressed by lack of visible certifications, low review accumulation, no awards, and a website and SEO profile that doesn't appear to be actively invested in. They are not a significant threat to Medwick but compete in the same local ZIP code and could capture jobs through price competition or referral networks.
+      </div>
+    </div>
+
+    <!-- #12 Legacy Roofing -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#12 — Authority Score</div>
+          <div class="profile-name">Legacy Roofing Services</div>
+          <div class="profile-loc">Medina County · legacyroofing.com</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-below40">37.9</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-amber">BBB A</span>
+        <span class="chip chip-blue">7+ Years</span>
+      </div>
+      <div class="profile-body">
+        Legacy Roofing Services holds a BBB "A" rating (not A+) and has 7+ years of operation in the Medina County area. Their website is functional but minimal. Limited certification depth, no visible awards, no community sponsorship presence. They compete primarily on local familiarity and price. The BBB "A" (rather than A+) and relatively brief operating history compared to the market's veterans mean they don't carry the authority weight to challenge the upper tier. A moderate-threat for low-price residential work.
+      </div>
+    </div>
+
+    <!-- #13 Finish Line -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div>
+          <div class="profile-rank">#13 — Authority Score</div>
+          <div class="profile-name">Finish Line Construction</div>
+          <div class="profile-loc">Spencer, OH (serves Medina) · Est. 1998</div>
+        </div>
+        <div>
+          <div class="profile-score-badge total-below40">36.5</div>
+          <div class="profile-score-sub">/100</div>
+        </div>
+      </div>
+      <div class="profile-tags">
+        <span class="chip chip-gold">28 Years</span>
+        <span class="chip chip-red">3.6/5 Angi</span>
+        <span class="chip chip-amber">Shingle + Metal + Slate</span>
+      </div>
+      <div class="profile-body">
+        Finish Line Construction has been in operation since 1998 — 28 years — but their Angi rating of 3.6/5 is the lowest in this competitive set and a significant red flag for customer satisfaction. Spencer, Ohio-based with Medina as a secondary market. Positive: they offer shingle, metal, and slate roofing — more material diversity than most. Negative: below-average ratings, minimal certifications, no visible awards, and weak digital presence undermine their longevity narrative. Their tenure is their only real asset in the authority model, and it's not enough to overcome the satisfaction gaps visible in third-party ratings.
+      </div>
+    </div>
+
+  </div><!-- /profiles-grid -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTION 5 — GAP ANALYSIS / MEDWICK OPPORTUNITIES
+════════════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-label">Strategic Intelligence</div>
+  <div class="section-title">Market Gaps &amp; Medwick Opportunities</div>
+  <div class="section-desc">Structural vulnerabilities in the competitive set that Medwick can exploit. Each gap represents a dimension where no single competitor has locked up the position.</div>
+
+  <div class="gap-grid">
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">🔍</div>
+        <div>
+          <div class="gap-title">Gap #1 — AI &amp; Generative Search Visibility</div>
+          <div class="gap-subtitle">No competitor has claimed this position in Medina</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        When homeowners ask ChatGPT, Claude, Perplexity, or Google AI Overviews "who are the best roofers in Medina Ohio," almost no competitor has structured their digital presence to appear. <strong>4K Roofing is the only company actively investing in AEO (Answer Engine Optimization)</strong>, and even they are early. The window to become the AI-cited roofing authority in Medina is open right now. This requires: structured data markup, authoritative FAQ content, citation-worthy press mentions, a Google Business Profile tuned for AI extraction, and consistent NAP across platforms. First mover in Medina's AI search landscape gets a defensible long-term advantage.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">⭐</div>
+        <div>
+          <div class="gap-title">Gap #2 — Local Identity + Modern Digital Stack</div>
+          <div class="gap-subtitle">Fixler has the identity. Nobody has both.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Fixler Roofing owns Medina's "local identity" position (Reader's Choice wins, Home &amp; Garden Show sponsorship) but runs a Joomla CMS with thin content and only 34 Birdeye reviews. <strong>No competitor simultaneously holds deep local community identity AND a modern, content-rich digital authority position.</strong> Gridiron is digital but not local-identity. Fixler is local-identity but not digital. The company that earns the Reader's Choice-type social proof AND builds an aggressive review and content machine will own the Medina market completely. Medwick should pursue both tracks simultaneously from day one.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">☀️</div>
+        <div>
+          <div class="gap-title">Gap #3 — Solar Roofing</div>
+          <div class="gap-subtitle">Only Royalty Roofing holds this cert — and they're in North Canton</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Solar roofing integration is the fastest-growing premium roofing service segment. <strong>Only Royalty Roofing holds a GAF Solar Installer certification in the broader competitive set, and they are based in North Canton with limited Medina presence.</strong> A Medina-based contractor who earns solar roofing certification captures a premium, underserved market segment with strong margins and high referability (homeowners share solar roof contractors with neighbors). This also builds a long-term moat — solar certification requires investment that most small operators won't make.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon purple">📱</div>
+        <div>
+          <div class="gap-title">Gap #4 — Review Volume Dominance</div>
+          <div class="gap-subtitle">The market's local leader has 34 reviews. This is exploitable.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Fixler Roofing — the local authority — has only 34 Birdeye reviews for 15+ years of operation. Hinckley Roofing's 193 reviews are strong, but Gridiron Guys (928) is the only competitor who has seriously invested in review accumulation. <strong>A structured review generation program targeting 50 new Google reviews in the first 6 months would put Medwick in the top 3 by review volume within a year.</strong> Review velocity (recency + pace of accumulation) is now a primary Google ranking signal for local service queries. Medwick can leapfrog established competitors on this dimension faster than any other category.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon red">🏆</div>
+        <div>
+          <div class="gap-title">Gap #5 — Medina Gazette Reader's Choice</div>
+          <div class="gap-subtitle">Fixler keeps winning by default. Challenge it.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Fixler has won the Medina Gazette Reader's Choice award three times (2021, 2022, 2026) essentially without serious organized competition. <strong>The Reader's Choice is a community vote — it rewards whichever company has the most actively engaged customer base, not necessarily the best roofing work.</strong> A Medwick entry into the Reader's Choice campaign, backed by a strong review base and active customer engagement program, could challenge Fixler's hold on this position. A single Reader's Choice win or "Best of the Best" designation from the local paper would fundamentally alter the competitive landscape and close Fixler's primary local identity advantage.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon blue">🏗️</div>
+        <div>
+          <div class="gap-title">Gap #6 — Technology-Forward Positioning</div>
+          <div class="gap-subtitle">Drones + Equipter are mentioned by Fixler alone</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Fixler Roofing is the only competitor actively marketing drone inspections and Equipter roofing equipment as differentiators. No other significant competitor in the Medina market markets operational technology to homeowners. <strong>Homeowners respond to visible proof of professionalism — drone inspection photos, before/after cleanup shots, Equipter efficiency videos.</strong> A competitor who builds this into their content and sales process (video walkthroughs, drone footage in review responses, GBP photo uploads showing clean job sites) signals premium quality without requiring premium pricing. The investment in technology visibility far exceeds the investment in the technology itself.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon green">📝</div>
+        <div>
+          <div class="gap-title">Gap #7 — Content Marketing &amp; Education</div>
+          <div class="gap-subtitle">Only Gridiron runs a blog. Everyone else is content-dark.</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Gridiron Guys is the only competitor with an active content marketing program ("Roof to Remodel" blog). Every other competitor in the Medina market — including the top-rated ones — has essentially zero editorial content strategy. <strong>A Medwick blog targeting Medina-specific roofing questions ("hail damage assessment Medina County," "best shingles for Ohio winters," "signs your Medina home needs a roof inspection") will build topical authority that compounds over time.</strong> In a market where most competitors have thin or non-existent content, even 12–20 well-executed posts in the first year will generate durable organic traffic that competitors can't buy quickly.
+      </div>
+    </div>
+
+    <div class="gap-card">
+      <div class="gap-card-header">
+        <div class="gap-icon amber">🤝</div>
+        <div>
+          <div class="gap-title">Gap #8 — Commercial + Storm Restoration Specialty</div>
+          <div class="gap-subtitle">No one owns the Medina commercial + storm combo cleanly</div>
+        </div>
+      </div>
+      <div class="gap-body">
+        Storm damage and insurance restoration is a high-margin, repeat-opportunity segment in Medina County (significant hail and wind activity). Brightside and 4K Roofing compete here but neither dominates. On the commercial side, Gridiron and Exteriors Plus (Duro-Last certified) reach into commercial, but neither is a dedicated commercial-first Medina operator. <strong>A Medwick positioning as the dedicated commercial + insurance restoration specialist in Medina creates a distinct lane</strong> that avoids direct head-to-head combat with Gridiron's residential breadth, while capturing a segment (commercial property managers, insurance adjusters) that refers consistently.
+      </div>
+    </div>
+
+  </div><!-- /gap-grid -->
+
+</section>
+</div><!-- /container -->
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<div class="report-footer">
+  <div class="footer-brand">
+    <strong>Hunter Systems</strong> — Intelligence Division<br>
+    Prepared for Medwick Roofing, Medina, OH
+  </div>
+  <div class="footer-disclaimer">
+    Scores based on publicly available data as of July 2026 via direct website research, BBB records, Birdeye, Google Business, Angi/Angie's List, and search platform analysis. Scores represent relative market authority, not absolute quality ratings. All scoring is analytical estimation intended for strategic planning purposes only.
+  </div>
+</div>
+
+</body>
+</html>

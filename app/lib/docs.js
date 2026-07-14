@@ -39,6 +39,27 @@ export const DOCS = [
   },
 ];
 
+// Competitive Authority Reports — self-contained HTML dashboards served from /public/reports.
+// Open in a new tab so the overview stays put during a presentation.
+export const REPORTS = [
+  {
+    key: 'roofing',
+    title: 'Roofing Market',
+    file: 'roofing-authority.html',
+    tag: '13 rivals scored',
+    blurb:
+      'Every Medina roofer scored across 21 authority dimensions. Gridiron leads on volume, Fixler owns local identity, nobody holds both.',
+  },
+  {
+    key: 'water',
+    title: 'Water Mitigation Market',
+    file: 'water-authority.html',
+    tag: '15 rivals scored',
+    blurb:
+      'The county water-damage field. SERVPRO and Roto-Rooter win on brand recall; no local champion exists. The softer of the two markets.',
+  },
+];
+
 // Cross-document links inside the markdown reference the source filenames.
 // Map them to their on-site routes so the links resolve.
 export const FILE_TO_SLUG = Object.fromEntries(DOCS.map((d) => [d.file, d.slug]));
