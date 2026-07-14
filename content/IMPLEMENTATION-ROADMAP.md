@@ -25,6 +25,7 @@ Runs parallel to Phase 0. This is infrastructure, not content.
 - Core citations with canonical NAP: BBB, Yelp, Angi, HomeAdvisor, Houzz, Thumbtack, Nextdoor, Bing Places, Apple Maps.
 - Join Greater Medina Chamber; submit NMCC Alliance, Wadsworth, MCHBA applications.
 - Begin IICRC WRT enrollment; open GAF/Owens Corning territory-rep conversations.
+- **Remodeling decision point.** Decide now whether to contest the remodeling top tier. Per the market scan it will not fall to marketing alone, so if the answer is yes this is where it starts, not later: join NARI, begin the NARI Certified Remodeler / NKBA path, stand up and start populating a Houzz profile, and bank kitchen/bath project photos toward Best of Houzz eligibility. These credentials have long lead times; a late start pushes the payoff out by roughly a year.
 - Launch the review engine (post-job text + `g.page` link; FTC-compliant).
 - Pre-draft the storm-response playbook (August is peak, be ready).
 - Start collecting per-town project photos + testimonials as build inputs (gates the city pages).
@@ -46,7 +47,7 @@ Runs parallel to Phase 0. This is infrastructure, not content.
 ## Phase 3: Extend into the open field (Weeks 13-24 / Months 4-6)
 
 - City pages **Wave 2**, the zero-competition set: Montville, Hinckley, Valley City, Litchfield (remodel emphasis for the high-income two; roof/water for the closer two).
-- Remodeling sub-pages + first premium case study (kitchen/bath, budget band + timeline).
+- Remodeling sub-pages + first premium case study (kitchen/bath, budget band + timeline); mirror every remodel to the Houzz profile and request Houzz reviews (the metric Best of Houzz rewards). Local firms underplay Houzz, so it is a fast lane.
 - Winter-demand content live (shipped by late October regardless of phase timing).
 - Emergency + cost guides (flooded basement, bathroom/basement cost).
 - Youth-sports + Main Street Medina sponsorships (link + brand).
@@ -59,7 +60,7 @@ Runs parallel to Phase 0. This is infrastructure, not content.
 
 - City pages Wave 3 (remaining audited communities, demand-driven).
 - Thought-leadership + storm-response cadence sustained; insurance-claim hub deepened (the moat lane).
-- Pursue Master Elite / OC tier + IICRC Certified Firm; add earned "best of Medina" list placements (AI-visibility #1 factor).
+- Pursue Master Elite / OC tier + IICRC Certified Firm; if contesting remodeling, target NARI Certified Remodeler and the first Best of Houzz award (both draw on the review and portfolio base built in earlier phases). Add earned "best of Medina" list placements (AI-visibility #1 factor).
 - Continuous CWV + content refresh; expand what's ranking page 2 → page 1.
 - Re-run the competitive SERP + local-pack analysis with a Medina-grid tool (the audit's flagged next-phase gap) to resolve the competitor-set conflict and retarget.
 
@@ -75,5 +76,6 @@ Runs parallel to Phase 0. This is infrastructure, not content.
 | GBP verification (video, 2026 standard) | map-pack, all local | Start week 1; can lag build |
 | Real per-town project assets | city pages | Collect continuously from Phase 1; gates Wave 1/2 |
 | IICRC/GAF/OC enrollment lead times | certification claims | Start early; claim only when documented |
+| Remodeling credentials (NARI/NKBA + Best of Houzz) | remodeling authority; the top tier is credentialed and defended | Owner decision first. Credentials are the entry price, not optional marketing. Start in Phase 1 or accept a ~12-month delay on remodeling traction |
 | Jan-2026 domain age | organic traction | 6-12 mo expectation set; lean on GBP + reviews + storm content meanwhile |
 | Competitor-set conflict unresolved | ad targeting | Grid/local-pack re-scan in Phase 4 before scaling spend |

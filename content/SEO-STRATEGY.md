@@ -74,6 +74,7 @@ The single proven moat in this market is review volume (4K's 201). Off-site work
 - **Citations (greenfield, no cleanup):** BBB, Yelp, Angi, HomeAdvisor, Houzz, Thumbtack, Nextdoor, Bing Places, Apple Maps, all with canonical NAP.
 - **Local authority links:** Greater Medina Chamber, NMCC Alliance, Wadsworth Chamber, Medina County HBA, Medina County Fair sponsors, Main Street Medina, youth sports.
 - **Certification stack (the differentiator):** GAF or Owens Corning tier (roofing) + IICRC WRT/ASD then Certified Firm (water). Every claim is documented, in deliberate contrast to the two competitors currently carrying unsubstantiated-claim BBB problems.
+- **Remodeling is a different fight, and it costs more.** The remodeling market scan shows a real, credentialed, defended top tier (Cabinet-S-Top in kitchen & bath, Hurst in design-build) that marketing alone will not beat. There, NARI / NKBA credentials plus a Best of Houzz award are the *price of entry*, not a differentiator: they separate the top five from the invisible fifty-five. So contesting remodeling is an explicit owner decision (real time and money), not a default SEO play. If the answer is yes, the path is: earn the credentials first, then claim the one unowned seat the scan found, the cross-category "Medina remodeler," with basement-finishing authority and an active Houzz profile as the wedge. If the answer is no, treat remodeling as a supporting service to the roofing and water lanes rather than a market to win.
 
 Full citation/link target list with pricing lives in audit §4.6.
 
