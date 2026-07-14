@@ -1,0 +1,102 @@
+/* ============================================================
+   Canonical top navigation — THE single source for the whole product.
+   Loaded by the Next app (link in app/layout.jsx) AND by every static
+   report (link in each report's <head>). Change the nav here and nowhere
+   else. Uses var(--token, #fallback) so it themes from the app's design
+   tokens when present and stands alone (baked hex) inside the reports.
+
+   Geometry: 4px base unit — every gap/padding/size is an integer multiple.
+   Primary controls share one height (links + CTA 36px, chips 32px), equal by
+   construction. Pill padding 0 16px. Wordmark 20 : eyebrow 12 = 5:3 (~golden
+   ratio / Euclid's extreme-and-mean).
+   ============================================================ */
+
+.topnav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--navy, #2C3242);
+  border-bottom: 3px solid var(--gold, #C0A674);
+}
+.topnav-inner {
+  max-width: var(--maxw, 1180px); margin: 0 auto;
+  display: flex; align-items: center; justify-content: flex-start; gap: 24px;
+  padding: 12px 24px;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand:hover { text-decoration: none; }
+.brand-logo {
+  width: 40px; height: 40px; border-radius: 8px; object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name {
+  font-family: var(--font-display, 'Archivo'), sans-serif;
+  font-weight: 700; font-size: 20px; letter-spacing: 0.06em; color: #fff;
+}
+.brand-sub {
+  font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold, #C0A674); font-weight: 600;
+}
+.topnav-sections { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: flex-start; }
+.topnav-sections a {
+  display: inline-flex; align-items: center; min-height: 36px;
+  font-family: var(--font-body, 'Source Sans 3'), sans-serif; font-weight: 600; font-size: 15px;
+  color: #c3cdd7; padding: 0 16px; border: 1px solid transparent; border-radius: 8px;
+  white-space: nowrap; text-decoration: none;
+}
+.topnav-sections a:hover { color: #fff; background: rgba(255, 255, 255, 0.07); text-decoration: none; }
+.topnav-sections a.active { color: #fff; box-shadow: inset 0 -2px 0 var(--gold, #C0A674); border-radius: 8px 8px 0 0; }
+/* Proposal CTA — the "here's the ask" pill */
+.topnav-sections a.topnav-cta {
+  color: var(--navy-ink, #1A1F29); background: var(--gold, #C0A674); border: 1px solid var(--gold, #C0A674);
+  border-radius: 999px; padding: 0 16px; margin-right: 8px; font-weight: 700;
+}
+.topnav-sections a.topnav-cta:hover { color: var(--navy-ink, #1A1F29); background: #d6b463; border-color: #d6b463; box-shadow: 0 2px 12px rgba(192, 166, 116, 0.4); }
+
+/* Contextual sub-navigation: siblings of the current page (strategy docs, or the report set) */
+.subnav { background: var(--navy-deep, #232935); border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.subnav-inner {
+  max-width: var(--maxw, 1180px); margin: 0 auto;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 12px 24px;
+}
+.subnav-label {
+  font-family: var(--font-display, 'Archivo'), sans-serif; font-size: 11px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: #7f8b9b; font-weight: 700;
+  margin-right: 4px;
+}
+.subnav a {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 32px;
+  font-size: 14px; font-weight: 600; color: #d7dee6; white-space: nowrap;
+  padding: 0 16px; border-radius: 999px; text-decoration: none;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.subnav a:hover { color: #fff; background: rgba(255, 255, 255, 0.10); border-color: rgba(192, 166, 116, 0.65); text-decoration: none; }
+.subnav a.active { color: var(--navy-ink, #1A1F29); background: var(--gold, #C0A674); border-color: var(--gold, #C0A674); box-shadow: 0 2px 10px rgba(192, 166, 116, 0.35); }
+.subnav-num { font-family: var(--font-display, 'Archivo'), sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; color: var(--gold, #C0A674); }
+.subnav a:hover .subnav-num { color: var(--gold, #C0A674); }
+.subnav a.active .subnav-num { color: var(--navy-ink, #1A1F29); opacity: 0.65; }
+
+.topnav-sections a, .subnav a { transition: color 160ms ease-out, background 160ms ease-out; }
+
+/* Responsive: below 900px the section rows scroll horizontally with a soft edge mask */
+@media (max-width: 900px) {
+  .topnav-inner { flex-wrap: wrap; gap: 12px; padding: 12px 16px; }
+  .topnav-sections {
+    width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
+  }
+  .topnav-sections a { flex: none; }
+  .brand-sub { display: none; }
+  .subnav-inner {
+    padding: 8px 16px; overflow-x: auto; flex-wrap: nowrap;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
+  }
+  .subnav a, .subnav-label { flex: none; }
+}
+
+/* Touch targets on coarse pointers */
+@media (pointer: coarse) {
+  .topnav-sections a, .subnav a { min-height: 44px; }
+}

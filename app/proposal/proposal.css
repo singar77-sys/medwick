@@ -105,3 +105,27 @@
   .pp ul.feat { grid-template-columns: 1fr; gap: 13px; }
   .pp .why { grid-template-columns: 1fr; }
 }
+
+/* Print / Save-as-PDF. Contractors routinely save a quote to PDF, and browsers
+   drop backgrounds by default — which would render the navy hero/close and the
+   gold price block as near-invisible light text on white. Force those to keep
+   their fills, kill entrance animations, and avoid awkward page breaks. */
+@media print {
+  /* Drop site chrome so the PDF is just the proposal. */
+  .topnav, .site-footer, .skip-link { display: none !important; }
+  .main { padding-top: 0 !important; }
+  .pp .hero,
+  .pp .close,
+  .pp .price-block,
+  .pp .checkin {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .pp .hero-inner > * { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .pp .get,
+  .pp .reason,
+  .pp .price-block,
+  .pp .checkin,
+  .pp .close { break-inside: avoid; box-shadow: none; }
+  .pp .wrap { padding-bottom: 0; }
+}

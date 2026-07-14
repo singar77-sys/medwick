@@ -19,7 +19,6 @@ export default function Proposal() {
             You&rsquo;ve got the reviews and the work to back them up. Right now you just can&rsquo;t be
             found online. This fixes that.
           </p>
-          <p className="hero-line">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         </div>
       </header>
 
@@ -46,8 +45,7 @@ export default function Proposal() {
           <h2>The whole job - not a page count</h2>
           <p>
             You don&rsquo;t quote a roof by the shingle. We don&rsquo;t quote a website by the page. This
-            is a finished site with everything it needs to work - as many pages as it takes to get
-            the job done.
+            is a finished site with everything it needs to work.
           </p>
         </div>
 
@@ -55,45 +53,39 @@ export default function Proposal() {
           <ul className="feat">
             <li>A complete website in your navy-and-gold brand</li>
             <li>Every service laid out clear - roofing, water, reconstruction</li>
-            <li>
-              The <b>insurance-claim advocacy</b> angle no competitor owns
-            </li>
+            <li>The insurance-claim angle no local competitor leads with</li>
             <li>Every town you serve</li>
+            <li>Answer pages for the questions homeowners actually ask</li>
             <li>
-              Answers to what homeowners actually ask - so <b>Google and AI send them to you</b>
-            </li>
-            <li>
-              A 24/7 chatbot that catches the lead and <b>texts you - even at 2am</b>
+              A 24/7 chatbot that catches the lead and <b>texts you right away</b>
             </li>
             <li>Your reviews and real job photos, front and center</li>
             <li>Your Google Business Profile set up right</li>
-            <li>Tracking, so you see exactly what&rsquo;s working</li>
+            <li>Tracking, so you see what&rsquo;s working</li>
           </ul>
         </div>
 
         <div className="sec-head center">
-          <h2>Why this is smart money</h2>
-          <p>Not a cost. The tool that turns a 5-star reputation into calls.</p>
+          <h2>Why it&rsquo;s worth it</h2>
+          <p>It turns your 5-star reputation into phone calls.</p>
         </div>
 
         <div className="why">
           <div className="reason">
             <h3>One roof pays for it</h3>
+            <p>A single insurance roof covers the whole build.</p>
+          </div>
+          <div className="reason">
+            <h3>The position is open</h3>
             <p>
-              A single insurance roof covers the whole build. <b>Everything after that is yours.</b>
+              Nobody local owns the insurance-claim angle, or shows up when a homeowner asks AI who
+              to call.
             </p>
           </div>
           <div className="reason">
-            <h3>The best spot is still open</h3>
+            <h3>Built to bring in work</h3>
             <p>
-              Nobody in the county owns the <b>insurance-advocate</b> position - or shows up when a
-              homeowner asks AI who to call. First one there wins, and keeps winning.
-            </p>
-          </div>
-          <div className="reason">
-            <h3>This one actually works</h3>
-            <p>
-              A website that just sits there is what you have now. This one{' '}
+              The site you have now just sits there. This one{' '}
               <b>gets found, answers questions, and hands you the lead.</b>
             </p>
           </div>
@@ -102,9 +94,8 @@ export default function Proposal() {
         <div className="checkin">
           <h3>Six months in, we take a look</h3>
           <p>
-            We sit down and go through the numbers together - leads, calls, where you&rsquo;re
-            ranking - then decide if it&rsquo;s worth pushing further. <b>No retainer, no lock-in.</b>{' '}
-            You&rsquo;ll see it working long before we ever talk about more.
+            We go through the numbers together - leads, calls, where you&rsquo;re ranking - then
+            decide whether it&rsquo;s worth pushing further. <b>No retainer, no lock-in.</b>
           </p>
         </div>
 

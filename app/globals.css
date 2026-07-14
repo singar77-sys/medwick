@@ -57,70 +57,10 @@ a:hover { text-decoration: underline; }
 
 img { max-width: 100%; display: block; }
 
-/* ---------- Top navigation (unified across all pages) ---------- */
-.topnav {
-  position: sticky; top: 0; z-index: 50;
-  background: var(--navy);
-  border-bottom: 3px solid var(--gold);
-}
-.topnav-inner {
-  max-width: var(--maxw); margin: 0 auto;
-  display: flex; align-items: center; justify-content: space-between; gap: 20px;
-  padding: 11px 26px;
-}
-.brand { display: flex; align-items: center; gap: 13px; }
-.brand:hover { text-decoration: none; }
-.brand-logo {
-  width: 42px; height: 42px; border-radius: 8px; object-fit: cover;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-}
-.brand-text { display: flex; flex-direction: column; line-height: 1.05; }
-.brand-name {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 700; font-size: 21px; letter-spacing: 0.06em; color: #fff;
-}
-.brand-sub {
-  font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gold); font-weight: 600;
-}
-.topnav-sections { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; justify-content: flex-end; }
-.topnav-sections a {
-  font-family: var(--font-body), sans-serif; font-weight: 600; font-size: 15px;
-  color: #c3cdd7; padding: 8px 13px; border-radius: 8px; white-space: nowrap;
-}
-.topnav-sections a:hover { color: #fff; background: rgba(255, 255, 255, 0.07); text-decoration: none; }
-.topnav-sections a.active { color: #fff; box-shadow: inset 0 -2px 0 var(--gold); border-radius: 8px 8px 0 0; }
-/* Proposal CTA — the "here's the ask" pill */
-.topnav-sections a.topnav-cta {
-  color: var(--navy-ink); background: var(--gold); border: 1px solid var(--gold);
-  border-radius: 999px; padding: 7px 16px; margin-left: 8px; font-weight: 700;
-}
-.topnav-sections a.topnav-cta:hover { color: var(--navy-ink); background: #d6b463; border-color: #d6b463; box-shadow: 0 2px 12px rgba(192, 166, 116, 0.4); }
-
-/* Contextual sub-navigation: siblings of the current page */
-.subnav { background: var(--navy-deep); border-top: 1px solid rgba(255, 255, 255, 0.08); }
-.subnav-inner {
-  max-width: var(--maxw); margin: 0 auto;
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-  padding: 10px 26px;
-}
-.subnav-label {
-  font-family: var(--font-display), sans-serif; font-size: 10.5px;
-  letter-spacing: 0.16em; text-transform: uppercase; color: #7f8b9b; font-weight: 700;
-  margin-right: 2px;
-}
-/* Chip tabs — visibly clickable, brighter, with a stronger active state */
-.subnav a {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13.5px; font-weight: 600; color: #d7dee6; white-space: nowrap;
-  padding: 8px 14px; border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.14);
-}
-.subnav a:hover { color: #fff; background: rgba(255, 255, 255, 0.10); border-color: rgba(192, 166, 116, 0.65); text-decoration: none; }
-.subnav a.active { color: var(--navy-ink); background: var(--gold); border-color: var(--gold); box-shadow: 0 2px 10px rgba(192, 166, 116, 0.35); }
-.subnav-num { font-family: var(--font-display), sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; color: var(--gold); }
-.subnav a:hover .subnav-num { color: var(--gold); }
-.subnav a.active .subnav-num { color: var(--navy-ink); opacity: 0.65; }
+/* ---------- Top navigation ----------
+   The nav (topnav + subnav) now lives in /public/nav.css — the single source
+   shared by the Next app (linked in app/layout.jsx) and every static report,
+   so it can no longer drift between them. Edit it there, not here. */
 
 /* ---------- Content shell ---------- */
 .main {
@@ -316,20 +256,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
-  .topnav-inner { flex-wrap: wrap; gap: 10px; padding: 10px 16px; }
-  .topnav-sections {
-    width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
-  }
-  .topnav-sections a { flex: none; }
-  .brand-sub { display: none; }
-  .subnav-inner {
-    padding: 8px 16px; overflow-x: auto; flex-wrap: nowrap;
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, #000 3%, #000 96%, transparent 100%);
-  }
-  .subnav a, .subnav-label { flex: none; }
+  /* top-nav + sub-nav responsive rules live in /public/nav.css */
   .main { border-left: none; border-right: none; }
   .hero, .callout, .doc-cards, .howto, .doc { padding-left: 24px; padding-right: 24px; }
   .site-footer { padding-left: 24px; padding-right: 24px; }
@@ -384,7 +311,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Touch targets (coarse pointers) ---------- */
 @media (pointer: coarse) {
-  .topnav-sections a, .subnav a { min-height: 44px; display: inline-flex; align-items: center; }
+  /* nav touch targets live in /public/nav.css */
   .card-go { min-height: 24px; }
 }
 
@@ -392,7 +319,6 @@ img { max-width: 100%; display: block; }
 /* Micro-interactions (cheap, always on) */
 .btn { transition: background 160ms ease-out, color 160ms ease-out, transform 130ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms ease-out; }
 .btn:active { transform: scale(0.97); }
-.topnav-sections a, .subnav a { transition: color 160ms ease-out, background 160ms ease-out; }
 .card:active { transform: translateY(0) scale(0.995); }
 
 @media (prefers-reduced-motion: no-preference) {

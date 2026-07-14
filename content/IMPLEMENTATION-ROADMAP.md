@@ -62,10 +62,10 @@ Runs parallel to Phase 0. This is infrastructure, not content.
 - Emergency + cost guides (flooded basement, bathroom/basement cost). Each guide doubles as AEO answer-content: question-first headers, direct answers, FAQ schema, so it is quotable by AI Overviews and assistants. Highest content score in any market is a 6, so depth here is uncontested.
 - **Reader's Choice campaign (roofing) opens here.** Line up the Medina Gazette Reader's Choice push now so nominations and voting land in-cycle; Fixler's 3x wins are the identity moat to contest, and no other scored roofer holds it. Awards are an AI-visibility signal, not just a badge.
 - Youth-sports + Main Street Medina sponsorships (link + brand).
-- **Add review markup** once real reviews render → capture the "only SERP result with stars" opening.
+- **Add review markup** once real reviews render → structured data + AI-answer parsing (Google does not show organic stars from self-serving LocalBusiness review markup; stars come from the GBP / map pack).
 - One tightly negative-matched Google Ads test on storm/emergency terms (audit §4.2 negative list), only after tracking + pages + review base are live; LSA/Google Guaranteed application if licensing docs ready.
 
-**GATE 3:** Wave-2 cities live w/ proof · map-pack presence for emergency water · Reader's Choice campaign submitted in-cycle · ≥28 reviews (Fixler's 34 in reach, water on pace toward top-3 by volume) · review stars showing in SERPs · appearing in at least one AI answer for a target query. → authority.
+**GATE 3:** Wave-2 cities live w/ proof · map-pack presence for emergency water · Reader's Choice campaign submitted in-cycle · ≥28 reviews (Fixler's 34 in reach, water on pace toward top-3 by volume) · map-pack stars live from real Google reviews · appearing in at least one AI answer for a target query. → authority.
 
 ## Phase 4: Authority (Months 7-12)
 

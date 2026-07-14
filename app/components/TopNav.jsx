@@ -7,11 +7,11 @@ import { DOCS, REPORTS, POSITION } from '../lib/docs';
 // One nav system for the whole site: a global row of sections, plus a
 // contextual sub-row of the current section's pages.
 const SECTIONS = [
+  { label: 'Proposal', href: '/proposal', match: (p) => p === '/proposal', cta: true },
   { label: 'Overview', href: '/', match: (p) => p === '/' },
   { label: POSITION.title, href: `/${POSITION.slug}`, match: (p) => p === `/${POSITION.slug}` },
   { label: 'Market Intelligence', href: `/reports/${REPORTS[0].file}`, match: (p) => p.startsWith('/reports/') },
   { label: 'The Strategy', href: `/${DOCS[0].slug}`, match: (p) => DOCS.some((d) => p === `/${d.slug}`) },
-  { label: 'Proposal', href: '/proposal', match: (p) => p === '/proposal', cta: true },
 ];
 
 export default function TopNav() {

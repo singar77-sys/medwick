@@ -1,4 +1,7 @@
 import './globals.css';
+// Canonical nav styling — one file, bundled here for the app and also served at
+// /nav.css (linked by every static report) so the nav can never drift.
+import '../public/nav.css';
 import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
 import TopNav from './components/TopNav';
 import MotionInit from './components/MotionInit';
@@ -28,9 +31,18 @@ const body = Source_Sans_3({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://medwick.vercel.app'),
   title: 'Medwick Construction: Digital Growth Plan',
   description:
-    'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and remodeling across Medina County, Ohio.',
+    'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and reconstruction across Medina County, Ohio.',
+  // Confidential client planning + pricing document. Keep it out of search
+  // indexes and AI crawlers. NOTE: this only stops indexing, not access —
+  // enable Vercel Deployment Protection (password) for true privacy.
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
   openGraph: {
     title: 'Medwick Construction: Digital Growth Plan',
     description:

@@ -88,7 +88,7 @@ This is the **#1 competitive gap**: across the market, no competitor is the cite
 - **Target questions** homeowners actually type or ask an assistant: "does homeowners insurance cover roof storm damage in Ohio", "what should I do after a roof leak", "who do I call for a flooded basement in Medina", "how long before mold grows after water damage", "can I choose my own contractor", "will insurance pay for water mitigation", "a tree fell on my house, what now", "should I tarp my roof". Own the problem, not merely the solution.
 - **Guides** (`/learning-center/guides/{article-slug}/`): longer educational and emergency articles that support the money pages; blog and guide pages support, never compete for the canonical URL.
 - **llms.txt** at root: plain-text map of the hubs, services, service area, NAP, and the answer pages so AI crawlers can parse who Medwick is and what it covers.
-- **Review schema:** add `aggregateRating` / `Review` markup so star ratings render in results, but **only once real reviews exist on-page**. Never fabricate the count (see COMPETITOR-ANALYSIS guardrails).
+- **Review schema:** add `aggregateRating` / `Review` markup for structured-data / AI parsing, **only once real reviews exist on-page**, and never fabricate the count (see COMPETITOR-ANALYSIS guardrails). This does **not** produce organic star snippets — Google excludes self-serving LocalBusiness reviews from review rich results; stars show via the Google Business Profile / map pack.
 
 ### Money sub-pages (the advocacy cluster)
 | Page | Title | H1 |
@@ -122,7 +122,7 @@ Reconstruction is a normal service and the natural tail of recovery, not a marke
 - One page per real project. Every completed job feeds the site + a GBP post + social simultaneously (one asset, many channels), the documentation engine from the positioning: before/after photos, drone photos, testimonial, review, case study, FAQ material. Nothing leaves without documentation.
 
 ### Reviews / About / Contact
-- Reviews: real on-page testimonials (add `aggregateRating` / `Review` schema **only** once they render, so stars show in results). About: owner story + the MEDina+brunsWICK name equity + reg #26-731. Contact: `ContactPage` + `LocalBusiness`, one phone, map, hours, consistent NAP.
+- Reviews: real on-page testimonials (add `aggregateRating` / `Review` schema **only** once they render, for structured data — not for organic stars, which come from the GBP / map pack). About: owner story + the MEDina+brunsWICK name equity + reg #26-731. Contact: `ContactPage` + `LocalBusiness`, one phone, map, hours, consistent NAP.
 
 ## 3. Keyword → URL mapping
 
