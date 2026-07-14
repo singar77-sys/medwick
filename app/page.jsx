@@ -4,7 +4,7 @@ import { DOCS, REPORTS } from './lib/docs';
 export default function Home() {
   return (
     <div className="home">
-      <section className="hero">
+      <section className="hero ghost" style={{ '--ghost': "url('/textures/hero.webp')" }}>
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
           Medina County&rsquo;s <span className="hl">Insurance Restoration Advocate</span>. From the
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="callout reveal">
+      <section className="callout reveal ghost" style={{ '--ghost': "url('/textures/roofing.webp')" }}>
         <p>
           These three services each have a clear opening. Roofing has several strong competitors, but
           no single company leads in every area. Water mitigation has no clear local leader.
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="scoreboard reveal-group">
+      <section className="scoreboard reveal-group ghost" style={{ '--ghost': "url('/textures/water.webp')" }}>
         <div className="market">
           <div className="market-head">
             <span className="market-tag">Roofing Market</span>
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="callout reveal">
+      <section className="callout reveal ghost" style={{ '--ghost': "url('/textures/build.webp')" }}>
         <p>
           <strong>The answer is to own the whole problem, not a trade.</strong>{' '}
           People don&rsquo;t wake up wanting a roofer; they wake up with a leaking ceiling, a flooded
@@ -83,7 +83,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="doc-cards" id="intel">
+      <section className="doc-cards ghost" id="intel" style={{ '--ghost': "url('/textures/exterior.webp')" }}>
         <h2 className="section-h">Market intelligence</h2>
         <div className="cards reveal-group">
           {REPORTS.map((r) => (
@@ -97,7 +97,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="doc-cards">
+      <section className="doc-cards ghost" style={{ '--ghost': "url('/textures/kitchen.webp')" }}>
         <h2 className="section-h">The strategy</h2>
         <div className="cards reveal-group">
           {DOCS.map((d) => (

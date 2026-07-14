@@ -28,7 +28,7 @@ export default async function DocPage({ params }) {
   const next = idx < DOCS.length - 1 ? DOCS[idx + 1] : null;
 
   return (
-    <article className="doc">
+    <article className="doc ghost" style={{ '--ghost': "url('/textures/build.webp')" }}>
       <div className="doc-kicker">
         <span className="doc-kicker-num">{doc.num}</span>
         <span className="doc-kicker-label">Medwick Digital Growth Plan</span>

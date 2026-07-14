@@ -420,3 +420,23 @@ img { max-width: 100%; display: block; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Ghosted imagery (subtle photographic texture) ---------- */
+.ghost { position: relative; isolation: isolate; }
+.ghost > * { position: relative; z-index: 1; }
+.ghost::before {
+  content: ''; position: absolute; inset: 0; z-index: 0;
+  background-image: var(--ghost);
+  background-size: cover; background-position: center; background-repeat: no-repeat;
+  opacity: 0.09; pointer-events: none;
+}
+/* Hero sits on navy — lift + soft-light blend so the photo reads as tonal texture */
+.hero.ghost::before { opacity: 0.22; mix-blend-mode: soft-light; }
+/* Footer: whisper-faint behind the small print */
+.site-footer.ghost::before { opacity: 0.07; }
+/* Doc pages: confine the texture to the top so body copy stays clean */
+.doc.ghost::before {
+  opacity: 0.10;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 110px, transparent 330px);
+  mask-image: linear-gradient(to bottom, #000 0, #000 110px, transparent 330px);
+}

@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         <MotionInit />
         <TopNav />
         <main id="main" className="main">{children}</main>
-        <footer className="site-footer">
+        <footer className="site-footer ghost" style={{ '--ghost': "url('/textures/remodel.webp')" }}>
           <p>
             <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
             (330) 635-3744
