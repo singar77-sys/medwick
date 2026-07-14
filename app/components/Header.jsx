@@ -10,7 +10,7 @@ export default function Header() {
           <span className="brand-sub">Digital Growth Plan</span>
         </span>
       </Link>
-      <span className="header-tag">SEO Strategy · Prepared July 2026</span>
+      <span className="header-tag">Strategic Positioning · July 2026</span>
     </header>
   );
 }

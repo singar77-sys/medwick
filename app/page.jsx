@@ -7,22 +7,23 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
-          We reviewed Medina&rsquo;s roofing, water-damage, and remodeling companies and found a
-          position <span className="hl">no competitor currently owns</span>.
+          Medina County&rsquo;s <span className="hl">Insurance Restoration Advocate</span>. From the
+          first insurance call to the final repair.
         </h1>
         <p className="hero-lede">
-          No other company combines a strong local presence, all three services, and a professional
-          online presence. Medwick can fill that gap by becoming Medina&rsquo;s trusted company for
-          roofing, water mitigation, and remodeling.
+          We reviewed every roofing, water-damage, and remodeling company in Medina County. Not one
+          owns the position homeowners actually need when disaster strikes: a single trusted local
+          company that guides them through the insurance claim and completes the repair. That gap is
+          Medwick&rsquo;s to take.
         </p>
         <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         <div className="hero-cta">
-          <a href="#intel" className="btn btn-gold">
-            See the market intelligence →
-          </a>
-          <Link href="/strategy" className="btn btn-ghost">
-            See the strategy
+          <Link href="/positioning" className="btn btn-gold">
+            Read the positioning →
           </Link>
+          <a href="#intel" className="btn btn-ghost">
+            See the market intelligence
+          </a>
         </div>
       </section>
 
