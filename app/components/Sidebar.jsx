@@ -28,7 +28,7 @@ export default function Sidebar() {
 
         <p className="nav-group">Market Intelligence</p>
         {REPORTS.map((r) => (
-          <a key={r.key} href={`/reports/${r.file}`} target="_blank" rel="noopener" className="nav-item nav-report">
+          <a key={r.key} href={`/reports/${r.file}`} className="nav-item nav-report">
             <span className="nav-num">▸</span>
             <span className="nav-label">{r.title}</span>
           </a>
