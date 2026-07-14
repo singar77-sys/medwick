@@ -11,6 +11,7 @@ const SECTIONS = [
   { label: POSITION.title, href: `/${POSITION.slug}`, match: (p) => p === `/${POSITION.slug}` },
   { label: 'Market Intelligence', href: `/reports/${REPORTS[0].file}`, match: (p) => p.startsWith('/reports/') },
   { label: 'The Strategy', href: `/${DOCS[0].slug}`, match: (p) => DOCS.some((d) => p === `/${d.slug}`) },
+  { label: 'Proposal', href: '/proposal', match: (p) => p === '/proposal', cta: true },
 ];
 
 export default function TopNav() {
@@ -30,8 +31,9 @@ export default function TopNav() {
         <nav className="topnav-sections" aria-label="Primary">
           {SECTIONS.map((s) => {
             const active = s.match(pathname);
+            const className = s.cta ? 'topnav-cta' : active ? 'active' : '';
             return (
-              <Link key={s.label} href={s.href} className={active ? 'active' : ''}
+              <Link key={s.label} href={s.href} className={className}
                 aria-current={active ? 'page' : undefined}>
                 {s.label}
               </Link>

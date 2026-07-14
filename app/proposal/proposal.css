@@ -1,0 +1,107 @@
+/* Website Proposal page — scoped under .pp so its generic class names
+   (.hero, .reason, .eyebrow ...) never collide with the rest of the site. */
+.pp {
+  --accent-text: var(--gold-ink);
+  --callout: var(--gold-soft);
+  --card: var(--surface);
+  --chip: #f3f1ea;
+  --shadow-gold: 0 2px 8px rgba(125, 102, 52, 0.10), 0 22px 50px rgba(125, 102, 52, 0.18);
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Hero */
+.pp .hero {
+  background: linear-gradient(158deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #eef2f6; border-bottom: 3px solid var(--gold);
+  padding: 40px clamp(24px, 5vw, 60px) 46px;
+}
+.pp .hero-inner { max-width: 960px; margin: 0 auto; }
+.pp .eyebrow {
+  font-family: var(--font-display), sans-serif; text-transform: uppercase;
+  letter-spacing: 0.18em; font-size: 12px; color: var(--gold); font-weight: 600; margin: 0 0 16px;
+}
+.pp .hero h1 {
+  font-family: var(--font-display), sans-serif; font-weight: 800;
+  font-size: clamp(28px, 4.6vw, 44px); line-height: 1.08; letter-spacing: 0.005em;
+  margin: 0 0 18px; max-width: 20ch; text-wrap: balance;
+}
+.pp .hero h1 .hl { color: var(--gold); }
+.pp .hero-lede { font-size: clamp(16px, 15px + 0.4vw, 18.5px); color: #c3cdd7; max-width: 54ch; margin: 0 0 22px; }
+.pp .hero-line { font-family: var(--font-serif), serif; font-style: italic; font-size: 18px; color: var(--gold); margin: 0; }
+
+.pp .wrap { max-width: 1000px; margin: 0 auto; padding: 0 22px 64px; }
+
+/* Section heads */
+.pp .sec-head { margin: 54px 0 22px; }
+.pp .sec-head.center { text-align: center; }
+.pp .sec-head h2 {
+  font-family: var(--font-display), sans-serif; font-weight: 800;
+  font-size: clamp(22px, 2.6vw, 29px); color: var(--ink); margin: 0 0 8px; letter-spacing: 0.01em; text-wrap: balance;
+}
+.pp .sec-head p { margin: 0; color: var(--ink-soft); font-size: 16px; max-width: 60ch; }
+.pp .sec-head.center p { margin: 0 auto; }
+
+/* What you get */
+.pp .get { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px clamp(22px, 3vw, 34px); box-shadow: var(--shadow-sm); }
+.pp ul.feat { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 15px 30px; }
+.pp ul.feat li { position: relative; padding-left: 30px; font-size: 16px; color: var(--ink); line-height: 1.45; }
+.pp ul.feat li::before { content: "\2713"; position: absolute; left: 0; top: 1px; color: var(--good); font-weight: 800; font-size: 16px; }
+.pp ul.feat li b { font-weight: 700; }
+
+/* Price centerpiece */
+.pp .price-block {
+  margin-top: 34px;
+  background: linear-gradient(158deg, color-mix(in srgb, var(--gold) 8%, var(--surface)), var(--surface));
+  border: 2px solid var(--gold); border-radius: 18px; box-shadow: var(--shadow-gold);
+  padding: 36px clamp(24px, 4vw, 44px); text-align: center;
+}
+.pp .price-label { font-family: var(--font-display), sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: 0.16em; font-size: 13px; color: var(--accent-text); margin: 0 0 6px; }
+.pp .price-anchor { font-size: 15px; color: var(--ink-faint); margin: 0 0 8px; }
+.pp .price-anchor s { text-decoration-color: var(--gold-deep); }
+.pp .price-amt { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: clamp(58px, 10vw, 86px); line-height: 0.95; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; margin: 2px 0 4px; }
+.pp .price-amt .cur { font-size: 0.5em; color: var(--ink-faint); vertical-align: top; font-weight: 700; margin-right: 2px; }
+.pp .price-terms { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px; margin-top: 18px; padding: 12px 20px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--surface); }
+.pp .price-terms span { font-size: 14.5px; color: var(--ink-soft); font-weight: 600; }
+.pp .price-terms .g { color: var(--accent-text); }
+.pp .price-note { margin: 14px 0 0; font-size: 13.5px; color: var(--ink-faint); }
+.pp .price-note b { color: var(--accent-text); font-weight: 700; }
+
+/* Why */
+.pp .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pp .reason { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 22px 20px; box-shadow: var(--shadow-sm); border-top: 3px solid var(--gold); }
+.pp .reason h3 { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 17px; color: var(--ink); margin: 0 0 8px; line-height: 1.25; }
+.pp .reason p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+.pp .reason p b { color: var(--ink); font-weight: 700; }
+
+/* Six months */
+.pp .checkin { margin-top: 34px; background: var(--callout); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 0 14px 14px 0; padding: 26px clamp(22px, 3vw, 32px); }
+.pp .checkin h3 { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 20px; color: var(--ink); margin: 0 0 8px; }
+.pp .checkin p { margin: 0; font-size: 16px; color: var(--ink-soft); max-width: 68ch; }
+.pp .checkin b { color: var(--ink); }
+
+/* Close */
+.pp .close { margin-top: 52px; background: linear-gradient(158deg, var(--navy), var(--navy-deep)); border-radius: 18px; color: #eef2f6; padding: 42px clamp(24px, 5vw, 48px); text-align: center; }
+.pp .close .cline { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: clamp(21px, 2.8vw, 28px); line-height: 1.2; margin: 0 auto 22px; max-width: 22ch; text-wrap: balance; }
+.pp .close .cline .hl { color: var(--gold); }
+.pp .contact { font-size: 15.5px; color: #c3cdd7; }
+.pp .contact b { color: #fff; }
+.pp .foot { text-align: center; margin-top: 26px; font-size: 13px; color: var(--ink-faint); }
+
+/* Motion */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes ppRise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  .pp .hero-inner > * { animation: ppRise 560ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .pp .eyebrow { animation-delay: 90ms; }
+  .pp .hero h1 { animation-delay: 150ms; }
+  .pp .hero-lede { animation-delay: 230ms; }
+  .pp .hero-line { animation-delay: 300ms; }
+  .pp .reason { transition: transform 0.14s ease, box-shadow 0.14s ease; }
+  .pp .reason:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .pp ul.feat { grid-template-columns: 1fr; gap: 13px; }
+  .pp .why { grid-template-columns: 1fr; }
+}
