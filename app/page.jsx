@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="callout">
+      <section className="callout reveal">
         <p>
           These three services each have a clear opening. Roofing has several strong competitors, but
           no single company leads in every area. Water mitigation has no clear local leader.
@@ -36,7 +36,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="scoreboard">
+      <section className="scoreboard reveal-group">
         <div className="market">
           <div className="market-head">
             <span className="market-tag">Roofing Market</span>
@@ -72,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="callout">
+      <section className="callout reveal">
         <p>
           <strong>The answer is to own the whole problem, not a trade.</strong>{' '}
           People don&rsquo;t wake up wanting a roofer; they wake up with a leaking ceiling, a flooded
@@ -85,7 +85,7 @@ export default function Home() {
 
       <section className="doc-cards" id="intel">
         <h2 className="section-h">Market intelligence</h2>
-        <div className="cards">
+        <div className="cards reveal-group">
           {REPORTS.map((r) => (
             <a key={r.key} href={`/reports/${r.file}`} className="card card-report">
               <span className="card-num">{r.tag}</span>
@@ -99,7 +99,7 @@ export default function Home() {
 
       <section className="doc-cards">
         <h2 className="section-h">The strategy</h2>
-        <div className="cards">
+        <div className="cards reveal-group">
           {DOCS.map((d) => (
             <Link key={d.slug} href={`/${d.slug}`} className="card">
               <span className="card-num">{d.num}</span>

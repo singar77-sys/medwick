@@ -1,6 +1,7 @@
 import './globals.css';
 import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
 import TopNav from './components/TopNav';
+import MotionInit from './components/MotionInit';
 
 // Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
 const display = Archivo({
@@ -41,9 +42,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${serif.variable} ${body.variable}`}>
       <body>
+        {/* Enable scroll-reveal styling before paint so there is no flash */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js-reveal')" }} />
         <a href="#main" className="skip-link">Skip to content</a>
+        <MotionInit />
         <TopNav />
         <main id="main" className="main">{children}</main>
         <footer className="site-footer">

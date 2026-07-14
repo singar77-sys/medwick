@@ -37,7 +37,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  font-size: 17px;
+  font-size: clamp(16px, 15.3px + 0.2vw, 17px);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -137,7 +137,7 @@ img { max-width: 100%; display: block; }
   margin: 0 0 20px; letter-spacing: 0.01em; max-width: 30ch;
 }
 .hero h1 .hl { color: var(--gold); }
-.hero-lede { font-size: 18px; color: #c3cdd7; max-width: 62ch; margin: 0 0 22px; }
+.hero-lede { font-size: clamp(16px, 15px + 0.5vw, 18px); color: #c3cdd7; max-width: 62ch; margin: 0 0 22px; }
 .hero-tagline {
   font-family: var(--font-serif), Georgia, 'Times New Roman', serif;
   font-style: italic; font-size: 18px; color: var(--gold);
@@ -177,10 +177,10 @@ img { max-width: 100%; display: block; }
 .doc-cards { padding: 44px 52px 12px; }
 .section-h {
   font-family: var(--font-display), sans-serif; font-weight: 600;
-  font-size: 24px; color: var(--navy); margin: 0 0 22px; letter-spacing: 0.01em;
+  font-size: clamp(20px, 17px + 1vw, 24px); color: var(--navy); margin: 0 0 22px; letter-spacing: 0.01em;
   text-transform: capitalize;
 }
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
 .card {
   display: flex; flex-direction: column;
   padding: 22px 22px 20px; border: 1px solid var(--line); border-radius: 12px;
@@ -227,7 +227,7 @@ img { max-width: 100%; display: block; }
 }
 .prose h2 {
   font-family: var(--font-display), sans-serif; font-weight: 600;
-  font-size: 25px; color: var(--navy); margin: 44px 0 14px;
+  font-size: clamp(21px, 18px + 1vw, 25px); color: var(--navy); margin: 44px 0 14px;
   padding-bottom: 9px; border-bottom: 2px solid var(--gold); letter-spacing: 0.01em;
 }
 .prose h3 {
@@ -321,15 +321,12 @@ img { max-width: 100%; display: block; }
   .main { border-left: none; border-right: none; }
   .hero, .callout, .doc-cards, .howto, .doc { padding-left: 24px; padding-right: 24px; }
   .site-footer { padding-left: 24px; padding-right: 24px; }
-  .cards { grid-template-columns: 1fr; }
   .bignums { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
-  body { font-size: 16px; }
   .hero { padding: 38px 20px 34px; }
   .doc { padding: 24px 18px 44px; }
-  .prose h2 { font-size: 22px; }
   .brand-sub { display: none; }
   .doc-pager { flex-direction: column; }
   .pager { min-width: 0; }
@@ -337,10 +334,9 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Scoreboard (two markets) ---------- */
 .scoreboard {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
   padding: 40px 52px; background: var(--surface); border-bottom: 1px solid var(--line);
 }
-@media (max-width: 1024px) { .scoreboard { grid-template-columns: 1fr; } }
 .market {
   border: 1px solid var(--line); border-radius: 12px; padding: 22px;
   box-shadow: var(--shadow-sm); background: var(--surface);
@@ -361,7 +357,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Shared gaps ---------- */
 .gaps-sec { padding: 40px 52px; }
-.gaps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.gaps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
 .gap { border-top: 3px solid var(--navy); padding-top: 12px; }
 .gap h4 { margin: 0 0 6px; font-family: var(--font-display), sans-serif; font-weight: 700; font-size: 16px; color: var(--navy); }
 .gap p { margin: 0; font-size: 14.5px; color: var(--ink-soft); line-height: 1.5; }
@@ -372,6 +368,55 @@ img { max-width: 100%; display: block; }
 /* ---------- Responsive: new sections ---------- */
 @media (max-width: 900px) {
   .scoreboard, .gaps-sec { padding-left: 24px; padding-right: 24px; }
-  .scoreboard { grid-template-columns: 1fr; }
-  .gaps { grid-template-columns: 1fr; }
+}
+
+/* ---------- Touch targets (coarse pointers) ---------- */
+@media (pointer: coarse) {
+  .topnav-sections a, .subnav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .card-go { min-height: 24px; }
+}
+
+/* ---------- Motion ---------- */
+/* Micro-interactions (cheap, always on) */
+.btn { transition: background 160ms ease-out, color 160ms ease-out, transform 130ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms ease-out; }
+.btn:active { transform: scale(0.97); }
+.topnav-sections a, .subnav a { transition: color 160ms ease-out, background 160ms ease-out; }
+.card:active { transform: translateY(0) scale(0.995); }
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes riseIn { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+  /* Hero: staggered entrance on load */
+  .hero > * { animation: riseIn 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .hero .eyebrow { animation-delay: 40ms; }
+  .hero h1 { animation-delay: 110ms; }
+  .hero-lede { animation-delay: 200ms; }
+  .hero-tagline { animation-delay: 280ms; }
+  .hero-cta { animation-delay: 360ms; }
+
+  /* Doc pages: gentle fade-in on load */
+  .doc { animation: riseIn 500ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+  /* Scroll reveal (IntersectionObserver toggles .is-visible; js-reveal gates it) */
+  .js-reveal .reveal { opacity: 0; transform: translateY(20px); }
+  .js-reveal .reveal.is-visible {
+    opacity: 1; transform: none;
+    transition: opacity 520ms cubic-bezier(0.16, 1, 0.3, 1), transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Staggered children within a revealed group */
+  .js-reveal .reveal-group > * { opacity: 0; }
+  .js-reveal .reveal-group.is-visible > * { animation: riseIn 480ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .js-reveal .reveal-group.is-visible > *:nth-child(2) { animation-delay: 70ms; }
+  .js-reveal .reveal-group.is-visible > *:nth-child(3) { animation-delay: 140ms; }
+  .js-reveal .reveal-group.is-visible > *:nth-child(4) { animation-delay: 210ms; }
+  .js-reveal .reveal-group.is-visible > *:nth-child(5) { animation-delay: 280ms; }
+  .js-reveal .reveal-group.is-visible > *:nth-child(6) { animation-delay: 350ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
