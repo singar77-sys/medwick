@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <title>Medwick | Competitive Authority Report — Medina County, OH Remodeling Market</title>
 <style>
   :root {
@@ -553,6 +556,7 @@
   --border:#e5e2d9; --border2:#e5e2d9;
   --text:#1c2530; --text-dim:#55606c; --text-muted:#8a8578;
   --accent:#8a6d3b;
+  --gold:#c0a674; --gold-light:#d4bd85;
 }
 body{ background:var(--bg); color:var(--text); }
 .report-header{ background:linear-gradient(135deg,#2c3242 0%,#1f2530 100%) !important; border-bottom:4px solid #c0a674 !important; }
@@ -560,6 +564,11 @@ body{ background:var(--bg); color:var(--text); }
 .report-subtitle,.report-date,.hstat-label{ color:#aeb9c6 !important; }
 .section-title,.threat-name,.competitor-name,.profile-name,.gap-title{ color:#161f29 !important; }
 .score-table tbody tr:hover td{ background:rgba(18,22,29,0.05) !important; }
+/* Brand typography to match the strategy pages */
+body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; }
+.report-title,.section-title,.section-label,.threat-name,.competitor-name,.profile-name,.gap-title,.hstat-val,.threat-score,.wcat-weight,.col-total,.agency-badge{ font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif !important; }
+/* Gold text on the light paper uses the darker brand gold so it meets AA contrast */
+.section-label,.threat-score,.wcat-weight,.weight-badge,.col-total,.rank-3 .threat-rank,.chip-gold,.alert-box strong,.footer-brand strong{ color:var(--accent) !important; }
 </style>
 </head>
 <body>

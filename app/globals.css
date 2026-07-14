@@ -46,6 +46,15 @@ body {
 a { color: var(--gold-ink); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Skip link: hidden until keyboard-focused */
+.skip-link {
+  position: absolute; left: 8px; top: -60px; z-index: 100;
+  background: var(--navy); color: #fff; padding: 10px 16px;
+  border-radius: 9px; font-weight: 700; font-size: 15px;
+  box-shadow: var(--shadow); transition: top 0.15s ease;
+}
+.skip-link:focus { top: 8px; text-decoration: none; outline: 2px solid var(--gold); }
+
 img { max-width: 100%; display: block; }
 
 /* ---------- Header ---------- */
@@ -116,7 +125,7 @@ img { max-width: 100%; display: block; }
   display: inline-flex; align-items: center; justify-content: center;
   width: 30px; height: 30px; border-radius: 7px;
   font-family: var(--font-display), sans-serif; font-size: 13px; font-weight: 700;
-  background: #ece8dd; color: var(--ink-faint); border: 1px solid var(--line);
+  background: #ece8dd; color: var(--ink-soft); border: 1px solid var(--line);
 }
 .nav-overview .nav-num { font-size: 12px; }
 
@@ -308,7 +317,7 @@ img { max-width: 100%; display: block; }
   border-top: 1px solid var(--line);
 }
 .site-footer p { margin: 0 0 6px; }
-.footer-note { color: var(--ink-faint); font-size: 13px; }
+.footer-note { color: var(--ink-soft); font-size: 13px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
@@ -318,7 +327,13 @@ img { max-width: 100%; display: block; }
     padding: 14px 16px; border-bottom: 1px solid var(--line);
     background: var(--bg);
   }
-  .nav { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px; }
+  .nav {
+    flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding-bottom: 4px;
+    /* fade both edges to signal the row scrolls horizontally */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 4%, #000 95%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 4%, #000 95%, transparent 100%);
+  }
+  .nav-group { display: none; } /* section labels add noise in a horizontal strip */
   .nav-item { flex: none; white-space: nowrap; }
   .nav-label { font-size: 14px; }
   .main { border-left: none; border-right: none; }
@@ -340,7 +355,7 @@ img { max-width: 100%; display: block; }
 .nav-group {
   margin: 22px 0 6px; padding: 0 14px;
   font-family: var(--font-display), sans-serif; font-size: 11px;
-  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); font-weight: 700;
 }
 .nav-report .nav-num { background: var(--navy); color: var(--gold); border-color: var(--navy); }
 

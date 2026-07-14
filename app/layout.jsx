@@ -44,10 +44,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${display.variable} ${serif.variable} ${body.variable}`}>
       <body>
+        <a href="#main" className="skip-link">Skip to content</a>
         <Header />
         <div className="shell">
           <Sidebar />
-          <main className="main">{children}</main>
+          <main id="main" className="main">{children}</main>
         </div>
         <footer className="site-footer">
           <p>
