@@ -7,12 +7,13 @@ export default function Home() {
       <section className="hero">
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
-          Three market scans. One position <span className="hl">nobody holds</span>, and Medwick fits it.
+          We reviewed Medina&rsquo;s roofing, water-damage, and remodeling companies and found a
+          position <span className="hl">no competitor currently owns</span>.
         </h1>
         <p className="hero-lede">
-          We scored every roofer, water-damage firm, and remodeler in the Medina market across 21
-          authority dimensions. No competitor combines genuine local identity, cross-category range,
-          and digital authority. Medwick can, across roof, water, and rebuild.
+          No other company combines a strong local presence, all three services, and a professional
+          online presence. Medwick can fill that gap by becoming Medina&rsquo;s trusted company for
+          roofing, water mitigation, and remodeling.
         </p>
         <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
         <div className="hero-cta">
@@ -27,12 +28,10 @@ export default function Home() {
 
       <section className="callout">
         <p>
-          <strong>Three markets, three shapes, one wedge.</strong> In roofing, authority splits
-          three ways and nobody holds all of it. In water mitigation it is wide open, with no local
-          champion at all. Remodeling is the inverse: a credentialed top tier that marketing alone
-          won&rsquo;t topple, over an undifferentiated middle with the cross-category &ldquo;Medina
-          remodeler&rdquo; seat unclaimed. The one company that is local, credentialed, and spans
-          all three takes ground no single-market rival can defend.
+          These three services each have a clear opening. Roofing has several strong competitors, but
+          no single company leads in every area. Water mitigation has no clear local leader.
+          Remodeling has a few highly qualified companies at the top, while most of the middle looks
+          the same.
         </p>
       </section>
 
@@ -43,13 +42,10 @@ export default function Home() {
             <span className="market-n">13 rivals scored</span>
           </div>
           <div className="market-rows">
-            <div className="mrow"><b>79.0</b> Gridiron Guys — wins on sheer volume</div>
-            <div className="mrow"><b>75.1</b> Fixler — owns Medina&rsquo;s local identity</div>
+            <div className="mrow"><b>79.0</b> Gridiron Guys, wins on volume</div>
+            <div className="mrow"><b>75.1</b> Fixler, owns local identity</div>
             <div className="mrow"><b>57.8</b> market average</div>
           </div>
-          <p className="market-take">
-            Three leaders, three different strengths. Beat any one of them on its weak flank.
-          </p>
         </div>
         <div className="market">
           <div className="market-head">
@@ -57,13 +53,10 @@ export default function Home() {
             <span className="market-n">15 rivals scored</span>
           </div>
           <div className="market-rows">
-            <div className="mrow"><b>75.4</b> SERVPRO — national brand recall</div>
-            <div className="mrow"><b>57.7</b> BTN — best local, but thin proof</div>
+            <div className="mrow"><b>75.4</b> SERVPRO, national brand recall</div>
+            <div className="mrow"><b>57.7</b> BTN, best local but thin</div>
             <div className="mrow"><b>53.2</b> market average</div>
           </div>
-          <p className="market-take">
-            No local champion, no award holder, a review desert. The most wide-open of the three.
-          </p>
         </div>
         <div className="market">
           <div className="market-head">
@@ -71,44 +64,19 @@ export default function Home() {
             <span className="market-n">16 rivals scored</span>
           </div>
           <div className="market-rows">
-            <div className="mrow"><b>74.4</b> Cabinet-S-Top — kitchen &amp; bath leader</div>
-            <div className="mrow"><b>67.6</b> Hansen — broadest scope, whole-home</div>
+            <div className="mrow"><b>74.4</b> Cabinet-S-Top, kitchen &amp; bath leader</div>
+            <div className="mrow"><b>67.6</b> Hansen, broadest scope</div>
             <div className="mrow"><b>58.8</b> market average</div>
           </div>
-          <p className="market-take">
-            A defended top tier. Earn the credentials, then take the unowned cross-category seat.
-          </p>
         </div>
       </section>
 
-      <section className="gaps-sec">
-        <h2 className="section-h">Where Medwick wins</h2>
-        <div className="gaps">
-          <div className="gap">
-            <h4>AI &amp; generative search</h4>
-            <p>Nobody is the cited answer when a homeowner asks ChatGPT or Google AI who to call. First mover wins a compounding lead.</p>
-          </div>
-          <div className="gap">
-            <h4>Review volume</h4>
-            <p>The roofing identity leader shows just 34 reviews; the water field is a desert. The fastest lever to climb.</p>
-          </div>
-          <div className="gap">
-            <h4>Local identity &amp; awards</h4>
-            <p>Reader&rsquo;s Choice and &ldquo;Best of Medina&rdquo; are winnable, and water has zero award holders at all.</p>
-          </div>
-          <div className="gap">
-            <h4>Educational content</h4>
-            <p>Almost no competitor publishes. Medina-specific answers build authority that competitors can&rsquo;t buy quickly.</p>
-          </div>
-          <div className="gap">
-            <h4>Insurance-claim advocacy</h4>
-            <p>Everyone bills insurance; nobody owns &ldquo;we fight for you.&rdquo; An empty, emotionally resonant lane.</p>
-          </div>
-          <div className="gap">
-            <h4>The trifecta</h4>
-            <p>Roof + water + rebuild under one local roof. Three scans, zero competitors who span all three. Medwick&rsquo;s structural edge.</p>
-          </div>
-        </div>
+      <section className="callout">
+        <p>
+          <strong>The opportunity is to become Medina&rsquo;s trusted contractor for all three.</strong>{' '}
+          A local company with the right credentials that offers roofing, water mitigation, and
+          remodeling can take a position that specialized competitors cannot easily match.
+        </p>
       </section>
 
       <section className="doc-cards" id="intel">
@@ -137,14 +105,6 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      </section>
-
-      <section className="howto">
-        <h2 className="section-h">A living picture</h2>
-        <p>
-          More market scans are underway. As each one lands it slots into this overview, building a
-          single connected view of where Medwick stands and how it wins, market by market.
-        </p>
       </section>
     </div>
   );

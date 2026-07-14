@@ -142,8 +142,8 @@ img { max-width: 100%; display: block; }
 }
 .hero h1 {
   font-family: var(--font-display), sans-serif;
-  font-weight: 700; font-size: clamp(28px, 4.4vw, 44px); line-height: 1.1;
-  margin: 0 0 20px; letter-spacing: 0.01em; max-width: 20ch;
+  font-weight: 700; font-size: clamp(26px, 3.8vw, 38px); line-height: 1.14;
+  margin: 0 0 20px; letter-spacing: 0.01em; max-width: 30ch;
 }
 .hero h1 .hl { color: var(--gold); }
 .hero-lede { font-size: 18px; color: #c3cdd7; max-width: 62ch; margin: 0 0 22px; }
