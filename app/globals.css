@@ -92,23 +92,29 @@ img { max-width: 100%; display: block; }
 .topnav-sections a.active { color: #fff; box-shadow: inset 0 -2px 0 var(--gold); border-radius: 8px 8px 0 0; }
 
 /* Contextual sub-navigation: siblings of the current page */
-.subnav { background: var(--navy-deep); border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.subnav { background: var(--navy-deep); border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .subnav-inner {
   max-width: var(--maxw); margin: 0 auto;
-  display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-  padding: 8px 26px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 26px;
 }
 .subnav-label {
-  font-family: var(--font-display), sans-serif; font-size: 11px;
-  letter-spacing: 0.14em; text-transform: uppercase; color: #8b97a6; font-weight: 700;
-  margin-right: 6px;
+  font-family: var(--font-display), sans-serif; font-size: 10.5px;
+  letter-spacing: 0.16em; text-transform: uppercase; color: #7f8b9b; font-weight: 700;
+  margin-right: 2px;
 }
+/* Chip tabs — visibly clickable, brighter, with a stronger active state */
 .subnav a {
-  font-size: 13.5px; font-weight: 600; color: #aeb9c6;
-  padding: 6px 12px; border-radius: 7px; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13.5px; font-weight: 600; color: #d7dee6; white-space: nowrap;
+  padding: 8px 14px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.14);
 }
-.subnav a:hover { color: #fff; background: rgba(255, 255, 255, 0.07); text-decoration: none; }
-.subnav a.active { color: var(--navy-ink); background: var(--gold); }
+.subnav a:hover { color: #fff; background: rgba(255, 255, 255, 0.10); border-color: rgba(192, 166, 116, 0.65); text-decoration: none; }
+.subnav a.active { color: var(--navy-ink); background: var(--gold); border-color: var(--gold); box-shadow: 0 2px 10px rgba(192, 166, 116, 0.35); }
+.subnav-num { font-family: var(--font-display), sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.03em; color: var(--gold); }
+.subnav a:hover .subnav-num { color: var(--gold); }
+.subnav a.active .subnav-num { color: var(--navy-ink); opacity: 0.65; }
 
 /* ---------- Content shell ---------- */
 .main {

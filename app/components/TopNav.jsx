@@ -49,6 +49,7 @@ export default function TopNav() {
               return (
                 <Link key={d.slug} href={`/${d.slug}`} className={active ? 'active' : ''}
                   aria-current={active ? 'page' : undefined}>
+                  <span className="subnav-num">{d.num}</span>
                   {d.title}
                 </Link>
               );
