@@ -1,12 +1,10 @@
 # Medwick Construction: SEO Strategy for the New Website
 
-**Client:** Medwick Construction LLC · 7130 Norwalk Rd, Medina, OH 44256 · (330) 635-3744
-**Prepared:** July 14, 2026
-**Basis:** Rests on three dated Competitive Authority Reports (roofing, water, remodeling) issued July 14, 2026, each scoring every real competitor in its market on one 21-dimension, 100-point scale. These supersede `medwick-digital-audit-2026-07-13.md`; where they disagree, the reports win. This document is the forward-looking SEO plan for the **rebuild** of Medwick as Medina County's Insurance Restoration Advocate: it specifies the search layer those reports imply but do not engineer. It does not repeat them; read `COMPETITOR-ANALYSIS.md` first.
+**Basis:** Rests on three dated Competitive Authority Reports (roofing, water, remodeling) issued July 14, 2026, each scoring every real competitor in its market on one 21-dimension, 100-point scale. These supersede the initial audit; where they disagree, the reports win. This document is the forward-looking SEO plan for the **rebuild** of Medwick as Medina County's Insurance Restoration Advocate: it specifies the search layer those reports imply but do not engineer. It does not repeat them; read the [Competitor Analysis](COMPETITOR-ANALYSIS.md) first.
 
-> **North star.** Insurance advocacy is the brand; roofing, water mitigation, and reconstruction are the services delivered under it. Read `POSITIONING.md` first; where it and this plan disagree, positioning wins.
+> **North star.** Insurance advocacy is the brand; roofing, water mitigation, and reconstruction are the services delivered under it. Read the [Positioning](POSITIONING.md) first; where it and this plan disagree, positioning wins.
 >
-> **Competitive basis.** Three markets, three different shapes. Roofing authority is split three ways with no holder of all three levers; water is soft, undefended, and content-dark; the remodeling market is the inverse, a real credentialed top tier. Medwick's play in that market is reconstruction, the insurance-paid rebuild that follows a damage job, not discretionary remodeling. Every section below reflects all three scans. See `COMPETITOR-ANALYSIS.md` for the digest and Market Intelligence for the full scored reports.
+> **Competitive basis.** Three markets, three different shapes. Roofing authority is split three ways with no holder of all three levers; water is soft, undefended, and content-dark; the remodeling market is the inverse, a real credentialed top tier. Medwick's play in that market is reconstruction, the insurance-paid rebuild that follows a damage job, not discretionary remodeling. Every section below reflects all three scans. See the [Competitor Analysis](COMPETITOR-ANALYSIS.md) for the digest and Market Intelligence for the full scored reports.
 
 ---
 
@@ -15,7 +13,7 @@
 **"Medina County's Insurance Restoration Advocate. From the first insurance call to the final repair."** The owner-led, Medina-County-native company that guides homeowners through the whole storm: the insurance claim first, then roof, water mitigation, and reconstruction, with documented workmanship and insurance-claim fluency. The customer buys confidence, not a trade: "I don't have to figure this out anymore." Premium-practical: never the cheapest, always the most accountable.
 
 Three defensible pillars, all verified as *unoccupied* across the three scored markets:
-1. **Insurance-claim advocacy (the flagship):** "water damage insurance claim Ohio contractor" returns adjusters and attorneys, zero Medina contractors, in a market where nobody across roofing or water owns "we fight for you." Medwick meets the adjuster, negotiates the scope, and stays until the job is finished. An empty content lane that maps exactly to the brand.
+1. **Insurance-claim advocacy (the flagship):** "water damage insurance claim Ohio contractor" returns adjusters and attorneys, zero Medina contractors, in a market where nobody across roofing or water owns "you're our customer, not the insurance company's." Medwick meets the adjuster, prepares a complete, documented repair estimate and walks through the proposed scope of work, and stays until the job is finished. An empty content lane that maps exactly to the brand.
 2. **Genuinely local across the whole storm:** the credentialed leaders reach Medina from elsewhere (Exteriors Plus from Akron, Hurst from Cleveland, SERVPRO and Roto-Rooter on national templates). The two roofers with real local roots, Gridiron and Fixler, are single-trade. Medwick is in-county at 7130 Norwalk Rd for roof, water, and reconstruction alike.
 3. **The trifecta of services under one advocate:** three separate scans, and not one firm spans roof + water + rebuild. No local competitor is local, credentialed, cross-category, and digitally strong at once. Insurance advocacy is the brand; roofing, water mitigation, and reconstruction are the services it delivers, which is exactly why the trifecta holds together as one relationship instead of three.
 
@@ -55,21 +53,21 @@ Replace the GoDaddy one-pager. Requirements for the new stack:
 
 - **Rendering:** server-rendered or static HTML (Next.js/Astro or equivalent). The current site's fatal flaw is that reviews, gallery photos, and services hydrate client-side. Google sees empty slides. **All ranking-critical content must be in the initial server HTML.**
 - **Core Web Vitals:** LCP ≤ 2.5s · INP ≤ 200ms · CLS ≤ 0.1, on mobile, in the field. Self-host all images (kill the hotlinked Getty hero: SEO *and* licensing risk). Descriptive filenames + real alt text: `medwick-roof-replacement-brunswick-oh-after.jpg`.
-- **Crawlability:** clean URL hierarchy (§ `SITE-STRUCTURE.md`), per-section XML sitemaps, one canonical per page, no duplicate or self-canonical doorway pairs (the doorway-site failure the audit flagged).
+- **Crawlability:** clean URL hierarchy (the [Site Structure](SITE-STRUCTURE.md)), per-section XML sitemaps, one canonical per page, no duplicate or self-canonical doorway pairs (the doorway-site failure the audit flagged).
 - **One phone number everywhere.** Resolve defect C1 first. Canonical (330) 635-3744 on site, GBP, and all citations. A call-tracking number is ads-only, added later, never on GBP/citations.
 - **Instrumentation day one:** GA4 + Search Console + call tracking. Nothing is optimizable until this exists (defect C4).
-- **Schema:** per §4.5 of the audit: `GeneralContractor`/`RoofingContractor` org identity with complete NAP + geo + `sameAs`; per-service `Service` with city-level `areaServed` (all served communities, not "Ohio") for insurance restoration, storm and water mitigation, roofing, and reconstruction; FAQ schema on the insurance-claim and storm pages first, then cost pages. **No `aggregateRating` markup until real reviews render on-page** (and never fabricate a count). Note: Google does **not** show star rich results from a business's own self-serving review markup — organic review stars for LocalBusiness pages were discontinued years ago. Review stars appear via the **Google Business Profile / map pack** (from Google reviews), which is where the review program actually pays off in the SERP. Still mark up real on-page reviews with `Review`/`aggregateRating` for structured data and AI-answer parsing, and surface them for conversion. Schema is also the substrate for §5.
+- **Schema:** per §4.5 of the audit: `GeneralContractor`/`RoofingContractor` org identity with complete NAP + geo + `sameAs`; per-service `Service` with city-level `areaServed` (all served communities, not "Ohio") for insurance restoration, storm and water mitigation, roofing, and reconstruction; FAQ schema on the insurance-claim and storm pages first, then cost pages. **No `aggregateRating` markup until real reviews render on-page** (and never fabricate a count). Note: Google does **not** show star rich results from a business's own self-serving review markup — organic review stars for LocalBusiness pages were discontinued years ago. Review stars appear via the **Google Business Profile / map pack** (from Google reviews), which is where the review program actually pays off in the SERP. Still mark up real on-page reviews with `Review`/`aggregateRating` for structured data, and surface them for conversion. Schema is also the substrate for §5.
 - **Accessibility:** WCAG 2.2-oriented (overlaps with technical SEO and CWV).
 
 ## 5. GEO / AI-search readiness (the lead pillar)
 
-This is the strategy's single highest-leverage play. Across all three scored markets the same gap recurs and goes unclaimed: **no competitor is the answer an AI returns** when a Medina homeowner asks who to call after damage: a roof leak, a flooded basement, a denied claim. The reports rank AI and generative search as the #1 recurring opening in every market. Local keywords see minimal AI-Overview disruption in classic SERPs today (~0.14%), but ChatGPT, Perplexity, and Google's AI answers are rising fast for local recommendations, and the field is publishing nothing (the highest content score anywhere is a 6). First mover takes the citation. The build:
+This is the strategy's single highest-leverage play. Across all three scored markets the same gap recurs and goes unclaimed: **no competitor is the answer an AI returns** when a Medina homeowner asks who to call after damage: a roof leak, a flooded basement, a denied claim. The reports rank AI and generative search as the #1 recurring opening in every market. Local keywords see minimal AI-Overview disruption in classic SERPs today (~0.14%), but ChatGPT, Perplexity, and Google's AI answers are rising fast for local recommendations, and the field is publishing nothing (the highest content score anywhere is a 6). Being an early, well-structured answer source is an opening no incumbent is contesting. The build:
 
-- **Answer-shaped content:** quotable, self-contained answers to one homeowner question per page, insurance-claim walkthroughs first, then water-mitigation steps and honest price ranges (roof-replacement cost bands, reconstruction scope), the format AI engines lift and cite. Pair with a comprehensive FAQ layer; Google Maps Q&A is now AI-generated from your GBP + site FAQ.
+- **Answer-shaped content:** quotable, self-contained answers to one homeowner question per page, insurance-claim walkthroughs first, then water-mitigation steps and honest price ranges (roof-replacement cost bands, reconstruction scope), the format AI engines lift and cite. Pair with a comprehensive FAQ layer.
 - **Complete structured data:** `LocalBusiness` / service schema with geo, openingHours, priceRange, and city-level areaServed, so machines can parse who Medwick is, where it works, and what it does across insurance restoration, roof, water, and reconstruction.
 - **Consistent NAP** across Google, Yelp, Apple Maps, and Bing. Inconsistency is the fastest way to get filtered out of an AI answer.
 - **GBP tuned for AI:** complete, category-accurate, review-rich profile with active Q&A; the profile is what the assistants read first.
-- **`llms.txt`** at the root to declare crawlable, citation-ready content for AI agents.
+- **`llms.txt`** (optional/experimental) at the root for AI systems that may consume it (no Google Search effect).
 - **Curated "best of Medina" list presence:** the #1 AI-visibility factor in the 2026 local report, and the direct answer to the "best roofing companies" SERP being directory-locked. Water has zero award or list holders, so any placement there is pure greenfield.
 
 ## 6. Off-site: reviews, citations, authority
@@ -88,12 +86,12 @@ Full citation/link target list with pricing lives in audit §4.6.
 ## 7. Guardrails
 
 - **Anti-doorway rule:** a city page ships only with real local proof (project photos from that town, a named local testimonial, town-specific housing/storm detail, distinct FAQs). Never templated clones.
-- **No fake reviews, no competitor smear pages, never repeat unverified accusations** about any competitor. Counter reputational risk with *policy* (published cancellation terms, "no games with your insurer" process page), not commentary. Two roofing competitors already carry open BBB problems over unsubstantiated claims: the mistake to avoid, not imitate.
+- **No fake reviews, no competitor smear pages, never repeat unverified accusations** about any competitor. Counter reputational risk with *policy* (published cancellation terms, a "clear, documented, and honest at every step" process page), not commentary. Two roofing competitors already carry open BBB problems over unsubstantiated claims: the mistake to avoid, not imitate.
 - **Only claim 24/7 if operationally true.** In water, everyone claims round-the-clock and nobody proves it; an in-county contractor can guarantee an arrival time the North Royalton / Akron / Cleveland regionals physically cannot. Make the promise only if reliably deliverable, then prove it.
 
 ## Deliverables in this plan
-- `SEO-STRATEGY.md`: this document
-- `SITE-STRUCTURE.md`: architecture, URL map, per-page on-page spec, keyword→URL mapping, internal linking
-- `CONTENT-CALENDAR.md`: publishing plan and cadence
-- `IMPLEMENTATION-ROADMAP.md`: phased build roadmap with SEO gates (includes the reconstruction scope and any discretionary-remodeling go/no-go decision point)
-- `COMPETITOR-ANALYSIS.md`: strategic digest of the three Competitive Authority Reports + exploitable gaps
+- SEO Strategy (this document)
+- [Site Structure](SITE-STRUCTURE.md): architecture, URL map, per-page on-page spec, keyword→URL mapping, internal linking
+- [Content Calendar](CONTENT-CALENDAR.md): publishing plan and cadence
+- [Roadmap](IMPLEMENTATION-ROADMAP.md): phased build roadmap with SEO gates (includes the reconstruction scope and any discretionary-remodeling go/no-go decision point)
+- [Competitor Analysis](COMPETITOR-ANALYSIS.md): strategic digest of the three Competitive Authority Reports + exploitable gaps

@@ -4,7 +4,7 @@ Publishing plan for the rebuild, sequenced to Medwick's position as Medina Count
 
 The build window (mid-July to mid-October 2026) sits inside peak wind season (August is busiest) and rides the September "roof repair near me" national peak. Winter leak and pipe content must index **before** the January leak-repair spike, so it ships by late October.
 
-The single largest opening is the same across every service line: **nobody answers the questions homeowners actually type after damage, and nobody owns the insurance decision that follows.** Everyone bills insurance; no one has claimed the "we fight for you" position, and no competitor is the cited answer when a homeowner asks an AI who to call. That makes advocacy-led answer content the top priority, because one well-built asset earns AI-search citation and durable organic authority at once. Even 12 to 20 strong Medina-specific assets build a lead no incumbent can quickly close.
+The single largest opening is the same across every service line: **nobody answers the questions homeowners actually type after damage, and nobody owns the insurance decision that follows.** Everyone bills insurance; no one has claimed the "you're our customer, not the insurance company's" position, and no competitor is the cited answer when a homeowner asks an AI who to call. That makes advocacy-led answer content the top priority, because one well-built asset earns AI-search citation and durable organic authority at once. Even 12 to 20 strong Medina-specific assets build a lead no incumbent can quickly close.
 
 ## Priority order
 
@@ -19,7 +19,7 @@ The single largest opening is the same across every service line: **nobody answe
 
 ## How content ties to reviews and awards
 
-Content and review velocity compound: every case study and answer post ends with a review ask, because review volume is the single fastest authority lever. The targets are concrete: beat Fixler's 34 reviews inside the first stretch, then approach SERVPRO's 189, aiming for 50 Google reviews in six months. The award pushes ride the same content: sustained local roofing and storm content plus review velocity feed the **Medina Gazette Reader's Choice** run (roofing's challengeable prize). Publish policy, not commentary, to counter reputational risk: a clear "no games with your insurer, we work for you" process page, not competitor references.
+Content and review velocity compound: every case study and answer post ends with a review ask, because review volume is the single fastest authority lever. The targets are concrete: beat Fixler's 34 reviews inside the first stretch, then approach SERVPRO's 189, aiming for 50 Google reviews in six months. The award pushes ride the same content: sustained local roofing and storm content plus review velocity feed the **Medina Gazette Reader's Choice** run (roofing's challengeable prize). Publish policy, not commentary, to counter reputational risk: a plain "we answer to you, the homeowner — clear, documented, and honest at every step" process page, not competitor references.
 
 ## Cadence
 
@@ -34,21 +34,21 @@ Ordered to the position: insurance and storm answers lead, then water and emerge
 
 | # | Working title | Target URL | Cluster | Ship by |
 |---|---|---|---|---|
-| 1 | Will Insurance Cover a Burst Pipe in Ohio? | `/guides/burst-pipe-insurance-ohio/` | insurance / water (flagship) | Days 1-30 |
-| 2 | Sump Pump Failed and Your Basement Flooded? Do This First | `/guides/sump-pump-failed-basement-flooded-medina/` | water / emergency | Days 1-30 |
-| 3 | How Fast Does Water Damage Cause Mold? | `/guides/how-fast-water-damage-mold/` | water / AEO | Days 1-30 |
-| 4 | Water Damage Insurance Claims: A Homeowner's Steps | `/guides/water-damage-insurance-claim-medina/` | insurance / water (flagship) | Days 31-60 |
-| 5 | Roof Insurance Claims in Ohio: Process, Denials & Supplements | `/roofing/insurance-claims/` (pillar) | insurance / roofing (flagship) | Days 31-60 |
-| 6 | Can I Choose My Own Contractor After an Insurance Claim? | `/guides/choose-own-contractor-insurance-claim-ohio/` | insurance / advocacy (empty niche) | Days 31-60 |
-| 7 | Hail Damage Assessment in Medina County | `/guides/hail-damage-assessment-medina/` | storm / roofing (flagship) | Days 31-60 |
-| 8 | Sewage Backup Cleanup Cost in Medina County | `/guides/sewage-backup-cleanup-cost-medina/` | water / cost | Days 31-60 |
-| 9 | Flooded Basement: Who to Call in Medina County | `/guides/flooded-basement-who-to-call-medina/` | water / emergency | Days 61-90 |
-| 10 | Roof Replacement Cost in Medina Ohio, 2026 | `/guides/roof-replacement-cost-medina-2026/` | roofing / cost | Days 61-90 |
-| 11 | Reconstruction Cost After Water Damage in Medina County | `/guides/reconstruction-cost-after-water-damage-medina/` | reconstruction / cost | Days 61-90 |
-| 12 | Will Insurance Pay to Rebuild After Major Damage? | `/guides/will-insurance-pay-to-rebuild-ohio/` | insurance / reconstruction (flagship) | Days 61-90 |
-| 13 | Best Shingles for Ohio Winters | `/guides/best-shingles-ohio-winters/` | roofing / AEO | Days 61-90 |
-| 14 | Winter Roof Leaks & Ice Dams in Northeast Ohio | `/guides/roof-leak-ice-dam-northeast-ohio/` | winter (Jan peak) | **By late Oct** |
-| 15 | Frozen & Burst Pipes: The First Hour | `/guides/burst-pipe-first-hour-medina/` | winter (Dec-Feb) | **By late Oct** |
+| 1 | Will Insurance Cover a Burst Pipe in Ohio? | `/learning-center/guides/burst-pipe-insurance-ohio/` | insurance / water (flagship) | Days 1-30 |
+| 2 | Sump Pump Failed and Your Basement Flooded? Do This First | `/learning-center/guides/sump-pump-failed-basement-flooded-medina/` | water / emergency | Days 1-30 |
+| 3 | How Fast Does Water Damage Cause Mold? | `/learning-center/guides/how-fast-water-damage-mold/` | water / AEO | Days 1-30 |
+| 4 | Water Damage Insurance Claims: A Homeowner's Steps | `/learning-center/guides/water-damage-insurance-claim-medina/` | insurance / water (flagship) | Days 31-60 |
+| 5 | Roof Insurance Claims in Ohio: Process, Denials & Supplements | `/insurance-claims/roof/` (pillar) | insurance / roofing (flagship) | Days 31-60 |
+| 6 | Can I Choose My Own Contractor After an Insurance Claim? | `/learning-center/guides/choose-own-contractor-insurance-claim-ohio/` | insurance / advocacy (empty niche) | Days 31-60 |
+| 7 | Hail Damage Assessment in Medina County | `/learning-center/guides/hail-damage-assessment-medina/` | storm / roofing (flagship) | Days 31-60 |
+| 8 | Sewage Backup Cleanup Cost in Medina County | `/learning-center/guides/sewage-backup-cleanup-cost-medina/` | water / cost | Days 31-60 |
+| 9 | Flooded Basement: Who to Call in Medina County | `/learning-center/guides/flooded-basement-who-to-call-medina/` | water / emergency | Days 61-90 |
+| 10 | Roof Replacement Cost in Medina Ohio, 2026 | `/learning-center/guides/roof-replacement-cost-medina-2026/` | roofing / cost | Days 61-90 |
+| 11 | Reconstruction Cost After Water Damage in Medina County | `/learning-center/guides/reconstruction-cost-after-water-damage-medina/` | reconstruction / cost | Days 61-90 |
+| 12 | Will Insurance Pay to Rebuild After Major Damage? | `/learning-center/guides/will-insurance-pay-to-rebuild-ohio/` | insurance / reconstruction (flagship) | Days 61-90 |
+| 13 | Best Shingles for Ohio Winters | `/learning-center/guides/best-shingles-ohio-winters/` | roofing / AEO | Days 61-90 |
+| 14 | Winter Roof Leaks & Ice Dams in Northeast Ohio | `/learning-center/guides/roof-leak-ice-dam-northeast-ohio/` | winter (Jan peak) | **By late Oct** |
+| 15 | Frozen & Burst Pipes: The First Hour | `/learning-center/guides/burst-pipe-first-hour-medina/` | winter (Dec-Feb) | **By late Oct** |
 
 Items 11 and 12 replace the old discretionary-remodel entries. Under the advocacy position, reconstruction content answers the covered-loss rebuild decision (will insurance pay, what does it cost to put the home back), not discretionary kitchen or bath keyword chasing.
 

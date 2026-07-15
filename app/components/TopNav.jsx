@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { DOCS, REPORTS, POSITION } from '../lib/docs';
@@ -7,16 +8,18 @@ import { DOCS, REPORTS, POSITION } from '../lib/docs';
 // One nav system for the whole site: a global row of sections, plus a
 // contextual sub-row of the current section's pages.
 const SECTIONS = [
-  { label: 'Proposal', href: '/proposal', match: (p) => p === '/proposal', cta: true },
   { label: 'Overview', href: '/', match: (p) => p === '/' },
   { label: POSITION.title, href: `/${POSITION.slug}`, match: (p) => p === `/${POSITION.slug}` },
-  { label: 'Market Intelligence', href: `/reports/${REPORTS[0].file}`, match: (p) => p.startsWith('/reports/') },
-  { label: 'The Strategy', href: `/${DOCS[0].slug}`, match: (p) => DOCS.some((d) => p === `/${d.slug}`) },
+  { label: 'Audit', href: `/reports/${REPORTS[0].file}`, match: (p) => p.startsWith('/reports/') },
+  { label: 'Strategies', href: `/${DOCS[0].slug}`, match: (p) => DOCS.some((d) => p === `/${d.slug}`) },
+  { label: 'Quote', href: '/proposal', match: (p) => p === '/proposal', cta: true },
 ];
 
 export default function TopNav() {
   const pathname = usePathname();
   const inStrategy = DOCS.some((d) => pathname === `/${d.slug}`);
+  const [navOpen, setNavOpen] = useState(false);
+  useEffect(() => { setNavOpen(false); }, [pathname]);
 
   return (
     <header className="topnav">
@@ -28,13 +31,25 @@ export default function TopNav() {
             <span className="brand-sub">Digital Growth Plan</span>
           </span>
         </Link>
+        <input
+          type="checkbox"
+          id="mw-nav-toggle"
+          className="nav-toggle"
+          checked={navOpen}
+          onChange={(e) => setNavOpen(e.target.checked)}
+          aria-label="Toggle navigation menu"
+        />
+        <label htmlFor="mw-nav-toggle" className="nav-burger" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </label>
         <nav className="topnav-sections" aria-label="Primary">
           {SECTIONS.map((s) => {
             const active = s.match(pathname);
             const className = s.cta ? 'topnav-cta' : active ? 'active' : '';
             return (
               <Link key={s.label} href={s.href} className={className}
-                aria-current={active ? 'page' : undefined}>
+                aria-current={active ? 'page' : undefined}
+                onClick={() => setNavOpen(false)}>
                 {s.label}
               </Link>
             );
@@ -45,7 +60,7 @@ export default function TopNav() {
       {inStrategy && (
         <div className="subnav">
           <nav className="subnav-inner" aria-label="Strategy documents">
-            <span className="subnav-label">The Strategy</span>
+            <span className="subnav-label">Strategies</span>
             {DOCS.map((d) => {
               const active = pathname === `/${d.slug}`;
               return (

@@ -7,32 +7,31 @@ export default function Home() {
       <section className="hero ghost" style={{ '--ghost': "url('/textures/hero.webp')" }}>
         <p className="eyebrow">Digital Growth Plan · Medina County, Ohio</p>
         <h1>
-          Medina County&rsquo;s <span className="hl">Insurance Restoration Advocate</span>. From the
-          first insurance call to the final repair.
+          Medina County&rsquo;s <span className="hl">Insurance Restoration Advocate</span>
         </h1>
+        <p className="hero-sub">From the first call to the final repair.</p>
         <p className="hero-lede">
-          We reviewed every roofing, water-damage, and remodeling company in Medina County. Not one
-          owns the position homeowners actually need when disaster strikes: a single trusted local
-          company that guides them through the insurance claim and completes the repair. That gap is
-          Medwick&rsquo;s to take.
+          We reviewed the roofing, water-damage, and reconstruction market across Medina County. No
+          local company clearly owns the position homeowners need after property damage: one trusted
+          team that helps them understand the process, documents the work, coordinates with the
+          adjuster, and completes the repair.
         </p>
-        <p className="hero-tagline">&ldquo;Building Excellence, One Project at a Time.&rdquo;</p>
+        <p className="hero-punch">That position is open. <span className="hl">Medwick can own it.</span></p>
         <div className="hero-cta">
           <Link href="/positioning" className="btn btn-gold">
             Read the positioning →
           </Link>
           <a href="#intel" className="btn btn-ghost">
-            See the market intelligence
+            See the audit
           </a>
         </div>
       </section>
 
       <section className="callout reveal ghost" style={{ '--ghost': "url('/textures/roofing.webp')" }}>
         <p>
-          These three services each have a clear opening. Roofing has several strong competitors, but
-          no single company leads in every area. Water mitigation has no clear local leader.
-          Remodeling has a few highly qualified companies at the top, while most of the middle looks
-          the same.
+          <strong>Each market has a clear opening.</strong> Roofing is competitive, but no company
+          leads across the board. Water mitigation has no established local leader. Remodeling has a
+          strong top tier, but the rest of the market is largely interchangeable.
         </p>
       </section>
 
@@ -74,17 +73,13 @@ export default function Home() {
 
       <section className="callout reveal ghost" style={{ '--ghost': "url('/textures/build.webp')" }}>
         <p>
-          <strong>The answer is to own the whole problem, not a trade.</strong>{' '}
-          People don&rsquo;t wake up wanting a roofer; they wake up with a leaking ceiling, a flooded
-          basement, or a denied claim. Medwick can become Medina County&rsquo;s{' '}
-          <strong>Insurance Restoration Advocate</strong>: the trusted guide from the first insurance
-          call to the final repair, with roofing, water mitigation, and reconstruction as the natural
-          outcomes. <Link href="/positioning">Read the positioning →</Link>
+          <strong>Medwick does not need to beat everyone at everything.</strong> It needs to own the
+          position none of them do. <Link href="/positioning">Read the positioning →</Link>
         </p>
       </section>
 
       <section className="doc-cards ghost" id="intel" style={{ '--ghost': "url('/textures/exterior.webp')" }}>
-        <h2 className="section-h">Market intelligence</h2>
+        <h2 className="section-h">Audit</h2>
         <div className="cards reveal-group">
           {REPORTS.map((r) => (
             <a key={r.key} href={`/reports/${r.file}`} className="card card-report">
@@ -98,7 +93,7 @@ export default function Home() {
       </section>
 
       <section className="doc-cards ghost" style={{ '--ghost': "url('/textures/kitchen.webp')" }}>
-        <h2 className="section-h">The strategy</h2>
+        <h2 className="section-h">Strategies</h2>
         <div className="cards reveal-group">
           {DOCS.map((d) => (
             <Link key={d.slug} href={`/${d.slug}`} className="card">

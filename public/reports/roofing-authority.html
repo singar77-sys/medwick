@@ -572,35 +572,6 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 .report-title,.section-title,.section-label,.threat-name,.competitor-name,.profile-name,.gap-title,.hstat-val,.threat-score,.wcat-weight,.col-total,.agency-badge{ font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif !important; }
 /* Gold text on the light paper uses the darker brand gold so it meets AA contrast */
 .section-label,.threat-score,.wcat-weight,.weight-badge,.col-total,.rank-3 .threat-rank,.chip-gold,.alert-box strong,.footer-brand strong{ color:var(--accent) !important; }
-/* Shared Medwick top nav — mirrors the strategy pages' two-tier nav */
-.mwnav{ position:sticky; top:0; z-index:200; background:#2c3242; border-bottom:3px solid #c0a674; font-family:'Source Sans 3',-apple-system,system-ui,sans-serif; }
-.mwnav-row{ max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:11px 26px; }
-.mwnav-brand{ display:flex; align-items:center; gap:13px; text-decoration:none; }
-.mwnav-logo{ width:42px; height:42px; border-radius:8px; object-fit:cover; box-shadow:0 0 0 1px rgba(255,255,255,.08); }
-.mwnav-bt{ display:flex; flex-direction:column; line-height:1.05; }
-.mwnav-name{ font-family:'Archivo',-apple-system,system-ui,sans-serif; font-weight:700; font-size:21px; letter-spacing:.06em; color:#fff; }
-.mwnav-tag{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#c0a674; font-weight:600; }
-.mwnav-sections{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; justify-content:flex-end; }
-.mwnav-sections a{ font-weight:600; font-size:15px; color:#c3cdd7; padding:8px 13px; border-radius:8px; text-decoration:none; white-space:nowrap; }
-.mwnav-sections a:hover{ color:#fff; background:rgba(255,255,255,.07); }
-.mwnav-sections a.active{ color:#fff; box-shadow:inset 0 -2px 0 #c0a674; border-radius:8px 8px 0 0; }
-.mwnav-cta{ color:#1a1f29; background:#c0a674; border:1px solid #c0a674; border-radius:999px; padding:8px 16px; margin-left:8px; font-weight:700; text-decoration:none; }
-.mwnav-cta:hover{ color:#1a1f29; background:#d6b463; border-color:#d6b463; }
-.mwnav-sub2{ background:#232935; border-top:1px solid rgba(255,255,255,.08); }
-.mwnav-sub2row{ max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:10px 26px; }
-.mwnav-sub2label{ font-family:'Archivo',sans-serif; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#7f8b9b; font-weight:700; margin-right:2px; }
-.mwnav-sub2 a{ display:inline-flex; align-items:center; font-size:13.5px; font-weight:600; color:#d7dee6; padding:8px 14px; border-radius:999px; text-decoration:none; white-space:nowrap; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); }
-.mwnav-sub2 a:hover{ color:#fff; background:rgba(255,255,255,.10); border-color:rgba(192,166,116,.65); }
-.mwnav-sub2 a.active{ color:#1a1f29; background:#c0a674; border-color:#c0a674; box-shadow:0 2px 10px rgba(192,166,116,.35); }
-@media (max-width:900px){
-  .mwnav-row{ flex-wrap:wrap; gap:10px; padding:10px 16px; }
-  .mwnav-sections{ justify-content:flex-start; width:100%; overflow-x:auto; flex-wrap:nowrap; -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); }
-  .mwnav-sub2row{ padding:8px 16px; overflow-x:auto; flex-wrap:nowrap; -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); }
-  .mwnav-tag{ display:none; }
-}
-/* Motion + touch targets (mirrors the strategy pages) */
-@media (pointer: coarse){ .mwnav-sections a, .mwnav-sub2 a{ min-height:44px; display:inline-flex; align-items:center; } }
-.mwnav-sections a, .mwnav-sub2 a{ transition: color 160ms ease-out, background 160ms ease-out; }
 @media (prefers-reduced-motion: no-preference){
   @keyframes mwRise{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
   .report-header{ animation: mwRise 600ms cubic-bezier(0.16,1,0.3,1) both; }
@@ -620,17 +591,19 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
       <img src="/medwick-logo.webp" alt="Medwick Construction" class="brand-logo">
       <span class="brand-text"><span class="brand-name">MEDWICK</span><span class="brand-sub">Digital Growth Plan</span></span>
     </a>
+    <input type="checkbox" id="mw-nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+    <label for="mw-nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
     <nav class="topnav-sections" aria-label="Primary">
-      <a href="/proposal" class="topnav-cta">Proposal</a>
       <a href="/">Overview</a>
-      <a href="/positioning">The Position</a>
-      <a href="/reports/roofing-authority.html" class="active" aria-current="page">Market Intelligence</a>
-      <a href="/strategy">The Strategy</a>
+      <a href="/positioning">Positioning</a>
+      <a href="/reports/roofing-authority.html" class="active" aria-current="page">Audit</a>
+      <a href="/strategy">Strategies</a>
+      <a href="/proposal" class="topnav-cta">Quote</a>
     </nav>
   </div>
   <div class="subnav">
     <nav class="subnav-inner" aria-label="Market intelligence reports">
-      <span class="subnav-label">Market Intelligence</span>
+      <span class="subnav-label">Audit</span>
       <a href="/reports/roofing-authority.html" class="active" aria-current="page">Roofing</a>
       <a href="/reports/water-authority.html">Water</a>
       <a href="/reports/remodeling-authority.html">Remodeling</a>
@@ -643,7 +616,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="report-header">
   <div class="header-meta">
-    <div class="agency-badge">Hunter Systems — Intelligence Division</div>
+    <div class="agency-badge">Hunter Systems — Competitive Market Analysis</div>
     <div class="report-date">
       Client: <span>Medwick Construction</span><br>
       Market: <span>Medina, OH</span><br>
@@ -682,15 +655,15 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="container">
 <section>
-  <div class="section-label">Threat Assessment</div>
-  <div class="section-title">Top 3 Hardest to Beat</div>
-  <div class="section-desc">Competitors with the highest aggregate authority across all 21 dimensions — these require deliberate flanking strategy, not head-on challenge.</div>
+  <div class="section-label">Competitive Assessment</div>
+  <div class="section-title">Top 3 Competitive Priorities</div>
+  <div class="section-desc">Competitors with the highest aggregate authority across all 21 dimensions — these require a deliberate positioning strategy, not direct competition.</div>
 
   <div class="threat-grid">
 
     <!-- THREAT 1 -->
     <div class="threat-card rank-1">
-      <div class="threat-rank">⚠ Threat Level: Critical</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">Gridiron Guys Construction</div>
       <div class="threat-score-line">
         <div class="threat-score">79.0</div>
@@ -711,7 +684,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 
     <!-- THREAT 2 -->
     <div class="threat-card rank-2">
-      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">Exteriors Plus</div>
       <div class="threat-score-line">
         <div class="threat-score">78.8</div>
@@ -731,14 +704,14 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 
     <!-- THREAT 3 -->
     <div class="threat-card rank-3">
-      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">Fixler Roofing LLC</div>
       <div class="threat-score-line">
         <div class="threat-score">75.1</div>
         <div class="threat-score-label">/100 Authority Score</div>
       </div>
       <div class="threat-why">
-        The most dangerous competitor for Medwick specifically — not because of scale, but because of identity. Fixler <em>is</em> Medina roofing in the eyes of the local community. Three-time Medina Gazette Reader's Choice winner (2021, 2022, 2026 "Best of the Best"), GAF Master Elite President's Club, multi-manufacturer certified, drone inspections, Equipter tearoff system, and they sponsor the Medina County Home &amp; Garden Show. Ohio License #CE24667. That's institutional-grade local presence. Their Achilles heel: only 34 Birdeye reviews (far too few for their tenure), a Joomla CMS that is aging out, and limited digital content. A competitor who matches their local credibility and out-digitals them will steal their top Google positions.
+        The most dangerous competitor for Medwick specifically — not because of scale, but because of identity. Fixler <em>is</em> Medina roofing in the eyes of the local community. Three-time Medina Gazette Reader's Choice winner (2021, 2022, 2026 "Best of the Best"), GAF Master Elite President's Club, multi-manufacturer certified, drone inspections, Equipter tearoff system, and they sponsor the Medina County Home &amp; Garden Show. Ohio License #CE24667. That's institutional-grade local presence. Their key gap: only 34 Birdeye reviews (far too few for their tenure), a Joomla CMS that is aging out, and limited digital content. A competitor who matches their local credibility and out-digitals them will win the positions they haven't defended.
       </div>
       <div class="threat-chips">
         <span class="chip chip-red">2026 Best of the Best</span>
@@ -753,7 +726,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
   </div><!-- /threat-grid -->
 
   <div class="alert-box">
-    <strong>Key Insight for Medwick:</strong> None of the top three threats dominate all dimensions simultaneously. Gridiron wins on volume; Exteriors Plus wins on certifications; Fixler wins on local identity. The market has no single competitor who is both the <em>local identity brand</em> AND the <em>digital authority</em> AND the <em>most certified</em>. That three-way split is Medwick's opening.
+    <strong>Key Insight for Medwick:</strong> None of the top three competitors leads across all dimensions simultaneously. Gridiron wins on volume; Exteriors Plus wins on certifications; Fixler wins on local identity. The market has no single competitor who is both the <em>local identity brand</em> AND the <em>digital authority</em> AND the <em>most certified</em>. That three-way split is Medwick's opening.
   </div>
 
 </section>
@@ -1077,7 +1050,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-green">928 Reviews</span>
       </div>
       <div class="profile-body">
-        Founded in 2003 as a family-owned business, Gridiron Guys is the operational giant of the Medina market. Their numbers are staggering: 20 active trucks, 21,000+ satisfied customers, 10,000+ residential installs, and 1,029+ commercial installs. Seven consecutive Angie's List Super Service Awards (2015–2021) validate their consistency at scale. GAF Master Elite certified. Their service scope is the broadest in the market — residential and commercial roofing, siding, gutters, windows, doors, flooring, kitchen remodels, and bathroom remodels — making them the only true "full exterior and interior" player. HubSpot CMS powers a clean, modern website with a dedicated blog ("Roof to Remodel"), e-estimate flow, and multi-channel social presence (Facebook, Instagram, YouTube). Their core vulnerability: despite 23 years of operation, they have no Medina Gazette Reader's Choice wins, minimal community sponsorship presence, and their massive scope means they don't feel like a roofing specialist. They are spread thin across many trades. A tightly positioned Medina roofing specialist with strong local identity can steal the "roofing expert" positioning from under them.
+        Founded in 2003 as a family-owned business, Gridiron Guys is the operational giant of the Medina market. Their numbers are staggering: 20 active trucks, 21,000+ satisfied customers, 10,000+ residential installs, and 1,029+ commercial installs. Seven consecutive Angie's List Super Service Awards (2015–2021) validate their consistency at scale. GAF Master Elite certified. Their service scope is the broadest in the market — residential and commercial roofing, siding, gutters, windows, doors, flooring, kitchen remodels, and bathroom remodels — making them the only true "full exterior and interior" player. HubSpot CMS powers a clean, modern website with a dedicated blog ("Roof to Remodel"), e-estimate flow, and multi-channel social presence (Facebook, Instagram, YouTube). Their core vulnerability: despite 23 years of operation, they have no Medina Gazette Reader's Choice wins, minimal community sponsorship presence, and their massive scope means they don't feel like a roofing specialist. They are spread thin across many trades. A tightly positioned Medina roofing specialist with strong local identity can win the "roofing expert" positioning they've left undefended.
       </div>
     </div>
 
@@ -1128,7 +1101,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-blue">H&amp;G Show Sponsor</span>
       </div>
       <div class="profile-body">
-        Fixler Roofing is the local identity champion — and the most strategically critical competitor for Medwick to monitor. Owner David Averette grew up in the roofing business, holds Ohio License #CE24667, and has built a multi-layered certification stack: GAF Master Elite with President's Club (top ~2% of North American roofers), CertainTeed, Owens Corning, Firestone materials, BBB Accredited since 2014, and Houzz endorsement. They operate drone inspections and use an Equipter roofing robot for tearoff and cleanup — genuine operational differentiators. Most importantly, they won the Medina Gazette "Best of the Best" in 2021, 2022, and 2026, and sponsor the Medina County Home &amp; Garden Show, embedding them into the community's annual calendar. That is brand equity no website can replicate quickly. Their critical weakness: only 34 Birdeye reviews for 15+ years of operation — a glaring digital underperformance. Their Joomla CMS website is aging. Their content strategy is thin. And their social presence, while multi-platform, is not aggressive. A competitor who matches their local credibility, stacks their own certification portfolio, and then out-executes digitally and on review volume will crack their position.
+        Fixler Roofing is the local identity champion — and the most strategically critical competitor for Medwick to monitor. Owner David Averette grew up in the roofing business, holds Ohio License #CE24667, and has built a multi-layered certification stack: GAF Master Elite with President's Club (top ~2% of North American roofers), CertainTeed, Owens Corning, Firestone materials, BBB Accredited since 2014, and Houzz endorsement. They operate drone inspections and use an Equipter roofing robot for tearoff and cleanup — genuine operational differentiators. Most importantly, they won the Medina Gazette "Best of the Best" in 2021, 2022, and 2026, and sponsor the Medina County Home &amp; Garden Show, embedding them into the community's annual calendar. That is brand equity no website can replicate quickly. Their critical gap: only 34 Birdeye reviews for 15+ years of operation — a glaring digital underperformance. Their Joomla CMS website is aging. Their content strategy is thin. And their social presence, while multi-platform, is not aggressive. A competitor who matches their local credibility, stacks their own certification portfolio, and then out-executes digitally and on review volume will crack their position.
       </div>
     </div>
 
@@ -1176,7 +1149,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-gold">193 Reviews 5.0★</span>
       </div>
       <div class="profile-body">
-        Established in 1958, Hinckley Roofing is the oldest active roofing contractor in the Medina market by a wide margin — 68 years of operation, BBB A+ accredited since 1999, and 193 Birdeye reviews averaging 5.0★. That 5.0★ average over nearly 200 reviews is remarkably consistent for any trade contractor and speaks to deeply embedded customer trust. They have generational name recognition — grandparents who had Hinckley do their roof in the 1970s are recommending them to their grandchildren today. Their Achilles heels are completely concentrated in the digital era: their website appears dated, their technical SEO and content strategy are minimal, their social presence is thin, and their AI search visibility is essentially non-existent. They represent the "old money" of the local roofing market — unimpeachable in word-of-mouth but nearly invisible in modern search. A digital-first competitor will not take their existing customers, but will capture all the new-to-Medina homeowners and younger buyers who start their search online.
+        Established in 1958, Hinckley Roofing is the oldest active roofing contractor in the Medina market by a wide margin — 68 years of operation, BBB A+ accredited since 1999, and 193 Birdeye reviews averaging 5.0★. That 5.0★ average over nearly 200 reviews is remarkably consistent for any trade contractor and speaks to deeply embedded customer trust. They have generational name recognition — grandparents who had Hinckley do their roof in the 1970s are recommending them to their grandchildren today. Their key gaps are completely concentrated in the digital era: their website appears dated, their technical SEO and content strategy are minimal, their social presence is thin, and their AI search visibility is essentially non-existent. They represent the "old money" of the local roofing market — unimpeachable in word-of-mouth but nearly invisible in modern search. A digital-first competitor will not take their existing customers, but will capture all the new-to-Medina homeowners and younger buyers who start their search online.
       </div>
     </div>
 
@@ -1201,7 +1174,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-blue">SEO/AEO Optimized</span>
       </div>
       <div class="profile-body">
-        Founded 2020 by Michael Kvak, 4K Roofing is the fastest-growing digitally-native player in the Medina market. Despite only 6 years in operation, they've accumulated 201 Birdeye reviews at 4.9★, built a clean Wix site optimized for both SEO and AEO (AI engine optimization, explicitly noted in their footer credit to Purposeful IT), and positioned hard on insurance claim advocacy — a highly effective residential marketing angle post-storm. Owens Corning Preferred Contractor, BBB A+, licensed and insured. Their "5,000+ roofs completed" and "25+ years in NEO" claims leverage Michael's pre-company experience, which the market may or may not scrutinize. Their certification stack is thin compared to the top three. No awards, minimal community sponsorship. But their SEO/AEO investment and 4.9★ review velocity make them the most dangerous upstart in the market — especially as AI search becomes the primary discovery channel for home services.
+        Founded 2020 by Michael Kvak, 4K Roofing is the fastest-growing digitally-native player in the Medina market. Despite only 6 years in operation, they've accumulated 201 Birdeye reviews at 4.9★, built a clean Wix site optimized for both SEO and AEO (AI engine optimization, explicitly noted in their footer credit to Purposeful IT), and positioned hard on insurance claim advocacy — a highly effective residential marketing angle post-storm. Owens Corning Preferred Contractor, BBB A+, licensed and insured. Their "5,000+ roofs completed" and "25+ years in NEO" claims leverage Michael's pre-company experience, which the market may or may not scrutinize. Their certification stack is thin compared to the top three. No awards, minimal community sponsorship. But their SEO/AEO investment and 4.9★ review velocity make them the fastest-growing competitor in the market — especially as AI search becomes the primary discovery channel for home services.
       </div>
     </div>
 
@@ -1224,7 +1197,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-blue">BBB 5-Star</span>
       </div>
       <div class="profile-body">
-        Firestone Restorations holds a dual GAF Master Elite and CertainTeed certification — rare in this market — and maintains a perfect 5.0★ Google rating across 51+ reviews. A 2026 PRWeb press release self-proclaimed them "Medina County's #1 Roofer," though this is a paid distribution claim without verified third-party award backing. Based in the Akron/Fairlawn area, their Medina presence is secondary. Their digital footprint is moderate: a 5-star BBB rating, functional website, and strong review quality, but limited review volume, thin content strategy, and minimal community visibility in Medina proper. They are credible for homeowners who find them via search, but lack the local identity to dominate the Medina market.
+        Firestone Restorations holds a dual GAF Master Elite and CertainTeed certification — rare in this market — and maintains a perfect 5.0★ Google rating across 51+ reviews. A 2026 PRWeb press release self-proclaimed them "Medina County's #1 Roofer," though this is a paid distribution claim without verified third-party award backing. Based in the Akron/Fairlawn area, their Medina presence is secondary. Their digital footprint is moderate: a 5-star BBB rating, functional website, and strong review quality, but limited review volume, thin content strategy, and minimal community visibility in Medina proper. They are credible for homeowners who find them via search, but lack the local identity to lead the Medina market.
       </div>
     </div>
 
@@ -1271,7 +1244,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-red">11 Yelp Reviews (Mixed)</span>
       </div>
       <div class="profile-body">
-        Medina Exteriors &amp; Remodeling is a 30+ year Medina institution with a CertainTeed Select Shingle Master designation. They have generational name recognition in the area, but their digital presence is essentially nonexistent by modern standards. Only 11 Yelp reviews with mixed sentiment is a significant red flag — this level of online exposure for a 30-year company indicates either a very small operation, customer service inconsistency, or both. No visible social media presence, no content marketing, no major awards, and no manufacturer partnership depth. They represent a "legacy operator coasting on historical reputation" profile — dangerous for them in the medium term as digital-first buyers become the norm.
+        Medina Exteriors &amp; Remodeling is a 30+ year Medina institution with a CertainTeed Select Shingle Master designation. They have generational name recognition in the area, but their digital presence is essentially nonexistent by modern standards. Only 11 Yelp reviews with mixed sentiment is a significant concern — this level of online exposure for a 30-year company indicates either a very small operation, customer service inconsistency, or both. No visible social media presence, no content marketing, no major awards, and no manufacturer partnership depth. They represent a "legacy operator relying on historical reputation" profile — a risky position in the medium term as digital-first buyers become the norm.
       </div>
     </div>
 
@@ -1360,7 +1333,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-amber">Shingle + Metal + Slate</span>
       </div>
       <div class="profile-body">
-        Finish Line Construction has been in operation since 1998 — 28 years — but their Angi rating of 3.6/5 is the lowest in this competitive set and a significant red flag for customer satisfaction. Spencer, Ohio-based with Medina as a secondary market. Positive: they offer shingle, metal, and slate roofing — more material diversity than most. Negative: below-average ratings, minimal certifications, no visible awards, and weak digital presence undermine their longevity narrative. Their tenure is their only real asset in the authority model, and it's not enough to overcome the satisfaction gaps visible in third-party ratings.
+        Finish Line Construction has been in operation since 1998 — 28 years — but their Angi rating of 3.6/5 is the lowest in this competitive set and a significant concern for customer satisfaction. Spencer, Ohio-based with Medina as a secondary market. Positive: they offer shingle, metal, and slate roofing — more material diversity than most. Negative: below-average ratings, minimal certifications, no visible awards, and weak digital presence undermine their longevity narrative. Their tenure is their only real asset in the authority model, and it's not enough to overcome the satisfaction gaps visible in third-party ratings.
       </div>
     </div>
 
@@ -1374,7 +1347,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 <section>
   <div class="section-label">Strategic Intelligence</div>
   <div class="section-title">Market Gaps &amp; Medwick Opportunities</div>
-  <div class="section-desc">Structural vulnerabilities in the competitive set that Medwick can exploit. Each gap represents a dimension where no single competitor has locked up the position.</div>
+  <div class="section-desc">Structural gaps in the competitive set that Medwick can capitalize on. Each gap represents a dimension where no single competitor has locked up the position.</div>
 
   <div class="gap-grid">
 
@@ -1422,7 +1395,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <div class="gap-icon purple">📱</div>
         <div>
           <div class="gap-title">Gap #4 — Review Volume Dominance</div>
-          <div class="gap-subtitle">The market's local leader has 34 reviews. This is exploitable.</div>
+          <div class="gap-subtitle">The market's local leader has 34 reviews. This is an opportunity.</div>
         </div>
       </div>
       <div class="gap-body">
@@ -1478,7 +1451,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         </div>
       </div>
       <div class="gap-body">
-        Storm damage and insurance restoration is a high-margin, repeat-opportunity segment in Medina County (significant hail and wind activity). Brightside and 4K Roofing compete here but neither dominates. On the commercial side, Gridiron and Exteriors Plus (Duro-Last certified) reach into commercial, but neither is a dedicated commercial-first Medina operator. <strong>A Medwick positioning as the dedicated commercial + insurance restoration specialist in Medina creates a distinct lane</strong> that avoids direct head-to-head combat with Gridiron's residential breadth, while capturing a segment (commercial property managers, insurance adjusters) that refers consistently.
+        Storm damage and insurance restoration is a high-margin, repeat-opportunity segment in Medina County (significant hail and wind activity). Brightside and 4K Roofing compete here but neither dominates. On the commercial side, Gridiron and Exteriors Plus (Duro-Last certified) reach into commercial, but neither is a dedicated commercial-first Medina operator. <strong>A Medwick positioning as the dedicated commercial + insurance restoration specialist in Medina creates a distinct lane</strong> that avoids direct head-to-head competition with Gridiron's residential breadth, while capturing a segment (commercial property managers, insurance adjusters) that refers consistently.
       </div>
     </div>
 
@@ -1493,7 +1466,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="report-footer">
   <div class="footer-brand">
-    <strong>Hunter Systems</strong> — Intelligence Division<br>
+    <strong>Hunter Systems</strong> — Competitive Market Analysis<br>
     Prepared for Medwick Construction, Medina, OH
   </div>
   <div class="footer-disclaimer">

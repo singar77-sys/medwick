@@ -572,35 +572,6 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 .report-title,.section-title,.section-label,.threat-name,.competitor-name,.profile-name,.gap-title,.hstat-val,.threat-score,.wcat-weight,.col-total,.agency-badge{ font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif !important; }
 /* Gold text on the light paper uses the darker brand gold so it meets AA contrast */
 .section-label,.threat-score,.wcat-weight,.weight-badge,.col-total,.rank-3 .threat-rank,.chip-gold,.alert-box strong,.footer-brand strong{ color:var(--accent) !important; }
-/* Shared Medwick top nav — mirrors the strategy pages' two-tier nav */
-.mwnav{ position:sticky; top:0; z-index:200; background:#2c3242; border-bottom:3px solid #c0a674; font-family:'Source Sans 3',-apple-system,system-ui,sans-serif; }
-.mwnav-row{ max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:11px 26px; }
-.mwnav-brand{ display:flex; align-items:center; gap:13px; text-decoration:none; }
-.mwnav-logo{ width:42px; height:42px; border-radius:8px; object-fit:cover; box-shadow:0 0 0 1px rgba(255,255,255,.08); }
-.mwnav-bt{ display:flex; flex-direction:column; line-height:1.05; }
-.mwnav-name{ font-family:'Archivo',-apple-system,system-ui,sans-serif; font-weight:700; font-size:21px; letter-spacing:.06em; color:#fff; }
-.mwnav-tag{ font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:#c0a674; font-weight:600; }
-.mwnav-sections{ display:flex; align-items:center; gap:2px; flex-wrap:wrap; justify-content:flex-end; }
-.mwnav-sections a{ font-weight:600; font-size:15px; color:#c3cdd7; padding:8px 13px; border-radius:8px; text-decoration:none; white-space:nowrap; }
-.mwnav-sections a:hover{ color:#fff; background:rgba(255,255,255,.07); }
-.mwnav-sections a.active{ color:#fff; box-shadow:inset 0 -2px 0 #c0a674; border-radius:8px 8px 0 0; }
-.mwnav-cta{ color:#1a1f29; background:#c0a674; border:1px solid #c0a674; border-radius:999px; padding:8px 16px; margin-left:8px; font-weight:700; text-decoration:none; }
-.mwnav-cta:hover{ color:#1a1f29; background:#d6b463; border-color:#d6b463; }
-.mwnav-sub2{ background:#232935; border-top:1px solid rgba(255,255,255,.08); }
-.mwnav-sub2row{ max-width:1180px; margin:0 auto; display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:10px 26px; }
-.mwnav-sub2label{ font-family:'Archivo',sans-serif; font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:#7f8b9b; font-weight:700; margin-right:2px; }
-.mwnav-sub2 a{ display:inline-flex; align-items:center; font-size:13.5px; font-weight:600; color:#d7dee6; padding:8px 14px; border-radius:999px; text-decoration:none; white-space:nowrap; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14); }
-.mwnav-sub2 a:hover{ color:#fff; background:rgba(255,255,255,.10); border-color:rgba(192,166,116,.65); }
-.mwnav-sub2 a.active{ color:#1a1f29; background:#c0a674; border-color:#c0a674; box-shadow:0 2px 10px rgba(192,166,116,.35); }
-@media (max-width:900px){
-  .mwnav-row{ flex-wrap:wrap; gap:10px; padding:10px 16px; }
-  .mwnav-sections{ justify-content:flex-start; width:100%; overflow-x:auto; flex-wrap:nowrap; -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); }
-  .mwnav-sub2row{ padding:8px 16px; overflow-x:auto; flex-wrap:nowrap; -webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); mask-image:linear-gradient(to right,transparent,#000 3%,#000 96%,transparent); }
-  .mwnav-tag{ display:none; }
-}
-/* Motion + touch targets (mirrors the strategy pages) */
-@media (pointer: coarse){ .mwnav-sections a, .mwnav-sub2 a{ min-height:44px; display:inline-flex; align-items:center; } }
-.mwnav-sections a, .mwnav-sub2 a{ transition: color 160ms ease-out, background 160ms ease-out; }
 @media (prefers-reduced-motion: no-preference){
   @keyframes mwRise{ from{ opacity:0; transform:translateY(16px); } to{ opacity:1; transform:none; } }
   .report-header{ animation: mwRise 600ms cubic-bezier(0.16,1,0.3,1) both; }
@@ -620,17 +591,19 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
       <img src="/medwick-logo.webp" alt="Medwick Construction" class="brand-logo">
       <span class="brand-text"><span class="brand-name">MEDWICK</span><span class="brand-sub">Digital Growth Plan</span></span>
     </a>
+    <input type="checkbox" id="mw-nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu">
+    <label for="mw-nav-toggle" class="nav-burger" aria-hidden="true"><span></span><span></span><span></span></label>
     <nav class="topnav-sections" aria-label="Primary">
-      <a href="/proposal" class="topnav-cta">Proposal</a>
       <a href="/">Overview</a>
-      <a href="/positioning">The Position</a>
-      <a href="/reports/roofing-authority.html" class="active" aria-current="page">Market Intelligence</a>
-      <a href="/strategy">The Strategy</a>
+      <a href="/positioning">Positioning</a>
+      <a href="/reports/roofing-authority.html" class="active" aria-current="page">Audit</a>
+      <a href="/strategy">Strategies</a>
+      <a href="/proposal" class="topnav-cta">Quote</a>
     </nav>
   </div>
   <div class="subnav">
     <nav class="subnav-inner" aria-label="Market intelligence reports">
-      <span class="subnav-label">Market Intelligence</span>
+      <span class="subnav-label">Audit</span>
       <a href="/reports/roofing-authority.html">Roofing</a>
       <a href="/reports/water-authority.html" class="active" aria-current="page">Water</a>
       <a href="/reports/remodeling-authority.html">Remodeling</a>
@@ -643,7 +616,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="report-header">
   <div class="header-meta">
-    <div class="agency-badge">Hunter Systems — Intelligence Division</div>
+    <div class="agency-badge">Hunter Systems — Competitive Market Analysis</div>
     <div class="report-date">
       Client: <span>Medwick</span><br>
       Market: <span>Medina County, OH</span><br>
@@ -682,15 +655,15 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="container">
 <section>
-  <div class="section-label">Threat Assessment</div>
-  <div class="section-title">Top 3 Hardest to Beat</div>
+  <div class="section-label">Competitive Assessment</div>
+  <div class="section-title">Top 3 Competitive Priorities</div>
   <div class="section-desc">Competitors with the highest aggregate authority across all 21 dimensions. In water mitigation, unlike roofing, the top of the market is held by <em>national franchise brand power</em> — not a local identity champion. That distinction defines the entire strategy below.</div>
 
   <div class="threat-grid">
 
     <!-- THREAT 1 -->
     <div class="threat-card rank-1">
-      <div class="threat-rank">⚠ Threat Level: Critical</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">SERVPRO of Medina County</div>
       <div class="threat-score-line">
         <div class="threat-score">75.4</div>
@@ -711,7 +684,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 
     <!-- THREAT 2 -->
     <div class="threat-card rank-2">
-      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">Roto-Rooter</div>
       <div class="threat-score-line">
         <div class="threat-score">66.3</div>
@@ -731,7 +704,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 
     <!-- THREAT 3 -->
     <div class="threat-card rank-3">
-      <div class="threat-rank">⚠ Threat Level: High</div>
+      <div class="threat-rank">Competitive Priority: High</div>
       <div class="threat-name">BTN Restoration Group</div>
       <div class="threat-score-line">
         <div class="threat-score">57.7</div>
@@ -1236,7 +1209,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
         <span class="chip chip-green">Full Restoration Scope</span>
       </div>
       <div class="profile-body">
-        A well-known national franchise brand covering Medina through several NE Ohio offices (nearest in Elyria; Akron, Macedonia, Chagrin Valley and Chardon also serve the county). Full scope — water, fire, mold, biohazard, reconstruction and commercial — 24/7 with ~60-minute response targets and insurance-direct billing. The brand ("the paramedics of property damage") carries respectable recall. The problem for Medina specifically is that there is <em>no Medina PuroClean office</em>: coverage is a service-area page, not a local presence, so there's no Medina GBP, no local reviews, and no community identity. Strong franchise machine, absent local roots — precisely the gap a Medina-based specialist exploits.
+        A well-known national franchise brand covering Medina through several NE Ohio offices (nearest in Elyria; Akron, Macedonia, Chagrin Valley and Chardon also serve the county). Full scope — water, fire, mold, biohazard, reconstruction and commercial — 24/7 with ~60-minute response targets and insurance-direct billing. The brand ("the paramedics of property damage") carries respectable recall. The problem for Medina specifically is that there is <em>no Medina PuroClean office</em>: coverage is a service-area page, not a local presence, so there's no Medina GBP, no local reviews, and no community identity. Strong franchise machine, absent local roots — precisely the gap a Medina-based specialist can capitalize on.
       </div>
     </div>
 
@@ -1457,7 +1430,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 <section>
   <div class="section-label">Strategic Intelligence</div>
   <div class="section-title">Market Gaps &amp; Medwick Opportunities</div>
-  <div class="section-desc">Structural vulnerabilities in the competitive set that Medwick can exploit. This market is <em>weaker and more fragmented</em> than the roofing market — the gaps are wider and there is no incumbent local champion defending them.</div>
+  <div class="section-desc">Structural gaps in the competitive set that Medwick can capitalize on. This market is <em>weaker and more fragmented</em> than the roofing market — the gaps are wider and there is no incumbent local champion defending them.</div>
 
   <div class="gap-grid">
 
@@ -1530,12 +1503,12 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
       <div class="gap-card-header">
         <div class="gap-icon red">🛡️</div>
         <div>
-          <div class="gap-title">Gap #6 — Insurance-Claim Advocacy Positioning</div>
-          <div class="gap-subtitle">Everyone bills insurance; nobody owns "we fight for you"</div>
+          <div class="gap-title">Gap #6 — Insurance-Claim Guidance Positioning</div>
+          <div class="gap-subtitle">Everyone bills insurance; nobody owns being the homeowner's guide through the claim</div>
         </div>
       </div>
       <div class="gap-body">
-        Water damage is overwhelmingly an insurance event, and the franchises all "work with insurance" — transactionally. <strong>No competitor has claimed the homeowner-advocacy angle:</strong> "we document the loss, handle the adjuster, maximize your claim, and you pay your deductible — not a dollar more." For a homeowner who is frightened, underwater and distrustful of both the water and the insurer, that positioning is powerful and emotionally resonant. It is a messaging lane sitting completely empty in Medina County, and it pairs naturally with the local-identity and content plays.
+        Water damage is overwhelmingly an insurance event, and the franchises all "work with insurance" — transactionally. <strong>No competitor has claimed the homeowner-guidance angle:</strong> "we document the damage thoroughly, meet your adjuster on-site to walk through the repair scope, and make sure nothing gets missed — you pay your deductible, not a dollar more." For a homeowner who is frightened, underwater and distrustful of both the water and the insurer, that positioning is powerful and reassuring. It is a messaging lane sitting completely empty in Medina County, and it pairs naturally with the local-identity and content plays.
       </div>
     </div>
 
@@ -1580,7 +1553,7 @@ body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',sy
 ════════════════════════════════════════════════════════════ -->
 <div class="report-footer">
   <div class="footer-brand">
-    <strong>Hunter Systems</strong> — Intelligence Division<br>
+    <strong>Hunter Systems</strong> — Competitive Market Analysis<br>
     Prepared for Medwick · Medina County, OH · Water Mitigation Market
   </div>
   <div class="footer-disclaimer">

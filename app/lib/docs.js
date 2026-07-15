@@ -4,7 +4,7 @@
 // The north-star positioning document. Leads the whole deliverable.
 export const POSITION = {
   slug: 'positioning',
-  title: 'The Position',
+  title: 'Positioning',
   num: '★',
   file: 'POSITIONING.md',
   blurb:

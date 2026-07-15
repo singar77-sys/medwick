@@ -1,9 +1,8 @@
 # Medwick Construction: 2026 Strategic Positioning
 
-**Prepared:** July 14, 2026
 **Purpose:** The single business strategy behind everything else, and the north star for the website, content, SEO, and marketing. Where a tactical document and this positioning disagree, this wins.
 
-> **Medwick is not competing to become another roofing company.** The opportunity is larger. The company should position itself as **Medina County's Insurance Restoration Advocate.** Roofing, water mitigation, and remodeling are services. Insurance advocacy is the brand.
+> **Medwick is not competing to become another roofing company.** The opportunity is larger. The company should position itself as **Medina County's Insurance Restoration Advocate.** Roofing, water mitigation, and reconstruction are services. Insurance advocacy is the brand.
 
 ## The market reality
 
@@ -20,8 +19,8 @@ The owner interview changed the strategy. Asked what Medwick actually does durin
 - walk the homeowner through the claim
 - help make the insurance calls
 - meet the adjuster
-- negotiate the estimate
-- challenge incorrect scopes
+- prepare a complete, documented repair estimate and meet the adjuster to walk through the proposed scope of work
+- if the adjuster's scope misses damage we've documented, show our photos and measurements and provide a detailed repair estimate
 - coordinate the repairs
 - complete the roof, perform mitigation, and rebuild if necessary
 
@@ -31,7 +30,7 @@ This is not three businesses. It is one continuous process.
 
 | Existing position | Recommended position |
 |---|---|
-| Roofing + Water Mitigation + Remodeling | **Insurance Restoration Advocacy** |
+| Roofing + Water Mitigation + Reconstruction | **Insurance Restoration Advocacy** |
 
 Everything else supports this.
 
@@ -39,7 +38,7 @@ Everything else supports this.
 
 ## Core brand pillars
 
-1. **Insurance advocacy (the flagship).** We work for homeowners, not insurance companies. We meet the adjuster. We help negotiate the scope. We explain every step. We stay until the project is finished. No competitor owns this position.
+1. **Insurance advocacy (the flagship).** We answer to you, the homeowner. We prepare a complete, documented repair estimate and meet the adjuster to walk through the proposed scope of work. We explain every step. We stay until the project is finished. No competitor owns this position.
 2. **Complete storm recovery.** One company, one relationship, the entire project: roof, then water mitigation, then reconstruction. No local competitor provides this complete path while remaining locally owned.
 3. **Local identity.** Medina born, Brunswick raised. The Medwick name comes from MEDina + BrunsWICK. Authentic community roots are hard to copy.
 4. **Communication.** Customer feedback repeatedly highlights responsiveness, clear explanations, accessibility, and a personable experience. This is culture, not marketing. Lean into it.
@@ -89,3 +88,5 @@ Do not become another contractor website. There are already dozens. Become the t
 ## Positioning statement
 
 > **Medwick Construction is Medina County's Insurance Restoration Advocate.** We guide homeowners from the first insurance phone call through the final repair, providing roofing, water mitigation, and reconstruction under one trusted local company. We don't simply repair homes. We help people recover.
+
+> Medwick Construction is a licensed general contractor, not a licensed public insurance adjuster. We document damage, prepare repair estimates, and coordinate and perform repairs. We do not negotiate, adjust, or interpret your insurance policy or claim settlement. For claim negotiation or coverage questions, consult your insurer, a licensed Ohio public adjuster, or an attorney. Our compensation is for the construction work performed, not a percentage of your insurance claim.
