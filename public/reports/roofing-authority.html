@@ -334,11 +334,13 @@
     z-index: 1;
     border-right: 2px solid var(--border2);
     white-space: nowrap;
+    background: var(--surface); /* opaque bg prevents score cells bleeding through sticky col */
   }
   .score-table tbody tr { transition: background 0.1s; }
   .score-table tbody tr:hover td { background: rgba(255,255,255,0.03); }
   .score-table tbody tr:hover td.col-name,
   .score-table tbody tr:hover td.col-total { filter: brightness(1.1); }
+  .score-table tbody tr:hover td.col-name { background: var(--surface); } /* keep solid bg on hover */
   .competitor-name {
     font-weight: 700;
     color: #fff;
@@ -550,6 +552,13 @@
     .gap-grid { grid-template-columns: 1fr; }
     .weight-grid { grid-template-columns: repeat(4, 1fr); }
   }
+  @media (max-width: 600px) {
+    .container { padding: 0 16px; }
+    .report-header { padding: 32px 16px 28px; }
+    .header-stats { gap: 16px; flex-wrap: wrap; }
+    .hstat { flex: 1 1 calc(50% - 8px); }
+    .weight-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 
 <style id="light-theme-match">
@@ -566,7 +575,7 @@ body{ background:var(--bg); color:var(--text); }
 .report-header::before{ display:none !important; }
 .report-subtitle,.report-date,.hstat-label{ color:#aeb9c6 !important; }
 .section-title,.threat-name,.competitor-name,.profile-name,.gap-title{ color:#161f29 !important; }
-.score-table tbody tr:hover td{ background:rgba(18,22,29,0.05) !important; }
+.score-table tbody tr:hover td:not(.col-name){ background:rgba(18,22,29,0.05) !important; }
 /* Brand typography to match the strategy pages */
 body{ font-family:'Source Sans 3',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif; }
 .report-title,.section-title,.section-label,.threat-name,.competitor-name,.profile-name,.gap-title,.hstat-val,.threat-score,.wcat-weight,.col-total,.agency-badge{ font-family:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif !important; }

@@ -119,6 +119,13 @@
   .subnav a, .subnav-label { flex: none; }
 }
 
+@media (max-width: 600px) {
+  /* Strategy subnav: show only the number on inactive tabs so all 6 fit without overflow */
+  .subnav-title { display: none; }
+  .subnav a.active .subnav-title { display: inline; }
+  .subnav a:not(.active) { padding: 0 10px; min-width: 36px; justify-content: center; }
+}
+
 /* Touch targets on coarse pointers */
 @media (pointer: coarse) {
   .topnav-sections a, .subnav a { min-height: 44px; }
