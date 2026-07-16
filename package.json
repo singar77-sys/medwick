@@ -1,6 +1,6 @@
 {
-  "name": "medwick-seo-plan",
-  "version": "1.0.0",
+  "name": "medwick-website",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

@@ -1,77 +1,86 @@
 import './globals.css';
-// Canonical nav styling — one file, bundled here for the app and also served at
-// /nav.css (linked by every static report) so the nav can never drift.
-import '../public/nav.css';
+import Link from 'next/link';
 import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
-import TopNav from './components/TopNav';
-import MotionInit from './components/MotionInit';
+import { SITE, DISCLAIMER, NAV } from '@/lib/site';
+import { organization, JsonLd } from '@/lib/schema';
+import { Divider } from './components/ornaments';
 
-// Wide, heavy grotesque that echoes the MEDWICK wordmark (not condensed).
-const display = Archivo({
+const archivo = Archivo({
   subsets: ['latin'],
-  weight: ['600', '700', '800'],
-  variable: '--font-display',
+  weight: ['300', '600', '700', '800'],
+  variable: '--font-archivo',
   display: 'swap',
 });
 
-// Serif italic that echoes the logo tagline "Building Excellence, One Project at a Time."
-const serif = Lora({
+const lora = Lora({
   subsets: ['latin'],
   weight: ['500', '600'],
   style: ['italic'],
-  variable: '--font-serif',
+  variable: '--font-lora',
   display: 'swap',
 });
 
-const body = Source_Sans_3({
+const sourceSans = Source_Sans_3({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
-  variable: '--font-body',
+  variable: '--font-source-sans',
   display: 'swap',
 });
 
 export const metadata = {
-  metadataBase: new URL('https://medwick.vercel.app'),
-  title: 'Medwick Construction: Digital Growth Plan',
+  metadataBase: new URL(SITE.baseUrl),
+  title: {
+    default: `Medina County's Insurance Restoration Advocate | Medwick`,
+    template: '%s',
+  },
   description:
-    'SEO strategy and website plan for Medwick Construction: roofing, water mitigation, and reconstruction across Medina County, Ohio.',
-  // Confidential client planning + pricing document. Keep it out of search
-  // indexes and AI crawlers. NOTE: this only stops indexing, not access —
-  // enable Vercel Deployment Protection (password) for true privacy.
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
-  },
-  openGraph: {
-    title: 'Medwick Construction: Digital Growth Plan',
-    description:
-      'The full SEO strategy, site structure, content calendar, roadmap, and competitor analysis for the new Medwick website.',
-    type: 'website',
-  },
+    'From the first insurance call to the final repair. Medwick guides Medina County homeowners through storm, roof, and water damage claims, then completes the work.',
   icons: { icon: '/medwick-logo.webp' },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${display.variable} ${serif.variable} ${body.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${lora.variable} ${sourceSans.variable}`}>
       <body>
-        {/* Enable scroll-reveal styling before paint so there is no flash */}
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js-reveal')" }} />
-        <a href="#main" className="skip-link">Skip to content</a>
-        <MotionInit />
-        <TopNav />
-        <main id="main" className="main">{children}</main>
-        <footer className="site-footer ghost" style={{ '--ghost': "url('/textures/remodel.webp')" }}>
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        {/* Axially symmetric facade: tagline strip → centered wordmark → nav */}
+        <header className="site-header">
+          <div className="utility-bar">
+            <p className="tagline">{SITE.tagline}</p>
+            <a className="phone" href={SITE.phoneHref}>
+              24/7 Emergency &amp; Claim Help <span>{SITE.phone}</span>
+            </a>
+          </div>
+          <div className="brand-row">
+            <Link href="/" className="brand">
+              <span className="wordmark">MEDWICK</span>
+              <span className="undermark">CONSTRUCTION</span>
+            </Link>
+          </div>
+          <nav className="primary-nav" aria-label="Primary">
+            {NAV.map((item) => (
+              <Link key={item.href} href={item.href}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </header>
+        <main id="main" className="main">
+          {children}
+        </main>
+        <footer className="site-footer">
+          <Divider />
           <p>
-            <strong>Medwick Construction LLC</strong> · 7130 Norwalk Rd, Medina, OH 44256 ·
-            (330) 635-3744
+            <strong>{SITE.name}</strong> · {SITE.address.street}, {SITE.address.city},{' '}
+            {SITE.address.region} {SITE.address.postalCode} ·{' '}
+            <a href={SITE.phoneHref}>{SITE.phone}</a>
           </p>
-          <p className="footer-note">
-            Confidential planning document prepared for Medwick Construction · July 13, 2026.
-            Strategy only. Figures are directional pending live rank-tracking.
-          </p>
+          <p className="smallcaps">{SITE.legalNote}</p>
+          <p className="disclaimer">{DISCLAIMER}</p>
         </footer>
+        <JsonLd data={organization()} />
       </body>
     </html>
   );
