@@ -50,6 +50,12 @@ export default async function DocPage({ params }) {
             <span className="pager-dir">Next →</span>
             <span className="pager-title">{next.title}</span>
           </Link>
+        ) : idx === DOCS.length - 1 ? (
+          <Link href="/proposal" className="pager next pager-cta">
+            <span className="pager-dir">You&rsquo;ve seen the plan.</span>
+            <span className="pager-title">Here&rsquo;s what it costs to build it.</span>
+            <span className="pager-go">See the quote →</span>
+          </Link>
         ) : (
           <span />
         )}

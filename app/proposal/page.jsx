@@ -6,6 +6,22 @@ export const metadata = {
     'The website build proposal for Medwick Construction: scope, pricing, and terms, prepared by Hunter Systems.',
 };
 
+const DEPOSIT_URL = 'https://buy.stripe.com/6oU28saXe5Btco122o9sk05';
+
+// Hunter Systems sites launched this year. Local Ohio / trades first (similarity
+// bias for a Medina County contractor), then range/credibility. Verified live
+// (HTTP 200, real page) before shipping — see TODO-proposal-improvements.md Task 3.
+const PROOF_SITES = [
+  { name: 'Precision Mechanical', url: 'https://precisionmechanicalohio.com/' },
+  { name: 'Ghost Tree Service', url: 'https://www.ghosttreeservice.com/' },
+  { name: 'Jaworski Meats', url: 'https://www.jaworskimeats.com/' },
+  { name: "Siedel's", url: 'https://www.siedels.com/' },
+  { name: 'Ledgewood Barber', url: 'https://ledgewoodbarber.com/' },
+  { name: 'Zanes Inc', url: 'https://zanesinc.org/' },
+  { name: 'Jon Heavens', url: 'https://jonheavens.com/' },
+  { name: 'KP Accounts', url: 'https://kpaccounts.co.uk/' },
+];
+
 export default function Proposal() {
   return (
     <div className="pp">
@@ -88,6 +104,12 @@ export default function Proposal() {
           </div>
         </div>
 
+        <p className="timing-note">
+          Those ten weeks matter. Starting now puts the site live for the September roofing peak,
+          with winter leak and frozen-pipe pages indexed before the January spike. Waiting means
+          launching into the slow season and missing that window.
+        </p>
+
         <div className="sec-head center">
           <h2>Why it is worth it</h2>
           <p>
@@ -100,8 +122,9 @@ export default function Proposal() {
           <div className="reason">
             <h3>A few jobs can cover the investment</h3>
             <p>
-              It does not take hundreds of leads. A small number of qualified roofing, mitigation, or
-              reconstruction projects can pay for the entire build.
+              It does not take hundreds of leads. The entire build costs less than a single roof
+              replacement, and one qualified reconstruction job can cover it several times over.
+              {/* TODO: swap in a specific average job figure if the owner prefers a hard number */}
             </p>
           </div>
           <div className="reason">
@@ -120,6 +143,15 @@ export default function Proposal() {
           </div>
         </div>
 
+        <div className="guarantee">
+          <h3>We don&rsquo;t call it launched until it&rsquo;s right</h3>
+          <p>
+            The site goes live fast, passes Google&rsquo;s Core Web Vitals, and works on every
+            device &mdash; or we keep working at no extra cost until it does.
+            {/* TODO: confirm exact guarantee wording with owner before this ships to the client */}
+          </p>
+        </div>
+
         <div className="checkin">
           <h3>Six-month review</h3>
           <p>After six months, we review the numbers together:</p>
@@ -133,11 +165,32 @@ export default function Proposal() {
           <p>Then we decide what comes next. No retainer. No lock-in.</p>
         </div>
 
+        <section className="proof">
+          <p className="proof-label">Recent builds</p>
+          <div className="proof-grid">
+            {PROOF_SITES.map((site) => (
+              <a
+                key={site.url}
+                href={site.url}
+                target="_blank"
+                rel="noopener"
+                className="proof-link"
+              >
+                {site.name}
+              </a>
+            ))}
+          </div>
+        </section>
+
         <section className="close">
           <p className="eyebrow">Ready when you are</p>
           <p className="cline">
             Take a look through the plan. When you are ready, <span className="hl">we will build it</span>.
           </p>
+          <a href={DEPOSIT_URL} target="_blank" rel="noopener" className="btn btn-gold close-cta">
+            Approve the plan → start with the 50% deposit
+          </a>
+          <p className="close-reassure">No retainer. No lock-in.</p>
           <p className="contact">
             <b>Hunter Systems</b> &middot; <a href="mailto:hello@huntersystems.dev">hello@huntersystems.dev</a>
           </p>

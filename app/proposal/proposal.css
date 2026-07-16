@@ -90,12 +90,36 @@
 .pp .checkin p { margin: 0; font-size: 16px; color: var(--ink-soft); max-width: 68ch; }
 .pp .checkin b { color: var(--ink); }
 
+/* Timing / seasonal urgency note (under the timeline) */
+.pp .timing-note { max-width: 64ch; margin: 22px auto 0; text-align: center; font-size: 15px; color: var(--ink-soft); line-height: 1.5; }
+
+/* Build guarantee (risk reversal, before the six-month review) */
+.pp .guarantee { margin-top: 22px; text-align: center; background: var(--card); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 14px; padding: 26px clamp(22px, 3vw, 32px); box-shadow: var(--shadow-sm); }
+.pp .guarantee h3 { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 20px; color: var(--ink); margin: 0 0 8px; }
+.pp .guarantee p { margin: 0 auto; max-width: 60ch; font-size: 16px; color: var(--ink-soft); line-height: 1.5; }
+
+/* Recent builds proof strip */
+.pp .proof { margin-top: 48px; text-align: center; }
+.pp .proof-label {
+  font-family: var(--font-display), sans-serif; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.16em; font-size: 12px; color: var(--ink-faint); margin: 0 0 14px;
+}
+.pp .proof-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 14px; }
+.pp .proof-link {
+  font-size: 14.5px; font-weight: 600; color: var(--ink-soft);
+  padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); transition: border-color 0.14s ease, color 0.14s ease;
+}
+.pp .proof-link:hover { border-color: var(--gold); color: var(--accent-text); text-decoration: none; }
+
 /* Close */
 .pp .close { margin-top: 52px; background: linear-gradient(158deg, var(--navy), var(--navy-deep)); border-radius: 18px; color: #eef2f6; padding: 42px clamp(24px, 5vw, 48px); text-align: center; }
 .pp .close .cline { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: clamp(21px, 2.8vw, 28px); line-height: 1.2; margin: 0 auto 22px; max-width: 22ch; text-wrap: balance; }
 .pp .close .cline .hl { color: var(--gold); }
-.pp .contact { font-size: 15.5px; color: #c3cdd7; }
-.pp .contact b { color: #fff; }
+.pp .close .btn { margin: 0 0 16px; font-size: 17px; padding: 16px 30px; }
+.pp .close-reassure { font-size: 14.5px; color: #c3cdd7; margin: 0 0 24px; }
+.pp .contact { font-size: 13.5px; color: #9fabb8; }
+.pp .contact b { color: #cdd5dd; }
 .pp .foot { text-align: center; margin-top: 26px; font-size: 13px; color: var(--ink-faint); }
 
 /* Six-month review list */
@@ -145,7 +169,9 @@
   .pp .get,
   .pp .reason,
   .pp .price-block,
+  .pp .guarantee,
   .pp .checkin,
+  .pp .proof,
   .pp .close { break-inside: avoid; box-shadow: none; }
   .pp .wrap { padding-bottom: 0; }
 }

@@ -25,6 +25,10 @@ export default function Home() {
             See the audit
           </a>
         </div>
+        <p className="hero-start">
+          New here? Start with the <Link href="/positioning">Positioning</Link>, then see the{' '}
+          <Link href="/proposal">Quote</Link>.
+        </p>
       </section>
 
       <section className="callout reveal ghost" style={{ '--ghost': "url('/textures/roofing.webp')" }}>
