@@ -9,6 +9,7 @@ export const metadata = {
 export default function Projects() {
   return (
     <Stub
+      tier="court"
       h1="Real Projects, Documented"
       purpose="Every completed job feeds the site, a GBP post, and social, all off one shoot."
       outline={[

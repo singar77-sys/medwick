@@ -9,6 +9,7 @@ export const metadata = {
 export default function Reviews() {
   return (
     <Stub
+      tier="court"
       h1="What Medina County Homeowners Say"
       purpose="The 12 five-star reviews finally show up on the page. No more 'coming soon.'"
       outline={[

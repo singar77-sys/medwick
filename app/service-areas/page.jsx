@@ -13,6 +13,7 @@ export default function ServiceAreas() {
   return (
     <>
       <Stub
+        tier="court"
         h1="Serving All of Medina County, Ohio"
         purpose="Based in Medina. Not dispatched from Akron or Cleveland."
         outline={[

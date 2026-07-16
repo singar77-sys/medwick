@@ -9,6 +9,7 @@ export const metadata = {
 export default function StormEmergency() {
   return (
     <Stub
+      tier="hekhal"
       h1="Emergency Storm Response in Medina County"
       purpose="The first call after the storm. Secure the place, document everything, then walk the claim."
       outline={[

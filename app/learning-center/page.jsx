@@ -9,6 +9,7 @@ export const metadata = {
 export default function LearningCenter() {
   return (
     <Stub
+      tier="court"
       h1="Medina County Storm, Roof & Water Damage: Answers"
       purpose="One homeowner question per page. Nobody else in the county owns this ground yet."
       outline={[

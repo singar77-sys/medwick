@@ -9,6 +9,7 @@ export const metadata = {
 export default function RoofClaims() {
   return (
     <Stub
+      tier="hekhal"
       h1="Roof Insurance Claim Help in Medina County"
       purpose="Most roof jobs are claims. This page owns that path."
       outline={[

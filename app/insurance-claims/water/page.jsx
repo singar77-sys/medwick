@@ -9,6 +9,7 @@ export const metadata = {
 export default function WaterClaims() {
   return (
     <Stub
+      tier="hekhal"
       h1="Water Damage Insurance Claim Help in Medina County"
       purpose="Nobody in the county owns water-claim advocacy yet. We're taking it."
       outline={[

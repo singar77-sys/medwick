@@ -37,6 +37,7 @@ export default async function ProjectPage({ params }) {
   if (!p) notFound();
   return (
     <Stub
+      tier="court"
       h1={`${p.type} in ${p.city}, Ohio: Before & After`}
       purpose={p.summary}
       outline={[

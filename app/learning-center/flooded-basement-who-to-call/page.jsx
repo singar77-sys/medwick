@@ -9,6 +9,7 @@ export const metadata = {
 export default function Article() {
   return (
     <Stub
+      tier="court"
       h1="Who do I call for a flooded basement in Medina?"
       purpose="Answer page → supports /water-mitigation/emergency-water-removal/"
       outline={[

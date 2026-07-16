@@ -9,6 +9,7 @@ export const metadata = {
 export default function Article() {
   return (
     <Stub
+      tier="court"
       h1="Can I choose my own contractor for an insurance claim?"
       purpose="Answer page → supports /insurance-claims/"
       outline={[

@@ -11,6 +11,7 @@ export default function Reconstruction() {
   return (
     <>
       <Stub
+        tier="hekhal"
         h1="Reconstruction in Medina County, Ohio"
         purpose="The natural next step after recovery. Same crew, not a new contractor to vet."
         outline={[

@@ -9,6 +9,7 @@ export const metadata = {
 export default function About() {
   return (
     <Stub
+      tier="court"
       h1="Medina Born, Brunswick Raised"
       purpose="The name is the story: MEDina + brunsWICK."
       outline={[

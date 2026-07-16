@@ -11,6 +11,7 @@ export default function Roofing() {
   return (
     <>
       <Stub
+        tier="hekhal"
         h1="Roofing in Medina County, Ohio"
         purpose="Our core trade, running through the same advocacy promise as everything else."
         outline={[

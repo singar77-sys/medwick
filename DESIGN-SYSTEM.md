@@ -18,6 +18,34 @@ symmetrical, esoteric — everything on the golden ratio.**
 | Hero watermark | true golden-spiral construction in a 610×377 φ-rectangle |
 | Hero pillar rules | at 9.02% margins (23.6% / φ) |
 
+## Container tiers — the temple axis
+
+The site widens or narrows depending on how deep a page sits on the path from
+first visit to signed job, tracing the same porch → hall → sanctuary
+progression as the temple plan (1 Kings 6, roughly `1 : 4 : 2` along the main
+axis). Three widths, two already existing, one new half-step:
+
+| Tier | Token | Width | Derivation | Pages |
+|---|---|---|---|---|
+| Outer Court | `--container` | 61.8rem | existing | Home (default — no `tier` prop needed) |
+| Hekhal (Middle Chamber) | `--container-hekhal` | 48.6rem | `61.8 / √φ` — the same half-step already used for `--t-*` | Storm Damage (+ Emergency), Insurance Claims (+ Roof, + Water), Roofing, Water Mitigation (+ Emergency Water Removal), Reconstruction |
+| Debir (Holy of Holies) | `--measure` | 38.2rem | existing | Contact only |
+
+Side chambers — About, Reviews, Service Areas, Projects, Learning Center —
+sit off this axis at the default `--container` width; they aren't on the
+conversion path so they don't compress. They carry `tier="court"` explicitly
+rather than an untagged default, so the tier is visible at every call site.
+
+Implementation: `Stub` (`app/components/Stub.jsx`) takes a
+`tier="court" | "hekhal" | "debir"` prop and overrides `--container` inline
+on the wrapping `<article>`. Every rule that reads `var(--container)` —
+`.stub`, `.stub-banner`, and later the real page templates — inherits the
+override for free; no per-component width logic. Home is the one exception:
+it's Outer Court by construction (real page.jsx, not Stub) and needs no tag.
+Real (non-stub) page templates replacing these stubs should follow the same
+pattern: set `--container` on the page's outermost element rather than
+hardcoding a width.
+
 ## Symbol language (the esoterica — kept at builder's-craft level)
 
 Reads as **craftsmanship** to homeowners, as geometry to those who look closer.

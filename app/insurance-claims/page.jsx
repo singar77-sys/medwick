@@ -12,6 +12,7 @@ export default function InsuranceClaims() {
   return (
     <>
       <Stub
+        tier="hekhal"
         h1="Insurance Claim Help in Medina County, Ohio"
         purpose="Clear, documented, and honest at every step. That's the whole pitch."
         outline={[

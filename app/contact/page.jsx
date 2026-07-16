@@ -10,6 +10,7 @@ export const metadata = {
 export default function Contact() {
   return (
     <Stub
+      tier="debir"
       h1="Talk to Medwick"
       purpose="One phone number, everywhere: (330) 635-3744."
       outline={[

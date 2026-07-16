@@ -49,6 +49,10 @@
 
   /* -- φ layout -- */
   --container: 61.8rem;
+  /* container tiers, the temple axis (outer court → middle chamber → holy of
+     holies): 61.8rem (--container, default) → 48.6rem → 38.2rem (--measure).
+     48.6 = 61.8 / √φ, the same half-step already used for --t-* type sizes. */
+  --container-hekhal: 48.6rem;
   --measure: 38.2rem;
   --pad: clamp(1rem, 4vw, 2.618rem);
 
@@ -627,7 +631,7 @@ img {
   height: auto;
   color: var(--gold-deep);
 }
-.owner-block blockquote {
+.owner-block .owner-statement {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: var(--t-1);

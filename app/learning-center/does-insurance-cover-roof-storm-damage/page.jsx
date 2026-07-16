@@ -9,6 +9,7 @@ export const metadata = {
 export default function Article() {
   return (
     <Stub
+      tier="court"
       h1="Does homeowners insurance cover roof storm damage in Ohio?"
       purpose="Answer page → supports /insurance-claims/roof/"
       outline={[

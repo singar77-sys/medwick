@@ -9,6 +9,7 @@ export const metadata = {
 export default function EmergencyWaterRemoval() {
   return (
     <Stub
+      tier="hekhal"
       h1="Flooded Basement? Emergency Water Removal in Medina County"
       purpose="This is where the emergency calls land. Response-time proof lives here."
       outline={[

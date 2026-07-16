@@ -11,6 +11,7 @@ export default function WaterMitigation() {
   return (
     <>
       <Stub
+        tier="hekhal"
         h1="Water Mitigation in Medina County, Ohio"
         purpose="Nobody local is fast here. Speed is our edge, and we prove it."
         outline={[

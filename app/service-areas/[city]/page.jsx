@@ -25,6 +25,7 @@ export default async function CityPage({ params }) {
   if (!city) notFound();
   return (
     <Stub
+      tier="court"
       h1={`Storm, Roof & Water Restoration in ${city.name}, Ohio`}
       purpose={city.detail}
       outline={[

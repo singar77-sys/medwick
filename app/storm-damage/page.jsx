@@ -11,6 +11,7 @@ export default function StormDamage() {
   return (
     <>
       <Stub
+        tier="hekhal"
         h1="Storm Damage in Medina County: Your First Steps"
         purpose="Everything a storm sets in motion routes from here."
         outline={[
