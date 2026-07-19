@@ -1,91 +1,86 @@
 /* ============================================================
-   MEDWICK DESIGN SYSTEM — "The Builder's Geometry"
-   Masonic / Bauhaus: mathematical, symmetrical, esoteric.
-
-   Every dimension derives from φ (1.618):
-   · type scale     = ×√φ (1.272) half-steps, ×φ full steps
-   · spacing scale  = powers of φ
-   · layout splits  = 61.8% / 38.2%
-   · container      = 61.8rem, prose measure = 38.2rem
-   · ornaments      = Fibonacci dimensions (21 34 55 89 144…)
-   Bauhaus rules: sharp corners, stroke geometry, grid discipline,
-   primary forms (△ ▽ ◻ ○) as the icon language.
-   Colors per BRAND.md — navy anchor, antique gold accent, 90/10.
+   MEDWICK — new direction, built top-down (started 2026-07-17).
+   Brand palette (BRAND.md) with a real light/dark theme system:
+   semantic tokens below, raw brand values kept as constants.
+   data-theme is set on <html> before first paint (see layout).
    ============================================================ */
 
 :root {
-  /* -- brand -- */
+  /* -- raw brand constants (BRAND.md) -- */
   --navy: #2c3242;
   --navy-deep: #232935;
   --navy-ink: #1a1f29;
   --gold: #c0a674;
   --gold-deep: #a98f5f;
-  --gold-ink: #7d6634; /* small gold text on white (WCAG AA) */
+  --gold-ink: #7d6634; /* gold that passes AA as small text on light */
   --gold-soft: #f2ebdb;
   --white: #f0f0f2;
   --paper: #f7f6f2;
-  --ink: #26292f;
-  --hairline: #e0dbcf;
 
-  /* -- φ type scale (body 17px) -- */
-  --t-sm: 0.834rem;
-  --t-0: 1.0625rem;
-  --t-1: 1.352rem;
-  --t-2: 1.719rem;
-  --t-3: 2.188rem;
-  --t-4: 2.782rem;
-  --t-5: 3.539rem;
-  --t-6: 4.503rem;
-
-  /* -- φ spacing scale -- */
-  --s-3n: 0.236rem;
-  --s-2n: 0.382rem;
-  --s-1n: 0.618rem;
-  --s0: 1rem;
-  --s1: 1.618rem;
-  --s2: 2.618rem;
-  --s3: 4.236rem;
-  --s4: 6.854rem;
-
-  /* -- φ layout -- */
-  --container: 61.8rem;
-  /* container tiers, the temple axis (outer court → middle chamber → holy of
-     holies): 61.8rem (--container, default) → 48.6rem → 38.2rem (--measure).
-     48.6 = 61.8 / √φ, the same half-step already used for --t-* type sizes. */
-  --container-hekhal: 48.6rem;
-  --measure: 38.2rem;
-  --pad: clamp(1rem, 4vw, 2.618rem);
+  /* -- semantic tokens: LIGHT (default) -- */
+  --bg: var(--paper);
+  --surface: #ffffff;
+  --text: #26292f;
+  --text-soft: #5b5f6b;
+  --heading: var(--navy);
+  --line: #e0dbcf;
+  --accent: var(--gold-ink); /* small text / links */
+  --accent-strong: var(--gold-deep); /* rules, borders */
+  --header-bg: #ffffff;
+  --header-text: var(--navy);
+  --dropdown-shadow: 0 12px 28px rgba(20, 20, 25, 0.14);
 
   --font-display: var(--font-archivo), -apple-system, 'Segoe UI', sans-serif;
   --font-serif: var(--font-lora), Georgia, serif;
   --font-body: var(--font-source-sans), -apple-system, 'Segoe UI', sans-serif;
 }
 
+html[data-theme='dark'] {
+  /* -- semantic tokens: DARK -- */
+  --bg: var(--navy-ink);
+  --surface: var(--navy-deep);
+  --text: #d9d8d3;
+  --text-soft: #a8abb6;
+  --heading: var(--white);
+  --line: rgba(240, 240, 242, 0.14);
+  --accent: var(--gold);
+  --accent-strong: var(--gold);
+  --header-bg: var(--navy);
+  --header-text: var(--white);
+  --dropdown-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: light;
+}
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-body);
-  font-size: var(--t-0);
-  line-height: 1.618; /* golden line-height */
+  font-size: 1.0625rem;
+  line-height: 1.6;
 }
 
 h1,
 h2,
 h3 {
   font-family: var(--font-display);
-  color: var(--navy);
-  line-height: 1.146;
-  text-wrap: balance;
-  margin: 0;
+  color: var(--heading);
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
 }
 
 a {
-  color: var(--gold-ink);
+  color: var(--accent);
 }
 
 img {
@@ -97,7 +92,7 @@ img {
   left: -9999px;
   background: var(--navy);
   color: var(--white);
-  padding: var(--s-1n) var(--s0);
+  padding: 0.5rem 1rem;
 }
 .skip-link:focus {
   left: 0;
@@ -105,664 +100,514 @@ img {
   z-index: 100;
 }
 
-/* small-caps utility voice used across chrome */
-.smallcaps {
-  font-family: var(--font-display);
-  font-size: var(--t-sm);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+/* ============================================================
+   HEADER — the Solomon temple grid: 1 : 4 : 2 along the axis
+   (porch : hall : sanctuary → logo : nav : the ask).
+   ============================================================ */
+.site-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 2px solid var(--gold);
+  position: relative;
+  z-index: 40;
+}
+.header-grid {
+  display: grid;
+  /* Equal outer columns so the nav sits on the true page center: the logo
+     pins left, the ask pins right, and the auto-width nav is centered
+     between them regardless of their differing widths. */
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
 }
 
-/* ---- buttons: rectangular, geometric, no radius ---- */
-.btn,
-.btn-ghost {
-  display: inline-block;
+/* porch — the logo, swapped by theme */
+.brand {
+  display: block;
+  line-height: 0;
+  justify-self: start;
+}
+.brand .logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+.logo-dark {
+  display: none;
+}
+html[data-theme='dark'] .logo-light {
+  display: none;
+}
+html[data-theme='dark'] .logo-dark {
+  display: block;
+}
+
+/* hall — the nav groups. Scope the flex row to the DIRECT child list so it
+   never matches the dropdown <ul>s (which must stay display:none until open). */
+.site-nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem clamp(0.75rem, 2vw, 1.75rem);
+}
+.site-nav a,
+.site-nav .nav-summary {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--header-text);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  white-space: nowrap;
+}
+.site-nav > ul > li > a:hover {
+  color: var(--accent);
+}
+
+.nav-group {
+  position: relative;
+}
+.nav-summary {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-summary:hover,
+.nav-group.open .nav-summary {
+  color: var(--accent);
+}
+.nav-group .caret {
+  transition: transform 0.15s;
+  opacity: 0.7;
+}
+.nav-group.open .caret {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 15rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  box-shadow: var(--dropdown-shadow);
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 0;
+  z-index: 50;
+}
+.nav-group.open .dropdown {
+  display: block;
+}
+.dropdown a {
+  display: block;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+.dropdown a:hover {
+  background: var(--bg);
+  color: var(--accent);
+}
+
+/* sanctuary — the ask */
+.header-ask {
+  display: flex;
+  justify-self: end;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.9rem;
+}
+.header-ask .phone {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: var(--t-sm);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
   text-decoration: none;
-  padding: var(--s-1n) var(--s1);
-  border: 1px solid var(--gold);
-  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.header-ask .phone:hover {
+  text-decoration: underline;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--header-text);
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  border-color: var(--gold);
+  color: var(--accent);
+}
+
+/* hamburger + mobile call CTA: desktop-hidden by default */
+.hamburger {
+  display: none;
+}
+.nav-call {
+  display: none;
+}
+
+/* ============================================================
+   MOBILE (< 64rem) — the hall collapses into a hamburger drawer.
+   Header row is logo | (theme toggle + hamburger); the nav becomes
+   an absolutely-positioned panel below the header, and groups render
+   as tap-to-expand accordions.
+   ============================================================ */
+@media (max-width: 64rem) {
+  .header-grid {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .header-ask {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  /* the phone lives in the drawer as a full-width call button on mobile */
+  .header-ask .phone {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--header-text);
+    cursor: pointer;
+  }
+  .hamburger:hover,
+  .hamburger.is-open {
+    border-color: var(--gold);
+    color: var(--accent);
+  }
+
+  /* the drawer */
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 2px solid var(--gold);
+    box-shadow: var(--dropdown-shadow);
+    max-height: calc(100dvh - 100%);
+    overflow-y: auto;
+    z-index: 45;
+  }
+  .site-nav.mobile-open {
+    display: block;
+  }
+  .site-nav > ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+  .site-nav > ul > li + li {
+    border-top: 1px solid var(--line);
+  }
+
+  .site-nav a,
+  .site-nav .nav-summary {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  .nav-summary {
+    justify-content: space-between;
+  }
+
+  /* accordion content — static, indented, no floating panel */
+  .nav-group {
+    position: static;
+  }
+  .dropdown,
+  .nav-group.open .dropdown {
+    position: static;
+    transform: none;
+    min-width: 0;
+    box-shadow: none;
+    border: none;
+    background: var(--bg);
+  }
+  .nav-group.open .dropdown {
+    padding: 0.15rem 0 0.4rem;
+  }
+  .dropdown a {
+    padding: 0.6rem 1.5rem 0.6rem 2.6rem;
+    font-size: 0.85rem;
+  }
+
+  /* call CTA leading the drawer */
+  .nav-call {
+    display: block;
+    padding: 0.25rem 1.5rem 0.6rem;
+    border-top: 0 !important;
+  }
+  .nav-call a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--gold);
+    color: var(--navy-ink);
+    padding: 0.8rem 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .nav-call a:hover {
+    background: var(--gold-deep);
+  }
+}
+
+.main {
+  min-height: 50vh;
+}
+
+/* ============================================================
+   BUTTONS — gold solid + ghost. Reused across heroes and CTAs.
+   ============================================================ */
+.btn,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.9rem 1.6rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
 .btn {
   background: var(--gold);
   color: var(--navy-ink);
+  border-color: var(--gold);
 }
 .btn:hover {
   background: var(--gold-deep);
   border-color: var(--gold-deep);
 }
+/* ghost default suits a light surface; the hero variant below goes white */
 .btn-ghost {
   background: transparent;
-  color: var(--gold);
+  color: var(--accent);
+  border-color: var(--accent-strong);
 }
 .btn-ghost:hover {
-  background: var(--gold);
-  color: var(--navy-ink);
-}
-.on-paper .btn-ghost,
-.btn-ghost.on-paper {
-  color: var(--gold-ink);
-  border-color: var(--gold-deep);
-}
-.btn-row {
-  display: flex;
-  gap: var(--s0);
-  justify-content: center;
-  flex-wrap: wrap;
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
 }
 
 /* ============================================================
-   HEADER — axially symmetric: tagline strip, centered wordmark,
-   centered nav between hairlines. A facade, not a toolbar.
-   ============================================================ */
-.site-header {
-  background: var(--navy);
-  color: var(--white);
-  border-bottom: 3px solid var(--gold);
-}
-.utility-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--s0);
-  padding: var(--s-2n) var(--pad);
-  background: var(--navy-deep);
-  font-size: var(--t-sm);
-}
-.utility-bar .tagline {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--gold);
-  margin: 0;
-}
-.utility-bar .phone {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-}
-.utility-bar .phone span {
-  color: var(--gold);
-}
-.brand-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--s1) var(--pad) var(--s0);
-  text-align: center;
-}
-.brand-row .brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--s-2n);
-  color: var(--white);
-  text-decoration: none;
-}
-.brand-row .wordmark {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: var(--t-2);
-  letter-spacing: 0.14em;
-  line-height: 1;
-}
-.brand-row .undermark {
-  font-family: var(--font-display);
-  font-weight: 300;
-  font-size: var(--t-sm);
-  letter-spacing: 0.42em;
-  text-indent: 0.42em; /* re-center the letterspaced line */
-  color: var(--gold);
-}
-.primary-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--s-2n) var(--s1);
-  padding: var(--s-1n) var(--pad);
-  border-top: 1px solid rgba(192, 166, 116, 0.28);
-}
-.primary-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-family: var(--font-display);
-  font-size: var(--t-sm);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: var(--s-3n) 0;
-  border-bottom: 2px solid transparent;
-}
-.primary-nav a:hover {
-  color: var(--gold);
-  border-bottom-color: var(--gold);
-}
-
-/* ============================================================
-   HERO — navy field, golden-spiral construction watermark,
-   flanking pillar rules at the φ margins.
+   HERO — full-bleed muted video with a poster still and a scrim.
+   Always reads dark/cinematic (mode-independent); the headline
+   seats lower-left, clear of the bright center of the footage.
    ============================================================ */
 .hero {
   position: relative;
-  background: linear-gradient(160deg, #293040, #2e3545);
-  color: var(--white);
-  text-align: center;
-  padding: var(--s4) var(--pad);
+  min-height: clamp(30rem, 82vh, 46rem);
+  display: flex;
+  align-items: flex-end;
   overflow: hidden;
+  isolation: isolate;
+  background: var(--navy-ink);
+  color: var(--white);
 }
-.hero .spiral {
+.hero-media {
   position: absolute;
   inset: 0;
-  margin: auto;
-  width: min(61.8vw, 610px);
-  height: auto;
-  color: var(--gold);
-  opacity: 0.09;
-  pointer-events: none;
+  z-index: 0;
 }
-/* the two pillars */
-.hero::before,
-.hero::after {
-  content: '';
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+/* Layered scrim tuned for footage with a bright, moving center (this clip's
+   lit doorway): a flat base tint guarantees baseline contrast at the brightest
+   frame, a strong bottom-left lift keeps the copy zone dark through the whole
+   loop, and the upper-right stays clear so the doorway glow reads. */
+.hero-scrim {
   position: absolute;
-  top: var(--s2);
-  bottom: var(--s2);
-  width: 1px;
-  background: linear-gradient(var(--gold) 0 8px, rgba(192, 166, 116, 0.25) 8px);
-}
-.hero::before {
-  left: 9.02%; /* 23.6% / φ — the outer φ margin */
-}
-.hero::after {
-  right: 9.02%;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(rgba(26, 31, 41, 0.32), rgba(26, 31, 41, 0.32)),
+    linear-gradient(
+      to top,
+      rgba(26, 31, 41, 0.95) 0%,
+      rgba(26, 31, 41, 0.62) 40%,
+      rgba(26, 31, 41, 0.16) 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(26, 31, 41, 0.72) 0%,
+      rgba(26, 31, 41, 0.18) 52%,
+      transparent 78%
+    );
 }
 .hero-inner {
   position: relative;
-  max-width: var(--container);
+  z-index: 2;
+  width: 100%;
+  max-width: 76rem;
   margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4.5rem) 1.5rem clamp(2.5rem, 6vw, 4.5rem);
 }
-.hero .eyebrow {
+.hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--gold);
-  margin: 0 0 var(--s1);
+  margin: 0 0 0.9rem;
 }
 .hero h1 {
-  color: var(--white);
-  font-size: clamp(var(--t-3), 5.5vw, var(--t-5));
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.4rem);
   font-weight: 800;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  max-width: 23.6em;
-  margin: 0 auto;
+  line-height: 1.06;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+  margin: 0;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
 }
-.hero .promise {
+.hero-promise {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--t-1);
-  color: var(--gold);
-  max-width: var(--measure);
-  margin: var(--s1) auto var(--s2);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: rgba(240, 240, 242, 0.92);
+  max-width: 42ch;
+  margin: 1.1rem 0 1.9rem;
 }
-
-/* ---- crew band: the real guys, full width, hard geometric frame ----
-   Desktop crop is a φ² panorama (2.618:1); mobile relaxes to a golden
-   rectangle (1.618:1). No scrims, no gradients — Bauhaus hard cut. */
-.crew-band {
-  position: relative;
-  margin: 0;
-  aspect-ratio: 2.618 / 1;
-  overflow: hidden;
-  border-bottom: 3px solid var(--gold);
-}
-.crew-band img {
-  object-fit: cover;
-  object-position: 50% 60%;
-}
-
-/* ---- proof band: symmetric row of credentials ---- */
-.proof-band {
-  background: var(--gold-soft);
-  border-bottom: 1px solid var(--hairline);
-  padding: var(--s0) var(--pad);
-}
-.proof-band ul {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: var(--container);
+.hero-cta {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: var(--s-2n) var(--s2);
-  color: var(--gold-ink);
-  text-align: center;
+  gap: 0.9rem;
 }
-.proof-band .smallcaps {
-  letter-spacing: 0.12em;
-}
-.proof-band a {
-  color: inherit;
-  text-decoration: none;
-}
-.proof-band a:hover {
-  text-decoration: underline;
-}
-
-/* ============================================================
-   SECTIONS — numbered, centered, divided by builder's ornament
-   ============================================================ */
-.section {
-  padding: var(--s3) var(--pad);
-}
-.section > * {
-  max-width: var(--container);
-  margin-left: auto;
-  margin-right: auto;
-}
-.section.navy {
-  background: var(--navy);
-  color: var(--white);
-}
-.section.navy h2,
-.section.navy h3 {
-  color: var(--white);
-}
-.section.soft {
-  background: var(--gold-soft);
-}
-.section-head {
-  text-align: center;
-  margin-bottom: var(--s2);
-}
-.section-numeral {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: var(--t-sm);
-  letter-spacing: 0.42em;
-  text-indent: 0.42em;
-  color: var(--gold-ink);
-  margin-bottom: var(--s-1n);
-}
-.section.navy .section-numeral {
-  color: var(--gold);
-}
-.section-head h2 {
-  font-size: clamp(var(--t-2), 3.4vw, var(--t-4));
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.section-kicker {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: var(--t-1);
-  color: var(--gold-ink);
-  max-width: var(--measure);
-  margin: var(--s-1n) auto 0;
-}
-.section.navy .section-kicker {
-  color: var(--gold);
-}
-
-.ornament-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--s0);
-  color: var(--gold-deep);
-  margin-top: var(--s1);
-}
-.ornament-divider .rule {
-  width: 89px;
-  height: 1px;
-  background: currentColor;
-  opacity: 0.55;
-}
-
-/* ---- geometric cards ---- */
-.grid-2,
-.grid-3 {
-  display: grid;
-  gap: var(--s1);
-}
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.geo-card {
-  background: #fff;
-  border: 1px solid var(--hairline);
-  border-top: 3px solid var(--gold);
-  padding: var(--s1);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--s-1n);
-}
-.section.navy .geo-card {
-  background: var(--navy-deep);
-  border-color: rgba(192, 166, 116, 0.28);
-  border-top-color: var(--gold);
-}
-.geo-card svg {
-  width: 55px;
-  height: 55px;
-  color: var(--gold-deep);
-}
-.section.navy .geo-card svg {
-  color: var(--gold);
-}
-.geo-card h3 {
-  font-size: var(--t-1);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.geo-card p {
-  margin: 0;
-  font-size: var(--t-sm);
-  line-height: 1.618;
-  color: inherit;
-  opacity: 0.88;
-}
-.geo-card .card-link {
-  margin-top: auto;
-  padding-top: var(--s-1n);
-}
-.section.navy .geo-card .card-link {
-  color: var(--gold);
-}
-
-/* the recovery path: three stations joined by a gold thread */
-.path-grid {
-  position: relative;
-}
-.path-grid::before {
-  content: '';
-  position: absolute;
-  top: 44px;
-  left: 16.6%;
-  right: 16.6%;
-  height: 1px;
-  background: var(--gold-deep);
-  opacity: 0.45;
-}
-.path-grid .geo-card {
-  position: relative;
-  border-top: none;
+.hero .btn-ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
   background: transparent;
-  border: none;
 }
-.path-grid .geo-card svg {
-  background: var(--paper);
-  padding: var(--s-2n);
-}
-.section.soft .path-grid .geo-card svg {
-  background: var(--gold-soft);
-}
-.path-grid .step-index {
-  font-family: var(--font-serif);
-  font-style: italic;
-  color: var(--gold-ink);
-  font-size: var(--t-sm);
-}
-
-/* ---- the golden split: 61.8 / 38.2 ---- */
-.golden-split {
-  display: grid;
-  grid-template-columns: 1.618fr 1fr;
-  gap: var(--s2);
-  align-items: start;
-}
-.golden-split .major p {
-  max-width: var(--measure);
-}
-.aside-panel {
-  border: 1px solid rgba(192, 166, 116, 0.4);
-  padding: var(--s1);
-  font-size: var(--t-sm);
-  line-height: 1.618;
-}
-.section.navy .aside-panel {
-  background: var(--navy-deep);
-  color: var(--white);
-  opacity: 0.92;
-}
-.aside-panel .smallcaps {
-  display: block;
+.hero .btn-ghost:hover {
   color: var(--gold);
-  margin-bottom: var(--s-1n);
+  border-color: var(--gold);
+  background: transparent;
 }
 
-/* ---- communities: symmetric lozenge-separated field ---- */
-.communities {
-  list-style: none;
+/* temporary placeholder band under the hero until the rest is built */
+.home-next {
+  max-width: 46rem;
   margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--s-2n) 0;
-  max-width: 47.6rem;
+  padding: 3rem 1.5rem;
   text-align: center;
-}
-.communities li {
-  display: flex;
-  align-items: center;
-}
-.communities li::after {
-  content: '◆';
-  color: var(--gold-deep);
-  font-size: 0.5em;
-  margin: 0 var(--s0);
-}
-.communities li:last-child::after {
-  content: none;
-}
-.communities a {
-  color: var(--navy);
-  font-weight: 600;
-  text-decoration-color: var(--gold-deep);
-}
-
-/* ---- FAQ: hairline ledger ---- */
-.faq {
-  max-width: var(--measure);
-  margin: 0 auto;
-}
-.faq details {
-  border-bottom: 1px solid var(--hairline);
-  padding: var(--s0) 0;
-}
-.faq details:first-of-type {
-  border-top: 1px solid var(--hairline);
-}
-.faq summary {
-  cursor: pointer;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--navy);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: var(--s0);
-}
-.faq summary::-webkit-details-marker {
-  display: none;
-}
-.faq summary::after {
-  content: '+';
-  color: var(--gold-deep);
-  font-size: var(--t-1);
-  line-height: 1;
-}
-.faq details[open] summary::after {
-  content: '−';
-}
-.faq details p {
-  margin: var(--s-1n) 0 0;
-}
-.faq .faq-more {
-  text-align: center;
-  margin-top: var(--s1);
-}
-
-/* ---- owner block ---- */
-.owner-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--s-1n);
-}
-.owner-block .mw-mark {
-  width: 144px;
-  height: auto;
-  color: var(--gold-deep);
-}
-.owner-block .owner-statement {
+  color: var(--text-soft);
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: var(--t-1);
-  color: var(--navy);
-  max-width: var(--measure);
-  margin: var(--s0) auto 0;
-}
-
-/* ---- legal fine print ---- */
-.fineprint {
-  font-size: var(--t-sm);
-  line-height: 1.618;
-  opacity: 0.75;
-  max-width: var(--measure);
 }
 
 /* ============================================================
-   INTERIOR PAGES (Stub) — same axis, same ornament
+   FOOTER — navy in both modes (brand anchor)
    ============================================================ */
-.main {
-  min-height: 38.2vh;
-}
-.stub {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: var(--s2) var(--pad) var(--s3);
+.site-footer {
+  background: var(--navy-deep);
+  color: var(--white);
+  padding: 2rem 1.5rem;
   text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--gold);
+}
+.site-footer a {
+  color: var(--gold);
+}
+.site-footer .disclaimer {
+  max-width: 42rem;
+  margin: 1rem auto 0;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+/* ---- stub pages (scaffold) ---- */
+.stub {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
 }
 .stub-banner {
-  max-width: var(--container);
-  margin: var(--s1) auto 0;
-  padding: var(--s-2n) var(--s0);
-  border: 1px dashed var(--gold-deep);
-  color: var(--gold-ink);
-  font-size: var(--t-sm);
-  text-align: center;
-}
-.stub h1 {
-  font-size: clamp(var(--t-2), 4vw, var(--t-4));
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-top: var(--s1);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px dashed var(--accent-strong);
+  color: var(--accent);
+  font-size: 0.9rem;
 }
 .stub .purpose {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--gold-ink);
-  font-size: var(--t-1);
-  max-width: var(--measure);
-  margin: var(--s-1n) auto var(--s1);
+  color: var(--accent);
+  font-size: 1.15rem;
 }
 .stub .outline {
-  background: #fff;
-  border: 1px solid var(--hairline);
-  border-top: 3px solid var(--gold);
-  padding: var(--s1);
-  max-width: var(--measure);
-  margin: var(--s1) auto;
-  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
 }
 .stub .outline h2 {
-  font-size: var(--t-sm);
-  letter-spacing: 0.16em;
+  font-size: 0.9rem;
   text-transform: uppercase;
-  color: var(--gold-ink);
-  margin-bottom: var(--s-1n);
+  letter-spacing: 0.08em;
+  color: var(--accent);
 }
 .stub .outline ul {
   margin: 0;
   padding-left: 1.2em;
 }
 .stub .links {
-  font-size: var(--t-sm);
-  margin: var(--s0) auto 0;
-}
-
-/* ============================================================
-   FOOTER — the base of the facade, centered
-   ============================================================ */
-.site-footer {
-  background: var(--navy-deep);
-  color: var(--white);
-  padding: var(--s2) var(--pad) var(--s2);
-  text-align: center;
-  font-size: var(--t-sm);
-}
-.site-footer .ornament-divider {
-  color: var(--gold);
-  margin: 0 0 var(--s1);
-}
-.site-footer p {
-  margin: var(--s-2n) auto;
-}
-.site-footer a {
-  color: var(--gold);
-}
-.site-footer .disclaimer {
-  max-width: var(--measure);
-  opacity: 0.7;
-  font-size: 0.78rem;
-  line-height: 1.618;
-  margin-top: var(--s1);
-}
-
-/* ============================================================
-   RESPONSIVE — the axis holds; columns fold into it
-   ============================================================ */
-@media (max-width: 47.6rem) {
-  .grid-2,
-  .grid-3,
-  .golden-split {
-    grid-template-columns: 1fr;
-  }
-  .crew-band {
-    aspect-ratio: 1.618 / 1;
-  }
-  .path-grid::before {
-    display: none;
-  }
-  .hero::before,
-  .hero::after {
-    display: none;
-  }
-  .section {
-    padding: var(--s2) var(--pad);
-  }
-  .utility-bar {
-    justify-content: center;
-  }
-  .utility-bar .tagline {
-    display: none;
-  }
+  font-size: 0.9rem;
 }

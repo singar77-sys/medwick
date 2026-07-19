@@ -1,5 +1,6 @@
+import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
-import { DISCLAIMER } from '@/lib/site';
+import { SITE, DISCLAIMER } from '@/lib/site';
 import { service, JsonLd } from '@/lib/schema';
 
 export const metadata = {
@@ -11,10 +12,17 @@ export const metadata = {
 export default function InsuranceClaims() {
   return (
     <>
+      <Hero
+        video="/video/water-bathroom-ceiling.mp4"
+        poster="/video/posters/water-bathroom-ceiling.jpg"
+        eyebrow="Insurance Claims &middot; Medina County"
+        title="Insurance Claim Help in Medina County, Ohio"
+        promise="You&rsquo;re our customer, not the insurance company&rsquo;s. We walk you through the claim, document the damage, meet the adjuster, and complete the repair."
+        primary={{ href: '/contact/', label: 'Start Your Claim' }}
+        secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
+      />
       <Stub
-        tier="hekhal"
-        h1="Insurance Claim Help in Medina County, Ohio"
-        purpose="Clear, documented, and honest at every step. That's the whole pitch."
+        underHero
         outline={[
           '≥ 800 words, the documented plain-English process: walk you through the claim, help make the calls, meet the adjuster, review the scope',
           'If the adjuster’s scope misses documented damage: our photos, measurements, and a detailed repair estimate',
@@ -28,7 +36,9 @@ export default function InsuranceClaims() {
           { href: '/storm-damage/', label: 'Storm Damage' },
         ]}
       />
-      <p style={{ maxWidth: '68ch', fontSize: '0.85rem', opacity: 0.8 }}>{DISCLAIMER}</p>
+      <p style={{ maxWidth: '68ch', margin: '0 auto', padding: '0 1.5rem', fontSize: '0.85rem', opacity: 0.8 }}>
+        {DISCLAIMER}
+      </p>
       <JsonLd
         data={service({
           name: 'Insurance Claim Support',

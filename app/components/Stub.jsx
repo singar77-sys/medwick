@@ -1,34 +1,25 @@
 import Link from 'next/link';
 import { SITE } from '@/lib/site';
-import { Divider } from './ornaments';
-
-// Container tier per the temple axis (see DESIGN-SYSTEM.md § Container tiers):
-// court (default, 61.8rem) → hekhal (48.6rem, the trade/advocacy hubs) →
-// debir (38.2rem, reached once — Contact).
-// 'court' is intentionally absent: it's the unmodified default --container,
-// so it's a documentation-only tag at call sites, not a CSS override. Mapping
-// it to 'var(--container)' would set --container: var(--container) on the
-// same element — a self-reference, which CSS treats as invalid and collapses
-// max-width to its initial value (none). Don't reintroduce that.
-const TIER_VAR = {
-  hekhal: 'var(--container-hekhal)',
-  debir: 'var(--measure)',
-};
 
 // Scaffold page body used by every route until real content lands
 // (Weeks 4–8). Carries the approved H1 and the planned content outline so
 // the IA is reviewable now. Replaced page-by-page during the build.
-export default function Stub({ h1, purpose, outline = [], links = [], tier }) {
-  const style = TIER_VAR[tier] ? { '--container': TIER_VAR[tier] } : undefined;
+// `tier` is accepted but unused: it belonged to the retired design system
+// (archived 2026-07-17); route files still pass it and get rebuilt under
+// the new design.
+// `underHero`: when a page already has a <Hero> supplying the H1, this drops
+// the stub's own H1 and purpose so there's exactly one H1 on the page —
+// leaving just the scaffolding banner, planned-content outline, and links.
+export default function Stub({ h1, purpose, outline = [], links = [], tier, underHero = false }) {
   return (
-    <article className="stub" style={style}>
+    <article className="stub">
       <div className="stub-banner">
-        This page is scaffolding. The H1 and content plan are locked in, real copy and design
-        come during the build.
+        {underHero
+          ? 'This page is scaffolding — the hero is in. The rest of the copy and design build next.'
+          : 'This page is scaffolding. The H1 and content plan are locked in, real copy and design come during the build.'}
       </div>
-      <h1>{h1}</h1>
-      {purpose && <p className="purpose">{purpose}</p>}
-      <Divider />
+      {!underHero && <h1>{h1}</h1>}
+      {!underHero && purpose && <p className="purpose">{purpose}</p>}
       {outline.length > 0 && (
         <div className="outline">
           <h2>Planned content</h2>

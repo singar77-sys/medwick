@@ -1,4 +1,6 @@
+import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { SITE } from '@/lib/site';
 
 export const metadata = {
   title: 'Reviews: What Medina County Homeowners Say | Medwick Construction',
@@ -8,17 +10,26 @@ export const metadata = {
 
 export default function Reviews() {
   return (
-    <Stub
-      tier="court"
-      h1="What Medina County Homeowners Say"
-      purpose="The 12 five-star reviews finally show up on the page. No more 'coming soon.'"
-      outline={[
-        'Real on-page testimonials (GBP 5.0★/9 + Facebook 5.0★/3), full text in server HTML',
-        'Links out to the GBP and Facebook review sources',
-        'aggregateRating / Review schema added ONLY once these render (no organic stars either way, that is GBP/map-pack territory)',
-        'Leave-a-review CTA with the g.page short link',
-      ]}
-      links={[{ href: '/projects/', label: 'See the work behind the reviews' }]}
-    />
+    <>
+      <Hero
+        video="/video/sitework-groundbreaking.mp4"
+        poster="/video/posters/sitework-groundbreaking.jpg"
+        eyebrow="★ 5.0 on Google"
+        title="What Medina County Homeowners Say"
+        promise="Real reviews from real Medwick customers across Medina County — responsiveness, clear communication, and claim guidance, in their words."
+        primary={{ href: '/contact/', label: 'Request an Estimate' }}
+        secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
+      />
+      <Stub
+        underHero
+        outline={[
+          'Real on-page testimonials (GBP 5.0★/9 + Facebook 5.0★/3), full text in server HTML',
+          'Links out to the GBP and Facebook review sources',
+          'aggregateRating / Review schema added ONLY once these render (no organic stars either way, that is GBP/map-pack territory)',
+          'Leave-a-review CTA with the g.page short link',
+        ]}
+        links={[{ href: '/projects/', label: 'See the work behind the reviews' }]}
+      />
+    </>
   );
 }

@@ -1,4 +1,6 @@
+import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { SITE } from '@/lib/site';
 
 export const metadata = {
   title: 'Roof Insurance Claim Help in Medina, OH | Medwick',
@@ -8,20 +10,29 @@ export const metadata = {
 
 export default function RoofClaims() {
   return (
-    <Stub
-      tier="hekhal"
-      h1="Roof Insurance Claim Help in Medina County"
-      purpose="Most roof jobs are claims. This page owns that path."
-      outline={[
-        '≥ 800 words, the documented claim-to-roof process, honest price bands',
-        'FAQPage schema (does insurance cover hail/wind, deductibles, timelines)',
-        '⚠ PENDING OHIO COUNSEL (SOW §11) before publish',
-      ]}
-      links={[
-        { href: '/insurance-claims/', label: 'Insurance Claims' },
-        { href: '/roofing/', label: 'Roofing' },
-        { href: '/storm-damage/', label: 'Storm Damage' },
-      ]}
-    />
+    <>
+      <Hero
+        video="/video/roofing-winter-install.mp4"
+        poster="/video/posters/roofing-winter-install.jpg"
+        eyebrow="Insurance Claims &middot; Roof"
+        title="Roof Insurance Claim Help in Medina County"
+        promise="Hail or wind damage? We document it, build the estimate, meet the adjuster, and complete the roof — one company from claim to final shingle."
+        primary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
+        secondary={{ href: '/roofing/', label: 'Our Roofing Work' }}
+      />
+      <Stub
+        underHero
+        outline={[
+          '≥ 800 words, the documented claim-to-roof process, honest price bands',
+          'FAQPage schema (does insurance cover hail/wind, deductibles, timelines)',
+          '⚠ PENDING OHIO COUNSEL (SOW §11) before publish',
+        ]}
+        links={[
+          { href: '/insurance-claims/', label: 'Insurance Claims' },
+          { href: '/roofing/', label: 'Roofing' },
+          { href: '/storm-damage/', label: 'Storm Damage' },
+        ]}
+      />
+    </>
   );
 }

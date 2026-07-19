@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Triangle_Up_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1200 1200">
+  <!-- Generator: Adobe Illustrator 30.6.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 109)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #696251;
+      }
+
+      .st1 {
+        fill: #c0a674;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M601,161.67l508.01,879.9H92.99L601,161.67ZM1053.8,1009.7L601,225.42,148.2,1009.7h905.6Z"/>
+  <path class="st0" d="M601,327.95l363.64,629.85H237.36l363.64-629.85ZM909.43,925.92l-308.43-534.22-308.43,534.22h616.86Z"/>
+</svg>
