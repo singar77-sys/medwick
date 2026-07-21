@@ -1,9 +1,10 @@
 import './globals.css';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
-import { SITE, DISCLAIMER } from '@/lib/site';
+import { SITE } from '@/lib/site';
 import { organization, JsonLd } from '@/lib/schema';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Sets data-theme before first paint so neither mode flashes. Stored choice
 // wins; otherwise follow the OS. Runs synchronously as the first thing in
@@ -77,15 +78,7 @@ export default function RootLayout({ children }) {
         <main id="main" className="main">
           {children}
         </main>
-        <footer className="site-footer">
-          <p>
-            <strong>{SITE.name}</strong> · {SITE.address.street}, {SITE.address.city},{' '}
-            {SITE.address.region} {SITE.address.postalCode} ·{' '}
-            <a href={SITE.phoneHref}>{SITE.phone}</a>
-          </p>
-          <p>{SITE.legalNote}</p>
-          <p className="disclaimer">{DISCLAIMER}</p>
-        </footer>
+        <Footer />
         <JsonLd data={organization()} />
       </body>
     </html>

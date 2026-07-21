@@ -582,21 +582,254 @@ html[data-theme='dark'] .logo-dark {
    FOOTER, navy in both modes (brand anchor)
    ============================================================ */
 .site-footer {
-  background: var(--navy-deep);
+  background: var(--navy-deep); /* Midnight Blue, dark in both modes */
   color: var(--white);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
   border-top: 2px solid var(--gold);
+  font-size: 0.9rem;
 }
-.site-footer a {
+
+/* ---- top: brand + link columns ---- */
+.footer-grid {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2.25rem;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 2rem;
+}
+.footer-brand .footer-logo {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+}
+.footer-tagline {
+  color: var(--bouillon); /* Pale Bouillon */
+  margin: 0.75rem 0 1rem;
+  max-width: 30ch;
+}
+.footer-phone {
+  display: inline-block;
+  font-family: var(--font-subhead);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
   color: var(--gold);
+  text-decoration: none;
 }
-.site-footer .disclaimer {
-  max-width: 42rem;
-  margin: 1rem auto 0;
+.footer-phone:hover {
+  text-decoration: underline;
+}
+.footer-address {
+  font-style: normal; /* browsers italicize <address>; the site uses no italics */
+  margin-top: 0.6rem;
+  line-height: 1.6;
+  color: rgba(240, 240, 242, 0.75);
+}
+.footer-col h2 {
+  font-family: var(--font-subhead);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.85rem;
+}
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.footer-col a {
+  color: rgba(240, 240, 242, 0.8);
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* ---- middle: NAP, license, disclaimer ---- */
+.footer-legal {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem;
+  border-top: 1px solid rgba(240, 240, 242, 0.14);
+}
+.footer-nap,
+.footer-license {
+  margin: 0 0 0.4rem;
+  color: rgba(240, 240, 242, 0.85);
+}
+.footer-nap a {
+  color: var(--gold);
+  text-decoration: none;
+}
+.footer-nap a:hover {
+  text-decoration: underline;
+}
+.footer-disclaimer {
+  max-width: 78ch;
+  margin: 0.9rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(240, 240, 242, 0.6);
+}
+
+/* ---- bottom bar: copyright + build credit ---- */
+.footer-bottom {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 1.75rem;
+  border-top: 1px solid rgba(240, 240, 242, 0.14);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-copy {
+  margin: 0;
+  font-size: 0.78rem;
+  color: rgba(240, 240, 242, 0.55);
+}
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
   opacity: 0.7;
-  font-size: 0.8rem;
+  transition: opacity 0.15s;
+}
+.footer-credit:hover {
+  opacity: 1;
+}
+.footer-credit span {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(240, 240, 242, 0.55);
+}
+.footer-credit img {
+  width: 116px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 64rem) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 40rem) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    justify-content: flex-start;
+  }
+}
+
+/* ============================================================
+   REVIEWS — real Google reviews and Facebook recommendations,
+   rendered as on-page text
+   ============================================================ */
+.reviews {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 1rem;
+}
+.review-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.25rem;
+}
+.review {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.review-stars {
+  margin: 0;
+  color: var(--accent-strong);
+  letter-spacing: 0.1em;
+}
+.review-text {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+/* Facebook dropped star ratings for recommendations, so these cards say what
+   Facebook actually says instead of borrowing Google's stars. */
+.review-recommends {
+  margin: 0;
+  font-family: var(--font-subhead);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+.review-meta {
+  margin: auto 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.review-author {
+  font-family: var(--font-subhead);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.review-source {
+  font-family: var(--font-subhead);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-soft);
+}
+/* The ask, sitting in the grid as the final tile so the rows stay flush.
+   Centred content and a button are what separate it from a review card. */
+.review-cta {
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+.review-cta h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+}
+.review-cta p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.review-cta .btn {
+  align-self: center;
+}
+.reviews-more {
+  text-align: center;
+  margin: 2rem 0 0;
+  font-family: var(--font-subhead);
+  font-size: 0.9rem;
 }
 
 /* ---- stub pages (scaffold) ---- */

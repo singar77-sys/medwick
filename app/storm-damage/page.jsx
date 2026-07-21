@@ -13,8 +13,8 @@ export default function StormDamage() {
   return (
     <>
       <Hero
-        video="/video/storm-clouds-rooftop.mp4"
-        poster="/video/posters/storm-clouds-rooftop.jpg"
+        video="/video/storm-downpour-roof.mp4"
+        poster="/video/posters/storm-downpour-roof.jpg"
         eyebrow="Storm Damage &middot; Medina County"
         title="Storm Damage in Medina County: Your First Steps"
         promise="Wind or hail hit your house? Here&rsquo;s what to do first, secure the property, document the damage, start the claim. One local company handles the whole thing."

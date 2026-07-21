@@ -59,6 +59,25 @@ Grouped by category. ⭐ = strongest hero candidate for that section.
 | `crew-walkout-silhouette` ⭐ | 449491825 | 1920×1080 · 13.0s | Three-person crew walking out toward a bright bay door, dramatic silhouette — good for **home** or **about** |
 | `medwick-storm-response` ⭐ | — (Medwick-branded) | 1280×720 · 12.0s | **Medwick's own footage** — a Medwick-shirted crewman on a storm-damaged roof (fallen branch, torn shingles), then interior flooring work. Source: `Desktop/this_guy_responds_to_storm_dam.mp4` (has audio; stripped for the muted hero). Kept native 720p (not upscaled). The **Projects** hero. Not Adobe Stock — no license ID. |
 
+## Batch 3 (added 2026-07-21)
+
+Eleven more Adobe Stock clips, same pipeline. ⭐ = placed on a hero; the rest
+are in the library, ready to swap in.
+
+| Name | Adobe ID | Dur | What it shows | Where it's used |
+|---|---|---|---|---|
+| `roofing-aerial-neighborhood` ⭐ | 1535802462 | 14.1s | Aerial over a suburban shingled roof and brick chimney, neighborhood around it | **About** hero ("Medina Born, Brunswick Raised") |
+| `storm-downpour-roof` | 503957803 | 13.0s | Heavy downpour sheeting off a metal roof edge, lush green behind | library (strong storm alt) |
+| `storm-rain-clay-tiles` | 509710001 | 9.7s | Rain streaming off old clay/terracotta roof tiles | library (clay tile is off-region for Ohio) |
+| `roofing-aerial-sheathing` | 511763198 | 20.4s | Aerial top-down, worker laying OSB roof sheathing on a new build | library (overlaps existing roofing aerials) |
+| `roofing-torch-down` | 503198263 | 30.0s | Torch-applied bitumen membrane on a flat roof, flame and roller | library (reads commercial/flat, not residential) |
+| `remodel-spray-insulation` | 513683924 | 13.2s | Spray-foam insulation onto timber framing, worker in full gear | library (good "mid-rebuild" option) |
+| `remodel-wall-plaster` | 510270594 | 27.7s | Worker troweling/plastering a concrete wall | library |
+| `remodel-wall-smoothing` | 509972546 | 23.8s | Gloved hands smoothing a plaster wall, close up | library |
+| `sitework-concrete-screed` | 341207794 | 8.5s | Screeding and leveling a wet concrete floor | library |
+| `metal-welding-sparks` | 504863777 | 26.8s | Welding sparks, dark and dramatic close up | library ⚠ off-trade (Medwick does not weld) |
+| `crane-night-lights` | 427280562 | 31.8s | Tower crane at night, colored lights and fog | library ⚠ off-brand (commercial high-rise, not residential) |
+
 ## Notes / options
 
 - **Format:** MP4 (H.264) is served everywhere including mobile. A VP9 **WebM**
