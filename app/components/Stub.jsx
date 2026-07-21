@@ -8,14 +8,13 @@ import { SITE } from '@/lib/site';
 // (archived 2026-07-17); route files still pass it and get rebuilt under
 // the new design.
 // `underHero`: when a page already has a <Hero> supplying the H1, this drops
-// the stub's own H1 and purpose so there's exactly one H1 on the page —
-// leaving just the scaffolding banner, planned-content outline, and links.
+// the stub's own H1 and purpose so there's exactly one H1 on the page, // leaving just the scaffolding banner, planned-content outline, and links.
 export default function Stub({ h1, purpose, outline = [], links = [], tier, underHero = false }) {
   return (
     <article className="stub">
       <div className="stub-banner">
         {underHero
-          ? 'This page is scaffolding — the hero is in. The rest of the copy and design build next.'
+          ? 'This page is scaffolding, the hero is in. The rest of the copy and design build next.'
           : 'This page is scaffolding. The H1 and content plan are locked in, real copy and design come during the build.'}
       </div>
       {!underHero && <h1>{h1}</h1>}

@@ -16,7 +16,7 @@ export default function Reviews() {
         poster="/video/posters/sitework-groundbreaking.jpg"
         eyebrow="★ 5.0 on Google"
         title="What Medina County Homeowners Say"
-        promise="Real reviews from real Medwick customers across Medina County — responsiveness, clear communication, and claim guidance, in their words."
+        promise="Real reviews from real Medwick customers across Medina County, responsiveness, clear communication, and claim guidance, in their words."
         primary={{ href: '/contact/', label: 'Request an Estimate' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

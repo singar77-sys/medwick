@@ -17,7 +17,7 @@ export default function Roofing() {
         poster="/video/posters/roofing-aerial-trusses.jpg"
         eyebrow="Roofing &middot; Medina County"
         title="Roofing in Medina County, Ohio"
-        promise="Our core trade — replacement, repair, and storm work — run through the same advocacy promise as everything else we do."
+        promise="Our core trade, replacement, repair, and storm work, run through the same advocacy promise as everything else we do."
         primary={{ href: '/insurance-claims/roof/', label: 'Roof Claim Help' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

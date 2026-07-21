@@ -17,7 +17,7 @@ export default function WaterMitigation() {
         poster="/video/posters/storm-rain-roof.jpg"
         eyebrow="Water Mitigation &middot; Medina County"
         title="Water Mitigation in Medina County, Ohio"
-        promise="Nobody local is fast here — speed is our edge. We&rsquo;re based in Medina County, so we reach your water damage before a truck out of Akron or Cleveland."
+        promise="Nobody local is fast here, speed is our edge. We&rsquo;re based in Medina County, so we reach your water damage before a truck out of Akron or Cleveland."
         primary={{ href: '/water-mitigation/emergency-water-removal/', label: 'Emergency Water Removal' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

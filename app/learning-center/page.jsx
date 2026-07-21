@@ -16,7 +16,7 @@ export default function LearningCenter() {
         poster="/video/posters/reconstruction-steel-framing.jpg"
         eyebrow="Learning Center"
         title="Medina County Storm, Roof &amp; Water Damage: Answers"
-        promise="Plain answers to the questions homeowners actually ask after storm, roof, and water damage — one question per page."
+        promise="Plain answers to the questions homeowners actually ask after storm, roof, and water damage, one question per page."
         primary={{ href: '/insurance-claims/', label: 'Get Claim Help' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

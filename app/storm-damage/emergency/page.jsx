@@ -16,7 +16,7 @@ export default function StormEmergency() {
         poster="/video/posters/roofing-aerial-teardown.jpg"
         eyebrow="Emergency Storm Response &middot; 24/7"
         title="Emergency Storm Response in Medina County"
-        promise="The first call after the storm — we secure the property, document everything for your claim, and stay through the repair."
+        promise="The first call after the storm, we secure the property, document everything for your claim, and stay through the repair."
         primary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
         secondary={{ href: '/storm-damage/', label: 'Storm Damage' }}
       />

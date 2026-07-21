@@ -17,7 +17,7 @@ export default function StormDamage() {
         poster="/video/posters/storm-clouds-rooftop.jpg"
         eyebrow="Storm Damage &middot; Medina County"
         title="Storm Damage in Medina County: Your First Steps"
-        promise="Wind or hail hit your house? Here&rsquo;s what to do first — secure the property, document the damage, start the claim. One local company handles the whole thing."
+        promise="Wind or hail hit your house? Here&rsquo;s what to do first, secure the property, document the damage, start the claim. One local company handles the whole thing."
         primary={{ href: '/insurance-claims/', label: 'Get Claim Help' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

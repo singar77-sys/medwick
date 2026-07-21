@@ -55,6 +55,19 @@ Running log of what Mark has approved, built top-down. The old system
    storm-damage all updated. Video files keep their `reconstruction-*` names
    (manifest mapping).
 
+9. **Official brand system applied** (2026-07-20, from Mark's branding deck).
+   **Colors** (exact): Refined Gold `#c0a675` (primary), Vintage Brass `#696251`
+   (alt on dark), Pale Bouillon `#e0ceb1` (alt on light), Off-White `#f0f0f2`
+   (text), Midnight Blue `#232935` (BG main), Prussian Blue `#2c3243` (BG alt).
+   Dark mode now = Midnight field + Prussian cards. New tokens `--brass`,
+   `--bouillon`, `--soft`.
+   **Type** (all self-hosted; Mark sent the font files 2026-07-20): headings =
+   **Eurostile Extd Black** (licensed Monotype, web-license `.ttf` → woff2),
+   sub-headers + body = **Plus Jakarta Sans** (`next/font/google`),
+   quotes/promise = **Zodiak Extrabold** + true italic. Files in
+   `public/fonts/` (see its README). Tokens: `--font-display` (h1/h2),
+   `--font-subhead` (h3 + nav/buttons/eyebrows), `--font-body`, `--font-serif`.
+
 ## Open
 
 - ⚠ **Remodeling rename not propagated to strategy docs.** `content/*.md`

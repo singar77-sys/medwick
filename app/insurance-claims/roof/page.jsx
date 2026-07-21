@@ -16,7 +16,7 @@ export default function RoofClaims() {
         poster="/video/posters/roofing-winter-install.jpg"
         eyebrow="Insurance Claims &middot; Roof"
         title="Roof Insurance Claim Help in Medina County"
-        promise="Hail or wind damage? We document it, build the estimate, meet the adjuster, and complete the roof — one company from claim to final shingle."
+        promise="Hail or wind damage? We document it, build the estimate, meet the adjuster, and complete the roof, one company from claim to final shingle."
         primary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
         secondary={{ href: '/roofing/', label: 'Our Roofing Work' }}
       />

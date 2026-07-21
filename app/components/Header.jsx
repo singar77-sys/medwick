@@ -8,7 +8,7 @@ import ThemeToggle from './ThemeToggle';
 import PrimaryNav from './PrimaryNav';
 
 // Header on the Solomon temple grid: three zones at the temple's 1 : 4 : 2
-// proportion (1 Kings 6 — porch : hall : sanctuary → logo : nav : the ask).
+// proportion (1 Kings 6, porch : hall : sanctuary → logo : nav : the ask).
 // Below 64rem the hall collapses into a hamburger drawer; this component owns
 // the drawer's open state so the button (in the ask cluster) and the nav
 // panel (in the hall) stay in sync.
@@ -51,7 +51,7 @@ export default function Header() {
         <Link
           href="/"
           className="brand"
-          aria-label="Medwick Construction — home"
+          aria-label="Medwick Construction, home"
           onClick={closeMobile}
         >
           <Image

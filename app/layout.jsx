@@ -1,5 +1,6 @@
 import './globals.css';
-import { Archivo, Lora, Source_Sans_3 } from 'next/font/google';
+import { Plus_Jakarta_Sans } from 'next/font/google';
+import localFont from 'next/font/local';
 import { SITE, DISCLAIMER } from '@/lib/site';
 import { organization, JsonLd } from '@/lib/schema';
 import Header from './components/Header';
@@ -17,25 +18,31 @@ try {
 } catch (e) { document.documentElement.dataset.theme = 'light'; }
 `;
 
-const archivo = Archivo({
-  subsets: ['latin'],
-  weight: ['300', '600', '700', '800'],
-  variable: '--font-archivo',
+// Headings, Eurostile Extended Black (licensed Monotype font), self-hosted
+// from the web-license .ttf, converted to woff2. Drives every h1/h2.
+const eurostile = localFont({
+  src: '../public/fonts/eurostile-ext-black.woff2',
+  weight: '900',
+  style: 'normal',
+  variable: '--font-heading',
   display: 'swap',
 });
 
-const lora = Lora({
+// Sub-headers + body (brand: Plus Jakarta Sans).
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['500', '600'],
-  style: ['italic'],
-  variable: '--font-lora',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta',
   display: 'swap',
 });
 
-const sourceSans = Source_Sans_3({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-source-sans',
+// Quote / promise serif, Zodiak Extrabold (self-hosted). Upright only; the
+// site uses no italics.
+const zodiak = localFont({
+  src: '../public/fonts/zodiak-extrabold.woff2',
+  weight: '800',
+  style: 'normal',
+  variable: '--font-zodiak',
   display: 'swap',
 });
 
@@ -55,11 +62,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     // suppressHydrationWarning: the THEME_INIT script sets data-theme on
-    // <html> before hydration — that attribute diff is intentional.
+    // <html> before hydration, that attribute diff is intentional.
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${archivo.variable} ${lora.variable} ${sourceSans.variable}`}
+      className={`${eurostile.variable} ${jakarta.variable} ${zodiak.variable}`}
     >
       <body>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />

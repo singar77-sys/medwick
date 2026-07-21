@@ -19,7 +19,7 @@ export default function ServiceAreas() {
         poster="/video/posters/reconstruction-saw-cut.jpg"
         eyebrow="Where We Work"
         title="Serving All of Medina County, Ohio"
-        promise="Based in Medina — not dispatched from Akron or Cleveland. We cover the whole county."
+        promise="Based in Medina, not dispatched from Akron or Cleveland. We cover the whole county."
         primary={{ href: '/contact/', label: 'Request an Estimate' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

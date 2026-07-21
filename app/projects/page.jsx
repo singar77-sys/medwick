@@ -16,7 +16,7 @@ export default function Projects() {
         poster="/video/posters/medwick-storm-response.jpg"
         eyebrow="Our Work &middot; Medina County"
         title="Real Projects, Documented"
-        promise="Every completed job, documented — real Medwick work across Medina County. Nothing staged, no stock photos."
+        promise="Every completed job, documented, real Medwick work across Medina County. Nothing staged, no stock photos."
         primary={{ href: '/contact/', label: 'Request an Estimate' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />

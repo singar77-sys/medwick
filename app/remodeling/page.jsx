@@ -5,7 +5,7 @@ import { SITE } from '@/lib/site';
 
 // Renamed from /reconstruction/ → /remodeling/ (2026-07-17, Mark). The third
 // trade is now customer-facing "Remodeling." NOTE: strategy/content docs
-// (content/*.md) still use "reconstruction" — propagation is pending Mark's
+// (content/*.md) still use "reconstruction", propagation is pending Mark's
 // call on whether this is a full positioning change or just the label.
 
 export const metadata = {
@@ -22,7 +22,7 @@ export default function Remodeling() {
         poster="/video/posters/reconstruction-finished-interior.jpg"
         eyebrow="Remodeling &middot; Medina County"
         title="Remodeling in Medina County, Ohio"
-        promise="The natural next step after recovery — kitchens, baths, basements, and whole-home remodels. Same crew, not a new contractor to vet."
+        promise="The natural next step after recovery, kitchens, baths, basements, and whole-home remodels. Same crew, not a new contractor to vet."
         primary={{ href: '/contact/', label: 'Request an Estimate' }}
         secondary={{ href: SITE.phoneHref, label: `Call ${SITE.phone}` }}
       />
