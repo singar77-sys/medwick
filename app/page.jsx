@@ -1,15 +1,17 @@
 import Hero from '@/app/components/Hero';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
 // Homepage, rebuilt top-down (2026-07-17). Hero first, using the crew-walkout
 // clip. Remaining sections build below the hero next.
 // Copy is DRAFT; insurance language pending Ohio counsel (SOW §11).
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: `Medina County's Insurance Restoration Advocate | Medwick`,
   description:
     'Storm damage, roof leak, flooded basement? Medwick walks Medina County homeowners through the insurance claim, then does the repair work ourselves. Licensed, insured, Registered #26-731. Call (330) 635-3744.',
-};
+  path: '/',
+});
 
 export default function Home() {
   return (

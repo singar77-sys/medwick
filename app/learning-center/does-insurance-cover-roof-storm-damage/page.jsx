@@ -1,10 +1,12 @@
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Does Homeowners Insurance Cover Roof Storm Damage in Ohio? | Medwick',
   description:
     'Usually, yes. Standard Ohio homeowners policies cover sudden storm damage from wind and hail, minus your deductible. What counts, what doesn’t, and the first steps that protect your claim.',
-};
+  path: '/learning-center/does-insurance-cover-roof-storm-damage/',
+});
 
 export default function Article() {
   return (

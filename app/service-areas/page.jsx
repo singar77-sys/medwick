@@ -3,12 +3,14 @@ import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { SITE } from '@/lib/site';
 import { CITIES, SERVICE_AREA_COMMUNITIES } from '@/lib/cities';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Service Areas: Medina County, OH | Medwick Construction',
   description:
     'Storm, roof, and water damage help across Medina County: Medina, Brunswick, Wadsworth, Hinckley, Montville, Valley City, and every community in between, from a contractor based here.',
-};
+  path: '/service-areas/',
+});
 
 export default function ServiceAreas() {
   const linked = new Set(CITIES.map((c) => c.name));

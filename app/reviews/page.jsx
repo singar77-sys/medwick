@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Hero from '@/app/components/Hero';
 import { SITE } from '@/lib/site';
 import { REVIEWS, GOOGLE_SOURCE } from '@/lib/reviews';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Reviews: What Medina County Homeowners Say | Medwick Construction',
   description:
     'Real reviews from real Medwick customers across Medina County. 5.0 stars on Google, plus recommendations on Facebook. Responsiveness, clear communication, and insurance-claim guidance, in their words.',
-};
+  path: '/reviews/',
+});
 
 // Review text is verbatim from the Google Business Profile and the Facebook
 // page (see lib/reviews.js). No aggregateRating/Review JSON-LD here on purpose:
@@ -32,8 +34,12 @@ export default function Reviews() {
           {REVIEWS.map((r) => (
             <li className="review" key={`${r.source}-${r.author}`}>
               {r.rating ? (
-                <p className="review-stars" aria-label={`${r.rating} out of 5 stars`}>
-                  {'★'.repeat(r.rating)}
+                // aria-label is prohibited on <p> (role=paragraph), so it was
+                // silently dropped and the rating never reached a screen reader.
+                // Give the glyphs to sighted users and the text to everyone else.
+                <p className="review-stars">
+                  <span aria-hidden="true">{'★'.repeat(r.rating)}</span>
+                  <span className="sr-only">{r.rating} out of 5 stars</span>
                 </p>
               ) : (
                 // Facebook has no star scale: show what it actually says.

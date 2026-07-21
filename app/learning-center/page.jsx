@@ -1,12 +1,14 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Storm, Roof & Water Damage Questions, Answered | Medwick, Medina OH',
   description:
     'Plain answers to the questions Medina County homeowners actually ask after storm, roof, and water damage: insurance coverage, first steps, who to call, and what it costs. One question per page.',
-};
+  path: '/learning-center/',
+});
 
 export default function LearningCenter() {
   return (

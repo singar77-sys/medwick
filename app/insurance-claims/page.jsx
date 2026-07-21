@@ -2,12 +2,14 @@ import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { SITE, DISCLAIMER } from '@/lib/site';
 import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Insurance Claim Help in Medina County, OH | Medwick',
   description:
     "You are our customer, not the insurance company's. Medwick walks Medina County homeowners through the claim, documents the damage, meets the adjuster, and completes the repair. Clear, documented, honest at every step.",
-};
+  path: '/insurance-claims/',
+});
 
 export default function InsuranceClaims() {
   return (

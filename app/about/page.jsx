@@ -1,12 +1,14 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'About Medwick: Medina Born, Brunswick Raised | Medwick Construction',
   description:
     'MEDWICK is MEDina plus brunsWICK, a contractor named for the towns it serves. Owner-led, City of Medina Registered #26-731, licensed and insured, and accountable to your family, not a franchise.',
-};
+  path: '/about/',
+});
 
 export default function About() {
   return (

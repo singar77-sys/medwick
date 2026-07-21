@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { CITIES } from '@/lib/cities';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
 export const dynamicParams = false;
@@ -14,14 +15,15 @@ export async function generateMetadata({ params }) {
   const { city: slug } = await params;
   const city = CITIES.find((c) => c.slug === slug);
   if (!city) return {};
-  return {
+  return pageMetadata({
     title: `Storm, Roof & Water Restoration in ${city.name}, OH | Medwick Construction`,
     // No "Real local projects" claim here until a project set actually renders
     // on this page: the meta description is what shows in search results, and
     // promising proof the page does not contain is the doorway pattern the
     // anti-doorway gate in lib/cities.js exists to prevent.
     description: `${city.name}, Ohio storm, roof, and water damage help from a Medina-based advocate. We guide your insurance claim and complete the repair. Free help: ${SITE.phone}.`,
-  };
+    path: `/service-areas/${city.slug}/`,
+  });
 }
 
 export default async function CityPage({ params }) {

@@ -1,12 +1,15 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Emergency Storm Response & Roof Tarping in Medina County, OH | Medwick',
   description:
     'Tree on the house? Roof opened by wind? Medina-based emergency storm response and roof tarping. We secure the property, document everything for your claim, and stay through the repair. Call (330) 635-3744.',
-};
+  path: '/storm-damage/emergency/',
+});
 
 export default function StormEmergency() {
   return (
@@ -32,6 +35,17 @@ export default function StormEmergency() {
           { href: '/storm-damage/', label: 'Storm Damage' },
           { href: '/insurance-claims/', label: 'Insurance Claims' },
         ]}
+      />
+      {/* emergency: true backs the 24/7 in the eyebrow with machine-readable
+          hours, scoped to this service rather than the office. */}
+      <JsonLd
+        data={service({
+          name: 'Emergency Storm Response',
+          description:
+            'Round-the-clock emergency storm response, roof tarping, and board-up across Medina County, Ohio, with every step documented for the insurance claim.',
+          path: '/storm-damage/emergency/',
+          emergency: true,
+        })}
       />
     </>
   );

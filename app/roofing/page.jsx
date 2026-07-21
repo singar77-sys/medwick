@@ -1,13 +1,15 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Roofing Contractor in Medina County, OH | Medwick Construction',
   description:
     'Roof replacement, repair, and storm restoration from a Medina-based contractor. Documented workmanship, insurance-claim fluency, and one company from tarp to final shingle. Registered #26-731.',
-};
+  path: '/roofing/',
+});
 
 export default function Roofing() {
   return (

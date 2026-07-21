@@ -7,9 +7,7 @@ export default function robots() {
   const live = process.env.NEXT_PUBLIC_SITE_ENV === 'production';
   return live
     ? {
-        // /proposal carries its own noindex metadata (app/proposal/layout.jsx);
-        // disallowed here too so crawlers never even fetch it.
-        rules: { userAgent: '*', allow: '/', disallow: '/proposal/' },
+        rules: { userAgent: '*', allow: '/' },
         sitemap: `${SITE.baseUrl}/sitemap.xml`,
       }
     : {

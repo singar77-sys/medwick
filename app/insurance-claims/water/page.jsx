@@ -1,12 +1,14 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Water Damage Insurance Claim Help in Medina, OH | Medwick',
   description:
     'Burst pipe or flooded basement? Medwick documents the water damage, prepares the repair estimate, meets your adjuster, and handles mitigation through rebuild. One Medina County company for the whole claim.',
-};
+  path: '/insurance-claims/water/',
+});
 
 export default function WaterClaims() {
   return (

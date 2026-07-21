@@ -1,13 +1,15 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Storm Damage in Medina County, OH: What to Do First | Medwick',
   description:
     'Wind or hail hit your house? Plain-English first steps for Medina County homeowners: secure the property, document the damage, start the insurance claim, and get it repaired. One local company handles the whole thing.',
-};
+  path: '/storm-damage/',
+});
 
 export default function StormDamage() {
   return (

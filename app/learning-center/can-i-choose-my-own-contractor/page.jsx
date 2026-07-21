@@ -1,10 +1,12 @@
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Can I Choose My Own Contractor for an Insurance Claim in Ohio? | Medwick',
   description:
     'Yes. In Ohio, you choose who repairs your home, not your insurance company. What "preferred vendor" really means, your rights, and how to pick a contractor who answers to you.',
-};
+  path: '/learning-center/can-i-choose-my-own-contractor/',
+});
 
 export default function Article() {
   return (

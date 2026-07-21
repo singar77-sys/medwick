@@ -1,6 +1,7 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
 import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
 // Renamed from /reconstruction/ → /remodeling/ (2026-07-17, Mark). The third
@@ -8,11 +9,12 @@ import { SITE } from '@/lib/site';
 // (content/*.md) still use "reconstruction", propagation is pending Mark's
 // call on whether this is a full positioning change or just the label.
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Remodeling Contractor in Medina County, OH | Medwick',
   description:
     'After the roof is on and the structure is dry, the remodel puts your home back together. Kitchen, bath, basement, and whole-home remodeling. Same company, same relationship, no new contractor to vet.',
-};
+  path: '/remodeling/',
+});
 
 export default function Remodeling() {
   return (

@@ -1,12 +1,15 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { service, JsonLd } from '@/lib/schema';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: '24/7 Emergency Water Removal in Medina County, OH',
   description:
     'Flooded basement? Burst pipe? A Medina-based crew reaches you faster than trucks dispatched from Akron or Cleveland. Water out, structure drying, insurance documented. Call (330) 635-3744 now.',
-};
+  path: '/water-mitigation/emergency-water-removal/',
+});
 
 export default function EmergencyWaterRemoval() {
   return (
@@ -32,6 +35,17 @@ export default function EmergencyWaterRemoval() {
           { href: '/water-mitigation/', label: 'Water Mitigation' },
           { href: '/insurance-claims/water/', label: 'Water Claims' },
         ]}
+      />
+      {/* emergency: true backs the 24/7 in the title and eyebrow with
+          machine-readable hours, scoped to this service rather than the office. */}
+      <JsonLd
+        data={service({
+          name: 'Emergency Water Removal',
+          description:
+            'Round-the-clock emergency water extraction, structural drying, and insurance documentation for flooded basements and burst pipes across Medina County, Ohio.',
+          path: '/water-mitigation/emergency-water-removal/',
+          emergency: true,
+        })}
       />
     </>
   );

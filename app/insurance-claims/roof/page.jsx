@@ -1,12 +1,14 @@
 import Hero from '@/app/components/Hero';
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Roof Insurance Claim Help in Medina, OH | Medwick',
   description:
     'Hail or wind damage to your roof? Medwick documents the damage, prepares a complete repair estimate, meets the adjuster, and completes the roof. One Medina County company from claim to final shingle.',
-};
+  path: '/insurance-claims/roof/',
+});
 
 export default function RoofClaims() {
   return (

@@ -1,10 +1,12 @@
 import Stub from '@/app/components/Stub';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Flooded Basement in Medina: Who Do I Call First? | Medwick',
   description:
     'Call a local water mitigation crew first, before the insurance company, before a plumber for standing water. Why order matters in the first hour, and what a Medina-based response looks like.',
-};
+  path: '/learning-center/flooded-basement-who-to-call/',
+});
 
 export default function Article() {
   return (

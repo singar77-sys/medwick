@@ -1,11 +1,13 @@
 import Hero from '@/app/components/Hero';
+import { pageMetadata } from '@/lib/seo';
 import { SITE } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Contact Medwick Construction | Medina County, OH',
   description:
     'Reach Medwick Construction: (330) 635-3744, 7130 Norwalk Rd, Medina, OH 44256. Storm damage, insurance claim help, roofing, water, and rebuilds across Medina County. Tell us what happened.',
-};
+  path: '/contact/',
+});
 
 // Contact hero uses the crew-walkout clip (Mark's pick), the crew heading out
 // reads as "we show up." Call is the primary CTA. Form/map/NAP build below next.
